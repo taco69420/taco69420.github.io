@@ -26,17 +26,15 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: deeply-dwarf/package-lock.json
 
       - name: Install dependencies
         working-directory: deeply-dwarf
-        run: npm ci
+        run: npm install
 
       - name: Build
         working-directory: deeply-dwarf
         run: npm run build
 
-      # Prevent any accidental Jekyll processing on the published output
       - name: Disable Jekyll
         run: touch deeply-dwarf/dist/.nojekyll
 
