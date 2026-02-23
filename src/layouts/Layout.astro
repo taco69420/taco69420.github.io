@@ -31,6 +31,29 @@ const { title } = Astro.props;
       .legal-link { color: #047857; text-decoration: none; font-weight: bold; }
       .legal-link:hover { text-decoration: underline; }
     </style>
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Mark the Bagger",
+  "image": "https://howtokillgophers.com/taco.jpg",
+  "@id": "https://howtokillgophers.com",
+  "url": "https://howtokillgophers.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Redlands",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 34.0556,
+    "longitude": -117.1825
+  },
+  "description": "Expert gopher trapping advice and gear reviews from Mark the Bagger, serving Redlands, CA since 2022.",
+  "openingHours": "Mo-Su 00:00-23:59"
+}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGL40V0V8V"></script>
     <script is:inline>
