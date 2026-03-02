@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const methods = await getCollection('methods');
+
+  return methods.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={`${entry.data.title} | Mark The Bagger`}>
+  <header>
+    <h1>{entry.data.title}</h1>
+    <p class="subtitle">{entry.data.description}</p>
+  </header>
+
+  <section class="card">
+    <h2>Quick Stats</h2>
+    <ul>
+      <li><strong>Difficulty:</strong> {entry.data.difficulty}</li>
+      <li><strong>Pet Risk:</strong> {entry.data.petRisk}</li>
+      <li><strong>Cost:</strong> {entry.data.cost}</li>
+    </ul>
+  </section>
+
+  <main class="card">
+    <Content />
+  </main>
+</Layout>
