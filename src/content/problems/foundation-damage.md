@@ -1,0 +1,41 @@
+---
+title: "Managing Gopher Risk Near Foundations"
+description: "Reduce burrowing pressure that can undermine soil support near slabs, walkways, and hardscape."
+date: 2026-03-01
+tags:
+  - foundation
+  - structural
+  - risk
+difficulty: medium
+timeToResults: "1-4 weeks"
+petRisk: medium
+cost: medium
+sources:
+  - label: "California Structural Pest Guidance"
+    url: "https://www.cdpr.ca.gov/"
+  - label: "UC IPM - Pocket Gophers"
+    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
+---
+
+## Quick Answer
+Gopher tunneling near foundations can increase soil voids and moisture movement around structures. Early intervention protects hardscape and reduces expensive repairs.
+
+## The Gear
+- Soil probe
+- Traps for perimeter runs
+- Compaction tamper
+- Marker paint
+- Work gloves
+
+## The Process
+1. Survey perimeter soil for fresh mounds, sink spots, and cracking at edges.
+2. Map active zones and set traps in runs that parallel the structure.
+3. Backfill shallow voids with suitable fill and compact in thin lifts.
+4. Adjust irrigation to prevent over-saturated perimeter soil.
+5. Reinspect weekly and escalate to professional assessment if settlement continues.
+
+## Bagger Pro-Tip
+Treat your slab edge like a castle wall—patrol the perimeter before the moat shows up.
+
+## Safety Warning
+Persistent cracking or settlement may indicate broader structural issues; consult a licensed professional promptly.
