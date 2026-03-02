@@ -1,0 +1,63 @@
+<section class="card lore-card" aria-live="polite">
+  <h2>Yard Wisdom of the Day</h2>
+  <p id="lore-label" class="lore-label"></p>
+  <p id="lore-text"></p>
+</section>
+
+<script>
+  const loreItems = [
+    {
+      type: 'Bagger Pro-Tip',
+      text: 'Gophers have a 360-degree sense of vibration. If you walk heavy, they are gone before you even pull the shovel out.'
+    },
+    {
+      type: 'Taco Legend',
+      text: 'Taco once alerted to a dry hole for three hours. I thought he was glitching until a 2-pounder emerged. Never doubt the whiskers.'
+    },
+    {
+      type: 'Field Intel',
+      text: 'A gopher’s tunnel system can span up to 2,000 square feet. You aren’t just guarding a yard; you’re defending a kingdom.'
+    },
+    {
+      type: 'Taco Legend',
+      text: 'They say Taco didn’t just catch gophers; he studied their network protocols. A true CIS partner.'
+    },
+    {
+      type: 'Bagger Pro-Tip',
+      text: 'Don’t set your wire traps dry. A small dab of peanut butter behind the trigger plate is the ultimate social engineering for rodents.'
+    },
+    {
+      type: 'Taco Legend',
+      text: 'Legend says the first victory taco was earned after a perfectly timed shovel strike at sunset.'
+    },
+    {
+      type: 'Field Intel',
+      text: 'Gophers can close their lips behind their front teeth so they can dig tunnels without eating dirt.'
+    },
+    {
+      type: 'Bagger Pro-Tip',
+      text: 'If the dirt is moist, use the Victor. If the dirt is Redlands clay, call for backup—and more water.'
+    }
+  ];
+
+  const selection = loreItems[Math.floor(Math.random() * loreItems.length)];
+  const labelEl = document.getElementById('lore-label');
+  const textEl = document.getElementById('lore-text');
+
+  if (labelEl && textEl) {
+    labelEl.textContent = selection.type;
+    textEl.textContent = `“${selection.text}”`;
+  }
+</script>
+
+<style>
+  .lore-card {
+    margin-top: 1rem;
+  }
+
+  .lore-label {
+    font-weight: 700;
+    color: #0f766e;
+    margin-bottom: 0.25rem;
+  }
+</style>
