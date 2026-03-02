@@ -1,6 +1,20 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import RandomLore from '../components/RandomLore.astro';
+
+const methods = await getCollection('methods');
+const problems = await getCollection('problems');
+
+const latestMethods = [...methods].sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+
+const difficultyColors = {
+  easy: '#047857',
+  medium: '#b45309',
+  hard: '#b91c1c',
+};
 ---
 
 <Layout title="How To Kill Gophers | Mark The Bagger">
@@ -11,10 +25,33 @@ import RandomLore from '../components/RandomLore.astro';
 
   <main>
     <section class="card">
-      <h2>The Bagger's Secret: Dog-Assisted Flooding</h2>
-      <p>Flooding a tunnel system is a classic low-tech solution. But here is the trick to making it highly effective: <strong>if you have a small dog, bring them out with you.</strong></p>
-      <p>While you pump water into the main run, have your dog monitor the yard. Their nose is infinitely better than your eyes at detecting a gopher moving toward a secondary exit hole to escape the rising water.</p>
-      <p>When your dog alerts to a specific spot, you know exactly where to stand ready with your shovel or trap. It turns a guessing game into a precision strike.</p>
+      <h2>Latest Methods</h2>
+      <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        {latestMethods.map((method) => (
+          <article style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
+            <h3 style="margin-top: 0;">{method.data.title}</h3>
+            <p>
+              <span
+                style={`display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; background: ${difficultyColors[method.data.difficulty]};`}
+              >
+                {method.data.difficulty}
+              </span>
+            </p>
+            <a href={`/methods/${method.slug}`} class="btn">Read More</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="card" style="padding: 1rem 1.5rem;">
+      <h2 style="margin-bottom: 0.5rem;">Common Problems</h2>
+      <ul style="margin-top: 0; padding-left: 1.2rem;">
+        {problems.map((problem) => (
+          <li>
+            <a href={`/problems/${problem.slug}`}>{problem.data.title}</a>
+          </li>
+        ))}
+      </ul>
     </section>
 
     <RandomLore />
