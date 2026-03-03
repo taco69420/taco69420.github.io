@@ -66,7 +66,11 @@ const { title } = Astro.props;
       window.addEventListener('load', () => {
         if (!window.CookieConsent) return;
 
+        CookieConsent.reset(true);
+
         CookieConsent.run({
+          autoShow: true,
+          hideFromBots: false,
           manageScriptTags: true,
           disablePageInteraction: true,
           guiOptions: {
