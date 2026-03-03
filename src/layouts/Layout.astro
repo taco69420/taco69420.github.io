@@ -65,7 +65,7 @@ const { title } = Astro.props;
         CookieConsent.run({
           manageScriptTags: true,
           guiOptions: {
-            consentModal: { layout: 'bar', position: 'bottom center', equalWeightButtons: true },
+            consentModal: { layout: 'box', position: 'middle center', equalWeightButtons: true },
             preferencesModal: { layout: 'box', position: 'right', equalWeightButtons: true }
           },
           categories: {
