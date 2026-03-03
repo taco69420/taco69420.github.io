@@ -4,17 +4,20 @@ const { title } = Astro.props;
 
 <html lang="en">
   <head>
-<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
-    
+
     <meta name="title" content="How To Kill Gophers | Mark The Bagger" />
-    <meta name="description" content="Expert gopher trapping advice and gear reviews from Mark the Bagger. Serving Redlands, CA with field-tested methods since 2022." />
-    <meta name="keywords" content="gopher trapping Redlands, how to kill gophers, Mark the Bagger, Victor gopher traps" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
+    <meta
+      name="description"
+      content="Expert gopher trapping advice and gear reviews from Mark the Bagger. Serving Redlands, CA with field-tested methods since 2022."
+    />
+    <meta
+      name="keywords"
+      content="gopher trapping Redlands, how to kill gophers, Mark the Bagger, Victor gopher traps"
+    />
+
     <style>
       body { font-family: system-ui, sans-serif; background: #f4f4f5; color: #18181b; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.6; }
       header { border-bottom: 2px solid #e4e4e7; padding-bottom: 1rem; margin-bottom: 2rem; }
@@ -31,31 +34,39 @@ const { title } = Astro.props;
       .legal-link { color: #047857; text-decoration: none; font-weight: bold; }
       .legal-link:hover { text-decoration: underline; }
     </style>
-<script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Mark the Bagger",
-  "image": "https://howtokillgophers.com/taco.jpg",
-  "@id": "https://howtokillgophers.com",
-  "url": "https://howtokillgophers.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Redlands",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 34.0556,
-    "longitude": -117.1825
-  },
-  "description": "Expert gopher trapping advice and gear reviews from Mark the Bagger, serving Redlands, CA since 2022.",
-  "openingHours": "Mo-Su 00:00-23:59"
-}
-</script>
-<!-- Google tag (gtag.js) -->
-<script type="text/plain" data-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-WGL40V0V8V"></script>
+
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Mark the Bagger",
+        "image": "https://howtokillgophers.com/taco.jpg",
+        "@id": "https://howtokillgophers.com",
+        "url": "https://howtokillgophers.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Redlands",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 34.0556,
+          "longitude": -117.1825
+        },
+        "description": "Expert gopher trapping advice and gear reviews from Mark the Bagger, serving Redlands, CA since 2022.",
+        "openingHours": "Mo-Su 00:00-23:59"
+      }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/plain"
+      data-category="analytics"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WGL40V0V8V"
+    ></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <script is:inline>
@@ -87,19 +98,12 @@ const { title } = Astro.props;
             },
             analytics: {
               autoClear: {
-                cookies: [
-                  { name: /^_ga/ },
-                  { name: '_gid' },
-                  { name: '_gat' },
-                ],
+                cookies: [{ name: /^_ga/ }, { name: '_gid' }, { name: '_gat' }],
               },
             },
             advertising: {
               autoClear: {
-                cookies: [
-                  { name: /^_gcl_/ },
-                  { name: /^_fbp$/ },
-                ],
+                cookies: [{ name: /^_gcl_/ }, { name: /^_fbp$/ }],
               },
             },
           },
@@ -147,6 +151,7 @@ const { title } = Astro.props;
         });
       });
     </script>
+
     <style>
       #cc-main {
         --cc-bg: #18181b;
@@ -161,15 +166,15 @@ const { title } = Astro.props;
         color: #D97706;
       }
     </style>
+
     <script type="text/plain" data-category="analytics" is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-WGL40V0V8V');
     </script>
   </head>
-  
+
   <body>
     <nav>
       <a href="/">Home</a>
