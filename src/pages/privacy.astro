@@ -16,8 +16,14 @@ import Layout from '../layouts/Layout.astro';
 
     <section class="card">
       <h2>Privacy & Cookies</h2>
-      <p>This site uses basic cookies to keep things running smoothly and track general analytics. Third-party vendors, including Google, use cookies to serve ads based on your prior visits. You can opt out of personalized advertising by visiting Google's Ad Settings.</p>
-      <p>I don't collect or sell your personal data. If you shoot me an email, I just use it to reply to your gopher-bagging questions.</p>
+      <p>This site uses a third-party open-source consent platform to manage cookie preferences. Third-party vendors, including Google, may use cookies to measure usage and improve advertising relevance.</p>
+      <p>You can update your consent choices at any time using the cookie preferences panel.</p>
+      <p><button type="button" class="btn" onclick="window.CookieConsent?.showPreferences()">Open Cookie Preferences</button></p>
+    </section>
+
+    <section id="do-not-sell" class="card">
+      <h2>Do Not Sell or Share My Personal Information</h2>
+      <p>To opt out of sale or sharing for cross-context behavioral advertising, open the cookie preferences and disable the <strong>Advertising / Sale or Sharing</strong> category.</p>
     </section>
 
     <section class="card">
