@@ -58,6 +58,93 @@ const { title } = Astro.props;
 </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGL40V0V8V"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <script is:inline>
+      window.addEventListener('load', () => {
+        if (!window.CookieConsent) return;
+
+        CookieConsent.run({
+          guiOptions: {
+            consentModal: {
+              layout: 'bar',
+              position: 'bottom center',
+              equalWeightButtons: true,
+              flipButtons: false,
+            },
+            preferencesModal: {
+              layout: 'box',
+              position: 'right',
+              equalWeightButtons: true,
+              flipButtons: false,
+            },
+          },
+          categories: {
+            necessary: {
+              enabled: true,
+              readOnly: true,
+            },
+            analytics: {},
+            advertising: {},
+          },
+          language: {
+            default: 'en',
+            translations: {
+              en: {
+                consentModal: {
+                  title: 'Your Privacy Choices',
+                  description:
+                    'We use cookies to improve site performance and personalize your experience. You can change your choices at any time.',
+                  acceptAllBtn: 'Accept',
+                  acceptNecessaryBtn: 'Reject non-essential',
+                  showPreferencesBtn: 'Manage preferences',
+                  footer:
+                    '<a href="/privacy" style="color:#D97706">Privacy Policy</a> · <a href="/privacy#do-not-sell">Do Not Sell or Share My Personal Information</a>',
+                },
+                preferencesModal: {
+                  title: 'Consent Preferences',
+                  acceptAllBtn: 'Accept all',
+                  acceptNecessaryBtn: 'Reject non-essential',
+                  savePreferencesBtn: 'Save preferences',
+                  closeIconLabel: 'Close',
+                  sections: [
+                    {
+                      title: 'Strictly Necessary',
+                      description: 'These cookies are required for the website to function.',
+                      linkedCategory: 'necessary',
+                    },
+                    {
+                      title: 'Analytics',
+                      description: 'These cookies help us understand how visitors use the site.',
+                      linkedCategory: 'analytics',
+                    },
+                    {
+                      title: 'Advertising / Sale or Sharing',
+                      description: 'Disable this category to opt out of sale or sharing for advertising purposes.',
+                      linkedCategory: 'advertising',
+                    },
+                  ],
+                },
+              },
+            },
+          },
+        });
+      });
+    </script>
+    <style>
+      #cc-main {
+        --cc-bg: #18181b;
+        --cc-primary-color: #f4f4f5;
+        --cc-secondary-color: #d4d4d8;
+        --cc-btn-primary-bg: #0F766E;
+        --cc-btn-primary-color: #ffffff;
+        --cc-btn-primary-hover-bg: #115e59;
+      }
+
+      #cc-main .cm__footer a:first-child {
+        color: #D97706;
+      }
+    </style>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
