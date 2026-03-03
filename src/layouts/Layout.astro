@@ -1,12 +1,10 @@
 ---
 import CookieBanner from '../components/CookieBanner.astro';
-
 const { title } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
@@ -14,9 +12,7 @@ const { title } = Astro.props;
     <meta name="title" content="How To Kill Gophers | Mark The Bagger" />
     <meta name="description" content="Expert gopher trapping advice and gear reviews from Mark the Bagger. Serving Redlands, CA with field-tested methods since 2022." />
     <meta name="keywords" content="gopher trapping Redlands, how to kill gophers, Mark the Bagger, Victor gopher traps" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
+    
     <style>
       body { font-family: system-ui, sans-serif; background: #f4f4f5; color: #18181b; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.6; }
       header { border-bottom: 2px solid #e4e4e7; padding-bottom: 1rem; margin-bottom: 2rem; }
@@ -33,59 +29,48 @@ const { title } = Astro.props;
       .legal-link { color: #047857; text-decoration: none; font-weight: bold; }
       .legal-link:hover { text-decoration: underline; }
     </style>
-<script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Mark the Bagger",
-  "image": "https://howtokillgophers.com/taco.jpg",
-  "@id": "https://howtokillgophers.com",
-  "url": "https://howtokillgophers.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Redlands",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 34.0556,
-    "longitude": -117.1825
-  },
-  "description": "Expert gopher trapping advice and gear reviews from Mark the Bagger, serving Redlands, CA since 2022.",
-  "openingHours": "Mo-Su 00:00-23:59"
-}
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WGL40V0V8V"></script>
+
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Mark the Bagger",
+      "image": "https://howtokillgophers.com/taco.jpg",
+      "@id": "https://howtokillgophers.com",
+      "url": "https://howtokillgophers.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Redlands",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.0556,
+        "longitude": -117.1825
+      },
+      "description": "Expert gopher trapping advice and gear reviews from Mark the Bagger, serving Redlands, CA since 2022.",
+      "openingHours": "Mo-Su 00:00-23:59"
+    }
+    </script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+
+    <script type="text/plain" data-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-WGL40V0V8V"></script>
+    
     <script is:inline>
       window.addEventListener('load', () => {
         if (!window.CookieConsent) return;
-
         CookieConsent.run({
           guiOptions: {
-            consentModal: {
-              layout: 'bar',
-              position: 'bottom center',
-              equalWeightButtons: true,
-              flipButtons: false,
-            },
-            preferencesModal: {
-              layout: 'box',
-              position: 'right',
-              equalWeightButtons: true,
-              flipButtons: false,
-            },
+            consentModal: { layout: 'bar', position: 'bottom center', equalWeightButtons: true },
+            preferencesModal: { layout: 'box', position: 'right', equalWeightButtons: true }
           },
           categories: {
-            necessary: {
-              enabled: true,
-              readOnly: true,
-            },
+            necessary: { enabled: true, readOnly: true },
             analytics: {},
-            advertising: {},
+            advertising: {}
           },
           language: {
             default: 'en',
@@ -93,63 +78,42 @@ const { title } = Astro.props;
               en: {
                 consentModal: {
                   title: 'Your Privacy Choices',
-                  description:
-                    'We use cookies to improve site performance and personalize your experience. You can change your choices at any time.',
+                  description: 'We use cookies to improve site performance and personalize your experience.',
                   acceptAllBtn: 'Accept',
                   acceptNecessaryBtn: 'Reject non-essential',
                   showPreferencesBtn: 'Manage preferences',
-                  footer:
-                    '<a href="/privacy" style="color:#D97706">Privacy Policy</a> · <a href="/privacy#do-not-sell">Do Not Sell or Share My Personal Information</a>',
+                  footer: '<a href="/privacy" style="color:#D97706">Privacy Policy</a> · <a href="/privacy#do-not-sell">Do Not Sell or Share My Personal Information</a>'
                 },
                 preferencesModal: {
                   title: 'Consent Preferences',
                   acceptAllBtn: 'Accept all',
                   acceptNecessaryBtn: 'Reject non-essential',
                   savePreferencesBtn: 'Save preferences',
-                  closeIconLabel: 'Close',
                   sections: [
-                    {
-                      title: 'Strictly Necessary',
-                      description: 'These cookies are required for the website to function.',
-                      linkedCategory: 'necessary',
-                    },
-                    {
-                      title: 'Analytics',
-                      description: 'These cookies help us understand how visitors use the site.',
-                      linkedCategory: 'analytics',
-                    },
-                    {
-                      title: 'Advertising / Sale or Sharing',
-                      description: 'Disable this category to opt out of sale or sharing for advertising purposes.',
-                      linkedCategory: 'advertising',
-                    },
-                  ],
-                },
-              },
-            },
-          },
+                    { title: 'Strictly Necessary', description: 'Required for the site to function.', linkedCategory: 'necessary' },
+                    { title: 'Analytics', description: 'Help us understand site usage.', linkedCategory: 'analytics' },
+                    { title: 'Advertising / Sale or Sharing', description: 'Opt-out of data sharing here.', linkedCategory: 'advertising' }
+                  ]
+                }
+              }
+            }
+          }
         });
       });
     </script>
-    <style>
+
+    <style is:inline>
       #cc-main {
         --cc-bg: #18181b;
-        --cc-primary-color: #f4f4f5;
-        --cc-secondary-color: #d4d4d8;
         --cc-btn-primary-bg: #0F766E;
-        --cc-btn-primary-color: #ffffff;
         --cc-btn-primary-hover-bg: #115e59;
       }
-
-      #cc-main .cm__footer a:first-child {
-        color: #D97706;
-      }
     </style>
-    <script is:inline>
+
+    <script type="text/plain" data-category="analytics" is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-WGL40V0V8V');
     </script>
   </head>
@@ -165,7 +129,7 @@ const { title } = Astro.props;
     <slot />
 
     <footer class="disclaimer">
-      <p><strong>Affiliate Disclosure:</strong> To keep the gopher-bagging gear coming and this site running on high-end hardware, I participate in the Amazon Services LLC Associates Program. As an Amazon Associate I earn from qualifying purchases.</p>
+      <p><strong>Affiliate Disclosure:</strong> I participate in the Amazon Services LLC Associates Program. As an Amazon Associate I earn from qualifying purchases.</p>
       <p style="margin-top: 10px;"><a href="/privacy" class="legal-link">Read the full Privacy Policy & Legal Disclaimers</a></p>
     </footer>
     <CookieBanner client:load />
