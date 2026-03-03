@@ -1,5 +1,4 @@
 ---
-import CookieBanner from '../components/CookieBanner.astro';
 const { title } = Astro.props;
 ---
 
@@ -54,23 +53,24 @@ const { title } = Astro.props;
     }
     </script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.8/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.8/dist/cookieconsent.umd.js"></script>
 
     <script type="text/plain" data-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-WGL40V0V8V"></script>
     
     <script is:inline>
       window.addEventListener('load', () => {
         if (!window.CookieConsent) return;
+
         CookieConsent.run({
+          manageScriptTags: true,
           guiOptions: {
             consentModal: { layout: 'bar', position: 'bottom center', equalWeightButtons: true },
             preferencesModal: { layout: 'box', position: 'right', equalWeightButtons: true }
           },
           categories: {
             necessary: { enabled: true, readOnly: true },
-            analytics: {},
-            advertising: {}
+            analytics: {}
           },
           language: {
             default: 'en',
@@ -78,11 +78,11 @@ const { title } = Astro.props;
               en: {
                 consentModal: {
                   title: 'Your Privacy Choices',
-                  description: 'We use cookies to improve site performance and personalize your experience.',
+                  description: 'We use cookies to improve site performance. Analytics cookies remain off until you click Accept.',
                   acceptAllBtn: 'Accept',
                   acceptNecessaryBtn: 'Reject non-essential',
                   showPreferencesBtn: 'Manage preferences',
-                  footer: '<a href="/privacy" style="color:#D97706">Privacy Policy</a> · <a href="/privacy#do-not-sell">Do Not Sell or Share My Personal Information</a>'
+                  footer: '<a href="/privacy" style="color:#D97706;font-weight:600;">Privacy Policy</a> · <a href="/privacy#do-not-sell" style="color:#D97706;font-weight:600;">Do Not Sell or Share My Personal Information</a>'
                 },
                 preferencesModal: {
                   title: 'Consent Preferences',
@@ -92,7 +92,10 @@ const { title } = Astro.props;
                   sections: [
                     { title: 'Strictly Necessary', description: 'Required for the site to function.', linkedCategory: 'necessary' },
                     { title: 'Analytics', description: 'Help us understand site usage.', linkedCategory: 'analytics' },
-                    { title: 'Advertising / Sale or Sharing', description: 'Opt-out of data sharing here.', linkedCategory: 'advertising' }
+                    {
+                      title: 'More information',
+                      description: 'Read our <a href="/privacy" class="cc__link">Privacy Policy</a> or use <a href="/privacy#do-not-sell" class="cc__link">Do Not Sell or Share My Personal Information</a>.'
+                    }
                   ]
                 }
               }
@@ -105,8 +108,15 @@ const { title } = Astro.props;
     <style is:inline>
       #cc-main {
         --cc-bg: #18181b;
+        --cc-primary-color: #D97706;
+        --cc-secondary-color: #0F766E;
         --cc-btn-primary-bg: #0F766E;
-        --cc-btn-primary-hover-bg: #115e59;
+        --cc-btn-primary-hover-bg: #0d635d;
+        --cc-btn-primary-color: #ffffff;
+        --cc-btn-secondary-bg: #D97706;
+        --cc-btn-secondary-hover-bg: #b45309;
+        --cc-btn-secondary-color: #ffffff;
+        --cc-link-color: #D97706;
       }
     </style>
 
@@ -132,6 +142,5 @@ const { title } = Astro.props;
       <p><strong>Affiliate Disclosure:</strong> I participate in the Amazon Services LLC Associates Program. As an Amazon Associate I earn from qualifying purchases.</p>
       <p style="margin-top: 10px;"><a href="/privacy" class="legal-link">Read the full Privacy Policy & Legal Disclaimers</a></p>
     </footer>
-    <CookieBanner client:load />
   </body>
 </html>
