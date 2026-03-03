@@ -27,6 +27,10 @@ const { title } = Astro.props;
       nav a:hover { background: #d4d4d8; }
       .legal-link { color: #047857; text-decoration: none; font-weight: bold; }
       .legal-link:hover { text-decoration: underline; }
+
+      @media (max-width: 640px) {
+        body { padding: 1rem; }
+      }
     </style>
 
     <script type="application/ld+json" is:inline>
@@ -62,15 +66,21 @@ const { title } = Astro.props;
       window.addEventListener('load', () => {
         if (!window.CookieConsent) return;
 
+        CookieConsent.reset(true);
+
         CookieConsent.run({
+          autoShow: true,
+          hideFromBots: false,
           manageScriptTags: true,
+          disablePageInteraction: true,
           guiOptions: {
-            consentModal: { layout: 'box', position: 'middle center', equalWeightButtons: true },
+            consentModal: { layout: 'box', position: 'middle center', equalWeightButtons: true, backdrop: true },
             preferencesModal: { layout: 'box', position: 'right', equalWeightButtons: true }
           },
           categories: {
             necessary: { enabled: true, readOnly: true },
-            analytics: {}
+            analytics: {},
+            advertising: {}
           },
           language: {
             default: 'en',
@@ -92,6 +102,7 @@ const { title } = Astro.props;
                   sections: [
                     { title: 'Strictly Necessary', description: 'Required for the site to function.', linkedCategory: 'necessary' },
                     { title: 'Analytics', description: 'Help us understand site usage.', linkedCategory: 'analytics' },
+                    { title: 'Advertising / Sale or Sharing', description: 'Controls ad measurement and cross-context behavioral advertising signals.', linkedCategory: 'advertising' },
                     {
                       title: 'More information',
                       description: 'Read our <a href="/privacy" class="cc__link">Privacy Policy</a> or use <a href="/privacy#do-not-sell" class="cc__link">Do Not Sell or Share My Personal Information</a>.'
@@ -117,6 +128,30 @@ const { title } = Astro.props;
         --cc-btn-secondary-hover-bg: #b45309;
         --cc-btn-secondary-color: #ffffff;
         --cc-link-color: #D97706;
+        --cc-modal-border-radius: 0.75rem;
+      }
+
+      #cc-main .cm,
+      #cc-main .pm {
+        max-width: min(100%, 34rem);
+      }
+
+      #cc-main .cm__desc,
+      #cc-main .pm__section-desc {
+        color: #e4e4e7;
+      }
+
+      #cc-main .pm__section-title,
+      #cc-main .cm__title,
+      #cc-main .pm__title {
+        color: #fafafa;
+      }
+
+      @media (max-width: 640px) {
+        #cc-main .cm,
+        #cc-main .pm {
+          max-width: calc(100% - 1.5rem);
+        }
       }
     </style>
 
@@ -141,6 +176,7 @@ const { title } = Astro.props;
     <footer class="disclaimer">
       <p><strong>Affiliate Disclosure:</strong> I participate in the Amazon Services LLC Associates Program. As an Amazon Associate I earn from qualifying purchases.</p>
       <p style="margin-top: 10px;"><a href="/privacy" class="legal-link">Read the full Privacy Policy & Legal Disclaimers</a></p>
+      <p style="margin-top: 10px;"><a href="/privacy#do-not-sell" class="legal-link">Do Not Sell or Share My Personal Information</a></p>
     </footer>
   </body>
 </html>
