@@ -63,6 +63,9 @@ const { title } = Astro.props;
         if (!window.CookieConsent) return;
 
         CookieConsent.run({
+          mode: 'opt-in',
+          manageScriptTags: true,
+          autoClearCookies: true,
           guiOptions: {
             consentModal: {
               layout: 'bar',
@@ -82,8 +85,23 @@ const { title } = Astro.props;
               enabled: true,
               readOnly: true,
             },
-            analytics: {},
-            advertising: {},
+            analytics: {
+              autoClear: {
+                cookies: [
+                  { name: /^_ga/ },
+                  { name: '_gid' },
+                  { name: '_gat' },
+                ],
+              },
+            },
+            advertising: {
+              autoClear: {
+                cookies: [
+                  { name: /^_gcl_/ },
+                  { name: /^_fbp$/ },
+                ],
+              },
+            },
           },
           language: {
             default: 'en',
