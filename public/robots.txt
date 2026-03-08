@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://howtokillgophers.com/sitemap-index.xml
