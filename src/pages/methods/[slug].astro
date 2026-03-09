@@ -13,9 +13,53 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const siteURL = "https://howtokillgophers.com";
+const pageURL = `${siteURL}/methods/${entry.slug}`;
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": entry.data.title,
+  "description": entry.data.description,
+  "url": pageURL,
+  "datePublished": entry.data.date.toISOString().split("T")[0],
+  ...(entry.data.updated ? { "dateModified": entry.data.updated.toISOString().split("T")[0] } : {}),
+  "author": {
+    "@type": "Person",
+    "name": "Mark the Bagger",
+    "url": `${siteURL}/about`
+  },
+  "tool": entry.data.cost === "low" ? [] : [],
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": entry.data.cost === "low" ? "0-20" : entry.data.cost === "medium" ? "20-80" : "80+"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteURL },
+    { "@type": "ListItem", "position": 2, "name": "Methods", "item": `${siteURL}/methods` },
+    { "@type": "ListItem", "position": 3, "name": entry.data.title, "item": pageURL }
+  ]
+};
 ---
 
-<Layout title={`${entry.data.title} | Mark The Bagger`}>
+<Layout
+  title={`${entry.data.title} | Gopher Control | Mark The Bagger`}
+  description={entry.data.description}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › <a href="/methods">Methods</a> › {entry.data.title}
+  </nav>
+
   <header>
     <h1>{entry.data.title}</h1>
     <p class="subtitle">{entry.data.description}</p>
@@ -27,10 +71,20 @@ const { Content } = await entry.render();
       <li><strong>Difficulty:</strong> {entry.data.difficulty}</li>
       <li><strong>Pet Risk:</strong> {entry.data.petRisk}</li>
       <li><strong>Cost:</strong> {entry.data.cost}</li>
+      <li><strong>Time to Results:</strong> {entry.data.timeToResults}</li>
     </ul>
   </section>
 
   <main class="card">
     <Content />
   </main>
+
+  <section class="card" style="padding: 1rem 1.5rem;">
+    <h2 style="margin-bottom: 0.5rem;">More Gopher Control</h2>
+    <ul style="margin-top: 0; padding-left: 1.2rem;">
+      <li><a href="/methods">All gopher control methods</a></li>
+      <li><a href="/traps">Recommended traps & gear</a></li>
+      <li><a href="/">Back to homepage</a></li>
+    </ul>
+  </section>
 </Layout>

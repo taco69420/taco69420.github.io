@@ -1,24 +1,59 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+
+const methods = await getCollection('methods');
+const sorted = [...methods].sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const difficultyColors = {
+  easy: '#047857',
+  medium: '#b45309',
+  hard: '#b91c1c',
+};
 ---
 
-<Layout title="Humane & Lethal Methods | Mark The Bagger">
+<Layout
+  title="Gopher Control Methods & Tactics | Mark The Bagger"
+  description="Field-tested gopher control methods from easy repellents to advanced burrow fumigation. Mark the Bagger's step-by-step playbook for eliminating gophers from your yard."
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › Gopher Control Methods
+  </nav>
+
   <header>
-    <h1>The Bagger's Playbook</h1>
-    <p class="subtitle">Step-by-step tactics for reclaiming your dirt.</p>
+    <h1>Gopher Control Methods</h1>
+    <p class="subtitle">Step-by-step tactics for reclaiming your yard from pocket gophers.</p>
   </header>
 
   <main>
     <section class="card">
+      <h2>All Methods</h2>
+      <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        {sorted.map((method) => (
+          <article style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
+            <h3 style="margin-top: 0;">{method.data.title}</h3>
+            <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 0.5rem;">{method.data.description}</p>
+            <p>
+              <span style={`display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; background: ${difficultyColors[method.data.difficulty]};`}>
+                {method.data.difficulty}
+              </span>
+            </p>
+            <a href={`/methods/${method.slug}`} class="btn">Read the {method.data.title} Guide</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="card">
       <h2>Passive Defense: Vibration Poles</h2>
       <p>Think of these as your background firewall. Ultrasonic and vibrational stakes aren't going to eliminate a massive infestation on their own, but they are fantastic deterrents when paired with traps or soil treatments. Place them every 30-45 feet and move them weekly so the gophers don't get used to the pattern.</p>
-      <a href="https://amzn.to/4c7WkYT" class="btn" target="_blank" rel="sponsored">View Top Rated Poles on Amazon</a>
+      <a href="https://amzn.to/4c7WkYT" class="btn" target="_blank" rel="sponsored noopener">View Top Rated Gopher Repellent Poles on Amazon</a>
     </section>
 
     <section class="card">
       <h2>Precision Capture: Live Wire Traps</h2>
       <p>If you need to relocate the gopher (or if local laws require it), two-door live traps placed directly in the main runway are your best bet. Always wire the trap to a surface stake so the gopher doesn't drag it deeper into the network, and check it every 12 hours.</p>
-      <a href="https://amzn.to/4aPIsjG" class="btn" target="_blank" rel="sponsored">View Live Traps on Amazon</a>
+      <a href="https://amzn.to/4aPIsjG" class="btn" target="_blank" rel="sponsored noopener">View Live Gopher Traps on Amazon</a>
     </section>
   </main>
 </Layout>

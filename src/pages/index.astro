@@ -15,9 +15,27 @@ const difficultyColors = {
   medium: '#b45309',
   hard: '#b91c1c',
 };
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "How To Kill Gophers",
+  "url": "https://howtokillgophers.com",
+  "description": "Expert gopher trapping advice and gear reviews from Mark the Bagger. Field-tested methods for eliminating gophers from your yard.",
+  "author": {
+    "@type": "Person",
+    "name": "Mark the Bagger",
+    "url": "https://howtokillgophers.com/about"
+  }
+};
 ---
 
-<Layout title="How To Kill Gophers | Mark The Bagger">
+<Layout
+  title="How To Kill Gophers | Mark The Bagger"
+  description="Expert gopher trapping advice and gear reviews from Mark the Bagger. Humane and lethal methods that actually work — field-tested in Redlands, CA since 2022."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+
   <header>
     <h1>How To Kill Gophers</h1>
     <p class="subtitle">Humane & Non-Humane Methods That Actually Work</p>
@@ -25,11 +43,12 @@ const difficultyColors = {
 
   <main>
     <section class="card">
-      <h2>Latest Methods</h2>
+      <h2>Latest Gopher Control Methods</h2>
       <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
         {latestMethods.map((method) => (
           <article style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
             <h3 style="margin-top: 0;">{method.data.title}</h3>
+            <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 0.5rem;">{method.data.description}</p>
             <p>
               <span
                 style={`display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; background: ${difficultyColors[method.data.difficulty]};`}
@@ -37,14 +56,17 @@ const difficultyColors = {
                 {method.data.difficulty}
               </span>
             </p>
-            <a href={`/methods/${method.slug}`} class="btn">Read More</a>
+            <a href={`/methods/${method.slug}`} class="btn">How to {method.data.title}</a>
           </article>
         ))}
       </div>
+      <p style="margin-top: 1.5rem; margin-bottom: 0;">
+        <a href="/methods" style="color: #047857; font-weight: bold;">See all gopher control methods →</a>
+      </p>
     </section>
 
     <section class="card" style="padding: 1rem 1.5rem;">
-      <h2 style="margin-bottom: 0.5rem;">Common Problems</h2>
+      <h2 style="margin-bottom: 0.5rem;">Common Gopher Problems</h2>
       <ul style="margin-top: 0; padding-left: 1.2rem;">
         {problems.map((problem) => (
           <li>
@@ -52,6 +74,11 @@ const difficultyColors = {
           </li>
         ))}
       </ul>
+    </section>
+
+    <section class="card" style="padding: 1rem 1.5rem;">
+      <h2 style="margin-bottom: 0.5rem;">Gear & Traps</h2>
+      <p style="margin-top: 0;">Browse Mark's field-tested trap picks and equipment reviews in <a href="/traps" style="color: #047857; font-weight: bold;">The Armory</a>.</p>
     </section>
 
     <RandomLore />

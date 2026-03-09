@@ -1,11 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mark the Bagger",
+  "url": "https://howtokillgophers.com/about",
+  "description": "Gopher trapping expert and pest control advisor based in Redlands, CA. Founder of howtokillgophers.com.",
+  "image": "https://howtokillgophers.com/mark-and-taco.jpg",
+  "knowsAbout": ["gopher trapping", "pest control", "yard management", "burrow fumigation"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Redlands",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  }
+};
 ---
 
-<Layout title="About Mark The Bagger | How To Kill Gophers">
+<Layout
+  title="About Mark The Bagger | Gopher Trapping Expert | How To Kill Gophers"
+  description="Meet Mark the Bagger — gopher trapping expert from Redlands, CA. Learn about his years of field experience and why his methods actually work."
+  ogImage="/mark-and-taco.jpg"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)}></script>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › About Mark
+  </nav>
+
   <header>
     <h1>Who is Mark the Bagger?</h1>
-    <p class="subtitle">From yard chores to pest control expert.</p>
+    <p class="subtitle">From yard chores to gopher trapping expert.</p>
   </header>
 
   <main>

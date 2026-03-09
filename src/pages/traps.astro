@@ -1,33 +1,50 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from ‘../layouts/Layout.astro’;
 ---
 
-<Layout title="Best Traps & Gear | Mark The Bagger">
+<Layout
+  title="Best Gopher Traps & Gear Reviews | Mark The Bagger"
+  description="Mark the Bagger’s field-tested gopher trap and gear picks. High-tension wire traps, gopher gassers, and the techniques to use them effectively."
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › Gopher Traps & Gear
+  </nav>
+
   <header>
-    <h1>The Bagger's Armory</h1>
-    <p class="subtitle">Precision tools and heavy ordnance for your yard.</p>
+    <h1>Best Gopher Traps & Gear</h1>
+    <p class="subtitle">Precision tools and field-tested picks for eliminating gophers from your yard.</p>
   </header>
 
   <main>
     <section class="card">
-      <h2>Precision Tools: High-Tension Wire Traps</h2>
-      <p>These aren't your standard cheap box traps. High-tension stainless steel wire traps (like the Macabee or Cinch style) are built for the main tunnel lines. You aren't just setting a trap; you're intercepting them right at the source.</p>
+      <h2>High-Tension Wire Gopher Traps</h2>
+      <p>These aren’t your standard cheap box traps. High-tension stainless steel wire traps (like the Macabee or Cinch style) are built for the main tunnel lines. You aren’t just setting a trap; you’re intercepting them right at the source.</p>
 <div class="field-notes" style="background: #fdfdfd; padding: 1.5rem; border: 1px solid #ddd; border-left: 5px solid #d4af37; margin: 1.5rem 0; border-radius: 4px;">
   <h3 style="margin-top: 0; color: #222;">The Bagger’s Field Notes</h3>
   <p style="font-style: italic; color: #555;">"I’ve been bagging gophers since I was 15, and the right hardware is only half the battle."</p>
   <ul style="margin-bottom: 0;">
     <li><strong>The Victor Standard:</strong> These "Easy Set" style traps are my daily drivers for main tunnel lines.</li>
-    <li><strong>Humane Dispatch:</strong> If you get a leg-catch, be ready to handle it quickly—I’ve used a pellet gun in the past to ensure they don't suffer.</li>
+    <li><strong>Humane Dispatch:</strong> If you get a leg-catch, be ready to handle it quickly—I’ve used a pellet gun in the past to ensure they don’t suffer.</li>
     <li><strong>The Peanut Butter Trick:</strong> Don’t set them dry. A small dab of peanut butter behind the trigger plate makes them commit to the spot for a guaranteed catch.</li>
   </ul>
 </div>
-      <a href="https://amzn.to/4cIJ64V" class="btn" target="_blank" rel="sponsored">Click Here For Traps!</a>
+      <a href="https://amzn.to/4cIJ64V" class="btn" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon</a>
     </section>
 
     <section class="card">
-      <h2>Chemical Warfare: Gopher Gassers</h2>
-      <p>Sometimes you need to clear a deep, complex network. Gassers are a consumable option that aggressively smoke out the tunnels. Just make sure you plug all the exit holes first, or you're just putting on a light show for the neighborhood.</p>
-      <a href="https://amzn.to/4b4oF11" class="btn" target="_blank" rel="sponsored">Click Here For Gassers!</a>
+      <h2>Gopher Gassers & Burrow Fumigation</h2>
+      <p>Sometimes you need to clear a deep, complex network. Gassers are a consumable option that aggressively smoke out the tunnels. Just make sure you plug all the exit holes first, or you’re just putting on a light show for the neighborhood.</p>
+      <p>For a full step-by-step on burrow fumigation, see the <a href="/methods/carbon-monoxide" style="color: #047857; font-weight: bold;">Carbon Monoxide Burrow Treatment guide</a>.</p>
+      <a href="https://amzn.to/4b4oF11" class="btn" target="_blank" rel="sponsored noopener">Shop Gopher Gassers on Amazon</a>
+    </section>
+
+    <section class="card" style="padding: 1rem 1.5rem;">
+      <h2 style="margin-bottom: 0.5rem;">More Resources</h2>
+      <ul style="margin-top: 0; padding-left: 1.2rem;">
+        <li><a href="/methods">Browse all gopher control methods</a></li>
+        <li><a href="/methods/victor-traps">Victor Trap Tunnel Intercept guide</a></li>
+        <li><a href="/">Back to homepage</a></li>
+      </ul>
     </section>
   </main>
 </Layout>
