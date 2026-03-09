@@ -17,26 +17,28 @@ const { Content } = await entry.render();
 const siteURL = "https://howtokillgophers.com";
 const pageURL = `${siteURL}/methods/${entry.slug}`;
 
-const howToSchema = {
+const howToSchema: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": entry.data.title,
   "description": entry.data.description,
   "url": pageURL,
   "datePublished": entry.data.date.toISOString().split("T")[0],
-  ...(entry.data.updated ? { "dateModified": entry.data.updated.toISOString().split("T")[0] } : {}),
   "author": {
     "@type": "Person",
     "name": "Mark the Bagger",
     "url": `${siteURL}/about`
   },
-  "tool": entry.data.cost === "low" ? [] : [],
   "estimatedCost": {
     "@type": "MonetaryAmount",
     "currency": "USD",
     "value": entry.data.cost === "low" ? "0-20" : entry.data.cost === "medium" ? "20-80" : "80+"
   }
 };
+
+if (entry.data.updated) {
+  howToSchema["dateModified"] = entry.data.updated.toISOString().split("T")[0];
+}
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -52,10 +54,8 @@ const breadcrumbSchema = {
 <Layout
   title={`${entry.data.title} | Gopher Control | Mark The Bagger`}
   description={entry.data.description}
+  schemas={[howToSchema, breadcrumbSchema]}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
-
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › <a href="/methods">Methods</a> › {entry.data.title}
   </nav>

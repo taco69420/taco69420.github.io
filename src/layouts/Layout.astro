@@ -4,6 +4,7 @@ const {
   title,
   description = "Expert gopher trapping advice and gear reviews from Mark the Bagger. Serving Redlands, CA with field-tested methods since 2022.",
   ogImage = "/taco.jpg",
+  schemas = [],
 } = Astro.props;
 
 const canonicalURL = Astro.url.href;
@@ -84,6 +85,9 @@ const localBusinessSchema = {
     </style>
 
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)}></script>
+    {schemas.map((s) => (
+      <script type="application/ld+json" set:html={JSON.stringify(s)}></script>
+    ))}
   </head>
 
   <body>

@@ -17,14 +17,13 @@ const { Content } = await entry.render();
 const siteURL = "https://howtokillgophers.com";
 const pageURL = `${siteURL}/problems/${entry.slug}`;
 
-const articleSchema = {
+const articleSchema: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": entry.data.title,
   "description": entry.data.description,
   "url": pageURL,
   "datePublished": entry.data.date.toISOString().split("T")[0],
-  ...(entry.data.updated ? { "dateModified": entry.data.updated.toISOString().split("T")[0] } : {}),
   "author": {
     "@type": "Person",
     "name": "Mark the Bagger",
@@ -41,6 +40,10 @@ const articleSchema = {
   }
 };
 
+if (entry.data.updated) {
+  articleSchema["dateModified"] = entry.data.updated.toISOString().split("T")[0];
+}
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -55,10 +58,8 @@ const breadcrumbSchema = {
 <Layout
   title={`${entry.data.title} | Gopher Problems | Mark The Bagger`}
   description={entry.data.description}
+  schemas={[articleSchema, breadcrumbSchema]}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
-
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › <a href="/#problems">Common Problems</a> › {entry.data.title}
   </nav>

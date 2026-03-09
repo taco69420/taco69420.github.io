@@ -22,8 +22,9 @@ const personSchema = {
   title="About Mark The Bagger | Gopher Trapping Expert | How To Kill Gophers"
   description="Meet Mark the Bagger — gopher trapping expert from Redlands, CA. Learn about his years of field experience and why his methods actually work."
   ogImage="/mark-and-taco.jpg"
+  schemas={[personSchema]}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(personSchema)}></script>
+
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › About Mark
