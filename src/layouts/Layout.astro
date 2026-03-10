@@ -1,5 +1,13 @@
 ---
 import CookieBanner from '../components/CookieBanner.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  schemas?: Record<string, unknown>[];
+}
+
 const {
   title,
   description = "Expert gopher trapping advice and gear reviews from Mark the Bagger. Serving Redlands, CA with field-tested methods since 2022.",
@@ -85,9 +93,7 @@ const localBusinessSchema = {
     </style>
 
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)}></script>
-    {schemas.map((s) => (
-      <script type="application/ld+json" set:html={JSON.stringify(s)}></script>
-    ))}
+    <Fragment set:html={schemas.map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('')} />
   </head>
 
   <body>
