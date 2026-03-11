@@ -66,15 +66,25 @@ const websiteSchema = {
       </p>
     </section>
 
-    <section class="card" style="padding: 1rem 1.5rem;">
-      <h2 style="margin-bottom: 0.5rem;">Common Gopher Problems</h2>
-      <ul style="margin-top: 0; padding-left: 1.2rem;">
+    <section class="card">
+      <h2>Common Gopher Problems</h2>
+      <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
         {problems.map((problem) => (
-          <li>
-            <a href={`/problems/${problem.slug}`}>{problem.data.title}</a>
-          </li>
+          <a
+            href={`/problems/${problem.slug}`}
+            style="display: block; padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa; text-decoration: none; color: inherit; transition: border-color 0.15s;"
+            onmouseover="this.style.borderColor='#047857'" onmouseout="this.style.borderColor='#e4e4e7'"
+          >
+            <h3 style="margin-top: 0; margin-bottom: 0.4rem; font-size: 1rem; color: #111;">{problem.data.title}</h3>
+            <p style="font-size: 0.85rem; color: #52525b; margin: 0 0 0.6rem;">{problem.data.description}</p>
+            <span
+              style={`display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; color: white; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; background: ${difficultyColors[problem.data.difficulty]};`}
+            >
+              {problem.data.difficulty}
+            </span>
+          </a>
         ))}
-      </ul>
+      </div>
     </section>
 
     <section class="card" style="padding: 1rem 1.5rem;">
