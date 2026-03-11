@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the fastest way to kill a gopher?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mechanical trapping with a cinch or Victor-style trap set in the main tunnel run. A correctly placed trap in an active run can catch a gopher within hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do gophers come out above ground?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rarely. Gophers spend almost their entire life underground. You might see one emerge briefly near a mound, but they're not surface animals like squirrels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will coffee grounds repel gophers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Coffee grounds, cayenne pepper, and similar home remedies have no proven effect on gophers. Save your coffee for yourself and set a trap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do gopher repellers actually work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sonic repeller stakes can push gophers out of a specific zone but won't eliminate them — they just move the problem to another part of your yard. Best used as a perimeter buffer alongside active trapping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What time of day are gophers most active?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gophers are most active in the early morning and late afternoon, but they tunnel at all hours. Unlike squirrels they don't have a strict above-ground schedule since they live underground."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can gophers chew through concrete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Gophers can't chew through concrete or solid rock. They can undermine it by removing the soil underneath, which causes settling and cracking — but the teeth aren't the weapon, the tunneling is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do gophers live in colonies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Gophers are solitary and territorial. Each tunnel system typically belongs to one gopher. If you're seeing mounds across a wide area, it's usually one animal with a large range — or several individual gophers working separate territories."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will a gopher come back after you remove it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The one you caught won't. But an empty tunnel system is prime real estate — neighboring gophers will often move in within days. Keep traps set for at least a week after your first catch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it legal to kill gophers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most U.S. states, yes — pocket gophers are not protected and can be legally trapped or baited on your own property. Always check your local regulations before using rodenticides, as some products require a license."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How deep do gopher tunnels go?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Main tunnel runs are typically 6–18 inches deep. Nesting and food storage chambers can go down 2–6 feet. That's why surface repellents and shallow barriers often fail."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Gopher FAQ — Common Questions Answered | How To Kill Gophers"
+  description="Straight answers to the most common gopher questions — from the fastest way to kill one to whether coffee grounds actually work."
+  schemas={[faqSchema]}
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › FAQ
+  </nav>
+
+  <header>
+    <h1>Gopher FAQ</h1>
+    <p class="subtitle">Common Questions — Straight Answers</p>
+  </header>
+
+  <main>
+
+    {[
+      {
+        q: "What is the fastest way to kill a gopher?",
+        a: "Mechanical trapping with a cinch or Victor-style trap set in the main tunnel run. A correctly placed trap in an active run can catch a gopher within hours. No bait gimmicks, no waiting — just find the main run and set two traps back-to-back.",
+        links: [
+          { href: "/methods/cinch-traps", text: "Cinch Trap Guide" },
+          { href: "/methods/victor-traps", text: "Victor Trap Guide" },
+        ]
+      },
+      {
+        q: "Do gophers come out above ground?",
+        a: "Rarely. Gophers spend almost their entire life underground. You might catch one briefly poking out near a fresh mound to push soil, but they're not surface animals. If you're seeing a rodent running around your yard, it's probably a ground squirrel — not a gopher.",
+        links: [{ href: "/gopher-vs-mole", text: "Gopher vs Mole ID Guide" }]
+      },
+      {
+        q: "Will coffee grounds repel gophers?",
+        a: "No. Coffee grounds, cayenne pepper, garlic, mothballs, and similar home remedies have no proven effect on gophers. They've been used underground their whole life — a weird smell isn't going to make them leave prime territory. Save your coffee for yourself and set a trap.",
+        links: []
+      },
+      {
+        q: "Do gopher repellers actually work?",
+        a: "Sonic repeller stakes can push gophers out of a specific zone but won't eliminate them — they just relocate the problem to another part of your yard. Think of them as a fence, not a fix. Best used as a perimeter buffer while you actively trap the population.",
+        links: [{ href: "/methods/sonic-stakes", text: "Sonic Stakes Guide" }]
+      },
+      {
+        q: "What time of day are gophers most active?",
+        a: "Gophers are most active in early morning and late afternoon, but they tunnel at all hours. Unlike squirrels, they don't have a strict above-ground schedule since they live underground. The good news: traps work 24/7 so timing doesn't matter much.",
+        links: []
+      },
+      {
+        q: "Can gophers chew through concrete?",
+        a: "No — their teeth can't handle solid concrete or rock. But they don't need to. Gophers undermine it by removing the soil underneath, which causes settling, sinking, and cracking over time. The tunneling is the weapon, not the teeth.",
+        links: [{ href: "/problems/foundation-damage", text: "Foundation Damage Guide" }]
+      },
+      {
+        q: "Do gophers live in colonies?",
+        a: "No. Gophers are solitary and fiercely territorial. Each tunnel system typically belongs to one animal. If you're seeing mounds spread across a wide area, it's usually one gopher with a large range — or multiple individual gophers holding separate territories side by side. Catching one doesn't clear the yard.",
+        links: []
+      },
+      {
+        q: "Will a gopher come back after you remove it?",
+        a: "The one you caught won't. But an empty tunnel system is prime real estate and neighboring gophers will move in within days — sometimes hours. Keep traps set for at least a week after your first catch and watch for new mound activity at the edges of the cleared zone.",
+        links: []
+      },
+      {
+        q: "Is it legal to kill gophers?",
+        a: "In most U.S. states, yes. Pocket gophers are classified as pests, not protected wildlife, and can be legally trapped or baited on your own property. Always check local regulations before using rodenticides — some products require a pest control license to purchase or apply.",
+        links: [{ href: "/methods/poison-bait-stations", text: "Bait Station Guide" }]
+      },
+      {
+        q: "How deep do gopher tunnels go?",
+        a: "Main lateral runs are typically 6–18 inches deep. Nesting chambers and food caches can go down 2–6 feet. This is why shallow barriers, surface sprays, and most repellents fail — the gopher is just working below them.",
+        links: [{ href: "/methods/gopher-mesh", text: "Gopher Mesh Barrier Guide" }]
+      },
+    ].map(({ q, a, links }) => (
+      <section class="card">
+        <h2 style="font-size: 1.15rem;">{q}</h2>
+        <p style="margin-bottom: links.length ? '0.75rem' : '0';">{a}</p>
+        {links.length > 0 && (
+          <p style="margin: 0;">
+            {links.map((link, i) => (
+              <span>
+                {i > 0 && " · "}
+                <a href={link.href} style="color: #047857; font-weight: bold;">{link.text} →</a>
+              </span>
+            ))}
+          </p>
+        )}
+      </section>
+    ))}
+
+  </main>
+</Layout>
