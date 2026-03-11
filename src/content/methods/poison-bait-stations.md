@@ -40,3 +40,6 @@ Zinc phosphide works fast but requires a mask and careful handling — it reacts
 
 ## Safety Warning
 Keep all bait away from children and pets. Never place bait in open boxes or above ground. Secondary poisoning of raptors, dogs, and cats is a real risk with zinc phosphide — if wildlife is present, use traps instead. Check your local regulations; some bait products require a pest control license to purchase.
+
+## Get the Gear
+<a href="https://amzn.to/46XnfTH" target="_blank" rel="sponsored noopener">Shop Underground Gopher Bait Stations on Amazon →</a>
