@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gopher vs Mole — How To Tell Which One Is Destroying Your Yard",
+  "description": "Learn how to tell a gopher from a mole using mound shape, tunnel type, and plant damage. The right ID means the right fix.",
+  "author": {
+    "@type": "Person",
+    "name": "Mark the Bagger",
+    "url": "https://howtokillgophers.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "How To Kill Gophers",
+    "url": "https://howtokillgophers.com"
+  },
+  "datePublished": "2026-03-11",
+  "url": "https://howtokillgophers.com/gopher-vs-mole"
+};
+---
+
+<Layout
+  title="Gopher vs Mole: How To Tell Which One Is Destroying Your Yard | How To Kill Gophers"
+  description="Crescent mound with a plugged hole? Gopher. Volcano mound with a center hole? Mole. Learn how to tell them apart and why it matters for treatment."
+  schemas={[articleSchema]}
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › Gopher vs Mole
+  </nav>
+
+  <header>
+    <h1>Gopher vs Mole</h1>
+    <p class="subtitle">How To Tell Which One Is Destroying Your Yard</p>
+  </header>
+
+  <main>
+
+    <section class="card">
+      <h2>Quick Answer</h2>
+      <p>Look at the mound. If it's a <strong>crescent or fan shape</strong> with a plugged hole off to one side, you have a gopher. If it's a <strong>symmetrical volcano shape</strong> with a hole dead center, you have a mole. Get the ID right first — gopher traps don't catch moles, and mole traps don't catch gophers. Treating the wrong animal wastes time and money.</p>
+    </section>
+
+    <section class="card">
+      <h2>Side-by-Side Comparison</h2>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+          <thead>
+            <tr style="background: #f4f4f5;">
+              <th style="text-align: left; padding: 0.6rem 1rem; border-bottom: 2px solid #e4e4e7;"></th>
+              <th style="text-align: left; padding: 0.6rem 1rem; border-bottom: 2px solid #e4e4e7; color: #b91c1c;">Gopher</th>
+              <th style="text-align: left; padding: 0.6rem 1rem; border-bottom: 2px solid #e4e4e7; color: #1d4ed8;">Mole</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["Mound shape", "Crescent or fan, plugged hole off to the side", "Symmetrical volcano, hole dead center"],
+              ["Diet", "Roots, bulbs, tubers — pure herbivore", "Grubs, worms, insects — never eats plants"],
+              ["Tunnel depth", "6–18 inches, deep main runs", "2–5 inches, shallow surface ridges"],
+              ["Plant damage", "Yes — pulls plants down from below", "Rarely — lifts turf but doesn't eat roots"],
+              ["Surface ridges", "Uncommon", "Very common — raised soil trails across lawn"],
+              ["Activity season", "Year-round", "Spring and fall most active"],
+              ["Size", "6–8 inches, larger body", "4–7 inches, paddle-shaped front feet"],
+            ].map(([label, gopher, mole], i) => (
+              <tr style={i % 2 === 0 ? "background: #fafafa;" : ""}>
+                <td style="padding: 0.6rem 1rem; font-weight: 600; border-bottom: 1px solid #e4e4e7;">{label}</td>
+                <td style="padding: 0.6rem 1rem; border-bottom: 1px solid #e4e4e7;">{gopher}</td>
+                <td style="padding: 0.6rem 1rem; border-bottom: 1px solid #e4e4e7;">{mole}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Why Getting the ID Right Matters</h2>
+      <p>Gophers and moles cause completely different types of damage and require completely different treatment. A gopher is an herbivore — it's actively eating your plants, bulbs, and roots. A mole is an insectivore — it's hunting grubs and worms underground and the surface damage is just collateral from tunneling.</p>
+      <p>If you set gopher bait in a mole tunnel, nothing happens. The mole won't touch it. If you set a surface mole trap over a deep gopher run, you'll never get a catch. Misidentification is the number one reason people spend weeks "treating" a pest problem with zero results.</p>
+    </section>
+
+    <section class="card">
+      <h2>How To ID Yours — Step by Step</h2>
+      <ol>
+        <li><strong>Find a fresh mound</strong> — fresh means damp soil pushed up within the last 24–48 hours.</li>
+        <li><strong>Check the shape.</strong> Get down and look at it from the side. Fan/crescent with a plugged hole off center = gopher. Dome/volcano with a center plug = mole.</li>
+        <li><strong>Look for surface ridges.</strong> If you see raised trails of soil running across your lawn between mounds, that's a mole's shallow feeding tunnel. Gophers don't leave surface trails.</li>
+        <li><strong>Check your plants.</strong> Pull up a plant near the damage zone. If the roots are chewed off or the whole plant pulls out easily with no roots attached, that's a gopher. If the roots are intact but the plant is just heaved up from below, that's mole tunneling.</li>
+        <li><strong>Probe for tunnel depth.</strong> Use a rod or screwdriver. Gopher main runs are 6–18 inches down. Mole feeding tunnels are only 2–5 inches — you'll hit the void almost immediately.</li>
+      </ol>
+
+      <div class="field-notes" style="background: #fdfdfd; padding: 1.5rem; border: 1px solid #ddd; border-left: 5px solid #d4af37; margin: 1.5rem 0 0; border-radius: 4px;">
+        <h3 style="margin-top: 0; color: #222;">The Bagger's Field Notes</h3>
+        <p style="font-style: italic; color: #555;">"Nine out of ten people who tell me they have gophers actually have gophers. But the ones who are wrong are always wrong the same way — they see raised ridges in the lawn and assume gopher. That's a mole every time. Gophers work deep. If you can feel a tunnel ridge with your foot, you've got moles."</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What To Do Next</h2>
+      <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-bottom: 1.5rem;">
+        <div style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
+          <h3 style="margin-top: 0; font-size: 1rem; color: #b91c1c;">You have a gopher</h3>
+          <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 1rem;">Start with mechanical trapping — it's the most reliable method.</p>
+          <a href="/methods/cinch-traps" class="btn">Cinch Trap Guide</a>
+          <a href="/methods/victor-traps" class="btn" style="margin-top: 0.5rem;">Victor Trap Guide</a>
+        </div>
+        <div style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
+          <h3 style="margin-top: 0; font-size: 1rem; color: #1d4ed8;">You have a mole</h3>
+          <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 1rem;">Moles need surface or shallow tunnel traps — the scissor-jaw or harpoon style.</p>
+          <a href="https://amzn.to/mole-traps" class="btn" target="_blank" rel="sponsored noopener">Shop Mole Traps on Amazon</a>
+        </div>
+      </div>
+      <p style="margin-bottom: 0;"><a href="/methods" style="color: #047857; font-weight: bold;">Browse all gopher control methods →</a></p>
+    </section>
+
+  </main>
+</Layout>
