@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const problems = await getCollection('problems');
+const sorted = [...problems].sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const difficultyColors = {
+  easy: '#047857',
+  medium: '#b45309',
+  hard: '#b91c1c',
+};
+---
+
+<Layout
+  title="Common Gopher Problems & How To Fix Them | How To Kill Gophers"
+  description="Identify and solve common gopher damage — from destroyed lawns and chewed irrigation lines to foundation risk and vegetable garden destruction."
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › Gopher Problems
+  </nav>
+
+  <header>
+    <h1>Common Gopher Problems</h1>
+    <p class="subtitle">Identify the damage and know exactly what to do about it.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>All Problems</h2>
+      <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        {sorted.map((problem) => (
+          <article style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
+            <h3 style="margin-top: 0;">{problem.data.title}</h3>
+            <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 0.5rem;">{problem.data.description}</p>
+            <p>
+              <span style={`display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; background: ${difficultyColors[problem.data.difficulty]};`}>
+                {problem.data.difficulty}
+              </span>
+            </p>
+            <a href={`/problems/${problem.slug}`} class="btn">Read the {problem.data.title} Guide</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="card" style="padding: 1rem 1.5rem;">
+      <h2 style="margin-bottom: 0.5rem;">Not Sure What You Have?</h2>
+      <p style="margin-top: 0;">Gophers and moles cause similar-looking damage but need completely different treatment. <a href="/gopher-vs-mole" style="color: #047857; font-weight: bold;">Use the Gopher vs Mole ID guide →</a></p>
+    </section>
+
+    <section class="card" style="padding: 1rem 1.5rem;">
+      <h2 style="margin-bottom: 0.5rem;">Ready to Fix It?</h2>
+      <p style="margin-top: 0;">Once you've identified the problem, head to <a href="/methods" style="color: #047857; font-weight: bold;">The Playbook</a> for step-by-step control methods.</p>
+    </section>
+  </main>
+</Layout>
