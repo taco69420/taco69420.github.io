@@ -38,3 +38,6 @@ Don't expect results in year one. Barn owls scout territory for months before co
 
 ## Safety Warning
 Never disturb an active nest. Barn owls are protected under the Migratory Bird Treaty Act — interfering with an active nest is a federal offense. Once they're in, leave them alone and let them work.
+
+## Get the Gear
+<a href="https://amzn.to/4sKmKFc" target="_blank" rel="sponsored noopener">Shop Barn Owl Nesting Boxes on Amazon →</a>
