@@ -6,9 +6,10 @@ import RandomLore from '../components/RandomLore.astro';
 const methods = await getCollection('methods');
 const problems = await getCollection('problems');
 
-const latestMethods = [...methods].sort(
-  (a, b) => b.data.date.getTime() - a.data.date.getTime()
-);
+const featuredMethodSlugs = ['victor-traps', 'cinch-traps', 'gopher-mesh'];
+const featuredMethods = featuredMethodSlugs
+  .map(slug => methods.find(m => m.slug === slug))
+  .filter(Boolean);
 
 const difficultyColors = {
   easy: '#047857',
@@ -35,51 +36,82 @@ const websiteSchema = {
   description="Expert gopher trapping advice and gear reviews from Mark the Bagger. Humane and lethal methods that actually work — field-tested in Redlands, CA since 2022."
   schemas={[websiteSchema]}
 >
-  
 
-  <header>
+  <header class="hero">
     <h1>How To Kill Gophers</h1>
-    <p class="subtitle">Humane & Non-Humane Methods That Actually Work</p>
+    <p class="subtitle">Field-tested methods from Mark the Bagger — Redlands, CA since 2022.</p>
+    <p class="hero-body">No fluff, no guesswork. This site is built around what actually works in the ground. Whether you've got one mound or twenty, there's a method here that fits your yard, your budget, and your patience level.</p>
+    <div class="hero-ctas">
+      <a href="/methods" class="btn">The Playbook</a>
+      <a href="/problems" class="btn btn-outline">Find Your Problem</a>
+      <a href="/traps" class="btn btn-outline">The Armory</a>
+    </div>
   </header>
 
   <main>
+
+    <section class="card start-here">
+      <h2>New Here? Start With These Three Steps</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div>
+            <strong>Identify what you have</strong>
+            <p>Gopher or mole? Fresh mound or old spoil? Getting this right saves you from wasting time on the wrong fix.</p>
+            <a href="/gopher-vs-mole">Gopher vs Mole ID guide →</a>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div>
+            <strong>Pick a method</strong>
+            <p>Traps are the fastest. Barriers are the most permanent. Repellents buy time. Know which one you need.</p>
+            <a href="/methods">Browse all methods →</a>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <strong>Get the right gear</strong>
+            <p>Mark's field-tested picks — no junk, no filler. The stuff that's actually in rotation on real jobs.</p>
+            <a href="/traps">Visit The Armory →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="card">
-      <h2>Latest Gopher Control Methods</h2>
-      <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-        {latestMethods.map((method) => (
-          <article style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
-            <h3 style="margin-top: 0;">{method.data.title}</h3>
-            <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 0.5rem;">{method.data.description}</p>
-            <p>
-              <span
-                style={`display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; background: ${difficultyColors[method.data.difficulty]};`}
-              >
+      <h2>Most-Used Methods</h2>
+      <p style="margin-top: 0; color: #52525b; font-size: 0.95rem;">The three Mark reaches for first on almost every job.</p>
+      <div class="method-grid">
+        {featuredMethods.map((method) => (
+          <article class="method-card">
+            <h3>{method.data.title}</h3>
+            <p>{method.data.description}</p>
+            <div class="method-meta">
+              <span class="badge" style={`background: ${difficultyColors[method.data.difficulty]};`}>
                 {method.data.difficulty}
               </span>
-            </p>
-            <a href={`/methods/${method.slug}`} class="btn">How to {method.data.title}</a>
+              <span class="meta-item">Results: {method.data.timeToResults}</span>
+            </div>
+            <a href={`/methods/${method.slug}`} class="btn">Read the Guide</a>
           </article>
         ))}
       </div>
       <p style="margin-top: 1.5rem; margin-bottom: 0;">
-        <a href="/methods" style="color: #047857; font-weight: bold;">See all gopher control methods →</a>
+        <a href="/methods">See all 9 gopher control methods →</a>
       </p>
     </section>
 
-    <section class="card">
+    <section class="card" id="problems">
       <h2>Common Gopher Problems</h2>
-      <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+      <p style="margin-top: 0; color: #52525b; font-size: 0.95rem;">Start with the damage you're seeing — each guide tells you exactly what to do about it.</p>
+      <div class="problem-grid">
         {problems.map((problem) => (
-          <a
-            href={`/problems/${problem.slug}`}
-            style="display: block; padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa; text-decoration: none; color: inherit; transition: border-color 0.15s;"
-            onmouseover="this.style.borderColor='#047857'" onmouseout="this.style.borderColor='#e4e4e7'"
-          >
-            <h3 style="margin-top: 0; margin-bottom: 0.4rem; font-size: 1rem; color: #111;">{problem.data.title}</h3>
-            <p style="font-size: 0.85rem; color: #52525b; margin: 0 0 0.6rem;">{problem.data.description}</p>
-            <span
-              style={`display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; color: white; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; background: ${difficultyColors[problem.data.difficulty]};`}
-            >
+          <a href={`/problems/${problem.slug}`} class="problem-card">
+            <h3>{problem.data.title}</h3>
+            <p>{problem.data.description}</p>
+            <span class="badge" style={`background: ${difficultyColors[problem.data.difficulty]};`}>
               {problem.data.difficulty}
             </span>
           </a>
@@ -87,16 +119,234 @@ const websiteSchema = {
       </div>
     </section>
 
-    <section class="card" style="padding: 1rem 1.5rem;">
-      <h2 style="margin-bottom: 0.5rem;">Not Sure What You Have?</h2>
-      <p style="margin-top: 0;">Gophers and moles look similar but need completely different treatment. <a href="/gopher-vs-mole" style="color: #047857; font-weight: bold;">Learn how to tell them apart →</a></p>
-    </section>
-
-    <section class="card" style="padding: 1rem 1.5rem;">
-      <h2 style="margin-bottom: 0.5rem;">Gear & Traps</h2>
-      <p style="margin-top: 0;">Browse Mark's field-tested trap picks and equipment reviews in <a href="/traps" style="color: #047857; font-weight: bold;">The Armory</a>.</p>
+    <section class="quick-links">
+      <a href="/gopher-vs-mole" class="quick-card">
+        <strong>Gopher vs Mole</strong>
+        <p>Same damage, completely different animal. Know before you trap.</p>
+      </a>
+      <a href="/seasons" class="quick-card">
+        <strong>Seasonal Guide</strong>
+        <p>When they're active, why they move, and what to do each season.</p>
+      </a>
+      <a href="/traps" class="quick-card">
+        <strong>The Armory</strong>
+        <p>Mark's go-to traps and gear picks with direct Amazon links.</p>
+      </a>
+      <a href="/faq" class="quick-card">
+        <strong>FAQ</strong>
+        <p>Quick answers to the questions Mark gets asked every week.</p>
+      </a>
     </section>
 
     <RandomLore />
+
   </main>
 </Layout>
+
+<style>
+  .hero {
+    border-bottom: 2px solid #e4e4e7;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-body {
+    color: #52525b;
+    font-size: 1rem;
+    max-width: 640px;
+    margin-top: 0.5rem;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #047857;
+    border: 2px solid #10b981;
+  }
+
+  .btn-outline:hover {
+    background: #f0fdf4;
+    color: #065f46;
+  }
+
+  /* Start Here */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    background: #10b981;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.1rem;
+  }
+
+  .step strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    color: #18181b;
+  }
+
+  .step p {
+    margin: 0 0 0.3rem;
+    font-size: 0.9rem;
+    color: #52525b;
+  }
+
+  /* Methods */
+  .method-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .method-card {
+    padding: 1rem;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    background: #fafafa;
+  }
+
+  .method-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+  }
+
+  .method-card p {
+    font-size: 0.9rem;
+    color: #52525b;
+    margin-bottom: 0.75rem;
+  }
+
+  .method-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .meta-item {
+    font-size: 0.8rem;
+    color: #71717a;
+  }
+
+  /* Problems */
+  .problem-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .problem-card {
+    display: block;
+    padding: 1rem;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    background: #fafafa;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    border-bottom: none;
+  }
+
+  .problem-card:hover {
+    border-color: #10b981;
+    box-shadow: 0 2px 8px rgba(16,185,129,0.1);
+    color: inherit;
+  }
+
+  .problem-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    color: #18181b;
+  }
+
+  .problem-card p {
+    font-size: 0.85rem;
+    color: #52525b;
+    margin: 0 0 0.6rem;
+  }
+
+  /* Quick Links */
+  .quick-links {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin-bottom: 2rem;
+  }
+
+  .quick-card {
+    display: block;
+    background: white;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    border-bottom: none;
+  }
+
+  .quick-card:hover {
+    border-color: #10b981;
+    box-shadow: 0 4px 12px rgba(16,185,129,0.12);
+    color: inherit;
+  }
+
+  .quick-card strong {
+    display: block;
+    color: #047857;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .quick-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #52525b;
+  }
+
+  @media (max-width: 640px) {
+    .hero-ctas { flex-direction: column; }
+    .hero-ctas .btn { text-align: center; }
+    .quick-links { grid-template-columns: 1fr 1fr; }
+  }
+</style>
