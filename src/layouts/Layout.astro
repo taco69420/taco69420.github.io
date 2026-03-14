@@ -75,8 +75,8 @@ const localBusinessSchema = {
       .subtitle { color: #52525b; font-size: 1.2rem; margin-top: 0; }
       .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 2rem; border: 1px solid #e4e4e7; }
       h2 { color: #047857; margin-top: 0; }
-      .btn { display: inline-block; background: #10b981; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 1rem; transition: background 0.2s; }
-      .btn:hover { background: #059669; }
+      .btn { display: inline-block; background: #10b981; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 1rem; transition: background 0.2s; border-bottom: none; }
+      .btn:hover { background: #059669; border-bottom: none; color: white; }
       .disclaimer { border-top: 1px solid #e4e4e7; padding-top: 1rem; margin-top: 3rem; font-size: 0.85rem; color: #71717a; text-align: center; }
       nav { display: flex; gap: 15px; margin-bottom: 2rem; flex-wrap: wrap; }
       nav a { text-decoration: none; color: #18181b; font-weight: bold; padding: 8px 16px; background: #e4e4e7; border-radius: 6px; }
@@ -86,6 +86,10 @@ const localBusinessSchema = {
       .breadcrumb { font-size: 0.85rem; color: #71717a; margin-bottom: 1.5rem; display: block; }
       .breadcrumb a { color: #047857; text-decoration: none; padding: 0; background: none; border-radius: 0; font-weight: normal; }
       .breadcrumb a:hover { background: none; text-decoration: underline; }
+      .card a { color: #047857; font-weight: 600; text-decoration: none; border-bottom: 2px solid #a7f3d0; transition: border-color 0.15s, color 0.15s; }
+      .card a:hover { color: #065f46; border-bottom-color: #047857; }
+      .card a[href^="http"] { padding-right: 1rem; position: relative; }
+      .card a[href^="http"]::after { content: "↗"; font-size: 0.75em; position: absolute; right: 0; top: 0; opacity: 0.6; }
 
       @media (max-width: 640px) {
         body { padding: 1rem; }
