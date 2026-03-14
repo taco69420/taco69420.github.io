@@ -39,3 +39,6 @@ Overlap your seams like roof shingles—gophers are many things, but they are no
 
 ## Safety Warning
 Wear heavy gloves while cutting mesh; galvanized edges can cause deep lacerations.
+
+## Get the Gear
+<a href="https://amzn.to/4sMH5cR" target="_blank" rel="sponsored noopener">Shop Gopher Mesh & Hardware Cloth on Amazon →</a>

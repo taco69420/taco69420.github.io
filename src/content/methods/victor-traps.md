@@ -39,3 +39,6 @@ If the tunnel feels like a freeway, set a double-team—one trap each direction�
 
 ## Safety Warning
 Keep children and pets away from set traps; the spring force can injure fingers, paws, or curious noses.
+
+## Get the Gear
+<a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon →</a>

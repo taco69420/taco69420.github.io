@@ -39,3 +39,6 @@ Repellent alone is like sending a strongly worded letter—effective only when b
 
 ## Safety Warning
 Follow label directions exactly; over-application can stress desirable plants and contaminate runoff.
+
+## Get the Gear
+<a href="https://amzn.to/3P7QFIM" target="_blank" rel="sponsored noopener">Shop Castor Oil Gopher Repellent on Amazon →</a>

@@ -39,3 +39,6 @@ If your plan is “wing it,” abort mission—gas work rewards precision, not c
 
 ## Safety Warning
 Carbon monoxide is lethal and odorless; never use in enclosed areas, near structures, or without certified safety equipment.
+
+## Get the Gear
+<a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">Shop CO Burrow Treatment Devices on Amazon →</a>

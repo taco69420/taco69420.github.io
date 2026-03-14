@@ -39,3 +39,6 @@ Treat trap placement like parking in a narrow garage—straight alignment saves 
 
 ## Safety Warning
 Never set cinch traps with bare hands near your face; sudden release can cause serious hand or eye injury.
+
+## Get the Gear
+<a href="https://amzn.to/4sMH5cR" target="_blank" rel="sponsored noopener">Shop Cinch Traps on Amazon →</a>
