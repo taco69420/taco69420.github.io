@@ -39,3 +39,9 @@ Replanting before control is complete is just catering—close the kitchen befor
 
 ## Safety Warning
 Avoid placing traps where pets roam freely; use covers or exclusion fencing during active sets.
+
+## Fix It
+Trap the gopher first, then harden the bed so it doesn't happen again.
+- [Install Gopher Mesh Barriers](/methods/gopher-mesh) — the only permanent protection for garden beds
+- [Victor Trap Tunnel Intercept](/methods/victor-traps) — eliminate the active gopher fast
+- [Cinch Trap Mainline Set](/methods/cinch-traps) — solid backup if Victor sets aren't producing

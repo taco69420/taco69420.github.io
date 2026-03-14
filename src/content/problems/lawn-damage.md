@@ -39,3 +39,9 @@ The mound soil is actually good fill — it came out of your yard. Spread it thi
 
 ## Safety Warning
 Collapsed tunnel voids can be deeper than they look. Probe before you walk across repaired areas, especially if kids or elderly people use the lawn.
+
+## Fix It
+Get the gopher out first — lawn repair is pointless while it's still active.
+- [Victor Trap Tunnel Intercept](/methods/victor-traps) — fastest setup for main run captures
+- [Cinch Trap Mainline Set](/methods/cinch-traps) — reliable alternative, great for beginners
+- [Poison Bait Stations](/methods/poison-bait-stations) — good for multi-mound pressure across a large lawn

@@ -39,3 +39,9 @@ Don’t trap vibes, trap evidence—fresh plugs are your fingerprint match.
 
 ## Safety Warning
 Use caution when probing near irrigation lines, cable runs, or shallow utility routes.
+
+## Fix It
+Confirmed it's a gopher? Time to act fast.
+- [Victor Trap Tunnel Intercept](/methods/victor-traps) — the go-to first set once you've found the main run
+- [Cinch Trap Mainline Set](/methods/cinch-traps) — great paired option for higher capture rates
+- Not sure if it's a gopher or a mole? [Use the Gopher vs Mole ID guide →](/gopher-vs-mole)

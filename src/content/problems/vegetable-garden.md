@@ -41,3 +41,9 @@ Chicken wire is useless — gophers chew right through it. Use ½-inch galvanize
 
 ## Safety Warning
 Avoid placing poison bait in or near active vegetable gardens. Soil contamination risk is low but not zero, and secondary poisoning of garden birds and beneficials (owls, hawks) is a real concern. Stick to mechanical traps inside garden perimeters.
+
+## Fix It
+Trap first, then harden the bed. In that order.
+- [Cinch Trap Mainline Set](/methods/cinch-traps) — best choice near garden beds where precise placement matters
+- [Victor Trap Tunnel Intercept](/methods/victor-traps) — fast results when you've found a hot main run
+- [Install Gopher Mesh Barriers](/methods/gopher-mesh) — the only permanent fix; do this after every active gopher is gone

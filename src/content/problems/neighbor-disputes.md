@@ -39,3 +39,7 @@ Nothing unites neighbors like a common enemy with terrible landscaping ethics.
 
 ## Safety Warning
 Do not enter adjacent property or set devices beyond your boundary without explicit permission.
+
+## Fix It
+Once you've got a plan with your neighbor, here's the full toolkit to execute it.
+- [All Gopher Control Methods →](/methods) — step-by-step guides for every approach, from traps to barriers to repellents

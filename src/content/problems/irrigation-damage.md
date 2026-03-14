@@ -40,3 +40,10 @@ Upgrade exposed shallow drip lines to rigid PVC where possible in active gopher 
 
 ## Safety Warning
 Gopher tunnels near irrigation lines create muddy, unstable soil. Watch your footing when digging. If the line runs near an electrical junction or low-voltage landscape lighting wire, hand-dig carefully before using a shovel.
+
+## Fix It
+Repair the line, but eliminate the gopher or you'll be back digging in a month.
+- [Victor Trap Tunnel Intercept](/methods/victor-traps) — fastest way to pull the gopher out of the run
+- [Cinch Trap Mainline Set](/methods/cinch-traps) — set a pair in the main run near the damaged section
+- [Install Gopher Mesh Barriers](/methods/gopher-mesh) — wrap repaired lines in hardware cloth to stop repeat gnawing
+- [Flooding Active Gopher Runs](/methods/flooding-tactics) — use water to map the tunnel network before trapping

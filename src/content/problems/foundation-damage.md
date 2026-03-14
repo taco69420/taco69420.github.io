@@ -39,3 +39,10 @@ Treat your slab edge like a castle wall—patrol the perimeter before the moat s
 
 ## Safety Warning
 Persistent cracking or settlement may indicate broader structural issues; consult a licensed professional promptly.
+
+## Fix It
+Get the gopher out of the perimeter — every day it stays is another foot of tunnel near your foundation.
+- [Victor Trap Tunnel Intercept](/methods/victor-traps) — precise perimeter trapping for foundation runs
+- [Cinch Trap Mainline Set](/methods/cinch-traps) — effective in the tight runs that parallel slab edges
+- [Poison Bait Stations](/methods/poison-bait-stations) — good when tunnel access is limited near hardscape
+- [Castor Oil Soil Repellent](/methods/castor-oil) — use as a perimeter buffer after active gophers are removed
