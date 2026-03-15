@@ -18,7 +18,7 @@ sources:
 ---
 
 ## Quick Answer
-Cinch traps are highly effective when centered in a verified main runway with good trigger clearance. Accurate tunnel selection matters more than bait gimmicks.
+Cinch traps are my backup when Victor sets aren't producing — and sometimes my first pick depending on the tunnel geometry. They're forgiving for beginners and the alignment is easier to nail. What matters most is finding the right run. In my experience, a mediocre trap in a great tunnel beats a great trap in the wrong spot every time.
 
 ## The Gear
 - 2 cinch-style gopher traps
@@ -35,7 +35,7 @@ Cinch traps are highly effective when centered in a verified main runway with go
 5. Recheck daily and reset in a new active run if no sign after 48 hours.
 
 ## Bagger Pro-Tip
-Treat trap placement like parking in a narrow garage—straight alignment saves your whole weekend.
+Straight alignment is everything with cinch traps. I've pulled failed sets where the trap was off by 15 degrees and the gopher just pushed it aside. Treat it like parking in a narrow garage — any angle and you're done. Get it centered, get it level, then cover the light.
 
 ## Safety Warning
 Never set cinch traps with bare hands near your face; sudden release can cause serious hand or eye injury.

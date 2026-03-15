@@ -18,7 +18,7 @@ sources:
 ---
 
 ## Quick Answer
-Victor traps work best when you place two traps directly in the main runway and block light from the opening. If the run is active, you can often get a catch overnight with careful placement.
+Victor traps are my go-to — they're what I started with at 15 and what I still reach for first. Place two traps directly in the main runway facing opposite directions, block the light, and if the run is active you're often looking at a catch overnight.
 
 ## The Gear
 - 2 Victor-style gopher traps
@@ -35,7 +35,7 @@ Victor traps work best when you place two traps directly in the main runway and 
 5. Check in 12-24 hours, reset in a nearby active run if no activity.
 
 ## Bagger Pro-Tip
-If the tunnel feels like a freeway, set a double-team—one trap each direction—because commuters hate surprise audits.
+Always run two traps back-to-back facing opposite directions. I learned this early on — set one trap and the gopher often feels the disturbance and reverses before hitting it. Set two and there's nowhere to go. If the tunnel feels like a freeway, you're in the right spot.
 
 ## Safety Warning
 Keep children and pets away from set traps; the spring force can injure fingers, paws, or curious noses.

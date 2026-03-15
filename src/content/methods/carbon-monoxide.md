@@ -35,7 +35,7 @@ Carbon monoxide treatment can be effective in dense tunnel networks when runs ar
 5. Return after 24-48 hours to check for new mounds and retreat only per label limits.
 
 ## Bagger Pro-Tip
-If your plan is “wing it,” abort mission—gas work rewards precision, not cowboy energy.
+I use this method selectively — it's worth it when you're dealing with a large, established tunnel network that traps keep missing. For a single-gopher situation, it's overkill. Seal every opening you can find before you start, or you're just venting the tunnel to atmosphere. Gas work rewards precision, not cowboy energy.
 
 ## Safety Warning
 Carbon monoxide is lethal and odorless; never use in enclosed areas, near structures, or without certified safety equipment.

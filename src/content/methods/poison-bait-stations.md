@@ -36,7 +36,7 @@ Underground bait stations place zinc phosphide or diphacinone pellets directly i
 5. Flag the location. Check after 3–5 days for new activity. Re-bait once if no take in 7 days, then switch methods.
 
 ## Bagger Pro-Tip
-Zinc phosphide works fast but requires a mask and careful handling — it reacts with moisture and produces toxic gas. Diphacinone is slower (anticoagulant, takes 5–7 days) but is safer to handle and has lower secondary poisoning risk. If you have raptors or cats in the area, go diphacinone.
+My preference is diphacinone over zinc phosphide for most yards. Zinc phosphide is faster but it's more temperamental — I've had it fail in damp soil conditions, and you have to be careful with the off-gassing. Diphacinone is slower (5–7 days) but safer to handle and lower secondary poisoning risk. If you have dogs, cats, or raptors nearby, diphacinone is the only responsible call. I also won't use bait at all on a property where Taco-type dogs are working — the secondary poisoning risk from a bait-killed gopher is real.
 
 ## Safety Warning
 Keep all bait away from children and pets. Never place bait in open boxes or above ground. Secondary poisoning of raptors, dogs, and cats is a real risk with zinc phosphide — if wildlife is present, use traps instead. Check your local regulations; some bait products require a pest control license to purchase.

@@ -18,7 +18,7 @@ sources:
 ---
 
 ## Quick Answer
-Gophers can destroy a garden bed in days by severing roots below the surface. Combining barriers with active trapping gives the fastest recovery and best long-term protection.
+Gophers can destroy a garden bed in days by severing roots below the surface — you'll see healthy plants wilt overnight with no above-ground explanation. I've watched a gopher take out 4 tomato plants in a single week before I figured out where the run was. Combining barriers with active trapping gives the fastest recovery and best long-term protection.
 
 ## The Gear
 - 1/2-inch hardware cloth baskets or bed liner
@@ -35,7 +35,7 @@ Gophers can destroy a garden bed in days by severing roots below the surface. Co
 5. Maintain weekly inspections and repair barrier breaches as needed.
 
 ## Bagger Pro-Tip
-Replanting before control is complete is just catering—close the kitchen before serving dessert.
+Don't replant until you've had 5+ days of zero new mound activity. I made the mistake of replanting too early more than once — the gopher was still down there and I just fed it. Close the kitchen before you serve dessert.
 
 ## Safety Warning
 Avoid placing traps where pets roam freely; use covers or exclusion fencing during active sets.

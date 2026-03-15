@@ -18,7 +18,7 @@ sources:
 ---
 
 ## Quick Answer
-Gophers ruin turf fast — mounds smother grass, subsurface tunnels create soft spots and ankle-breaking voids, and they chew roots from below leaving dead patches with no obvious cause. The fix is two-part: eliminate the gopher, then repair the turf.
+Gophers ruin turf fast — mounds smother grass, subsurface tunnels create soft spots and ankle-breaking voids, and they chew roots from below leaving dead patches with no obvious cause. I've reseeded over active gophers before and watched a whole repair job disappear in three days. The fix is two-part, in strict order: eliminate the gopher first, then repair the turf.
 
 ## The Gear
 - Soil probe
@@ -35,7 +35,7 @@ Gophers ruin turf fast — mounds smother grass, subsurface tunnels create soft 
 5. Monitor for new mounds — a single missed gopher will undo the repair in days.
 
 ## Bagger Pro-Tip
-The mound soil is actually good fill — it came out of your yard. Spread it thin over the grass rather than hauling it away. It'll settle in and the grass will grow through it.
+Don't haul the mound soil away — it came out of your yard and it's perfectly good fill. I used to bag it and drag it to the trash. Wasted effort. Just spread it thin over the surrounding grass with a rake. It settles in and the grass grows right through it within a few weeks.
 
 ## Safety Warning
 Collapsed tunnel voids can be deeper than they look. Probe before you walk across repaired areas, especially if kids or elderly people use the lawn.
