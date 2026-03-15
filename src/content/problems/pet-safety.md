@@ -34,7 +34,7 @@ The two biggest risks to pets in a gopher control program are poison bait and un
 5. If a pet does get into bait or a trap, call your vet immediately. Don't wait for symptoms.
 
 ## Bagger Pro-Tip
-Taco — Mark's dog — is the reason this page exists. A terrier with a nose for gopher tunnels is an asset, but even the best working dog shouldn't have unsupervised access to a live trap set. Flag everything. Always.
+Taco — Mark's dog — is the reason this page exists. A chihuahua with a nose for gopher tunnels is an asset, but even the best working dog shouldn't have unsupervised access to a live trap set. Flag everything. Always.
 
 ## Safety Warning
 Zinc phosphide and strychnine-based baits are extremely dangerous to dogs and can be fatal in small doses. If you use any bait product, store it locked up and treat every bait station as a serious hazard. When in doubt, use mechanical traps only.

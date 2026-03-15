@@ -1,6 +1,6 @@
 ---
 title: "The Taco Method: Using a Dog to Hunt Gophers"
-description: "Deploy a terrier or other high-prey-drive dog as a first-line gopher detection and hunting tool."
+description: "Deploy a high-prey-drive dog as a first-line gopher detection and hunting tool — breed matters less than drive."
 date: 2026-03-14
 tags:
   - biological-control
@@ -13,25 +13,25 @@ cost: low
 sources:
   - label: "UC IPM - Pocket Gophers"
     url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
-  - label: "American Kennel Club - Terrier Group"
-    url: "https://www.akc.org/dog-breeds/groups/terriers/"
+  - label: "American Kennel Club - Toy Group"
+    url: "https://www.akc.org/dog-breeds/groups/toy/"
 ---
 
 ## Quick Answer
-A dog with a strong prey drive — especially terriers — is one of the best gopher detection tools you have. They can locate active tunnels by scent alone, alert on live runs before you'd ever see a mound, and if they're fast enough, catch gophers at the surface. Taco, Mark's dog, has been field-tested across hundreds of yards. This method is real, and it works.
+A dog with a strong prey drive is one of the best gopher detection tools you have. They can locate active tunnels by scent alone, alert on live runs before you'd ever see a mound, and if they're fast enough, catch gophers at the surface. Taco was a chihuahua — not exactly the breed that comes to mind for pest control — but he had the drive and that's what actually matters. This method is real, and it works.
 
 ## The Gear
-- One motivated dog (terriers preferred — Jack Russell, Rat Terrier, Border Terrier, or any mutt with the look in their eye)
+- One motivated dog (terriers are well-known for this, but Taco was a chihuahua — any dog with real prey drive and focus will do)
 - A yard
 - Patience while your dog investigates every single inch of turf at their own pace
 
 ## What Makes a Good Gopher Dog
 - **High prey drive** — the dog should be obsessed with smells and movement, not just curious
-- **Terrier instincts** — bred to go to ground, follow tunnels, and work independently
+- **Terrier instincts help, but aren't required** — Taco was a chihuahua and had all of it naturally; what you're looking for is a dog that works independently and stays locked on a scent
 - **Focus** — a dog that gets distracted by squirrels, people, or its own tail is not going to be useful
 - **Size** — small to medium is ideal. Big dogs can alert but rarely fit the geometry of the work
 
-**Taco's stats:** Small mixed terrier. Extremely high prey drive. Has located active runs the probe couldn't find. Track record includes multiple confirmed catches at tunnel openings and one legendary three-hour alert on a dry hole that ended in a 2-pound gopher. Never doubt the whiskers.
+**Taco's stats:** Chihuahua. Extremely high prey drive. Has located active runs the probe couldn't find. Track record includes multiple confirmed catches at tunnel openings and one legendary three-hour alert on a dry hole that ended in a 2-pound gopher. Never doubt the whiskers.
 
 ## The Process
 1. Let the dog work the yard on a long lead or off-leash in a fenced area. Don't direct them — let the nose take over.
