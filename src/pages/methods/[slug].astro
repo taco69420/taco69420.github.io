@@ -14,6 +14,78 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
+const relatedLinks: Record<string, Array<{label: string, url: string}>> = {
+  'victor-traps': [
+    { label: 'Cinch Trap Mainline Set', url: '/methods/cinch-traps' },
+    { label: 'Quick Start Guide — full field process', url: '/quick-start' },
+    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
+    { label: 'The Armory — gear picks', url: '/traps' },
+  ],
+  'cinch-traps': [
+    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps' },
+    { label: 'Quick Start Guide — full field process', url: '/quick-start' },
+    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
+  ],
+  'gopher-mesh': [
+    { label: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing' },
+    { label: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants' },
+    { label: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep' },
+    { label: 'Stopping Gopher Garden Destruction', url: '/problems/garden-destruction' },
+  ],
+  'flooding-tactics': [
+    { label: 'Victor Trap Tunnel Intercept — follow-up after flooding', url: '/methods/victor-traps' },
+    { label: 'Quick Start Guide — flooding is Step 4', url: '/quick-start' },
+    { label: 'How to Identify Fresh Gopher Mounds', url: '/problems/mound-id' },
+  ],
+  'carbon-monoxide': [
+    { label: 'Hiring a Professional Gopher Trapper', url: '/methods/hiring-a-pro' },
+    { label: 'Victor Trap Tunnel Intercept — safer DIY alternative', url: '/methods/victor-traps' },
+    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
+  ],
+  'poison-bait-stations': [
+    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
+    { label: 'Victor Trap Tunnel Intercept — safer alternative', url: '/methods/victor-traps' },
+    { label: 'Cinch Trap Mainline Set — safer alternative', url: '/methods/cinch-traps' },
+  ],
+  'sonic-stakes': [
+    { label: 'Victor Trap Tunnel Intercept — pair with for real results', url: '/methods/victor-traps' },
+    { label: 'Castor Oil Soil Repellent Program', url: '/methods/castor-oil' },
+    { label: 'Install Gopher Mesh Barriers — permanent fix', url: '/methods/gopher-mesh' },
+  ],
+  'castor-oil': [
+    { label: 'Sonic Repeller Stakes — complementary repellent', url: '/methods/sonic-stakes' },
+    { label: 'Victor Trap Tunnel Intercept — for actual elimination', url: '/methods/victor-traps' },
+    { label: 'Install Gopher Mesh Barriers — permanent fix', url: '/methods/gopher-mesh' },
+  ],
+  'gopher-resistant-plants': [
+    { label: 'Install Gopher Mesh Barriers', url: '/methods/gopher-mesh' },
+    { label: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep' },
+    { label: 'Stopping Gopher Garden Destruction', url: '/problems/garden-destruction' },
+  ],
+  'exclusion-fencing': [
+    { label: 'Install Gopher Mesh Barriers — smaller-scale barrier', url: '/methods/gopher-mesh' },
+    { label: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep' },
+    { label: 'Barn Owl Box Installation — complementary prevention', url: '/methods/barn-owl-box' },
+  ],
+  'barn-owl-box': [
+    { label: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants' },
+    { label: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing' },
+    { label: 'Castor Oil Soil Repellent Program', url: '/methods/castor-oil' },
+  ],
+  'dog-hunting': [
+    { label: 'Quick Start Guide — Taco\'s role in the process', url: '/quick-start' },
+    { label: 'Victor Trap Tunnel Intercept — follow-up after dog finds the run', url: '/methods/victor-traps' },
+    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
+  ],
+  'hiring-a-pro': [
+    { label: 'Carbon Monoxide Burrow Treatment — most advanced DIY', url: '/methods/carbon-monoxide' },
+    { label: 'Victor Trap Tunnel Intercept — DIY first option', url: '/methods/victor-traps' },
+    { label: 'Underground Bait Station — DIY alternative', url: '/methods/poison-bait-stations' },
+  ],
+};
+
+const related = relatedLinks[entry.slug] ?? [];
+
 const siteURL = "https://howtokillgophers.com";
 const pageURL = `${siteURL}/methods/${entry.slug}`;
 
@@ -79,12 +151,11 @@ const breadcrumbSchema = {
     <Content />
   </main>
 
-  <section class="card" style="padding: 1rem 1.5rem;">
-    <h2 style="margin-bottom: 0.5rem;">More Gopher Control</h2>
+  <section class="card" style="border-left: 4px solid #e4e4e7; padding: 1rem 1.5rem;">
+    <h2 style="margin-bottom: 0.75rem; font-size: 1rem;">Also worth reading</h2>
     <ul style="margin-top: 0; padding-left: 1.2rem;">
-      <li><a href="/methods">All gopher control methods</a></li>
-      <li><a href="/traps">Recommended traps & gear</a></li>
-      <li><a href="/">Back to homepage</a></li>
+      {related.map(link => <li><a href={link.url}>{link.label}</a></li>)}
     </ul>
+    <p style="margin: 0.75rem 0 0;"><a href="/methods" style="color: #9ca3af; font-size: 0.85rem;">Browse all 13 methods →</a></p>
   </section>
 </Layout>

@@ -14,6 +14,66 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
+const relatedLinks: Record<string, Array<{label: string, url: string}>> = {
+  'drip-emitter-damage': [
+    { label: 'Gophers Chewing Irrigation Lines', url: '/problems/irrigation-damage' },
+    { label: 'Victor Trap Tunnel Intercept — stop the repeat damage', url: '/methods/victor-traps' },
+    { label: 'Install Gopher Mesh Barriers — protect emitter zones', url: '/methods/gopher-mesh' },
+  ],
+  'foundation-damage': [
+    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps' },
+    { label: 'Flooding Active Gopher Runs — map the tunnel system', url: '/methods/flooding-tactics' },
+    { label: 'Hiring a Professional Gopher Trapper', url: '/methods/hiring-a-pro' },
+  ],
+  'garden-destruction': [
+    { label: 'Install Gopher Mesh Barriers — prevent next time', url: '/methods/gopher-mesh' },
+    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps' },
+    { label: 'Gopher Damage in Vegetable Gardens', url: '/problems/vegetable-garden' },
+  ],
+  'irrigation-damage': [
+    { label: 'Gophers Destroying Drip Emitters', url: '/problems/drip-emitter-damage' },
+    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps' },
+    { label: 'Install Gopher Mesh Barriers — protect irrigation runs', url: '/methods/gopher-mesh' },
+  ],
+  'lawn-damage': [
+    { label: 'How to Identify Fresh Gopher Mounds', url: '/problems/mound-id' },
+    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps' },
+    { label: 'Quick Start Guide', url: '/quick-start' },
+  ],
+  'mound-id': [
+    { label: 'Gopher vs Mole ID Guide', url: '/gopher-vs-mole' },
+    { label: 'Quick Start Guide — once you know you have a gopher', url: '/quick-start' },
+    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps' },
+  ],
+  'neighbor-disputes': [
+    { label: 'Quick Start Guide — share this with your neighbor', url: '/quick-start' },
+    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps' },
+    { label: 'Hiring a Professional Gopher Trapper', url: '/methods/hiring-a-pro' },
+  ],
+  'new-yard-prep': [
+    { label: 'Install Gopher Mesh Barriers', url: '/methods/gopher-mesh' },
+    { label: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing' },
+    { label: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants' },
+  ],
+  'pet-safety': [
+    { label: 'Victor Trap Tunnel Intercept — safest lethal method', url: '/methods/victor-traps' },
+    { label: 'Cinch Trap Mainline Set', url: '/methods/cinch-traps' },
+    { label: 'Underground Bait Station — what NOT to use with dogs', url: '/methods/poison-bait-stations' },
+  ],
+  'tree-shrub-damage': [
+    { label: 'Install Gopher Mesh Barriers — root protection', url: '/methods/gopher-mesh' },
+    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps' },
+    { label: 'Hiring a Professional Gopher Trapper', url: '/methods/hiring-a-pro' },
+  ],
+  'vegetable-garden': [
+    { label: 'Install Gopher Mesh Barriers — only permanent fix', url: '/methods/gopher-mesh' },
+    { label: 'Stopping Gopher Garden Destruction', url: '/problems/garden-destruction' },
+    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps' },
+  ],
+};
+
+const related = relatedLinks[entry.slug] ?? [];
+
 const siteURL = "https://howtokillgophers.com";
 const pageURL = `${siteURL}/problems/${entry.slug}`;
 
@@ -83,12 +143,11 @@ const breadcrumbSchema = {
     <Content />
   </main>
 
-  <section class="card" style="padding: 1rem 1.5rem;">
-    <h2 style="margin-bottom: 0.5rem;">Related Resources</h2>
+  <section class="card" style="border-left: 4px solid #e4e4e7; padding: 1rem 1.5rem;">
+    <h2 style="margin-bottom: 0.75rem; font-size: 1rem;">Also worth reading</h2>
     <ul style="margin-top: 0; padding-left: 1.2rem;">
-      <li><a href="/methods">Browse all gopher control methods</a></li>
-      <li><a href="/traps">Recommended traps & gear</a></li>
-      <li><a href="/">Back to homepage</a></li>
+      {related.map(link => <li><a href={link.url}>{link.label}</a></li>)}
     </ul>
+    <p style="margin: 0.75rem 0 0;"><a href="/problems" style="color: #9ca3af; font-size: 0.85rem;">Browse all 11 problem guides →</a></p>
   </section>
 </Layout>
