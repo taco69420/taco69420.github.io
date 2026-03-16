@@ -1,0 +1,258 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Start Here Quiz — Find the Right Gopher Fix | How To Kill Gophers"
+  description="Answer 3 quick questions and Mark will point you to the right method for your specific situation."
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › Start Here Quiz
+  </nav>
+
+  <header>
+    <h1>Find Your Fix</h1>
+    <p class="subtitle">3 questions. Mark points you to the right method for your situation.</p>
+  </header>
+
+  <main>
+    <div id="quiz">
+
+      <!-- Q1 -->
+      <div class="quiz-step" id="step-1">
+        <div class="quiz-progress"><div class="quiz-progress-bar" style="width: 33%"></div></div>
+        <p class="quiz-label">Question 1 of 3</p>
+        <section class="card">
+          <h2>What are you looking at out there?</h2>
+          <div class="quiz-options">
+            <button class="quiz-option" data-q="q1" data-v="mounds">
+              <strong>Dirt mounds on the surface</strong>
+              <span>Fresh piles of loose soil, fan-shaped or crescent-shaped</span>
+            </button>
+            <button class="quiz-option" data-q="q1" data-v="ridges">
+              <strong>Raised ridges or soft tunnels in the grass</strong>
+              <span>Runways just under the surface you can see or press down with your foot</span>
+            </button>
+            <button class="quiz-option" data-q="q1" data-v="damage">
+              <strong>Destroyed plants, roots, or chewed irrigation</strong>
+              <span>Things dying underground, lines getting cut, garden getting wrecked</span>
+            </button>
+            <button class="quiz-option" data-q="q1" data-v="new">
+              <strong>Nothing yet — I just moved in or I'm starting fresh</strong>
+              <span>No active problem, but I want to set this yard up right</span>
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Q2 -->
+      <div class="quiz-step hidden" id="step-2">
+        <div class="quiz-progress"><div class="quiz-progress-bar" style="width: 66%"></div></div>
+        <p class="quiz-label">Question 2 of 3</p>
+        <section class="card">
+          <h2>How fast do you need this handled?</h2>
+          <div class="quiz-options">
+            <button class="quiz-option" data-q="q2" data-v="urgent">
+              <strong>This weekend — I want results fast</strong>
+              <span>Set traps, do the work, close this out</span>
+            </button>
+            <button class="quiz-option" data-q="q2" data-v="methodical">
+              <strong>I can take a week or two</strong>
+              <span>I'd rather do it right than rush it</span>
+            </button>
+            <button class="quiz-option" data-q="q2" data-v="prevent">
+              <strong>I'm preventing the next one, not reacting to this one</strong>
+              <span>Current problem is handled — I want to keep it that way</span>
+            </button>
+          </div>
+        </section>
+        <button class="quiz-back" id="back-2">← Back</button>
+      </div>
+
+      <!-- Q3 -->
+      <div class="quiz-step hidden" id="step-3">
+        <div class="quiz-progress"><div class="quiz-progress-bar" style="width: 100%"></div></div>
+        <p class="quiz-label">Question 3 of 3</p>
+        <section class="card">
+          <h2>Anything I should know about your yard?</h2>
+          <div class="quiz-options">
+            <button class="quiz-option" data-q="q3" data-v="pets">
+              <strong>Dogs or small kids use this yard</strong>
+              <span>Safety matters — I need methods that won't hurt them</span>
+            </button>
+            <button class="quiz-option" data-q="q3" data-v="open">
+              <strong>No restrictions — use whatever works best</strong>
+              <span>I just want the most effective method available</span>
+            </button>
+            <button class="quiz-option" data-q="q3" data-v="nochemicals">
+              <strong>I'd rather skip poison or chemical bait</strong>
+              <span>Mechanical methods only if there's a good option</span>
+            </button>
+          </div>
+        </section>
+        <button class="quiz-back" id="back-3">← Back</button>
+      </div>
+
+      <!-- Result -->
+      <div class="quiz-step hidden" id="step-result">
+        <div class="quiz-progress"><div class="quiz-progress-bar" style="width: 100%; background: #10b981;"></div></div>
+        <p class="quiz-label">Mark's pick for your situation</p>
+        <section class="card result-card">
+          <p class="result-tag">Recommended</p>
+          <h2 id="result-title"></h2>
+          <p id="result-reason" style="color: #374151;"></p>
+          <a id="result-link" href="#" class="btn" style="margin-top: 1rem;">Go there →</a>
+        </section>
+        <section class="card" id="result-also" style="border-left: 4px solid #e4e4e7;">
+          <h2 style="font-size: 1rem; margin-bottom: 0.75rem;">Also worth reading</h2>
+          <ul id="result-also-list" style="margin: 0; padding-left: 1.2rem;"></ul>
+        </section>
+        <button class="quiz-back" id="back-result">← Start over</button>
+      </div>
+
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .quiz-progress { height: 4px; background: #e4e4e7; border-radius: 2px; margin-bottom: 1.25rem; overflow: hidden; }
+  .quiz-progress-bar { height: 100%; background: #059669; border-radius: 2px; transition: width 0.3s ease; }
+  .quiz-label { font-size: 0.78rem; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+  .quiz-options { display: grid; gap: 0.65rem; margin-top: 1rem; }
+  .quiz-option { display: flex; flex-direction: column; align-items: flex-start; gap: 0.15rem; padding: 0.9rem 1.1rem; background: #fafafa; border: 2px solid #e4e4e7; border-radius: 9px; cursor: pointer; text-align: left; transition: border-color 0.15s, background 0.15s, box-shadow 0.15s; font-family: inherit; width: 100%; }
+  .quiz-option:hover { border-color: #10b981; background: #f0fdf4; box-shadow: 0 2px 8px rgba(16,185,129,0.1); }
+  .quiz-option strong { font-size: 0.95rem; color: #18181b; font-weight: 600; display: block; }
+  .quiz-option span { font-size: 0.83rem; color: #6b7280; display: block; }
+  .quiz-back { background: none; border: none; color: #9ca3af; font-size: 0.85rem; cursor: pointer; padding: 0; margin-top: 0.75rem; font-family: inherit; transition: color 0.15s; }
+  .quiz-back:hover { color: #047857; }
+  .hidden { display: none; }
+  .result-card { border-left: 4px solid #10b981; }
+  .result-tag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #059669; margin-bottom: 0.4rem; }
+</style>
+
+<script is:inline>
+  const answers = {};
+
+  const RESULTS = {
+    'victor-traps': {
+      title: 'Victor Trap Tunnel Intercept',
+      url: '/methods/victor-traps',
+      reason: "You want results fast with no restrictions — Victor-style pinch traps set correctly in the main run are the fastest, most reliable method. Set two back-to-back, block all light after setting, and check in 12 hours.",
+      also: [
+        { title: 'The Quick Start Guide (full field process)', url: '/quick-start' },
+        { title: 'The Armory (gear picks)', url: '/traps' },
+      ]
+    },
+    'cinch-traps': {
+      title: 'Cinch Trap Mainline Set',
+      url: '/methods/cinch-traps',
+      reason: "With pets or kids in the yard, mechanical traps are the right call — no bait, nothing dangerous if a dog digs it up. Cinch traps are just as effective as Victor-style and slightly more enclosed.",
+      also: [
+        { title: 'The Quick Start Guide (full field process)', url: '/quick-start' },
+        { title: 'Victor Traps (alternative)', url: '/methods/victor-traps' },
+      ]
+    },
+    'quick-start': {
+      title: 'The Quick Start Guide',
+      url: '/quick-start',
+      reason: "Since you have time to do it right, start here. It's the full field process — scout, probe, flush, trap — in the exact order Mark runs it. Following the sequence is more reliable than jumping straight to setting traps.",
+      also: [
+        { title: 'Victor Traps', url: '/methods/victor-traps' },
+        { title: 'Cinch Traps', url: '/methods/cinch-traps' },
+      ]
+    },
+    'gopher-mesh': {
+      title: 'Install Gopher Mesh Barriers',
+      url: '/methods/gopher-mesh',
+      reason: "For prevention, physical exclusion is the only thing that actually keeps gophers out long-term. Mesh barriers under planting beds and lawns are the permanent fix — nothing else comes close.",
+      also: [
+        { title: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants' },
+        { title: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing' },
+      ]
+    },
+    'gopher-vs-mole': {
+      title: 'Gopher vs Mole ID Guide',
+      url: '/gopher-vs-mole',
+      reason: "Raised ridges and surface runways are more often moles than gophers — and the fix is completely different. Trapping the wrong animal is wasted time and money. Get the ID right first.",
+      also: [
+        { title: 'Victor Traps (if it turns out to be a gopher)', url: '/methods/victor-traps' },
+        { title: 'Flooding Active Gopher Runs', url: '/methods/flooding-tactics' },
+      ]
+    },
+    'new-yard-prep': {
+      title: 'Gopher-Proofing a New Yard',
+      url: '/problems/new-yard-prep',
+      reason: "Starting fresh is the best time to set this up right. This guide covers what to install before you plant — mesh placement, what to watch for in the first year — so you're preventing damage instead of reacting to it.",
+      also: [
+        { title: 'Gopher Mesh Barriers', url: '/methods/gopher-mesh' },
+        { title: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing' },
+      ]
+    },
+    'garden-destruction': {
+      title: 'Stopping Gopher Garden Destruction',
+      url: '/problems/garden-destruction',
+      reason: "When they're actively destroying plants you need to stop the bleeding fast and trap the problem out. Victor traps in the main run are usually the fastest way to end active garden damage — this guide covers both.",
+      also: [
+        { title: 'Victor Traps', url: '/methods/victor-traps' },
+        { title: 'Gopher Mesh (protect future plantings)', url: '/methods/gopher-mesh' },
+      ]
+    },
+  };
+
+  function getResult() {
+    const { q1, q2, q3 } = answers;
+    if (q1 === 'ridges') return RESULTS['gopher-vs-mole'];
+    if (q1 === 'new') return RESULTS['new-yard-prep'];
+    if (q2 === 'prevent') return RESULTS['gopher-mesh'];
+    if (q1 === 'damage') return RESULTS['garden-destruction'];
+    if (q2 === 'urgent' && q3 === 'pets') return RESULTS['cinch-traps'];
+    if (q2 === 'urgent') return RESULTS['victor-traps'];
+    return RESULTS['quick-start'];
+  }
+
+  function show(id) {
+    document.querySelectorAll('.quiz-step').forEach(el => el.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showResult() {
+    const r = getResult();
+    document.getElementById('result-title').textContent = r.title;
+    document.getElementById('result-reason').textContent = r.reason;
+    const link = document.getElementById('result-link');
+    link.href = r.url;
+    link.textContent = 'Read: ' + r.title + ' →';
+    const alsoList = document.getElementById('result-also-list');
+    alsoList.innerHTML = r.also
+      .map(a => `<li><a href="${a.url}">${a.title}</a></li>`)
+      .join('');
+    show('step-result');
+  }
+
+  document.querySelectorAll('.quiz-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const q = btn.dataset.q;
+      const v = btn.dataset.v;
+      answers[q] = v;
+      if (q === 'q1' && (v === 'ridges' || v === 'new')) {
+        showResult();
+      } else if (q === 'q1') {
+        show('step-2');
+      } else if (q === 'q2' && v === 'prevent') {
+        showResult();
+      } else if (q === 'q2') {
+        show('step-3');
+      } else if (q === 'q3') {
+        showResult();
+      }
+    });
+  });
+
+  document.getElementById('back-2').addEventListener('click', () => show('step-1'));
+  document.getElementById('back-3').addEventListener('click', () => show('step-2'));
+  document.getElementById('back-result').addEventListener('click', () => {
+    Object.keys(answers).forEach(k => delete answers[k]);
+    show('step-1');
+  });
+</script>
