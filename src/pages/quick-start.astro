@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Quick Start Guide: How to Trap Gophers",
+  "description": "Mark the Bagger's exact step-by-step gopher trapping process, field-tested over years with his dog Taco.",
+  "step": [
+    { "@type": "HowToStep", "name": "Scout the yard", "text": "Walk the whole yard first to get a general layout of where gopher activity is. Look for all the mounds before touching anything." },
+    { "@type": "HowToStep", "name": "Open the mounds", "text": "Open up the holes where the actual mounds are." },
+    { "@type": "HowToStep", "name": "Probe for the main run", "text": "Use a probe a few inches out from the mound in a semicircle pattern. You're feeling for the drop — when the probe sinks deeper, you've hit the main run." },
+    { "@type": "HowToStep", "name": "Flush with water", "text": "Put a hose into the hole and flood it. This can flush gophers out toward the surface." },
+    { "@type": "HowToStep", "name": "Set traps", "text": "Set Victor-style pinch traps back-to-back in pairs in the two best spots along the flooded main run. Cover the hole completely — no light must enter the tunnel." }
+  ]
+};
+---
+
+<Layout
+  title="Quick Start Guide — How to Trap Gophers | How To Kill Gophers"
+  description="Mark the Bagger's exact step-by-step gopher trapping process. Scout, probe, flush, and trap — the same method he ran with his dog Taco for years."
+  schemas={[howToSchema]}
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › Quick Start
+  </nav>
+
+  <header>
+    <h1>Quick Start Guide</h1>
+    <p class="subtitle">The exact process I run every time I work a yard.</p>
+  </header>
+
+  <main>
+
+    <section class="card" style="border-left: 4px solid #10b981;">
+      <p style="margin: 0; color: #374151; font-size: 0.95rem;">This is the actual process I used with my dog Taco for years — not a cleaned-up version, not generic advice. Every yard is different, but the sequence below works. I still run it in this exact order every time I work a new gopher problem.</p>
+    </section>
+
+    <section class="card">
+      <h2>Step 1 — Scout the yard</h2>
+      <p>Walk the whole yard first to get a general layout of where gopher activity is. Look for <em>all</em> the mounds before touching anything. Get the full picture first.</p>
+      <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">Rushing straight to the first mound you see is how you miss the bigger picture. Know your battlefield before you start.</p>
+    </section>
+
+    <section class="card">
+      <h2>Step 2 — Open the mounds</h2>
+      <p>Open up the holes where the actual mounds are. This is where Taco would come in — he'd sniff the open holes and occasionally get a lucky catch right there if a gopher was close to the surface.</p>
+      <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">Opening the mound also lets the gopher smell open air, which will trigger it to come investigate and repair — exactly what you want.</p>
+    </section>
+
+    <section class="card">
+      <h2>Step 3 — Probe for the main run</h2>
+      <p>Use a probe to poke around the area, a few inches out from the mound in a semicircle pattern. You're feeling for the drop — when the probe suddenly sinks deeper, you've hit the main tunnel run. <strong>The main run is never directly under the mound.</strong></p>
+      <p>Rebar works fine. A purpose-built probe gives you better feedback and saves your wrist on hard ground.</p>
+      <p style="margin: 0;"><a href="https://amzn.to/4dlMbrU" target="_blank" rel="sponsored noopener" style="color: #6b7280; font-size: 0.875rem;">→ Probe tools on Amazon</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Step 4 — Flush with water</h2>
+      <p>Once the main run is found, put a hose into the hole and flood it. This can flush gophers out toward the surface where they can be caught.</p>
+      <p style="margin: 0; color: #374151; font-size: 0.9rem;"><strong>Note:</strong> Flooding also reaches the deepest chambers where young gophers nest — they live in the deepest part of the system.</p>
+    </section>
+
+    <section class="card">
+      <h2>Step 5 — Set traps if flushing didn't finish the job</h2>
+      <p>If no catch from flushing, set traps. Use steel pinch traps (Victor-style) back-to-back in pairs in the two best spots along the flooded main run.</p>
+      <p style="margin: 0;"><a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener" style="color: #6b7280; font-size: 0.875rem;">→ Victor traps on Amazon</a> &nbsp;·&nbsp; <a href="/methods/victor-traps" style="color: #047857; font-weight: bold;">Full Victor trap guide →</a></p>
+    </section>
+
+    <section style="background: #fffbeb; border: 2px solid #f59e0b; border-radius: 10px; padding: 1.75rem; margin-bottom: 1.5rem;">
+      <h2 style="color: #92400e; margin-top: 0; font-size: 1.15rem;">The Secret — No Light in the Tunnel</h2>
+      <p style="color: #78350f; font-weight: 600; margin-top: 0;">This is the most important part of the whole process, and most people skip it.</p>
+      <p style="color: #374151;">After setting the traps, there must be <strong>no visible light coming through the tunnel from the trap opening.</strong> Cover the hole completely. Block all light.</p>
+      <p style="color: #374151;"><strong>Why it works:</strong> Gophers feel safe when their tunnel system appears intact and dark. If they see light, they know something is wrong and won't approach. But if the tunnel looks normal and dark, they'll come to investigate and repair the damage from the flooding — and that's when they hit the trap.</p>
+      <p style="color: #374151; margin: 0;">Dirt clods, a board, a piece of sod — anything that seals out light. This one step is the difference between a trap that sits there for days doing nothing and one that catches within hours.</p>
+    </section>
+
+    <section class="card" style="border-left: 4px solid #e4e4e7;">
+      <h2 style="font-size: 1.1rem; margin-top: 0;">Go deeper</h2>
+      <p style="margin-bottom: 0.75rem; color: #6b7280; font-size: 0.9rem;">More detail on the gear and methods behind this process:</p>
+      <p style="margin: 0;"><a href="/methods/victor-traps" style="color: #047857; font-weight: bold;">Victor Trap Deep Dive →</a> &nbsp;·&nbsp; <a href="/traps" style="color: #047857; font-weight: bold;">The Armory →</a></p>
+    </section>
+
+  </main>
+</Layout>
