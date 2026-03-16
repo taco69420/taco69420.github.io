@@ -89,8 +89,17 @@ const localBusinessSchema = {
       nav { display: flex; align-items: center; gap: 0.2rem; margin-bottom: 2.5rem; flex-wrap: wrap; padding-bottom: 1.25rem; border-bottom: 2px solid #e8e8eb; row-gap: 0.4rem; }
       .nav-brand { font-weight: 800; font-size: 0.95rem; color: #065f46; text-decoration: none; letter-spacing: -0.025em; margin-right: auto; padding: 0.35rem 0; flex-shrink: 0; }
       .nav-brand:hover { color: #047857; background: none; }
-      nav a:not(.nav-brand) { text-decoration: none; color: #52525b; font-weight: 500; font-size: 0.825rem; padding: 0.3rem 0.6rem; border-radius: 6px; transition: background 0.15s, color 0.15s; }
-      nav a:not(.nav-brand):hover { background: #f0fdf4; color: #047857; }
+      nav > a:not(.nav-brand) { text-decoration: none; color: #52525b; font-weight: 500; font-size: 0.825rem; padding: 0.3rem 0.6rem; border-radius: 6px; transition: background 0.15s, color 0.15s; }
+      nav > a:not(.nav-brand):hover { background: #f0fdf4; color: #047857; }
+      .nav-dropdown { position: relative; }
+      .nav-dropdown-btn { background: none; border: none; cursor: pointer; color: #52525b; font-family: inherit; font-weight: 500; font-size: 0.825rem; padding: 0.3rem 0.6rem; border-radius: 6px; transition: background 0.15s, color 0.15s; display: flex; align-items: center; gap: 0.3rem; }
+      .nav-dropdown-btn::after { content: "▾"; font-size: 0.75em; opacity: 0.55; }
+      .nav-dropdown-btn:hover { background: #f0fdf4; color: #047857; }
+      .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 6px); left: 0; background: white; border: 1px solid #e4e4e7; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); list-style: none; margin: 0; padding: 0.4rem; min-width: 250px; z-index: 100; }
+      .nav-dropdown-menu li a { display: block; padding: 0.4rem 0.75rem; border-radius: 5px; color: #374151; font-size: 0.8rem; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background 0.15s, color 0.15s; border-bottom: none; }
+      .nav-dropdown-menu li a:hover { background: #f0fdf4; color: #047857; border-bottom: none; }
+      .nav-dropdown:hover .nav-dropdown-menu,
+      .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
       .legal-link { color: #047857; text-decoration: none; }
       .legal-link:hover { text-decoration: underline; }
       .breadcrumb { font-size: 0.82rem; color: #9ca3af; margin-bottom: 1.25rem; display: block; }
@@ -115,12 +124,41 @@ const localBusinessSchema = {
     <nav aria-label="Main navigation">
       <a href="/" class="nav-brand">How To Kill Gophers</a>
       <a href="/quick-start">Quick Start</a>
-      <a href="/methods">The Playbook</a>
-      <a href="/problems">Problems</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn">The Playbook</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/methods/victor-traps">Victor Trap Tunnel Intercept</a></li>
+          <li><a href="/methods/cinch-traps">Cinch Trap Mainline Set</a></li>
+          <li><a href="/methods/gopher-mesh">Install Gopher Mesh Barriers</a></li>
+          <li><a href="/methods/flooding-tactics">Flooding Active Gopher Runs</a></li>
+          <li><a href="/methods/carbon-monoxide">Carbon Monoxide Burrow Treatment</a></li>
+          <li><a href="/methods/poison-bait-stations">Underground Bait Station</a></li>
+          <li><a href="/methods/sonic-stakes">Sonic Repeller Stakes</a></li>
+          <li><a href="/methods/castor-oil">Castor Oil Soil Repellent Program</a></li>
+          <li><a href="/methods/gopher-resistant-plants">Gopher-Resistant Plant Selection</a></li>
+          <li><a href="/methods/exclusion-fencing">Exclusion Fencing for Large Properties</a></li>
+          <li><a href="/methods/barn-owl-box">Barn Owl Box Installation</a></li>
+          <li><a href="/methods/dog-hunting">The Taco Method: Using a Dog to Hunt Gophers</a></li>
+          <li><a href="/methods/hiring-a-pro">Hiring a Professional Gopher Trapper</a></li>
+        </ul>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn">Problems</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/problems/drip-emitter-damage">Gophers Destroying Drip Emitters</a></li>
+          <li><a href="/problems/foundation-damage">Managing Gopher Risk Near Foundations</a></li>
+          <li><a href="/problems/garden-destruction">Stopping Gopher Garden Destruction</a></li>
+          <li><a href="/problems/irrigation-damage">Gophers Chewing Irrigation Lines</a></li>
+          <li><a href="/problems/lawn-damage">Gopher Damage to Lawns & Turf</a></li>
+          <li><a href="/problems/mound-id">How to Identify Fresh Gopher Mounds</a></li>
+          <li><a href="/problems/neighbor-disputes">Handling Neighbor Disputes</a></li>
+          <li><a href="/problems/new-yard-prep">Gopher-Proofing a New Yard</a></li>
+          <li><a href="/problems/pet-safety">Keeping Pets Safe</a></li>
+          <li><a href="/problems/tree-shrub-damage">Gopher Damage to Trees & Shrubs</a></li>
+          <li><a href="/problems/vegetable-garden">Gopher Damage in Vegetable Gardens</a></li>
+        </ul>
+      </div>
       <a href="/traps">The Armory</a>
-      <a href="/gopher-vs-mole">Gopher vs Mole</a>
-      <a href="/seasons">Seasons</a>
-      <a href="/faq">FAQ</a>
       <a href="/about">About Mark</a>
     </nav>
 
@@ -131,6 +169,13 @@ const localBusinessSchema = {
         <img src="https://howtokillgophers.com/markwt.jpg" alt="Mark the Bagger" width="56" height="56" style="border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid #e4e4e7;" />
         <span>I'm Mark — I've been trapping gophers since I was 15, starting in my dad's yard in Redlands, CA at $5 a head. My dog Taco was my hunting partner for years. This site is what we learned.
         <a href="/about" class="legal-link" style="margin-left: 0.25rem;">Read the full story →</a></span>
+      </p>
+      <p style="margin-bottom: 0.5rem;">
+        <a href="/gopher-vs-mole" class="legal-link">Gopher vs Mole</a>
+        &nbsp;·&nbsp;
+        <a href="/seasons" class="legal-link">Seasonal Guide</a>
+        &nbsp;·&nbsp;
+        <a href="/faq" class="legal-link">FAQ</a>
       </p>
       <p><strong>Affiliate Disclosure:</strong> I participate in the Amazon Services LLC Associates Program. As an Amazon Associate I earn from qualifying purchases.</p>
       <p style="margin-top: 10px;"><a href="/privacy" class="legal-link">Read the full Privacy Policy & Legal Disclaimers</a></p>

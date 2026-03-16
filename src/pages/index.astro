@@ -4,7 +4,6 @@ import Layout from '../layouts/Layout.astro';
 import RandomLore from '../components/RandomLore.astro';
 
 const methods = await getCollection('methods');
-const problems = await getCollection('problems');
 
 const featuredMethodSlugs = ['victor-traps', 'cinch-traps', 'gopher-mesh'];
 const featuredMethods = featuredMethodSlugs
@@ -103,38 +102,19 @@ const websiteSchema = {
       </p>
     </section>
 
-    <section class="card" id="problems">
-      <h2>Common Gopher Problems</h2>
-      <p style="margin-top: 0; color: #52525b; font-size: 0.95rem;">Start with the damage you're seeing — each guide tells you exactly what to do about it.</p>
-      <div class="problem-grid">
-        {problems.map((problem) => (
-          <a href={`/problems/${problem.slug}`} class="problem-card">
-            <h3>{problem.data.title}</h3>
-            <p>{problem.data.description}</p>
-            <span class="badge" style={`background: ${difficultyColors[problem.data.difficulty]};`}>
-              {problem.data.difficulty}
-            </span>
-          </a>
-        ))}
-      </div>
+    <section class="card" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <p style="margin: 0; color: #52525b;">Dealing with something specific?</p>
+      <a href="/problems" class="btn" style="margin-top: 0;">Browse all 11 problem guides →</a>
     </section>
 
     <section class="quick-links">
-      <a href="/gopher-vs-mole" class="quick-card">
-        <strong>Gopher vs Mole</strong>
-        <p>Same damage, completely different animal. Know before you trap.</p>
-      </a>
-      <a href="/seasons" class="quick-card">
-        <strong>Seasonal Guide</strong>
-        <p>When they're active, why they move, and what to do each season.</p>
-      </a>
       <a href="/traps" class="quick-card">
         <strong>The Armory</strong>
         <p>Mark's go-to traps and gear picks with direct Amazon links.</p>
       </a>
-      <a href="/faq" class="quick-card">
-        <strong>FAQ</strong>
-        <p>Quick answers to the questions Mark gets asked every week.</p>
+      <a href="/quick-start" class="quick-card">
+        <strong>Quick Start</strong>
+        <p>New here? This is exactly how Mark and Taco did it.</p>
       </a>
     </section>
 
@@ -264,44 +244,6 @@ const websiteSchema = {
   .meta-item {
     font-size: 0.8rem;
     color: #71717a;
-  }
-
-  /* Problems */
-  .problem-grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-
-  .problem-card {
-    display: block;
-    padding: 1rem;
-    border: 1px solid #e4e4e7;
-    border-radius: 8px;
-    background: #fafafa;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s, box-shadow 0.15s;
-    border-bottom: none;
-  }
-
-  .problem-card:hover {
-    border-color: #10b981;
-    box-shadow: 0 2px 8px rgba(16,185,129,0.1);
-    color: inherit;
-  }
-
-  .problem-card h3 {
-    margin-top: 0;
-    margin-bottom: 0.4rem;
-    font-size: 1rem;
-    color: #18181b;
-  }
-
-  .problem-card p {
-    font-size: 0.85rem;
-    color: #52525b;
-    margin: 0 0 0.6rem;
   }
 
   /* Quick Links */
