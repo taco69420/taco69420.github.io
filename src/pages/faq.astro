@@ -116,7 +116,8 @@ const faqSchema = {
         links: [
           { href: "/methods/cinch-traps", text: "Cinch Trap Guide" },
           { href: "/methods/victor-traps", text: "Victor Trap Guide" },
-        ]
+        ],
+        amazon: { href: "https://amzn.to/4cIJ64V", text: "→ My pick on Amazon" }
       },
       {
         q: "Do gophers come out above ground?",
@@ -131,7 +132,8 @@ const faqSchema = {
       {
         q: "Do gopher repellers actually work?",
         a: "Sonic repeller stakes can push gophers out of a specific zone but won't eliminate them — they just relocate the problem to another part of your yard. Think of them as a fence, not a fix. Best used as a perimeter buffer while you actively trap the population.",
-        links: [{ href: "/methods/sonic-stakes", text: "Sonic Stakes Guide" }]
+        links: [{ href: "/methods/sonic-stakes", text: "Sonic Stakes Guide" }],
+        amazon: { href: "https://amzn.to/4bKpg8v", text: "→ My pick on Amazon" }
       },
       {
         q: "What time of day are gophers most active?",
@@ -163,11 +165,11 @@ const faqSchema = {
         a: "Main lateral runs are typically 6–18 inches deep. Nesting chambers and food caches can go down 2–6 feet. This is why shallow barriers, surface sprays, and most repellents fail — the gopher is just working below them.",
         links: [{ href: "/methods/gopher-mesh", text: "Gopher Mesh Barrier Guide" }]
       },
-    ].map(({ q, a, links }) => (
+    ].map(({ q, a, links, amazon }) => (
       <section class="card">
         <h2 style="font-size: 1.15rem;">{q}</h2>
-        <p style="margin-bottom: links.length ? '0.75rem' : '0';">{a}</p>
-        {links.length > 0 && (
+        <p style="margin-bottom: (links.length || amazon) ? '0.75rem' : '0';">{a}</p>
+        {(links.length > 0 || amazon) && (
           <p style="margin: 0;">
             {links.map((link, i) => (
               <span>
@@ -175,6 +177,12 @@ const faqSchema = {
                 <a href={link.href} style="color: #047857; font-weight: bold;">{link.text} →</a>
               </span>
             ))}
+            {amazon && (
+              <span>
+                {links.length > 0 && " · "}
+                <a href={amazon.href} target="_blank" rel="sponsored noopener" style="color: #6b7280; font-size: 0.875rem;">{amazon.text}</a>
+              </span>
+            )}
           </p>
         )}
       </section>
