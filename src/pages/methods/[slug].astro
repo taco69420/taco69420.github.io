@@ -137,6 +137,13 @@ const breadcrumbSchema = {
     <p class="subtitle">{entry.data.description}</p>
   </header>
 
+  {entry.data.petRisk === 'high' && (
+    <div style="background: #fef2f2; border: 2px solid #fca5a5; border-left: 5px solid #dc2626; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+      <strong style="color: #991b1b; font-size: 0.95rem;">&#9888; High Pet &amp; Wildlife Risk</strong>
+      <p style="margin: 0.4rem 0 0; color: #7f1d1d; font-size: 0.9rem;">This method poses serious risk to dogs, cats, and wildlife. Keep pets away from treated areas. Read all label warnings before use. If you have pets, consider <a href="/methods/victor-traps" style="color: #991b1b;">Victor traps</a> or <a href="/methods/cinch-traps" style="color: #991b1b;">Cinch traps</a> instead.</p>
+    </div>
+  )}
+
   <section class="card">
     <h2>Quick Stats</h2>
     <ul>
