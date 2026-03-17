@@ -3,13 +3,41 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 
 const methods = await getCollection('methods');
-const sorted = [...methods].sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-const difficultyColors = {
-  easy: '#047857',
-  medium: '#b45309',
-  hard: '#b91c1c',
-};
+const bySlug = Object.fromEntries(methods.map(m => [m.slug, m]));
+
+const groups = [
+  {
+    label: 'Active Removal',
+    description: 'Lethal and hands-on methods for eliminating gophers that are already in your yard.',
+    slugs: ['victor-traps', 'cinch-traps', 'dog-hunting', 'flooding-tactics'],
+  },
+  {
+    label: 'Chemical & Fumigation',
+    description: 'Faster kill methods for larger infestations — higher risk, higher stakes.',
+    slugs: ['carbon-monoxide', 'poison-bait-stations'],
+  },
+  {
+    label: 'Barriers & Prevention',
+    description: 'Stop gophers from getting in. Best installed before planting or during a rebuild.',
+    slugs: ['gopher-mesh', 'exclusion-fencing', 'gopher-resistant-plants', 'barn-owl-box'],
+  },
+  {
+    label: 'Repellents, Deterrents & Pro Help',
+    description: 'Supplementary tools and when to hand it off to someone else.',
+    slugs: ['castor-oil', 'sonic-stakes', 'hiring-a-pro'],
+  },
+];
+
+const difficultyColor = { easy: '#047857', medium: '#b45309', hard: '#b91c1c' };
+const riskColor = { low: '#047857', medium: '#b45309', high: '#b91c1c' };
+const costColor = { low: '#047857', medium: '#b45309', high: '#b91c1c' };
+
+const startPicks = [
+  { slug: 'victor-traps', cta: 'Most reliable first trap →' },
+  { slug: 'cinch-traps', cta: 'Good beginner alternative →' },
+  { slug: 'gopher-mesh', cta: 'Permanent prevention →' },
+];
 ---
 
 <Layout
@@ -21,39 +49,210 @@ const difficultyColors = {
   </nav>
 
   <header>
-    <h1>Gopher Control Methods</h1>
-    <p class="subtitle">Step-by-step tactics for reclaiming your yard from pocket gophers.</p>
+    <h1>The Playbook</h1>
+    <p class="subtitle">13 field-tested methods — from first trap to full perimeter defense.</p>
   </header>
 
   <main>
-    <section class="card">
-      <h2>All Methods</h2>
-      <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-        {sorted.map((method) => (
-          <article style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
-            <h3 style="margin-top: 0;">{method.data.title}</h3>
-            <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 0.5rem;">{method.data.description}</p>
-            <p>
-              <span style={`display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; background: ${difficultyColors[method.data.difficulty]};`}>
-                {method.data.difficulty}
-              </span>
-            </p>
-            <a href={`/methods/${method.slug}`} class="btn">Read the {method.data.title} Guide</a>
-          </article>
-        ))}
+
+    <section class="card start-picks">
+      <h2>Not sure where to start?</h2>
+      <p style="margin-top: 0; color: #52525b; font-size: 0.95rem;">Most people with a fresh gopher problem should start with one of these three.</p>
+      <div class="picks-grid">
+        {startPicks.map(({ slug, cta }) => {
+          const m = bySlug[slug];
+          if (!m) return null;
+          return (
+            <a href={`/methods/${slug}`} class="pick-card">
+              <strong>{m.data.title}</strong>
+              <p>{m.data.description}</p>
+              <span class="pick-cta">{cta}</span>
+            </a>
+          );
+        })}
       </div>
     </section>
 
-    <section class="card">
-      <h2>Passive Defense: Vibration Poles</h2>
-      <p>Think of these as your background firewall. Ultrasonic and vibrational stakes aren't going to eliminate a massive infestation on their own, but they are fantastic deterrents when paired with traps or soil treatments. Place them every 30-45 feet and move them weekly so the gophers don't get used to the pattern.</p>
-      <a href="https://amzn.to/4c7WkYT" class="btn" target="_blank" rel="sponsored noopener">View Top Rated Gopher Repellent Poles on Amazon</a>
+    {groups.map(group => (
+      <section class="method-group">
+        <h2 class="group-label">{group.label}</h2>
+        <p class="group-desc">{group.description}</p>
+        <div class="method-grid">
+          {group.slugs.map(slug => {
+            const m = bySlug[slug];
+            if (!m) return null;
+            const isHighRisk = m.data.petRisk === 'high';
+            return (
+              <article class={`method-card${isHighRisk ? ' method-card-danger' : ''}`}>
+                {isHighRisk && <div class="danger-flag">⚠ High Pet Risk</div>}
+                <h3>{m.data.title}</h3>
+                <p>{m.data.description}</p>
+                <div class="badge-row">
+                  <span class="badge" style={`background: ${difficultyColor[m.data.difficulty]}`}>{m.data.difficulty}</span>
+                  <span class="badge badge-outline" style={`color: ${riskColor[m.data.petRisk]}; border-color: ${riskColor[m.data.petRisk]}`}>
+                    Pet: {m.data.petRisk}
+                  </span>
+                  <span class="badge badge-outline" style={`color: ${costColor[m.data.cost]}; border-color: ${costColor[m.data.cost]}`}>
+                    Cost: {m.data.cost}
+                  </span>
+                </div>
+                <div class="time-to-results">Results: {m.data.timeToResults}</div>
+                <a href={`/methods/${slug}`} class="btn">Read the Guide</a>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    ))}
+
+    <section class="card" style="margin-top: 2rem;">
+      <h2 style="margin-top: 0;">Not a gopher?</h2>
+      <p style="margin-bottom: 0;">Before you trap, make sure you have the right pest. <a href="/gopher-vs-mole">Check the Gopher vs Mole ID guide →</a></p>
     </section>
 
-    <section class="card">
-      <h2>Precision Capture: Live Wire Traps</h2>
-      <p>If you need to relocate the gopher (or if local laws require it), two-door live traps placed directly in the main runway are your best bet. Always wire the trap to a surface stake so the gopher doesn't drag it deeper into the network, and check it every 12 hours.</p>
-      <a href="https://amzn.to/4aPIsjG" class="btn" target="_blank" rel="sponsored noopener">View Live Gopher Traps on Amazon</a>
-    </section>
   </main>
 </Layout>
+
+<style>
+  /* Start picks */
+  .picks-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 1rem;
+  }
+
+  .pick-card {
+    display: flex;
+    flex-direction: column;
+    background: #f0fdf4;
+    border: 1.5px solid #6ee7b7;
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .pick-card:hover {
+    border-color: #10b981;
+    box-shadow: 0 4px 12px rgba(16,185,129,0.12);
+  }
+
+  .pick-card strong {
+    display: block;
+    color: #065f46;
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .pick-card p {
+    font-size: 0.85rem;
+    color: #374151;
+    margin: 0 0 0.75rem;
+    flex: 1;
+  }
+
+  .pick-cta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #047857;
+  }
+
+  /* Method groups */
+  .method-group {
+    margin-bottom: 2.5rem;
+  }
+
+  .group-label {
+    font-size: 1.1rem;
+    color: #065f46;
+    margin-bottom: 0.2rem;
+    border-bottom: 2px solid #e4e4e7;
+    padding-bottom: 0.4rem;
+  }
+
+  .group-desc {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .method-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .method-card {
+    padding: 1.1rem;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .method-card-danger {
+    border-color: #fca5a5;
+    background: #fff9f9;
+  }
+
+  .danger-flag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #991b1b;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  .method-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+    color: #18181b;
+  }
+
+  .method-card p {
+    font-size: 0.85rem;
+    color: #52525b;
+    margin-bottom: 0.75rem;
+    flex: 1;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .badge-outline {
+    background: transparent !important;
+    border: 1.5px solid;
+    font-weight: 600;
+  }
+
+  .time-to-results {
+    font-size: 0.78rem;
+    color: #9ca3af;
+    margin-bottom: 0.75rem;
+  }
+
+  @media (max-width: 640px) {
+    .picks-grid { grid-template-columns: 1fr; }
+    .method-grid { grid-template-columns: 1fr; }
+  }
+</style>
