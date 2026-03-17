@@ -17,6 +17,7 @@ const {
 
 const canonicalURL = Astro.url.href;
 const siteURL = "https://howtokillgophers.com";
+const pathname = Astro.url.pathname;
 const fullOgImage = ogImage.startsWith("http") ? ogImage : siteURL + ogImage;
 
 const localBusinessSchema = {
@@ -95,6 +96,8 @@ const localBusinessSchema = {
       .nav-brand:hover { color: #047857; background: none; }
       nav[aria-label="Main navigation"] > a:not(.nav-brand) { text-decoration: none; color: #52525b; font-weight: 500; font-size: 0.825rem; padding: 0.3rem 0.6rem; border-radius: 6px; transition: background 0.15s, color 0.15s; }
       nav[aria-label="Main navigation"] > a:not(.nav-brand):hover { background: #f0fdf4; color: #047857; }
+      .nav-active { background: #f0fdf4; color: #047857; font-weight: 600; }
+      .nav-dropdown-btn.nav-active { background: #f0fdf4; color: #047857; font-weight: 600; }
       .nav-dropdown { position: relative; }
       .nav-dropdown-btn { background: none; border: none; cursor: pointer; color: #52525b; font-family: inherit; font-weight: 500; font-size: 0.825rem; padding: 0.3rem 0.6rem; border-radius: 6px; transition: background 0.15s, color 0.15s; display: flex; align-items: center; gap: 0.3rem; }
       .nav-dropdown-btn::after { content: "▾"; font-size: 0.75em; opacity: 0.55; }
@@ -127,9 +130,9 @@ const localBusinessSchema = {
   <body>
     <nav aria-label="Main navigation">
       <a href="/" class="nav-brand">How To Kill Gophers</a>
-      <a href="/quick-start">Quick Start</a>
+      <a href="/quick-start" class={pathname === '/quick-start' ? 'nav-active' : ''}>Quick Start</a>
       <div class="nav-dropdown">
-        <button class="nav-dropdown-btn">The Playbook</button>
+        <button class={`nav-dropdown-btn${pathname.startsWith('/methods') ? ' nav-active' : ''}`}>The Playbook</button>
         <ul class="nav-dropdown-menu">
           <li><a href="/methods/victor-traps">Victor Trap Tunnel Intercept</a></li>
           <li><a href="/methods/cinch-traps">Cinch Trap Mainline Set</a></li>
@@ -147,7 +150,7 @@ const localBusinessSchema = {
         </ul>
       </div>
       <div class="nav-dropdown">
-        <button class="nav-dropdown-btn">Problems</button>
+        <button class={`nav-dropdown-btn${pathname.startsWith('/problems') ? ' nav-active' : ''}`}>Problems</button>
         <ul class="nav-dropdown-menu">
           <li><a href="/problems/drip-emitter-damage">Gophers Destroying Drip Emitters</a></li>
           <li><a href="/problems/foundation-damage">Managing Gopher Risk Near Foundations</a></li>
@@ -162,8 +165,8 @@ const localBusinessSchema = {
           <li><a href="/problems/vegetable-garden">Gopher Damage in Vegetable Gardens</a></li>
         </ul>
       </div>
-      <a href="/traps">The Armory</a>
-      <a href="/about">About Mark</a>
+      <a href="/traps" class={pathname === '/traps' ? 'nav-active' : ''}>The Armory</a>
+      <a href="/about" class={pathname === '/about' ? 'nav-active' : ''}>About Mark</a>
     </nav>
 
     <slot />
