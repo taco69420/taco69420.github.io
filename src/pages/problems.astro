@@ -3,13 +3,40 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 
 const problems = await getCollection('problems');
-const sorted = [...problems].sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const bySlug = Object.fromEntries(problems.map(p => [p.slug, p]));
 
-const difficultyColors = {
-  easy: '#047857',
-  medium: '#b45309',
-  hard: '#b91c1c',
-};
+const groups = [
+  {
+    label: 'Identify First',
+    description: 'Before you do anything, confirm what you have. Gophers and moles look similar but need completely different treatment.',
+    slugs: ['mound-id'],
+  },
+  {
+    label: 'Yard & Plants',
+    description: 'The most common damage — lawns, gardens, trees, and shrubs getting destroyed from below.',
+    slugs: ['lawn-damage', 'garden-destruction', 'vegetable-garden', 'tree-shrub-damage'],
+  },
+  {
+    label: 'Infrastructure',
+    description: 'Gophers chewing through irrigation, drip systems, and tunneling near foundations.',
+    slugs: ['irrigation-damage', 'drip-emitter-damage', 'foundation-damage'],
+  },
+  {
+    label: 'Situations',
+    description: 'Special circumstances — new yards, pets in the picture, or a gopher problem that crosses property lines.',
+    slugs: ['new-yard-prep', 'pet-safety', 'neighbor-disputes'],
+  },
+];
+
+const difficultyColor = { easy: '#047857', medium: '#b45309', hard: '#b91c1c' };
+const riskColor = { low: '#047857', medium: '#b45309', high: '#b91c1c' };
+const costColor = { low: '#047857', medium: '#b45309', high: '#b91c1c' };
+
+const startPicks = [
+  { slug: 'mound-id', cta: 'Confirm what you have first →' },
+  { slug: 'lawn-damage', cta: 'Most common complaint →' },
+  { slug: 'vegetable-garden', cta: 'Highest urgency fix →' },
+];
 ---
 
 <Layout
@@ -26,32 +53,188 @@ const difficultyColors = {
   </header>
 
   <main>
+
     <section class="card">
-      <h2>All Problems</h2>
-      <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-        {sorted.map((problem) => (
-          <article style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
-            <h3 style="margin-top: 0;">{problem.data.title}</h3>
-            <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 0.5rem;">{problem.data.description}</p>
-            <p>
-              <span style={`display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; background: ${difficultyColors[problem.data.difficulty]};`}>
-                {problem.data.difficulty}
-              </span>
-            </p>
-            <a href={`/problems/${problem.slug}`} class="btn">Read the {problem.data.title} Guide</a>
-          </article>
-        ))}
+      <h2>Most common starting points</h2>
+      <p style="margin-top: 0; color: #52525b; font-size: 0.95rem;">If you're not sure where to begin, start with one of these.</p>
+      <div class="picks-grid">
+        {startPicks.map(({ slug, cta }) => {
+          const p = bySlug[slug];
+          if (!p) return null;
+          return (
+            <a href={`/problems/${slug}`} class="pick-card">
+              <strong>{p.data.title}</strong>
+              <p>{p.data.description}</p>
+              <span class="pick-cta">{cta}</span>
+            </a>
+          );
+        })}
       </div>
     </section>
 
-    <section class="card" style="padding: 1rem 1.5rem;">
-      <h2 style="margin-bottom: 0.5rem;">Not Sure What You Have?</h2>
-      <p style="margin-top: 0;">Gophers and moles cause similar-looking damage but need completely different treatment. <a href="/gopher-vs-mole" style="color: #047857; font-weight: bold;">Use the Gopher vs Mole ID guide →</a></p>
+    {groups.map(group => (
+      <section class="problem-group">
+        <h2 class="group-label">{group.label}</h2>
+        <p class="group-desc">{group.description}</p>
+        <div class="problem-grid">
+          {group.slugs.map(slug => {
+            const p = bySlug[slug];
+            if (!p) return null;
+            return (
+              <article class="problem-card">
+                <h3>{p.data.title}</h3>
+                <p>{p.data.description}</p>
+                <div class="badge-row">
+                  <span class="badge" style={`background: ${difficultyColor[p.data.difficulty]}`}>{p.data.difficulty}</span>
+                  <span class="badge badge-outline" style={`color: ${riskColor[p.data.petRisk]}; border-color: ${riskColor[p.data.petRisk]}`}>
+                    Pet: {p.data.petRisk}
+                  </span>
+                  <span class="badge badge-outline" style={`color: ${costColor[p.data.cost]}; border-color: ${costColor[p.data.cost]}`}>
+                    Cost: {p.data.cost}
+                  </span>
+                </div>
+                <div class="time-to-results">Results: {p.data.timeToResults}</div>
+                <a href={`/problems/${slug}`} class="btn">Read the Guide</a>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    ))}
+
+    <section class="card" style="margin-top: 2rem;">
+      <h2 style="margin-top: 0;">Know your problem, need a fix?</h2>
+      <p style="margin-bottom: 0;">Head to <a href="/methods">The Playbook</a> for step-by-step control methods, or <a href="/quick-start">Quick Start</a> if you want Mark's exact field process.</p>
     </section>
 
-    <section class="card" style="padding: 1rem 1.5rem;">
-      <h2 style="margin-bottom: 0.5rem;">Ready to Fix It?</h2>
-      <p style="margin-top: 0;">Once you've identified the problem, head to <a href="/methods" style="color: #047857; font-weight: bold;">The Playbook</a> for step-by-step control methods.</p>
-    </section>
   </main>
 </Layout>
+
+<style>
+  .picks-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 1rem;
+  }
+
+  .pick-card {
+    display: flex;
+    flex-direction: column;
+    background: #f0fdf4;
+    border: 1.5px solid #6ee7b7;
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .pick-card:hover {
+    border-color: #10b981;
+    box-shadow: 0 4px 12px rgba(16,185,129,0.12);
+  }
+
+  .pick-card strong {
+    display: block;
+    color: #065f46;
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .pick-card p {
+    font-size: 0.85rem;
+    color: #374151;
+    margin: 0 0 0.75rem;
+    flex: 1;
+  }
+
+  .pick-cta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #047857;
+  }
+
+  .problem-group {
+    margin-bottom: 2.5rem;
+  }
+
+  .group-label {
+    font-size: 1.1rem;
+    color: #065f46;
+    margin-bottom: 0.2rem;
+    border-bottom: 2px solid #e4e4e7;
+    padding-bottom: 0.4rem;
+  }
+
+  .group-desc {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .problem-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .problem-card {
+    padding: 1.1rem;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .problem-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+    color: #18181b;
+  }
+
+  .problem-card p {
+    font-size: 0.85rem;
+    color: #52525b;
+    margin-bottom: 0.75rem;
+    flex: 1;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .badge-outline {
+    background: transparent !important;
+    border: 1.5px solid;
+    font-weight: 600;
+  }
+
+  .time-to-results {
+    font-size: 0.78rem;
+    color: #9ca3af;
+    margin-bottom: 0.75rem;
+  }
+
+  @media (max-width: 640px) {
+    .picks-grid { grid-template-columns: 1fr; }
+    .problem-grid { grid-template-columns: 1fr; }
+  }
+</style>
