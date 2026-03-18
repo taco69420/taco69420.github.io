@@ -27,8 +27,16 @@ Victor traps are my go-to — they're what I started with at 15 and what I still
 - Flag marker
 - Soil to cover opening
 
+<div class="method-product-box">
+  <p class="mpb-label">Recommended Gear</p>
+  <h4 class="mpb-name">Victor Macabee Gopher Trap</h4>
+  <p class="mpb-desc">High-tension wire trap that fires clean and holds up to years of daily use. The go-to for any main-tunnel set — nothing I've tested beats it for speed and reliability.</p>
+  <p class="mpb-best-for"><strong>Best for:</strong> Active main tunnel intercept — place two facing opposite directions for the highest catch rate.</p>
+  <a href="https://amzn.to/4bqUakW" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
+</div>
+
 ## The Process
-1. Find a fresh mound and probe 6-12 inches from the plug side to locate the main tunnel.
+1. Find a fresh mound and use a <a href="https://amzn.to/4dlMbrU" target="_blank" rel="sponsored noopener">gopher probe</a> 6-12 inches from the plug side to locate the main tunnel.
 2. Open the tunnel cleanly and clear enough space so trap jaws move without rubbing dirt.
 3. Set two traps facing opposite directions in the main run and secure them with wire or cord.
 4. Cover the opening to block light and airflow while keeping trap triggers unobstructed.

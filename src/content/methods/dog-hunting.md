@@ -25,6 +25,14 @@ A dog with a strong prey drive is one of the best gopher detection tools you hav
 - A yard
 - Patience while your dog investigates every single inch of turf at their own pace
 
+<div class="method-product-box">
+  <p class="mpb-label">For the Close — After Taco Finds the Run</p>
+  <h4 class="mpb-name">Victor Macabee Gopher Trap</h4>
+  <p class="mpb-desc">The dog does the detection; the trap does the job. Once Taco marks a run, set two Victor traps back-to-back facing opposite directions — the gopher has nowhere to go.</p>
+  <p class="mpb-best-for"><strong>Best for:</strong> Setting in the exact runs your dog has already confirmed are active — no guesswork, no wasted sets.</p>
+  <a href="https://amzn.to/4bqUakW" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
+</div>
+
 ## What Makes a Good Gopher Dog
 - **High prey drive** — the dog should be obsessed with smells and movement, not just curious
 - **Terrier instincts help, but aren't required** — Taco was a chihuahua and had all of it naturally; what you're looking for is a dog that works independently and stays locked on a scent
@@ -37,7 +45,7 @@ A dog with a strong prey drive is one of the best gopher detection tools you hav
 1. Let the dog work the yard on a long lead or off-leash in a fenced area. Don't direct them — let the nose take over.
 2. Watch for sustained interest in a specific area. A dog that circles back to the same spot, digs shallowly, or goes low and sniffs intensely is telling you something.
 3. Mark any spots the dog fixates on. Probe those areas — the dog is usually right.
-4. Set traps in the runs the dog identified. Let them do the scout work; you do the close.
+4. Set <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">traps</a> in the runs the dog identified. Let them do the scout work; you do the close.
 5. If the dog is fast and the gopher surfaces — that's between them. Nature is nature.
 
 ## Bagger Pro-Tip

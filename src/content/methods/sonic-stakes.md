@@ -25,6 +25,14 @@ Sonic stakes send low-frequency vibrations through the soil every 30 seconds or 
 - Rubber mallet
 - Measuring tape
 
+<div class="method-product-box">
+  <p class="mpb-label">Recommended Gear</p>
+  <h4 class="mpb-name">Solar Sonic Repeller Stakes</h4>
+  <p class="mpb-desc">Solar-powered stakes that emit low-frequency vibrations every 30 seconds, irritating gophers and redirecting them away from treated zones. No batteries or power cords required.</p>
+  <p class="mpb-best-for"><strong>Best for:</strong> Protecting a specific garden bed or perimeter edge — most effective when paired with active trapping to address the main population.</p>
+  <a href="https://amzn.to/4sF1zUD" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Sonic Repeller Stakes on Amazon →</a>
+</div>
+
 ## The Process
 1. Identify the active zone by locating fresh mounds and probing for main tunnels.
 2. Drive stakes into the soil every 15–20 feet along the active perimeter — not just in the middle of the yard.
@@ -33,7 +41,7 @@ Sonic stakes send low-frequency vibrations through the soil every 30 seconds or 
 5. If new mounds appear outside the staked zone, the gopher moved — reposition stakes to cut off the new run.
 
 ## Bagger Pro-Tip
-Think of sonic stakes like a fence, not a trap. They redirect gophers, they don't kill them. Use them to protect a specific bed or garden edge while you trap the main population elsewhere.
+Think of sonic stakes like a fence, not a trap. They redirect gophers, they don't kill them. Use them to protect a specific bed or garden edge while you <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">trap</a> the main population elsewhere.
 
 ## Safety Warning
 Completely pet and kid safe. No chemicals, no trigger mechanisms. The only risk is driving the stake into an irrigation line — probe the soil first if you're near drip lines.

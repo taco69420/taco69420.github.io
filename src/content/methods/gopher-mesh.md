@@ -27,8 +27,16 @@ Gopher mesh is one of the most reliable long-term defenses for raised beds and s
 - Shovel
 - Work gloves
 
+<div class="method-product-box">
+  <p class="mpb-label">Recommended Gear</p>
+  <h4 class="mpb-name">1/2-Inch Galvanized Hardware Cloth</h4>
+  <p class="mpb-desc">Heavy-gauge galvanized mesh that keeps gophers out of raised beds and planting areas for years. The 1/2-inch opening is the right spec — smaller openings restrict root growth; larger ones let juveniles through.</p>
+  <p class="mpb-best-for"><strong>Best for:</strong> Lining raised beds, building wire baskets around individual plants, or installing vertical barrier skirts.</p>
+  <a href="https://amzn.to/4b9UG87" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Hardware Cloth on Amazon →</a>
+</div>
+
 ## The Process
-1. Measure the bed footprint and cut mesh panels with at least 6 inches overlap on seams.
+1. Measure the bed footprint and cut <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">hardware cloth panels</a> with at least 6 inches overlap on seams.
 2. Excavate around the bed perimeter 18-24 inches deep for a vertical barrier skirt.
 3. Line the bed bottom with mesh and fold edges upward to connect with side barrier panels.
 4. Secure all seams with ties or staples so no gaps exceed 1/2 inch.

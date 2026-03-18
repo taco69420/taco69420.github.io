@@ -27,8 +27,16 @@ Cinch traps are my backup when Victor sets aren't producing — and sometimes my
 - Safety gloves
 - Dark cover board
 
+<div class="method-product-box">
+  <p class="mpb-label">Recommended Gear</p>
+  <h4 class="mpb-name">Cinch Traps (Scissor-Jaw Style)</h4>
+  <p class="mpb-desc">Forgiving alignment and easy setting make these a solid choice for beginners and veterans alike. Consistent results in straight main tunnels where Victor sets are missing.</p>
+  <p class="mpb-best-for"><strong>Best for:</strong> Open, straight tunnel runs — especially useful when geometry makes Victor-style sets difficult.</p>
+  <a href="https://amzn.to/4sMH5cR" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Cinch Traps on Amazon →</a>
+</div>
+
 ## The Process
-1. Probe around fresh mounds to find the smooth, straight main tunnel path.
+1. Use a <a href="https://amzn.to/4dlMbrU" target="_blank" rel="sponsored noopener">probe rod</a> around fresh mounds to find the smooth, straight main tunnel path.
 2. Open the run and remove loose soil to keep the trigger loop unobstructed.
 3. Set two cinch traps back-to-back to intercept movement in both directions.
 4. Cover the opening with a board or soil cap to reduce light and airflow changes.

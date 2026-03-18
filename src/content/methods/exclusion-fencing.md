@@ -28,11 +28,19 @@ Exclusion fencing is the most labor-intensive method on this site — but on lar
 - Work gloves and eye protection
 - Wire cutters
 
+<div class="method-product-box">
+  <p class="mpb-label">Recommended Gear</p>
+  <h4 class="mpb-name">1/2-Inch Galvanized Hardware Cloth (24–36" Wide)</h4>
+  <p class="mpb-desc">Heavy-gauge galvanized mesh in wider rolls sized for perimeter fencing. The 1/2-inch grid stops gophers; the 24–36 inch width gives you 18+ inches of burial depth plus surface coverage in one unroll.</p>
+  <p class="mpb-best-for"><strong>Best for:</strong> Underground perimeter barriers on large properties, orchards, and yards that border open land with ongoing gopher migration pressure.</p>
+  <a href="https://amzn.to/4b9UG87" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Hardware Cloth on Amazon →</a>
+</div>
+
 ## The Process
 1. Mark your perimeter line. For most residential properties this follows the property edge. For orchards or garden areas, fence just the zone you're protecting.
 2. Dig a trench 18–24 inches deep along the entire perimeter. Gophers rarely tunnel deeper than 12 inches but go to 18+ in soft soil — don't cut corners here.
 3. Install fence posts every 6–8 feet along the trench line.
-4. Unroll hardware cloth and attach it to the posts so it extends from the surface down to the bottom of the trench. The bottom 6 inches should be bent outward at a 90-degree angle (like an L) away from the protected area — this stops gophers from tunneling under the barrier.
+4. Unroll <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">hardware cloth</a> and attach it to the posts so it extends from the surface down to the bottom of the trench. The bottom 6 inches should be bent outward at a 90-degree angle (like an L) away from the protected area — this stops gophers from tunneling under the barrier.
 5. Backfill the trench and tamp firmly. Check for gaps at corners and overlap sections by at least 6 inches.
 6. Inspect the fence line annually for corrosion, settlement, or breaches.
 

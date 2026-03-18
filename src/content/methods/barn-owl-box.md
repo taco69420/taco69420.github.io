@@ -26,8 +26,16 @@ A single barn owl family eats 1,000+ rodents per year. Installing a nesting box 
 - Lag bolts and drill
 - Predator guard (metal baffle for the post)
 
+<div class="method-product-box">
+  <p class="mpb-label">Recommended Gear</p>
+  <h4 class="mpb-name">Barn Owl Nesting Box</h4>
+  <p class="mpb-desc">Pre-built nesting box designed to the correct interior dimensions barn owls need. Skips the DIY plywood math, stays weatherproof longer, and gets installed faster so owls can start scouting sooner.</p>
+  <p class="mpb-best-for"><strong>Best for:</strong> Properties with open hunting ground — fields, orchards, large lawns — where owls have room to patrol regularly at night.</p>
+  <a href="https://amzn.to/4sKmKFc" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Barn Owl Nesting Boxes on Amazon →</a>
+</div>
+
 ## The Process
-1. Mount the box 12–16 feet off the ground — higher is better. Face the opening away from prevailing wind and direct afternoon sun.
+1. Mount the <a href="https://amzn.to/4sKmKFc" target="_blank" rel="sponsored noopener">nesting box</a> 12–16 feet off the ground — higher is better. Face the opening away from prevailing wind and direct afternoon sun.
 2. Install a predator guard on the post so raccoons and cats can't reach the box.
 3. Place the box near open hunting ground — a field edge, orchard row, or large lawn. Owls won't hunt dense brush.
 4. Leave the box completely alone for the first season. Human disturbance during nesting will cause abandonment.

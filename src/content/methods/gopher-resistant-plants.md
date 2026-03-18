@@ -23,6 +23,14 @@ Gophers avoid plants with strong-smelling roots, toxic compounds, or fibrous roo
 ## The Gear
 No special gear required — just smart plant choices.
 
+<div class="method-product-box">
+  <p class="mpb-label">Protecting High-Value Plants</p>
+  <h4 class="mpb-name">1/2-Inch Galvanized Hardware Cloth</h4>
+  <p class="mpb-desc">When gopher-resistant plants aren't an option — young fruit trees, established roses, root vegetables — hardware cloth wire baskets give them physical protection gophers can't chew through.</p>
+  <p class="mpb-best-for"><strong>Best for:</strong> Building wire baskets around individual high-value plants or lining raised beds before planting.</p>
+  <a href="https://amzn.to/4b9UG87" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Hardware Cloth on Amazon →</a>
+</div>
+
 ## Gopher-Resistant Plants Worth Knowing
 
 **Good choices for California yards:**
@@ -44,7 +52,7 @@ No special gear required — just smart plant choices.
 
 ## The Process
 1. Walk your yard and identify which plants are taking repeated gopher damage.
-2. For high-value plants you can't replace (mature fruit trees, established roses), shift to hardware cloth barriers rather than hoping gophers will leave them alone.
+2. For high-value plants you can't replace (mature fruit trees, established roses), shift to <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">hardware cloth barriers</a> rather than hoping gophers will leave them alone.
 3. When replanting damaged areas, choose from the resistant list above where possible.
 4. Use resistant plants as a border around garden beds — a ring of lavender or rosemary won't stop a gopher but it reduces entry points.
 5. Combine plant selection with active trapping in any zone where you've had consistent pressure.
