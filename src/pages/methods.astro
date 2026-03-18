@@ -38,11 +38,23 @@ const startPicks = [
   { slug: 'cinch-traps', cta: 'Good beginner alternative →' },
   { slug: 'gopher-mesh', cta: 'Permanent prevention →' },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is the most effective gopher control method?", "acceptedAnswer": { "@type": "Answer", "text": "Mechanical trapping — either Victor (Macabee) or Cinch-style traps — is the most reliable method for active infestations. Traps work directly in the main tunnel, require no chemicals, and give immediate results." } },
+    { "@type": "Question", "name": "Do gopher repellents actually work?", "acceptedAnswer": { "@type": "Answer", "text": "Repellents like castor oil and sonic stakes can discourage gophers at the perimeter but won't stop an active infestation or a breeding surge. Use them to hold ground after trapping, not as a primary fix." } },
+    { "@type": "Question", "name": "What is the difference between Victor traps and Cinch traps?", "acceptedAnswer": { "@type": "Answer", "text": "Both are main-run mechanical traps. Victor traps use a wire pinch mechanism and are the classic Macabee style. Cinch traps use a scissor-jaw design that many find easier to set and less prone to misfiring." } },
+    { "@type": "Question", "name": "How long does gopher control take?", "acceptedAnswer": { "@type": "Answer", "text": "A single gopher can be caught within 24–48 hours with a properly placed trap. If you're dealing with multiple gophers or a yard-wide infestation, plan for 1–3 weeks of active trapping to clear the population." } },
+  ]
+};
 ---
 
 <Layout
   title="Gopher Control Methods & Tactics | Mark The Bagger"
   description="Field-tested gopher control methods from easy repellents to advanced burrow fumigation. Mark the Bagger's step-by-step playbook for eliminating gophers from your yard."
+  schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › Gopher Control Methods
@@ -108,6 +120,28 @@ const startPicks = [
     <section class="card" style="margin-top: 2rem;">
       <h2 style="margin-top: 0;">Not a gopher?</h2>
       <p style="margin-bottom: 0;">Before you trap, make sure you have the right pest. <a href="/gopher-vs-mole">Check the Gopher vs Mole ID guide →</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What is the most effective gopher control method?</summary>
+          <p>Mechanical trapping — either Victor (Macabee) or Cinch-style traps — is the most reliable method for active infestations. Traps work directly in the main tunnel, require no chemicals, and give immediate results. See the <a href="/quick-start">Quick Start guide</a> for the exact process.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do gopher repellents actually work?</summary>
+          <p>Repellents like castor oil and sonic stakes can discourage gophers at the perimeter but won't stop an active infestation or a breeding surge. Use them to hold ground after trapping, not as a primary fix.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between Victor traps and Cinch traps?</summary>
+          <p>Both are main-run mechanical traps. Victor traps use a wire pinch mechanism and are the classic Macabee style. Cinch traps use a scissor-jaw design that many find easier to set and less prone to misfiring.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does gopher control take?</summary>
+          <p>A single gopher can be caught within 24–48 hours with a properly placed trap. If you're dealing with multiple gophers or a yard-wide infestation, plan for 1–3 weeks of active trapping to clear the population.</p>
+        </details>
+      </div>
     </section>
 
   </main>

@@ -37,11 +37,23 @@ const startPicks = [
   { slug: 'lawn-damage', cta: 'Most common complaint →' },
   { slug: 'vegetable-garden', cta: 'Highest urgency fix →' },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How do I know if gophers are damaging my irrigation lines?", "acceptedAnswer": { "@type": "Answer", "text": "Look for wet spots with no surface watering source, dry dead zones despite irrigation running, or low pressure in specific zones. Pull up emitters near the damage — chew marks on the line or cut drip tubing confirms gophers." } },
+    { "@type": "Question", "name": "Can gophers cause foundation damage?", "acceptedAnswer": { "@type": "Answer", "text": "Direct structural damage is rare, but tunneling near footings can cause soil subsidence and settlement over time. The bigger risk is undermined slabs, retaining walls, or landscaped slopes where soil movement matters." } },
+    { "@type": "Question", "name": "How do I protect a vegetable garden from gophers?", "acceptedAnswer": { "@type": "Answer", "text": "Underground gopher mesh (hardware cloth, minimum half-inch opening) installed at 12–18 inches depth under beds is the most permanent solution. Above-ground fencing alone won't help since gophers enter from below." } },
+    { "@type": "Question", "name": "How long does it take to see results after I start trapping?", "acceptedAnswer": { "@type": "Answer", "text": "With proper trap placement in the main run, catches typically happen within 24–48 hours. No new mounds for 5–7 consecutive days means the gopher is gone." } },
+  ]
+};
 ---
 
 <Layout
   title="Common Gopher Problems & How To Fix Them | How To Kill Gophers"
   description="Identify and solve common gopher damage — from destroyed lawns and chewed irrigation lines to foundation risk and vegetable garden destruction."
+  schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › Gopher Problems
@@ -105,6 +117,28 @@ const startPicks = [
     <section class="card" style="margin-top: 2rem;">
       <h2 style="margin-top: 0;">Know your problem, need a fix?</h2>
       <p style="margin-bottom: 0;">Head to <a href="/methods">The Playbook</a> for step-by-step control methods, or <a href="/quick-start">Quick Start</a> if you want Mark's exact field process.</p>
+    </section>
+
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>How do I know if gophers are damaging my irrigation lines?</summary>
+          <p>Look for wet spots with no surface watering source, dry dead zones despite irrigation running, or low pressure in specific zones. Pull up emitters near the damage — chew marks on the line or cut drip tubing confirms gophers.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can gophers cause foundation damage?</summary>
+          <p>Direct structural damage is rare, but tunneling near footings can cause soil subsidence and settlement over time. The bigger risk is undermined slabs, retaining walls, or landscaped slopes where soil movement matters.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I protect a vegetable garden from gophers?</summary>
+          <p>Underground gopher mesh (hardware cloth, minimum ½-inch opening) installed at 12–18 inches depth under beds is the most permanent solution. Above-ground fencing alone won't help since gophers enter entirely from below.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does it take to see results after I start trapping?</summary>
+          <p>With proper trap placement in the main run, catches typically happen within 24–48 hours. No new mounds for 5–7 consecutive days means the gopher is gone.</p>
+        </details>
+      </div>
     </section>
 
   </main>

@@ -19,12 +19,23 @@ const articleSchema = {
   "datePublished": "2026-03-11",
   "url": "https://howtokillgophers.com/gopher-vs-mole"
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How do I identify a gopher mound?", "acceptedAnswer": { "@type": "Answer", "text": "Look for a crescent or fan-shaped mound with a plugged hole off to one side — that's a gopher. A symmetrical volcano shape with a hole dead center is a mole. Get this right before treating anything, since gopher and mole traps are not interchangeable." } },
+    { "@type": "Question", "name": "What is the difference between a gopher and a mole?", "acceptedAnswer": { "@type": "Answer", "text": "Gophers are herbivores that eat roots, bulbs, and tubers — they actively destroy plants from below. Moles are insectivores that hunt grubs and worms; they cause surface tunnel ridges but don't eat your plants." } },
+    { "@type": "Question", "name": "How deep do gophers dig compared to moles?", "acceptedAnswer": { "@type": "Answer", "text": "Gopher main runs go 6–18 inches deep. Mole feeding tunnels are only 2–5 inches below the surface — you can often feel the raised ridges through the ground with your foot." } },
+    { "@type": "Question", "name": "Why are there raised ridges running across my lawn?", "acceptedAnswer": { "@type": "Answer", "text": "Raised surface ridges are mole tunnels, not gopher tunnels. Gophers work deep and never leave surface trails. If you can feel a tunnel ridge underfoot, it's a mole." } },
+  ]
+};
 ---
 
 <Layout
   title="Gopher vs Mole: How To Tell Which One Is Destroying Your Yard | How To Kill Gophers"
   description="Crescent mound with a plugged hole? Gopher. Volcano mound with a center hole? Mole. Learn how to tell them apart and why it matters for treatment."
-  schemas={[articleSchema]}
+  schemas={[articleSchema, faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › Gopher vs Mole
@@ -112,6 +123,28 @@ const articleSchema = {
         </div>
       </div>
       <p style="margin-bottom: 0;"><a href="/methods" style="color: #047857; font-weight: bold;">Browse all gopher control methods →</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>How do I identify a gopher mound?</summary>
+          <p>Look for a crescent or fan-shaped mound with a plugged hole off to one side — that's a gopher. A symmetrical volcano shape with a hole dead center is a mole. Get this right before treating anything, since gopher and mole traps are not interchangeable.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between a gopher and a mole?</summary>
+          <p>Gophers are herbivores that eat roots, bulbs, and tubers — they actively destroy plants from below. Moles are insectivores that hunt grubs and worms; they cause surface tunnel ridges but don't eat your plants. Setting gopher bait in a mole tunnel does nothing.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How deep do gophers dig compared to moles?</summary>
+          <p>Gopher main runs go 6–18 inches deep. Mole feeding tunnels are only 2–5 inches below the surface — you can often feel the raised ridges through the ground with your foot. Probe depth is a reliable way to confirm which animal you have.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Why are there raised ridges running across my lawn?</summary>
+          <p>Raised surface ridges are mole feeding tunnels, not gopher tunnels. Gophers work deep and never leave surface trails. If you can feel a tunnel ridge underfoot, it's a mole every time.</p>
+        </details>
+      </div>
     </section>
 
   </main>

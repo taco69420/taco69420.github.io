@@ -1,6 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Why isn't my gopher trap catching anything?", "acceptedAnswer": { "@type": "Answer", "text": "The most common reason is light entering the tunnel from the trap opening. Gophers sense the disruption and won't approach a trap that lets in daylight. Cover the hole completely with a dirt clod, board, or piece of sod." } },
+    { "@type": "Question", "name": "How do I find the gopher's main tunnel?", "acceptedAnswer": { "@type": "Answer", "text": "Probe in a semicircle 3–4 inches out from the mound edge. When the probe drops suddenly, you've found the main run. The main tunnel is never directly under the mound — it runs alongside it." } },
+    { "@type": "Question", "name": "Should I flood the burrow before trapping?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — flushing with water softens the soil, can drive gophers toward the surface, and reaches deep nesting chambers. Set traps immediately after flooding while the gopher is agitated and moving to repair the damage." } },
+    { "@type": "Question", "name": "How many traps should I set at once?", "acceptedAnswer": { "@type": "Answer", "text": "Set two traps back-to-back in the same main run section, facing in opposite directions. Two traps cover both directions of travel and double your chances of a quick catch." } },
+  ]
+};
+
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
@@ -19,7 +30,7 @@ const howToSchema = {
 <Layout
   title="Quick Start Guide — How to Trap Gophers | How To Kill Gophers"
   description="Mark the Bagger's exact step-by-step gopher trapping process. Scout, probe, flush, and trap — the same method he ran with his dog Taco for years."
-  schemas={[howToSchema]}
+  schemas={[howToSchema, faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › Quick Start
@@ -79,6 +90,28 @@ const howToSchema = {
       <h2 style="font-size: 1.1rem; margin-top: 0;">Go deeper</h2>
       <p style="margin-bottom: 0.75rem; color: #6b7280; font-size: 0.9rem;">More detail on the gear and methods behind this process:</p>
       <p style="margin: 0;"><a href="/methods/victor-traps" style="color: #047857; font-weight: bold;">Victor Trap Deep Dive →</a> &nbsp;·&nbsp; <a href="/traps" style="color: #047857; font-weight: bold;">The Armory →</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Why isn't my gopher trap catching anything?</summary>
+          <p>The most common reason is light entering the tunnel from the trap opening. Gophers sense the disruption and won't approach a trap that lets in daylight. Cover the hole completely with a dirt clod, board, or piece of sod — this single step is the difference between a trap that sits for days and one that catches within hours.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I find the gopher's main tunnel?</summary>
+          <p>Probe in a semicircle 3–4 inches out from the mound edge. When the probe drops suddenly deeper, you've found the main run. The main tunnel is never directly under the mound — it runs alongside it. Rebar works fine for probing; a purpose-built probe just has better ergonomics.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Should I flood the burrow before trapping?</summary>
+          <p>Yes — flushing with water softens the soil, can drive gophers toward the surface, and reaches deep nesting chambers. Set traps immediately after flooding while the gopher is agitated and moving to repair the damage.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How many traps should I set at once?</summary>
+          <p>Set two traps back-to-back in the same main run section, facing in opposite directions. Two traps cover both directions of travel and double your chances of a quick catch.</p>
+        </details>
+      </div>
     </section>
 
   </main>

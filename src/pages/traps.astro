@@ -1,10 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is the best gopher trap?", "acceptedAnswer": { "@type": "Answer", "text": "Victor-style high-tension wire traps (Macabee pattern) are the most reliable for main tunnel intercept work. They're inexpensive, durable, and catch consistently when placed correctly in the main run." } },
+    { "@type": "Question", "name": "Do I need bait on a gopher trap?", "acceptedAnswer": { "@type": "Answer", "text": "Bait isn't required, but a small dab of peanut butter behind the trigger plate increases commitment — the gopher pauses to investigate instead of pushing past the trigger without firing it." } },
+    { "@type": "Question", "name": "When should I use gopher gassers instead of traps?", "acceptedAnswer": { "@type": "Answer", "text": "Gassers work best when you can't locate the active run in a deep, branching tunnel network. Seal every exit hole before lighting one, or you'll just fumigate your lawn for no effect." } },
+    { "@type": "Question", "name": "Do I need a special probe, or can I use rebar?", "acceptedAnswer": { "@type": "Answer", "text": "Rebar from any hardware store does the exact same job as a purpose-built probe. A purpose-built probe just has better ergonomics and handle grip for longer sessions, but the technique is identical." } },
+  ]
+};
 ---
 
 <Layout
   title="Best Gopher Traps & Gear Reviews | Mark The Bagger"
   description="Mark the Bagger’s field-tested gopher trap and gear picks. High-tension wire traps, gopher gassers, and the techniques to use them effectively."
+  schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › Gopher Traps & Gear
@@ -56,6 +68,28 @@ import Layout from '../layouts/Layout.astro';
         <li><a href="/methods/victor-traps">Victor Trap Tunnel Intercept guide</a></li>
         <li><a href="/">Back to homepage</a></li>
       </ul>
+    </section>
+
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What is the best gopher trap?</summary>
+          <p>Victor-style high-tension wire traps (Macabee pattern) are the most reliable for main tunnel intercept work. They're inexpensive, durable, and catch consistently when placed correctly in the main run.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need bait on a gopher trap?</summary>
+          <p>Bait isn't required, but a small dab of peanut butter behind the trigger plate increases commitment — the gopher pauses to investigate instead of pushing past the trigger without firing it.</p>
+        </details>
+        <details class="faq-item">
+          <summary>When should I use gopher gassers instead of traps?</summary>
+          <p>Gassers work best when you can't locate the active run in a deep, branching tunnel network. Seal every exit hole before lighting one, or you'll just fumigate your lawn for no effect. See the <a href="/methods/carbon-monoxide">Carbon Monoxide Burrow Treatment guide</a> for full instructions.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need a special probe, or can I use rebar?</summary>
+          <p>Rebar from any hardware store does the exact same job as a purpose-built probe. A purpose-built probe just has better ergonomics and handle grip for longer sessions, but the technique is identical.</p>
+        </details>
+      </div>
     </section>
   </main>
 </Layout>

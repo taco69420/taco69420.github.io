@@ -1,10 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "When is the best time to trap gophers?", "acceptedAnswer": { "@type": "Answer", "text": "Spring (February–May) is peak season — gophers are breeding hard and expanding territory fast. Fall (September–November) is the second major activity window as they cache food for winter. Both surges are your best trapping opportunities of the year." } },
+    { "@type": "Question", "name": "Are gophers active year-round?", "acceptedAnswer": { "@type": "Answer", "text": "In Southern California, yes — gophers never fully stop. They slow down in winter and go deeper in summer heat, but activity continues throughout the year. In colder climates they reduce significantly in winter but do not hibernate." } },
+    { "@type": "Question", "name": "Why do I see so many gopher mounds in spring?", "acceptedAnswer": { "@type": "Answer", "text": "Spring is peak breeding season. A single female can produce 2–3 litters of 5–6 pups between February and May. New tunnels go in fast and mounds can multiply overnight during this window." } },
+    { "@type": "Question", "name": "When is the best time to install gopher mesh or barriers?", "acceptedAnswer": { "@type": "Answer", "text": "Winter (December–January) is ideal for barrier installation — gopher activity is at its lowest and you can get infrastructure in place before the spring breeding surge begins in February." } },
+  ]
+};
 ---
 
 <Layout
   title="Seasonal Gopher Activity Guide | Mark The Bagger"
   description="Know exactly when gophers are most active and what to do about it. Mark the Bagger's season-by-season field guide for gopher control in Southern California."
+  schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › Seasonal Guide
@@ -108,6 +120,28 @@ import Layout from '../layouts/Layout.astro';
     <section class="card" style="padding: 1rem 1.5rem;">
       <h2 style="margin-bottom: 0.5rem;">Ready to Act?</h2>
       <p style="margin-top: 0;">Head to <a href="/methods" style="color: #047857; font-weight: bold;">The Playbook</a> for step-by-step control methods, or check <a href="/problems" style="color: #047857; font-weight: bold;">Common Problems</a> to identify your specific damage.</p>
+    </section>
+
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>When is the best time to trap gophers?</summary>
+          <p>Spring (February–May) is peak season — gophers are breeding hard and expanding territory fast. Fall (September–November) is the second major activity window as they cache food for winter. Hit both surges hard and you can stay ahead of the problem.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are gophers active year-round?</summary>
+          <p>In Southern California, yes — gophers never fully stop. They slow down in winter and go deeper in summer heat, but activity continues throughout the year. In colder climates they reduce significantly in winter but do not hibernate.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Why do I see so many gopher mounds in spring?</summary>
+          <p>Spring is peak breeding season. A single female can produce 2–3 litters of 5–6 pups between February and May. New tunnels go in fast and mounds can multiply overnight during this window — which is exactly why it's the most important time to be trapping.</p>
+        </details>
+        <details class="faq-item">
+          <summary>When is the best time to install gopher mesh or barriers?</summary>
+          <p>Winter (December–January) is ideal — gopher activity is at its lowest and you can get infrastructure in place before the spring breeding surge begins in February. Two hours of mesh installation in January is worth ten hours of emergency trapping in March.</p>
+        </details>
+      </div>
     </section>
 
   </main>

@@ -28,12 +28,23 @@ const websiteSchema = {
     "url": "https://howtokillgophers.com/about"
   }
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "When is the best time to trap gophers?", "acceptedAnswer": { "@type": "Answer", "text": "Spring (February–May) and fall (September–November) are peak activity windows when trapping is most productive. During these surges, gophers are breeding and caching food aggressively and fresh mounds appear daily." } },
+    { "@type": "Question", "name": "How deep do gophers dig?", "acceptedAnswer": { "@type": "Answer", "text": "Gopher main tunnel runs are typically 6–18 inches underground. Nesting chambers and food storage can go 3–6 feet deep in established systems." } },
+    { "@type": "Question", "name": "How do I identify a gopher mound?", "acceptedAnswer": { "@type": "Answer", "text": "A gopher mound is crescent or fan-shaped with a plugged hole off to one side. If the mound is a symmetrical volcano with a center hole, you have a mole — which requires completely different treatment." } },
+    { "@type": "Question", "name": "How long does it take to get rid of gophers?", "acceptedAnswer": { "@type": "Answer", "text": "A single gopher can typically be caught within 24–48 hours with a properly placed trap in the main tunnel run. Complete elimination depends on how many gophers are present and whether more are moving in from neighboring yards." } },
+  ]
+};
 ---
 
 <Layout
   title="How To Kill Gophers | Mark The Bagger"
   description="Expert gopher trapping advice and gear reviews from Mark the Bagger. Humane and lethal methods that actually work — field-tested in Redlands, CA since 2022."
-  schemas={[websiteSchema]}
+  schemas={[websiteSchema, faqSchema]}
 >
 
   <header class="hero">
@@ -124,6 +135,28 @@ const websiteSchema = {
     </section>
 
     <RandomLore />
+
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>When is the best time to trap gophers?</summary>
+          <p>Spring (February–May) and fall (September–November) are the two peak activity windows. During spring, gophers are breeding hard and expanding territory fast — fresh mounds appear daily. Fall is the second major surge as they cache food for winter. Hit both windows hard and you stay ahead of the problem.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How deep do gophers dig?</summary>
+          <p>Main tunnel runs are 6–18 inches underground. Nesting chambers and food storage can go 3–6 feet deep in established systems. In summer, gophers go even deeper to escape heat — sometimes 3–4 feet below the surface.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I identify a gopher mound?</summary>
+          <p>A gopher mound is crescent or fan-shaped with a plugged hole off to one side. If the mound is a symmetrical volcano with a center hole, you have a mole — which requires completely different treatment. See the <a href="/gopher-vs-mole">Gopher vs Mole ID guide</a> for a full comparison.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does it take to get rid of gophers?</summary>
+          <p>A single gopher can typically be caught within 24–48 hours with a properly placed trap in the main tunnel run. Complete elimination depends on how many gophers are present and whether new ones are migrating in from neighboring yards. No new mounds for 5–7 consecutive days means the gopher is gone.</p>
+        </details>
+      </div>
+    </section>
 
   </main>
 </Layout>
