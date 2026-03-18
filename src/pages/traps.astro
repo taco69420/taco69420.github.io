@@ -15,7 +15,7 @@ const faqSchema = {
 
 <Layout
   title="Best Gopher Traps & Gear Reviews | Mark The Bagger"
-  description="Mark the Bagger’s field-tested gopher trap and gear picks. High-tension wire traps, gopher gassers, and the techniques to use them effectively."
+  description="Mark the Bagger's field-tested gopher trap and gear picks. High-tension wire traps, gopher gassers, probe tools — with comparison tables and honest reviews."
   schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -24,52 +24,240 @@ const faqSchema = {
 
   <header>
     <h1>The Armory: Gopher Traps & Gear</h1>
-    <p class="subtitle">My actual picks — the stuff I’ve used, tested, and kept using.</p>
+    <p class="subtitle">My actual picks — the stuff I've used, tested, and kept using.</p>
   </header>
 
   <main>
+
     <section class="card" style="border-left: 4px solid #10b981;">
-      <p style="margin: 0; color: #374151; font-size: 0.95rem;">These aren’t generic roundups. I started trapping gophers at 15 for $5 a head, and the gear on this page is what I actually reached for. If something didn’t work in the field, it’s not here. If I list it, I’ve used it and it delivered.</p>
+      <p style="margin: 0; color: #374151; font-size: 0.95rem;">These aren't generic roundups. I started trapping gophers at 15 for $5 a head, and the gear on this page is what I actually reached for. If something didn't work in the field, it's not here. If I list it, I've used it and it delivered.</p>
     </section>
 
-    <section class="card">
+    <!-- ============================================================
+         CATEGORY 1: HIGH-TENSION WIRE TRAPS
+    ============================================================= -->
+    <section class="card armory-category">
       <h2>High-Tension Wire Gopher Traps</h2>
-      <p>These are my first pick on almost every job. High-tension stainless steel wire traps — the Macabee style and the Cinch style — are built for the main tunnel lines where the gopher is actually traveling. You’re not hoping the gopher wanders into something. You’re cutting off the freeway.</p>
-<div class="field-notes" style="background: #fdfdfd; padding: 1.5rem; border: 1px solid #ddd; border-left: 5px solid #d4af37; margin: 1.5rem 0; border-radius: 4px;">
-  <h3 style="margin-top: 0; color: #222;">The Bagger’s Field Notes</h3>
-  <p style="font-style: italic; color: #555;">"I’ve been bagging gophers since I was 15, and the right hardware is only half the battle."</p>
-  <ul style="margin-bottom: 0;">
-    <li><strong>The Victor Standard:</strong> These "Easy Set" style traps are my daily drivers for main tunnel lines.</li>
-    <li><strong>Humane Dispatch:</strong> If you get a leg-catch, be ready to handle it quickly—I’ve used a pellet gun in the past to ensure they don’t suffer.</li>
-    <li><strong>The Peanut Butter Trick:</strong> Don’t set them dry. A small dab of peanut butter behind the trigger plate makes them commit to the spot for a guaranteed catch.</li>
-  </ul>
-</div>
-      <a href="https://amzn.to/4cIJ64V" class="btn" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon</a>
+      <p class="category-intro">These are my first pick on almost every job. High-tension stainless steel wire traps — the Macabee style and the Cinch style — are built for the main tunnel lines where the gopher is actually traveling. You're not hoping the gopher wanders into something. You're cutting off the freeway.</p>
+
+      <div class="field-notes">
+        <h3 style="margin-top: 0; color: #222;">The Bagger's Field Notes</h3>
+        <p style="font-style: italic; color: #555;">"I've been bagging gophers since I was 15, and the right hardware is only half the battle."</p>
+        <ul style="margin-bottom: 0;">
+          <li><strong>The Victor Standard:</strong> These "Easy Set" style traps are my daily drivers for main tunnel lines.</li>
+          <li><strong>Humane Dispatch:</strong> If you get a leg-catch, be ready to handle it quickly — I've used a pellet gun in the past to ensure they don't suffer.</li>
+          <li><strong>The Peanut Butter Trick:</strong> Don't set them dry. A small dab of peanut butter behind the trigger plate makes them commit to the spot for a guaranteed catch.</li>
+        </ul>
+      </div>
+
+      <h3 class="picks-heading">Our Picks</h3>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="product-badge badge-best">Best Overall</div>
+          <h4 class="product-name">Victor Macabee Gopher Trap</h4>
+          <p class="product-desc">The original high-tension wire trap and still the most reliable tool in the kit. Sets fast, fires clean, and holds up to years of daily use. Every serious trapper has a dozen of these.</p>
+          <p class="product-best-for"><strong>Best for:</strong> Main tunnel intercept on active runs — the go-to for any fresh mound situation.</p>
+          <a href="https://amzn.to/4cIJ64V" class="btn" target="_blank" rel="sponsored noopener">Shop on Amazon →</a>
+        </div>
+
+        <div class="product-card">
+          <div class="product-badge badge-budget">Easier to Set</div>
+          <h4 class="product-name">Cinch Traps (Scissor-Jaw)</h4>
+          <p class="product-desc">A scissor-jaw design that many people find easier to arm and less prone to accidental misfires during placement. Works the same tunnel-intercept principle as the Victor but with a different trigger geometry.</p>
+          <p class="product-best-for"><strong>Best for:</strong> Beginners, or anyone who finds the Victor wire mechanism fiddly to set consistently.</p>
+          <a href="https://amzn.to/4sMH5cR" class="btn" target="_blank" rel="sponsored noopener">Shop on Amazon →</a>
+        </div>
+
+      </div>
+
+      <h3 class="compare-heading">Quick Comparison</h3>
+      <div style="overflow-x: auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price Tier</th>
+              <th>Best For</th>
+              <th>Buy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Victor Macabee Trap</strong></td>
+              <td><span class="tier-badge tier-budget">Budget</span></td>
+              <td>Daily driver, most reliable catch rate</td>
+              <td><a href="https://amzn.to/4cIJ64V" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Cinch Trap</strong></td>
+              <td><span class="tier-badge tier-mid">Mid</span></td>
+              <td>Easier arming, fewer accidental misfires</td>
+              <td><a href="https://amzn.to/4sMH5cR" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="category-guide-link">Full technique guides: <a href="/methods/victor-traps">Victor Trap Guide →</a> &nbsp;·&nbsp; <a href="/methods/cinch-traps">Cinch Trap Guide →</a></p>
     </section>
 
-    <section class="card">
+    <!-- ============================================================
+         CATEGORY 2: GOPHER GASSERS & BURROW FUMIGATION
+    ============================================================= -->
+    <section class="card armory-category">
       <h2>Gopher Gassers & Burrow Fumigation</h2>
-      <p>When you’ve got a deep, branching tunnel network and traps aren’t producing — gassers are the move. I’ve used them when a gopher has gone dormant or when I’m dealing with a complex system where I can’t pinpoint the active run. The key is sealing every exit hole before you light one, or you’re just fumigating your lawn for nothing.</p>
-      <p>For a full step-by-step on burrow fumigation, see the <a href="/methods/carbon-monoxide" style="color: #047857; font-weight: bold;">Carbon Monoxide Burrow Treatment guide</a>.</p>
-      <a href="https://amzn.to/4b4oF11" class="btn" target="_blank" rel="sponsored noopener">Shop Gopher Gassers on Amazon</a>
+      <p class="category-intro">When you've got a deep, branching tunnel network and traps aren't producing — gassers are the move. I've used them when a gopher has gone dormant or when I'm dealing with a complex system where I can't pinpoint the active run. The key is sealing every exit hole before you light one, or you're just fumigating your lawn for nothing.</p>
+      <p class="category-intro">For a full step-by-step on burrow fumigation, see the <a href="/methods/carbon-monoxide">Carbon Monoxide Burrow Treatment guide</a>.</p>
+
+      <div class="field-notes">
+        <h3 style="margin-top: 0; color: #222;">The Bagger's Field Notes</h3>
+        <p style="font-style: italic; color: #555;">"Gassers are not a substitute for trapping — they're a supplement for when the tunnel system is too deep or spread out to work efficiently with mechanical sets."</p>
+        <ul style="margin-bottom: 0;">
+          <li><strong>Seal everything first:</strong> Walk the yard and plug every mound opening before you light a gasser. One open exit and you've wasted the fumigation.</li>
+          <li><strong>Wet soil helps:</strong> After a rain or irrigation cycle, the soil compacts better and holds the gas longer.</li>
+          <li><strong>Don't use near occupied structures</strong> — CO travels underground and can seep up indoors.</li>
+        </ul>
+      </div>
+
+      <h3 class="picks-heading">Our Picks</h3>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="product-badge badge-best">Best Overall</div>
+          <h4 class="product-name">Gopher Gassers (Fumigation Cartridges)</h4>
+          <p class="product-desc">The standard cartridge-style gasser — light the fuse, drop it into the main run, and seal the hole. Fast to deploy and effective on mid-depth systems. The go-to fumigation option for most yards.</p>
+          <p class="product-best-for"><strong>Best for:</strong> Mid-depth tunnel systems where the main run is accessible but traps aren't producing results.</p>
+          <a href="https://amzn.to/4b4oF11" class="btn" target="_blank" rel="sponsored noopener">Shop on Amazon →</a>
+        </div>
+
+        <div class="product-card">
+          <div class="product-badge badge-budget">Deep Systems</div>
+          <h4 class="product-name">CO Burrow Treatment Device</h4>
+          <p class="product-desc">Carbon monoxide-based fumigation that pushes gas deep into branching tunnel networks. More thorough penetration than standard cartridges on complex or multi-gopher systems. Higher cost per use but more complete coverage.</p>
+          <p class="product-best-for"><strong>Best for:</strong> Established infestations with deep, branching runs where cartridge gassers aren't reaching the full system.</p>
+          <a href="https://amzn.to/47l872T" class="btn" target="_blank" rel="sponsored noopener">Shop on Amazon →</a>
+        </div>
+
+      </div>
+
+      <h3 class="compare-heading">Quick Comparison</h3>
+      <div style="overflow-x: auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price Tier</th>
+              <th>Best For</th>
+              <th>Buy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Gopher Gassers</strong></td>
+              <td><span class="tier-badge tier-budget">Budget</span></td>
+              <td>Mid-depth systems, quick deployment</td>
+              <td><a href="https://amzn.to/4b4oF11" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+            </tr>
+            <tr>
+              <td><strong>CO Burrow Fumigator</strong></td>
+              <td><span class="tier-badge tier-premium">Premium</span></td>
+              <td>Deep, complex tunnel networks</td>
+              <td><a href="https://amzn.to/47l872T" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="category-guide-link">Full technique guide: <a href="/methods/carbon-monoxide">Carbon Monoxide Burrow Treatment →</a></p>
     </section>
 
-    <section class="card">
+    <!-- ============================================================
+         CATEGORY 3: PROBE TOOLS
+    ============================================================= -->
+    <section class="card armory-category">
       <h2>Probe Tools</h2>
-      <p>Before you set a single trap, you need to find the main tunnel run — and for that, you need a probe. I've been using the same piece of rebar I found on the ground when I was 15. Still use it today. You push it into the soil a few inches out from the mound, work in a semicircle, and when it drops, you've found the tunnel. That's it.</p>
-      <p>A plain piece of rebar from any hardware store does exactly the same job. You don't need to buy anything special. But if you want something with a real handle and a better grip — something that doesn't tear up your palm after a long day of probing — there are purpose-built gopher probes made for this exact task. I won't pretend the ergonomics aren't nicer.</p>
-      <a href="https://amzn.to/4s6X0CM" class="btn" target="_blank" rel="sponsored noopener">Shop Gopher Probe Tools on Amazon</a>
+      <p class="category-intro">Before you set a single trap, you need to find the main tunnel run — and for that, you need a probe. I've been using the same piece of rebar I found on the ground when I was 15. Still use it today. You push it into the soil a few inches out from the mound, work in a semicircle, and when it drops, you've found the tunnel. That's it.</p>
+      <p class="category-intro">A plain piece of rebar from any hardware store does exactly the same job. You don't need to buy anything special. But if you want something with a real handle and a better grip — something that doesn't tear up your palm after a long day of probing — there are purpose-built gopher probes made for this exact task. I won't pretend the ergonomics aren't nicer.</p>
+
+      <div class="field-notes">
+        <h3 style="margin-top: 0; color: #222;">The Bagger's Field Notes</h3>
+        <p style="font-style: italic; color: #555;">"The probe is the most underrated part of the whole system. Get this step right and everything downstream is easier."</p>
+        <ul style="margin-bottom: 0;">
+          <li><strong>Probe in a semicircle</strong> 3–4 inches out from the mound edge, not directly under it. The main run is never directly below the mound.</li>
+          <li><strong>Feel for the drop</strong> — when the probe suddenly sinks 2–3 inches deeper, you've hit the void. That's your set location.</li>
+          <li><strong>Hard clay?</strong> Wet the area slightly before probing. Dry, compacted soil gives false positives and makes probing exhausting.</li>
+        </ul>
+      </div>
+
+      <h3 class="picks-heading">Our Picks</h3>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="product-badge badge-best">Best Overall</div>
+          <h4 class="product-name">Purpose-Built Gopher Probe</h4>
+          <p class="product-desc">Designed specifically for gopher work — a proper handle, calibrated tip, and the right length to reach main tunnel depth without over-penetrating. The ergonomics matter on a long session across a large yard.</p>
+          <p class="product-best-for"><strong>Best for:</strong> Anyone doing regular gopher work who wants a tool that doesn't tear up their palm over dozens of probe points per session.</p>
+          <a href="https://amzn.to/4s6X0CM" class="btn" target="_blank" rel="sponsored noopener">Shop on Amazon →</a>
+        </div>
+
+        <div class="product-card">
+          <div class="product-badge badge-budget">Budget Pick</div>
+          <h4 class="product-name">Basic Probe / Entry-Level Option</h4>
+          <p class="product-desc">A functional probe that gets the job done without the premium price tag. Good for occasional use or for someone who wants to try the probing method before committing to a more serious tool. Does the same job — less comfortable over time.</p>
+          <p class="product-best-for"><strong>Best for:</strong> Occasional use, smaller yards, or first-time gopher trappers getting started with the technique.</p>
+          <a href="https://amzn.to/4dlMbrU" class="btn" target="_blank" rel="sponsored noopener">Shop on Amazon →</a>
+        </div>
+
+      </div>
+
+      <h3 class="compare-heading">Quick Comparison</h3>
+      <div style="overflow-x: auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price Tier</th>
+              <th>Best For</th>
+              <th>Buy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Purpose-Built Probe</strong></td>
+              <td><span class="tier-badge tier-mid">Mid</span></td>
+              <td>Regular use, ergonomic handle, long sessions</td>
+              <td><a href="https://amzn.to/4s6X0CM" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Basic Probe</strong></td>
+              <td><span class="tier-badge tier-budget">Budget</span></td>
+              <td>Occasional use, getting started</td>
+              <td><a href="https://amzn.to/4dlMbrU" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="category-guide-link">See probing in action: <a href="/quick-start">Quick Start Guide — Step 3 →</a></p>
     </section>
 
+    <!-- ============================================================
+         MORE RESOURCES
+    ============================================================= -->
     <section class="card" style="padding: 1rem 1.5rem;">
       <h2 style="margin-bottom: 0.5rem;">More Resources</h2>
       <ul style="margin-top: 0; padding-left: 1.2rem;">
         <li><a href="/methods">Browse all gopher control methods</a></li>
         <li><a href="/methods/victor-traps">Victor Trap Tunnel Intercept guide</a></li>
+        <li><a href="/quick-start">Quick Start field process</a></li>
         <li><a href="/">Back to homepage</a></li>
       </ul>
     </section>
 
+    <!-- ============================================================
+         FAQ
+    ============================================================= -->
     <section class="card">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-list">
@@ -91,5 +279,214 @@ const faqSchema = {
         </details>
       </div>
     </section>
+
   </main>
 </Layout>
+
+<style>
+  /* ── Category section spacing ── */
+  .armory-category { margin-bottom: 2rem; }
+
+  .category-intro {
+    color: #374151;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .category-guide-link {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  /* ── Field notes box ── */
+  .field-notes {
+    background: #fdfdfd;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-left: 5px solid #d4af37;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+  }
+
+  /* ── Picks section ── */
+  .picks-heading {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #e4e4e7;
+    padding-bottom: 0.4rem;
+  }
+
+  .product-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-bottom: 0.5rem;
+  }
+
+  .product-card {
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    padding: 1.1rem 1.25rem;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .product-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    margin-bottom: 0.65rem;
+    width: fit-content;
+  }
+
+  .badge-best {
+    background: #065f46;
+    color: #fff;
+  }
+
+  .badge-budget {
+    background: #f0fdf4;
+    color: #065f46;
+    border: 1.5px solid #6ee7b7;
+  }
+
+  .product-name {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: #18181b;
+  }
+
+  .product-desc {
+    font-size: 0.875rem;
+    color: #52525b;
+    margin-bottom: 0.6rem;
+    flex: 1;
+    line-height: 1.55;
+  }
+
+  .product-best-for {
+    font-size: 0.825rem;
+    color: #374151;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .product-best-for strong {
+    color: #047857;
+  }
+
+  /* ── Comparison table ── */
+  .compare-heading {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #e4e4e7;
+    padding-bottom: 0.4rem;
+  }
+
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .compare-table thead tr {
+    background: #f4f4f5;
+  }
+
+  .compare-table th {
+    text-align: left;
+    padding: 0.55rem 0.9rem;
+    border-bottom: 2px solid #e4e4e7;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+  }
+
+  .compare-table td {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid #e4e4e7;
+    vertical-align: middle;
+  }
+
+  .compare-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .compare-table tr:nth-child(even) {
+    background: #fafafa;
+  }
+
+  .tier-badge {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .tier-budget {
+    background: #f0fdf4;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+  }
+
+  .tier-mid {
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+  }
+
+  .tier-premium {
+    background: #fff1f2;
+    color: #9f1239;
+    border: 1px solid #fda4af;
+  }
+
+  .table-btn {
+    display: inline-block;
+    background: #059669;
+    color: white !important;
+    padding: 0.35rem 0.85rem;
+    text-decoration: none !important;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    border-bottom: none !important;
+    transition: background 0.15s;
+  }
+
+  .table-btn:hover {
+    background: #047857;
+    color: white !important;
+    border-bottom: none !important;
+  }
+
+  @media (max-width: 640px) {
+    .product-grid { grid-template-columns: 1fr; }
+    .compare-table th:nth-child(3),
+    .compare-table td:nth-child(3) { display: none; }
+  }
+</style>
