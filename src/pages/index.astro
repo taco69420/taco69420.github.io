@@ -40,6 +40,10 @@ const websiteSchema = {
     <h1>How To Kill Gophers</h1>
     <p class="subtitle">From Mark the Bagger — trapping gophers since age 15.</p>
     <p class="hero-body">I started catching gophers at 15 for $5 a head. My dog Taco was my partner. Over the years I built up real hands-on knowledge of what works — and what's a waste of time. This site is where I put all of it. No fluff, no AI content farms, no affiliate lists of junk that doesn't work.</p>
+    <figure class="hero-photo">
+      <img src="/taco-catch.jpg" alt="Taco with a fresh catch" />
+      <figcaption>Taco with a fresh catch. He never missed.</figcaption>
+    </figure>
     <div class="hero-ctas">
       <a href="/methods" class="btn">The Playbook</a>
       <a href="/problems" class="btn">Find Your Problem</a>
@@ -136,6 +140,26 @@ const websiteSchema = {
     font-size: 1rem;
     max-width: 640px;
     margin-top: 0.5rem;
+  }
+
+  .hero-photo {
+    margin: 1.25rem 0 0;
+    text-align: center;
+  }
+
+  .hero-photo img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero-photo figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: #71717a;
+    font-style: italic;
   }
 
   .hero-ctas {
