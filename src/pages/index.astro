@@ -119,6 +119,14 @@ const faqSchema = {
       </p>
     </section>
 
+    <div class="card quiz-callout">
+      <div class="quiz-callout-text">
+        <strong>Not sure which method is right for you?</strong>
+        <p>Answer 3 quick questions and I'll point you straight to the fix — no browsing required.</p>
+      </div>
+      <a href="/quiz" class="btn" style="margin-top: 0; flex-shrink: 0;">Take the 2-minute quiz →</a>
+    </div>
+
     <section class="card" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
       <p style="margin: 0; color: #52525b;">Dealing with something specific?</p>
       <a href="/problems" class="btn" style="margin-top: 0;">Browse all 11 problem guides →</a>
@@ -332,6 +340,31 @@ const faqSchema = {
     margin: 0;
     font-size: 0.85rem;
     color: #52525b;
+  }
+
+  /* Quiz callout */
+  .quiz-callout {
+    background: #f0fdf4;
+    border: 1.5px solid #6ee7b7;
+    border-left: 4px solid #059669;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .quiz-callout-text strong {
+    display: block;
+    color: #065f46;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .quiz-callout-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #374151;
   }
 
   @media (max-width: 640px) {

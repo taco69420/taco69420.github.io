@@ -140,6 +140,7 @@ const localBusinessSchema = {
     <nav aria-label="Main navigation">
       <a href="/" class="nav-brand">How To Kill Gophers</a>
       <a href="/quick-start" class={pathname === '/quick-start' ? 'nav-active' : ''}>Quick Start</a>
+      <a href="/seasons" class={pathname === '/seasons' ? 'nav-active' : ''}>Seasonal Guide</a>
       <div class="nav-dropdown">
         <button class={`nav-dropdown-btn${pathname.startsWith('/methods') ? ' nav-active' : ''}`}>The Playbook</button>
         <ul class="nav-dropdown-menu">
@@ -195,6 +196,8 @@ const localBusinessSchema = {
         <a href="/about" class="legal-link" style="margin-left: 0.25rem;">Read the full story →</a></span>
       </p>
       <p style="margin-bottom: 0.5rem;">
+        <a href="/quiz" class="legal-link">Take the Quiz</a>
+        &nbsp;·&nbsp;
         <a href="/gopher-vs-mole" class="legal-link">Gopher vs Mole</a>
         &nbsp;·&nbsp;
         <a href="/seasons" class="legal-link">Seasonal Guide</a>

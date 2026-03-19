@@ -101,6 +101,14 @@ const faqSchema = {
       </ul>
     </nav>
 
+    <div class="card" style="background: #f0fdf4; border: 1.5px solid #6ee7b7; border-left: 4px solid #059669; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <strong style="display: block; color: #065f46; font-size: 1rem; margin-bottom: 0.3rem;">Not sure which method fits your situation?</strong>
+        <p style="margin: 0; font-size: 0.9rem; color: #374151;">Answer 3 questions. I'll send you straight to the right fix.</p>
+      </div>
+      <a href="/quiz" class="btn" style="margin-top: 0; flex-shrink: 0;">Take the quiz →</a>
+    </div>
+
     {groups.map(group => (
       <section class="method-group">
         <h2 id={group.id} class="group-label">{group.label}</h2>
