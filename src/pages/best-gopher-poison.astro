@@ -1,0 +1,428 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the most effective gopher poison?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For tunnel-placed rodenticide, diphacinone bait pellets placed correctly inside an active run are the most consistently effective option for most residential properties. Zinc phosphide acts faster but is more temperamental. For large or deeply established tunnel systems, CO2 burrow fumigation devices offer more thorough coverage than pellet bait alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is gopher poison safe around other animals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Secondary poisoning is a documented, real-world risk. A dog, cat, hawk, or owl that eats a gopher killed by rodenticide bait can be poisoned by the active ingredient still present in the gopher's body. If you have pets, hunting dogs, or raptors on or near the property, use mechanical traps instead. This risk does not go away with careful placement — it is inherent to any rodenticide approach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does gopher poison take to work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zinc phosphide bait: 24–48 hours. Diphacinone bait: 5–7 days (anticoagulant — takes multiple feedings). Gopher gassers: same day in a properly sealed system. CO2 burrow treatment: same day to 48 hours. If you see no new mound activity within 7 days of bait placement, either the run was inactive, the bait wasn't taken, or the gopher has already moved on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a license to use gopher poison?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the product and your state. In California, certain rodenticide formulations (including some zinc phosphide products) require a licensed Pest Control Operator to purchase and apply. Diphacinone products sold as consumer bait stations are generally available without a license. Always read the label — the label is the legal document, and following it exactly is required by law, not optional."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Best Gopher Poison of 2026 | Mark the Bagger"
+  description="Honest review of gopher poison options — rodenticide bait, gassers, and CO2 treatment. Field experience from Mark the Bagger with real safety guidance."
+  schemas={[faqSchema]}
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › Best Gopher Poison
+  </nav>
+
+  <header>
+    <h1>Best Gopher Poison of 2026</h1>
+    <p class="subtitle">What's actually effective, what requires a license, and when you should skip chemical control entirely.</p>
+  </header>
+
+  <main>
+
+    <section class="card" style="border-left: 4px solid #dc2626;">
+      <p style="margin: 0 0 0.75rem; color: #374151; font-size: 0.95rem;"><strong>Before we get into product picks:</strong> If you have dogs, cats, or raptors on or near your property, stop here. Secondary poisoning from any rodenticide — bait pellets or fumigants — is a real risk, not a label formality. A dog that eats a bait-killed gopher can be killed by the same rodenticide. Use <a href="/best-gopher-traps">mechanical traps</a> instead.</p>
+      <p style="margin: 0; color: #374151; font-size: 0.95rem;">For properties without pets or wildlife concerns, chemical control is a legitimate tool — especially on large or deeply established tunnel systems where trapping alone isn't keeping up. The three products below are what I've used and what actually works.</p>
+    </section>
+
+    <!-- Quick Picks Table -->
+    <section class="card">
+      <h2>Quick Picks</h2>
+      <div style="overflow-x: auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Best For</th>
+              <th>Price Tier</th>
+              <th>Buy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Underground Gopher Bait Stations</strong></td>
+              <td>Most reliable lethal bait for tunnel placement</td>
+              <td><span class="tier-badge tier-budget">Budget</span></td>
+              <td><a href="https://amzn.to/46XnfTH" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Gopher Gassers (Fumigation Cartridges)</strong></td>
+              <td>Fast deployment on mid-depth sealed systems</td>
+              <td><span class="tier-badge tier-budget">Budget</span></td>
+              <td><a href="https://amzn.to/4b4oF11" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+            </tr>
+            <tr>
+              <td><strong>CO Burrow Treatment Device</strong></td>
+              <td>Deep, complex, multi-gopher tunnel networks</td>
+              <td><span class="tier-badge tier-premium">Premium</span></td>
+              <td><a href="https://amzn.to/47l872T" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Product 1: Underground Bait Stations -->
+    <section class="card product-section">
+      <div class="product-badge badge-best">Most Effective Rodenticide</div>
+      <h2 class="ps-name">Underground Gopher Bait Stations</h2>
+      <p class="ps-best-for"><strong>Best for:</strong> Pet-free properties where you need lethal control on established tunnel systems — particularly useful when trapping sessions aren't producing results over multiple days.</p>
+      <p class="ps-desc">Rodenticide bait pellets (diphacinone or zinc phosphide) placed inside active gopher tunnels. The mechanism is straightforward: probe to locate the main lateral tunnel, open a clean access hole, place the labeled bait dose 6–8 inches inside the run, and seal the hole completely with soil. The gopher encounters the bait during normal tunnel activity and consumes a lethal dose. Diphacinone (anticoagulant) takes multiple feedings over 5–7 days; zinc phosphide acts faster at 24–48 hours but is more sensitive to soil moisture conditions and requires extra PPE during handling due to off-gassing. My preference is diphacinone for most residential jobs — slower, but more consistent and a lower secondary risk profile.</p>
+      <div class="ps-verdict">
+        <div class="ps-pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Highly effective when placed correctly inside an active run</li>
+            <li>Low cost per treatment area</li>
+            <li>Can cover multiple tunnel runs in a single application session</li>
+            <li>Diphacinone is stable across soil moisture conditions</li>
+          </ul>
+        </div>
+        <div class="ps-cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Secondary poisoning risk to any animal that eats an affected gopher</li>
+            <li>Zinc phosphide off-gases and requires a mask plus gloves during application</li>
+            <li>Some formulations require a PCO license to purchase in California</li>
+            <li>Diphacinone takes 5–7 days — slower than trapping</li>
+            <li>Completely ineffective if placed near the entrance or in an inactive run</li>
+          </ul>
+        </div>
+      </div>
+      <div class="safety-callout">
+        <strong>Safety:</strong> Secondary poisoning risk is real. Dogs, cats, hawks, and owls that consume a bait-killed gopher can be fatally poisoned. Do not use on any property with pets or known raptor activity. Keep away from children. Follow label directions exactly — the label is a legal document.
+      </div>
+      <a href="https://amzn.to/46XnfTH" class="btn" target="_blank" rel="sponsored noopener">Shop Underground Gopher Bait Stations on Amazon →</a>
+    </section>
+
+    <!-- Product 2: Gopher Gassers -->
+    <section class="card product-section">
+      <div class="product-badge badge-budget">Best Fast-Acting Fumigant</div>
+      <h2 class="ps-name">Gopher Gassers (Fumigation Cartridges)</h2>
+      <p class="ps-best-for"><strong>Best for:</strong> Mid-depth tunnel systems where you can't locate or access the main run effectively, and where every tunnel exit can be sealed before treatment.</p>
+      <p class="ps-desc">Light the fuse, drop the burning cartridge into the tunnel, immediately seal the entrance with tamped soil. The cartridge generates gas as it burns, filling the tunnel system. This only works if every exit is sealed first — even one open hole vents the system and renders the treatment ineffective. Walk the yard and plug every mound you can find before you light anything. I use gassers when I'm dealing with a complex system where traps keep missing and I can't get a clean probe read on the active run. Post-rain or post-irrigation is ideal — compacted wet soil holds the gas in the system much better than dry, loose soil.</p>
+      <div class="ps-verdict">
+        <div class="ps-pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Same-day results on a properly sealed system</li>
+            <li>No precise tunnel placement required — just find an active entrance</li>
+            <li>Inexpensive per cartridge</li>
+            <li>No residual chemical in the soil after treatment</li>
+          </ul>
+        </div>
+        <div class="ps-cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Completely ineffective if any tunnel exit is left open</li>
+            <li>Limited penetration in very deep or extensive branching systems</li>
+            <li>Cannot be used near structures — gas follows underground paths</li>
+            <li>Results are harder to confirm than mechanical trapping</li>
+            <li>Requires walking the whole yard to seal every visible exit first</li>
+          </ul>
+        </div>
+      </div>
+      <div class="safety-callout">
+        <strong>Safety:</strong> Never use gassers within 15 feet of occupied structures, under decks or crawl spaces, or near any building foundation. The combustion gas travels underground and can enter structures through foundation gaps. Keep children and pets away from the treated area.
+      </div>
+      <a href="https://amzn.to/4b4oF11" class="btn" target="_blank" rel="sponsored noopener">Shop Gopher Gassers on Amazon →</a>
+    </section>
+
+    <!-- Product 3: CO Burrow Treatment -->
+    <section class="card product-section">
+      <div class="product-badge" style="background: #fffbeb; color: #92400e; border: 1.5px solid #fcd34d;">Best for Large Infestations</div>
+      <h2 class="ps-name">CO Burrow Treatment Device</h2>
+      <p class="ps-best-for"><strong>Best for:</strong> Established, large-scale tunnel networks with multiple interconnected runs — the method I use when trapping alone isn't keeping up with a high-pressure situation.</p>
+      <p class="ps-desc">Carbon monoxide-based burrow fumigation that delivers gas under pressure deep into the tunnel system through a probe inserted directly into the main run. Unlike cartridge gassers that rely on a slow burn, CO injection pushes gas actively through the network, reaching chambers and branches that surface-deployed cartridges don't penetrate. I use this selectively — it's worth the cost and setup when you're dealing with a large, established tunnel network that has multiple gophers or years of development. Overkill for a single gopher. Exactly right for an orchard or large property with entrenched pressure. Strict safety and legal compliance is not optional with this method — read the full method guide before using it.</p>
+      <div class="ps-verdict">
+        <div class="ps-pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Most thorough coverage of complex, deep tunnel networks</li>
+            <li>Active gas injection reaches areas cartridge gassers can't penetrate</li>
+            <li>Same-day to 48-hour results on properly treated systems</li>
+            <li>No residual chemical in soil after treatment</li>
+          </ul>
+        </div>
+        <div class="ps-cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Higher cost per treatment than cartridge gassers or bait pellets</li>
+            <li>Requires more setup — pre-sealing secondary openings before injection</li>
+            <li>Cannot be used near structures, enclosed spaces, or buildings</li>
+            <li>CO is odorless and lethal — requires a personal CO monitor during use</li>
+            <li>Check local regulations and label legality before first use</li>
+          </ul>
+        </div>
+      </div>
+      <div class="safety-callout">
+        <strong>Safety:</strong> Carbon monoxide is odorless, colorless, and lethal. Never use in enclosed areas, near structures, or without appropriate safety equipment including a personal CO monitor. Read the full <a href="/methods/carbon-monoxide" style="color: #991b1b;">Carbon Monoxide Burrow Treatment guide</a> before using this device. This is not a beginner method.
+      </div>
+      <a href="https://amzn.to/47l872T" class="btn" target="_blank" rel="sponsored noopener">Shop CO Burrow Treatment Devices on Amazon →</a>
+    </section>
+
+    <!-- Buying Guide -->
+    <section class="card">
+      <h2>What to Know Before Using Gopher Poison</h2>
+      <p style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Chemical gopher control is effective when matched to the right situation. Here's what matters before you choose a product:</p>
+      <dl class="buying-guide">
+        <dt>Pets and wildlife first — full stop</dt>
+        <dd>If dogs, cats, or birds of prey are present on or adjacent to your property, chemical control is off the table. Secondary poisoning risk from any rodenticide is real and documented. The only safe options in that scenario are mechanical traps — see the <a href="/best-gopher-traps">Best Gopher Traps page</a> for picks.</dd>
+
+        <dt>Match the method to the tunnel depth</dt>
+        <dd>Bait pellets work best in standard-depth residential systems (6–18 inches) where you can probe and locate the main run. Cartridge gassers work in mid-depth systems where exits can be sealed. CO injection is the right call for deep, complex, established networks where neither of the other approaches can reach effectively.</dd>
+
+        <dt>Diphacinone vs. zinc phosphide — know the difference</dt>
+        <dd>Diphacinone is slower (5–7 days) but more stable in varied soil conditions and carries a lower secondary poisoning risk. Zinc phosphide is faster (24–48 hours) but off-gases during application and can fail in wet soil. For most residential use, diphacinone is the more consistent and safer choice.</dd>
+
+        <dt>Check your state's regulations</dt>
+        <dd>In California and several other states, certain rodenticide formulations require a Pest Control Operator license to purchase and apply. Check CDPR requirements before ordering. The label is the controlling legal document — following it is not optional.</dd>
+      </dl>
+      <p style="margin-top: 1.25rem; margin-bottom: 0; font-size: 0.875rem; color: #6b7280;">Full method guides: <a href="/methods/poison-bait-stations">Underground Bait Station →</a> &nbsp;·&nbsp; <a href="/methods/carbon-monoxide">CO Burrow Treatment →</a> &nbsp;·&nbsp; <a href="/methods/hiring-a-pro">When to Hire a Pro →</a></p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What is the most effective gopher poison?</summary>
+          <p>For tunnel-placed rodenticide, diphacinone bait pellets placed correctly inside an active run are the most consistently effective option for most residential properties. For large or deeply established tunnel systems, CO2 burrow fumigation devices offer more thorough coverage than pellet bait alone.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is gopher poison safe around other animals?</summary>
+          <p>No. Secondary poisoning is a real-world risk — a dog, cat, hawk, or owl that eats a gopher killed by rodenticide can be poisoned by the active ingredient still in the gopher's system. If pets or wildlife are present, use <a href="/best-gopher-traps">mechanical traps</a> instead. This risk does not go away with careful placement; it is inherent to any rodenticide approach.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does gopher poison take to work?</summary>
+          <p>Zinc phosphide bait: 24–48 hours. Diphacinone bait: 5–7 days (requires multiple feedings). Gopher gassers: same day in a properly sealed system. CO burrow treatment: same day to 48 hours. No new mound activity within 7 days of placement means either the run was inactive, the bait wasn't taken, or the gopher moved on before treatment.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need a license to use gopher poison?</summary>
+          <p>Depends on the product and state. In California, certain rodenticide formulations require a licensed Pest Control Operator to purchase and apply. Diphacinone consumer bait products are generally available without a license. Always read the full product label — it is the legal document that governs proper use, and following it exactly is required by law, not optional.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  .product-section { margin-bottom: 1.5rem; }
+
+  .ps-name {
+    font-size: 1.3rem;
+    color: #065f46;
+    margin: 0.4rem 0 0.5rem;
+    font-weight: 700;
+  }
+
+  .ps-best-for {
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: 0.75rem;
+  }
+
+  .ps-best-for strong { color: #047857; }
+
+  .ps-desc {
+    color: #374151;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.65;
+  }
+
+  .ps-verdict {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .ps-pros, .ps-cons {
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+  }
+
+  .ps-pros { background: #f0fdf4; border: 1px solid #6ee7b7; }
+  .ps-cons { background: #fff1f2; border: 1px solid #fda4af; }
+
+  .ps-pros h3 {
+    color: #065f46;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.5rem;
+  }
+
+  .ps-cons h3 {
+    color: #9f1239;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.5rem;
+  }
+
+  .ps-pros ul, .ps-cons ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.6;
+  }
+
+  .ps-pros li, .ps-cons li { margin-bottom: 0.3rem; }
+
+  .safety-callout {
+    background: #fef2f2;
+    border: 1px solid #fca5a5;
+    border-left: 4px solid #dc2626;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: #7f1d1d;
+    margin: 0.75rem 0;
+    line-height: 1.55;
+  }
+
+  .safety-callout strong { color: #991b1b; }
+
+  .product-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+  }
+
+  .badge-best { background: #065f46; color: #fff; }
+  .badge-budget { background: #f0fdf4; color: #065f46; border: 1.5px solid #6ee7b7; }
+
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .compare-table thead tr { background: #f4f4f5; }
+
+  .compare-table th {
+    text-align: left;
+    padding: 0.55rem 0.9rem;
+    border-bottom: 2px solid #e4e4e7;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+  }
+
+  .compare-table td {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid #e4e4e7;
+    vertical-align: middle;
+  }
+
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:nth-child(even) { background: #fafafa; }
+
+  .tier-badge {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .tier-budget { background: #f0fdf4; color: #065f46; border: 1px solid #6ee7b7; }
+  .tier-mid { background: #fffbeb; color: #92400e; border: 1px solid #fcd34d; }
+  .tier-premium { background: #fff1f2; color: #9f1239; border: 1px solid #fda4af; }
+
+  .table-btn {
+    display: inline-block;
+    background: #059669;
+    color: white !important;
+    padding: 0.35rem 0.85rem;
+    text-decoration: none !important;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    border-bottom: none !important;
+    transition: background 0.15s;
+  }
+
+  .table-btn:hover {
+    background: #047857;
+    color: white !important;
+    border-bottom: none !important;
+  }
+
+  .buying-guide { margin: 0.5rem 0 0; }
+
+  .buying-guide dt {
+    font-weight: 600;
+    color: #18181b;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .buying-guide dd {
+    margin: 0;
+    color: #374151;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 640px) {
+    .ps-verdict { grid-template-columns: 1fr; }
+    .compare-table th:nth-child(2),
+    .compare-table td:nth-child(2) { display: none; }
+  }
+</style>
