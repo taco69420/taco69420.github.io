@@ -2,6 +2,7 @@
 title: "Keeping Pets Safe Around Gopher Control"
 description: "Run an effective gopher control program without putting your dogs, cats, or backyard wildlife at risk."
 date: 2026-03-14
+updated: 2026-03-18
 tags:
   - pets
   - safety

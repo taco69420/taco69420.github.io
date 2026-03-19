@@ -2,6 +2,7 @@
 title: "Underground Bait Station"
 description: "Place rodenticide bait directly in active gopher tunnels for lethal control without digging up the yard."
 date: 2026-03-11
+updated: 2026-03-18
 tags:
   - bait
   - lethal

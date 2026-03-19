@@ -2,6 +2,7 @@
 title: "Barn Owl Box Installation"
 description: "Install a barn owl nesting box to establish a natural, long-term gopher predator on your property."
 date: 2026-03-11
+updated: 2026-03-18
 tags:
   - biological-control
   - non-lethal

@@ -2,6 +2,7 @@
 title: "Cinch Trap Mainline Set"
 description: "Deploy cinch-style traps in open tunnel runs for quick mechanical control."
 date: 2026-03-01
+updated: 2026-03-18
 tags:
   - trapping
   - cinch

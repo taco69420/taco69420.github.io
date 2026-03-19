@@ -2,6 +2,7 @@
 title: "Castor Oil Soil Repellent Program"
 description: "Apply castor-oil-based repellents to make feeding zones less attractive and push activity outward."
 date: 2026-03-01
+updated: 2026-03-18
 tags:
   - repellent
   - lawn

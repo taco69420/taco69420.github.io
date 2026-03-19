@@ -2,6 +2,7 @@
 title: "Exclusion Fencing for Large Properties"
 description: "Install underground perimeter fencing to block gopher migration into yards, orchards, and large planting areas."
 date: 2026-03-14
+updated: 2026-03-18
 tags:
   - prevention
   - barrier

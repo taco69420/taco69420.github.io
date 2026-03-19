@@ -2,6 +2,7 @@
 title: "Gophers Destroying Drip Emitters & Heads"
 description: "Find and fix chewed drip emitters, pop-up heads, and shallow irrigation fittings that gophers gnaw through repeatedly."
 date: 2026-03-14
+updated: 2026-03-18
 tags:
   - irrigation
   - emitters

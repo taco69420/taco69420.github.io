@@ -2,6 +2,7 @@
 title: "Sonic Repeller Stakes"
 description: "Drive solar-powered vibration stakes into active runs to disrupt and displace gophers without traps or poison."
 date: 2026-03-11
+updated: 2026-03-18
 tags:
   - repeller
   - non-lethal

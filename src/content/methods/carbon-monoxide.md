@@ -2,6 +2,7 @@
 title: "Carbon Monoxide Burrow Treatment"
 description: "Use approved exhaust-injection devices to deliver carbon monoxide into sealed tunnel systems."
 date: 2026-03-01
+updated: 2026-03-18
 tags:
   - fumigation
   - advanced

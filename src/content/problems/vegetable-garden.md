@@ -2,6 +2,7 @@
 title: "Gopher Damage in Vegetable Gardens"
 description: "Stop gophers from destroying vegetable roots, raised beds, and replanted crops — and harden your garden against future invasions."
 date: 2026-03-11
+updated: 2026-03-18
 tags:
   - vegetable-garden
   - raised-beds

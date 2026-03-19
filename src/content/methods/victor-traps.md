@@ -2,6 +2,7 @@
 title: "Victor Trap Tunnel Intercept"
 description: "Use classic Victor pinch traps in active main runs for fast, repeatable captures."
 date: 2026-03-01
+updated: 2026-03-18
 tags:
   - trapping
   - mechanical

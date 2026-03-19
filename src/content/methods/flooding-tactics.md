@@ -2,6 +2,7 @@
 title: "Flooding Active Gopher Runs"
 description: "Use controlled water flushing to expose tunnel exits and force movement in shallow systems."
 date: 2026-03-01
+updated: 2026-03-18
 tags:
   - water
   - suppression

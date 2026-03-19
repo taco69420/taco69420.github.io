@@ -2,6 +2,7 @@
 title: "Gopher Damage to Lawns & Turf"
 description: "Identify and recover from gopher mounds, dead patches, and subsurface tunneling that destroys grass and creates trip hazards."
 date: 2026-03-11
+updated: 2026-03-18
 tags:
   - lawn
   - turf

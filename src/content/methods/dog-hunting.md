@@ -2,6 +2,7 @@
 title: "The Taco Method: Using a Dog to Hunt Gophers"
 description: "Deploy a high-prey-drive dog as a first-line gopher detection and hunting tool — breed matters less than drive."
 date: 2026-03-14
+updated: 2026-03-18
 tags:
   - biological-control
   - dog

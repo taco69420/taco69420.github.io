@@ -2,6 +2,7 @@
 title: "Managing Gopher Risk Near Foundations"
 description: "Reduce burrowing pressure that can undermine soil support near slabs, walkways, and hardscape."
 date: 2026-03-01
+updated: 2026-03-18
 tags:
   - foundation
   - structural

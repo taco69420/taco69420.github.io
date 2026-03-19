@@ -2,6 +2,7 @@
 title: "Gopher Damage to Trees & Shrubs"
 description: "Identify and stop gophers from girdling roots and killing established trees, shrubs, and ornamentals from below."
 date: 2026-03-14
+updated: 2026-03-18
 tags:
   - trees
   - shrubs

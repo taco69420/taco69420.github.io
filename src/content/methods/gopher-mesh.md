@@ -2,6 +2,7 @@
 title: "Install Gopher Mesh Barriers"
 description: "Use underground wire mesh to physically block gophers from garden beds and root zones."
 date: 2026-03-01
+updated: 2026-03-18
 tags:
   - prevention
   - barrier

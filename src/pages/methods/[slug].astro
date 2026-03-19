@@ -124,7 +124,7 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-  title={`${entry.data.title} | Gopher Control | Mark The Bagger`}
+  title={`${entry.data.title} (2026) | Gopher Control | Mark The Bagger`}
   description={entry.data.description}
   schemas={[howToSchema, breadcrumbSchema]}
 >
@@ -135,6 +135,7 @@ const breadcrumbSchema = {
   <header>
     <h1>{entry.data.title}</h1>
     <p class="subtitle">{entry.data.description}</p>
+    <p style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.25rem;">Updated March 2026</p>
   </header>
 
   {entry.data.petRisk === 'high' && (
