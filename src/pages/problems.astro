@@ -8,21 +8,25 @@ const bySlug = Object.fromEntries(problems.map(p => [p.slug, p]));
 const groups = [
   {
     label: 'Identify First',
+    id: 'identify-first',
     description: 'Before you do anything, confirm what you have. Gophers and moles look similar but need completely different treatment.',
     slugs: ['mound-id'],
   },
   {
     label: 'Yard & Plants',
+    id: 'yard-plants',
     description: 'The most common damage — lawns, gardens, trees, and shrubs getting destroyed from below.',
     slugs: ['lawn-damage', 'garden-destruction', 'vegetable-garden', 'tree-shrub-damage'],
   },
   {
     label: 'Infrastructure',
+    id: 'infrastructure',
     description: 'Gophers chewing through irrigation, drip systems, and tunneling near foundations.',
     slugs: ['irrigation-damage', 'drip-emitter-damage', 'foundation-damage'],
   },
   {
     label: 'Situations',
+    id: 'situations',
     description: 'Special circumstances — new yards, pets in the picture, or a gopher problem that crosses property lines.',
     slugs: ['new-yard-prep', 'pet-safety', 'neighbor-disputes'],
   },
@@ -85,9 +89,20 @@ const faqSchema = {
       </div>
     </section>
 
+    <nav class="card" style="border-left: 4px solid #059669; padding: 1rem 1.5rem;">
+      <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
+      <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
+        <li><a href="#identify-first">Identify First</a></li>
+        <li><a href="#yard-plants">Yard &amp; Plants</a></li>
+        <li><a href="#infrastructure">Infrastructure</a></li>
+        <li><a href="#situations">Situations</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+      </ul>
+    </nav>
+
     {groups.map(group => (
       <section class="problem-group">
-        <h2 class="group-label">{group.label}</h2>
+        <h2 id={group.id} class="group-label">{group.label}</h2>
         <p class="group-desc">{group.description}</p>
         <div class="problem-grid">
           {group.slugs.map(slug => {
@@ -121,7 +136,7 @@ const faqSchema = {
     </section>
 
     <section class="card">
-      <h2>Frequently Asked Questions</h2>
+      <h2 id="faq">Frequently Asked Questions</h2>
       <div class="faq-list">
         <details class="faq-item">
           <summary>How do I know if gophers are damaging my irrigation lines?</summary>

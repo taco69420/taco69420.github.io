@@ -63,9 +63,21 @@ const faqSchema = {
       <p style="margin: 0; color: #374151; font-size: 0.95rem;">If you have pets that work the yard or wildlife you care about, read the safety section on each product below before you open anything. Secondary poisoning is not theoretical — it happens.</p>
     </section>
 
+    <nav class="card" style="border-left: 4px solid #059669; padding: 1rem 1.5rem;">
+      <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
+      <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
+        <li><a href="#quick-picks">Quick Picks</a></li>
+        <li><a href="#bait-stations">Underground Gopher Bait Stations</a></li>
+        <li><a href="#gassers">Gopher Gassers (Fumigation Cartridges)</a></li>
+        <li><a href="#castor-oil">Castor Oil Gopher Repellent</a></li>
+        <li><a href="#buying-guide">What to Look For in a Gopher Bait</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+      </ul>
+    </nav>
+
     <!-- Quick Picks Table -->
     <section class="card">
-      <h2>Quick Picks</h2>
+      <h2 id="quick-picks">Quick Picks</h2>
       <div style="overflow-x: auto;">
         <table class="compare-table">
           <thead>
@@ -103,7 +115,7 @@ const faqSchema = {
     <!-- Product 1: Underground Bait Stations -->
     <section class="card product-section">
       <div class="product-badge badge-best">Most Effective Lethal Option</div>
-      <h2 class="ps-name">Underground Gopher Bait Stations</h2>
+      <h2 id="bait-stations" class="ps-name">Underground Gopher Bait Stations</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Properties without pets or raptors where you need lethal control on deep or branching tunnel systems that are difficult to trap mechanically.</p>
       <p class="ps-desc">Underground rodenticide bait — typically diphacinone or zinc phosphide pellets — placed directly inside active gopher tunnels. The key word is "inside." Bait dropped at a tunnel opening or sprinkled on the surface does nothing except waste product and create unnecessary chemical exposure. Probe to locate the main run, open a small access hole with a trowel, place the labeled dose inside the tunnel 6–8 inches from the opening, and seal the hole completely with soil to block light. Gophers are suspicious of anything near their entrances — the bait needs to be far enough in that they encounter it during normal tunnel activity.</p>
       <div class="ps-verdict">
@@ -136,7 +148,7 @@ const faqSchema = {
     <!-- Product 2: Gopher Gassers -->
     <section class="card product-section">
       <div class="product-badge badge-budget">Best for Deep Tunnel Systems</div>
-      <h2 class="ps-name">Gopher Gassers (Fumigation Cartridges)</h2>
+      <h2 id="gassers" class="ps-name">Gopher Gassers (Fumigation Cartridges)</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Mid-depth tunnel systems where you can't locate the active run clearly enough for effective trap placement, and trapping sessions haven't produced results.</p>
       <p class="ps-desc">Cartridge-style gassers — you light the fuse, drop the burning cartridge into the main tunnel opening, and immediately seal the entrance with soil. The cartridge burns and fills the tunnel system with gas. For this to work, every exit hole needs to be sealed before you light the cartridge, or the gas simply exhausts to the surface instead of filling the run. Walk the yard, plug every mound opening you can find, then treat. Wet soil holds the seal better and keeps the gas in the system longer — after irrigation or rain is a good time to use these.</p>
       <div class="ps-verdict">
@@ -168,7 +180,7 @@ const faqSchema = {
     <!-- Product 3: Castor Oil Repellent -->
     <section class="card product-section">
       <div class="product-badge" style="background: #fffbeb; color: #92400e; border: 1.5px solid #fcd34d;">Best Non-Toxic Option</div>
-      <h2 class="ps-name">Castor Oil Gopher Repellent Concentrate</h2>
+      <h2 id="castor-oil" class="ps-name">Castor Oil Gopher Repellent Concentrate</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Pet-safe pressure management in high-value turf areas — best used as a deterrent layer that pushes gophers toward the yard edge where trapping is easier, not as a standalone solution.</p>
       <p class="ps-desc">Castor-oil-based repellent concentrate applied through a hose-end sprayer and watered in deeply to carry the product to root-level soil. It makes the soil feeding environment unpleasant enough that gophers relocate rather than continue feeding in the treated zone. This is not a kill method and it's not a permanent fix — gophers come back when the product breaks down or they get hungry enough. But it's genuinely useful for protecting specific areas (a vegetable garden, a new lawn, a replanted bed) while you address the main population with traps. I'd always pair it with active trapping at the boundary.</p>
       <div class="ps-verdict">
@@ -196,7 +208,7 @@ const faqSchema = {
 
     <!-- Buying Guide -->
     <section class="card">
-      <h2>What to Look For in a Gopher Bait</h2>
+      <h2 id="buying-guide">What to Look For in a Gopher Bait</h2>
       <p style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Before choosing a bait, run through this checklist:</p>
       <dl class="buying-guide">
         <dt>Active ingredient: diphacinone vs. zinc phosphide</dt>
@@ -216,7 +228,7 @@ const faqSchema = {
 
     <!-- FAQ -->
     <section class="card">
-      <h2>Frequently Asked Questions</h2>
+      <h2 id="faq">Frequently Asked Questions</h2>
       <div class="faq-list">
         <details class="faq-item">
           <summary>Do gopher baits actually work?</summary>

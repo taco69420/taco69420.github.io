@@ -12,7 +12,8 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
+const contentH2s = headings.filter(h => h.depth === 2);
 
 const relatedLinks: Record<string, Array<{label: string, url: string}>> = {
   'victor-traps': [
@@ -154,6 +155,15 @@ const breadcrumbSchema = {
       <li><strong>Time to Results:</strong> {entry.data.timeToResults}</li>
     </ul>
   </section>
+
+  {contentH2s.length >= 3 && (
+    <nav class="card" style="border-left: 4px solid #059669; padding: 1rem 1.5rem;">
+      <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
+      <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
+        {contentH2s.map(h => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+      </ul>
+    </nav>
+  )}
 
   <main class="card">
     <Content />

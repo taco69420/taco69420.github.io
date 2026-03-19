@@ -63,9 +63,21 @@ const faqSchema = {
       <p style="margin: 0; color: #374151; font-size: 0.95rem;">For properties without pets or wildlife concerns, chemical control is a legitimate tool — especially on large or deeply established tunnel systems where trapping alone isn't keeping up. The three products below are what I've used and what actually works.</p>
     </section>
 
+    <nav class="card" style="border-left: 4px solid #059669; padding: 1rem 1.5rem;">
+      <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
+      <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
+        <li><a href="#quick-picks">Quick Picks</a></li>
+        <li><a href="#bait-stations">Underground Gopher Bait Stations</a></li>
+        <li><a href="#gassers">Gopher Gassers (Fumigation Cartridges)</a></li>
+        <li><a href="#co-burrow">CO Burrow Treatment Device</a></li>
+        <li><a href="#buying-guide">What to Know Before Using Gopher Poison</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+      </ul>
+    </nav>
+
     <!-- Quick Picks Table -->
     <section class="card">
-      <h2>Quick Picks</h2>
+      <h2 id="quick-picks">Quick Picks</h2>
       <div style="overflow-x: auto;">
         <table class="compare-table">
           <thead>
@@ -103,7 +115,7 @@ const faqSchema = {
     <!-- Product 1: Underground Bait Stations -->
     <section class="card product-section">
       <div class="product-badge badge-best">Most Effective Rodenticide</div>
-      <h2 class="ps-name">Underground Gopher Bait Stations</h2>
+      <h2 id="bait-stations" class="ps-name">Underground Gopher Bait Stations</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Pet-free properties where you need lethal control on established tunnel systems — particularly useful when trapping sessions aren't producing results over multiple days.</p>
       <p class="ps-desc">Rodenticide bait pellets (diphacinone or zinc phosphide) placed inside active gopher tunnels. The mechanism is straightforward: probe to locate the main lateral tunnel, open a clean access hole, place the labeled bait dose 6–8 inches inside the run, and seal the hole completely with soil. The gopher encounters the bait during normal tunnel activity and consumes a lethal dose. Diphacinone (anticoagulant) takes multiple feedings over 5–7 days; zinc phosphide acts faster at 24–48 hours but is more sensitive to soil moisture conditions and requires extra PPE during handling due to off-gassing. My preference is diphacinone for most residential jobs — slower, but more consistent and a lower secondary risk profile.</p>
       <div class="ps-verdict">
@@ -136,7 +148,7 @@ const faqSchema = {
     <!-- Product 2: Gopher Gassers -->
     <section class="card product-section">
       <div class="product-badge badge-budget">Best Fast-Acting Fumigant</div>
-      <h2 class="ps-name">Gopher Gassers (Fumigation Cartridges)</h2>
+      <h2 id="gassers" class="ps-name">Gopher Gassers (Fumigation Cartridges)</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Mid-depth tunnel systems where you can't locate or access the main run effectively, and where every tunnel exit can be sealed before treatment.</p>
       <p class="ps-desc">Light the fuse, drop the burning cartridge into the tunnel, immediately seal the entrance with tamped soil. The cartridge generates gas as it burns, filling the tunnel system. This only works if every exit is sealed first — even one open hole vents the system and renders the treatment ineffective. Walk the yard and plug every mound you can find before you light anything. I use gassers when I'm dealing with a complex system where traps keep missing and I can't get a clean probe read on the active run. Post-rain or post-irrigation is ideal — compacted wet soil holds the gas in the system much better than dry, loose soil.</p>
       <div class="ps-verdict">
@@ -169,7 +181,7 @@ const faqSchema = {
     <!-- Product 3: CO Burrow Treatment -->
     <section class="card product-section">
       <div class="product-badge" style="background: #fffbeb; color: #92400e; border: 1.5px solid #fcd34d;">Best for Large Infestations</div>
-      <h2 class="ps-name">CO Burrow Treatment Device</h2>
+      <h2 id="co-burrow" class="ps-name">CO Burrow Treatment Device</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Established, large-scale tunnel networks with multiple interconnected runs — the method I use when trapping alone isn't keeping up with a high-pressure situation.</p>
       <p class="ps-desc">Carbon monoxide-based burrow fumigation that delivers gas under pressure deep into the tunnel system through a probe inserted directly into the main run. Unlike cartridge gassers that rely on a slow burn, CO injection pushes gas actively through the network, reaching chambers and branches that surface-deployed cartridges don't penetrate. I use this selectively — it's worth the cost and setup when you're dealing with a large, established tunnel network that has multiple gophers or years of development. Overkill for a single gopher. Exactly right for an orchard or large property with entrenched pressure. Strict safety and legal compliance is not optional with this method — read the full method guide before using it.</p>
       <div class="ps-verdict">
@@ -201,7 +213,7 @@ const faqSchema = {
 
     <!-- Buying Guide -->
     <section class="card">
-      <h2>What to Know Before Using Gopher Poison</h2>
+      <h2 id="buying-guide">What to Know Before Using Gopher Poison</h2>
       <p style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Chemical gopher control is effective when matched to the right situation. Here's what matters before you choose a product:</p>
       <dl class="buying-guide">
         <dt>Pets and wildlife first — full stop</dt>
@@ -221,7 +233,7 @@ const faqSchema = {
 
     <!-- FAQ -->
     <section class="card">
-      <h2>Frequently Asked Questions</h2>
+      <h2 id="faq">Frequently Asked Questions</h2>
       <div class="faq-list">
         <details class="faq-item">
           <summary>What is the most effective gopher poison?</summary>

@@ -9,21 +9,25 @@ const bySlug = Object.fromEntries(methods.map(m => [m.slug, m]));
 const groups = [
   {
     label: 'Active Removal',
+    id: 'active-removal',
     description: 'Lethal and hands-on methods for eliminating gophers that are already in your yard.',
     slugs: ['victor-traps', 'cinch-traps', 'dog-hunting', 'flooding-tactics'],
   },
   {
     label: 'Chemical & Fumigation',
+    id: 'chemical-fumigation',
     description: 'Faster kill methods for larger infestations — higher risk, higher stakes.',
     slugs: ['carbon-monoxide', 'poison-bait-stations'],
   },
   {
     label: 'Barriers & Prevention',
+    id: 'barriers-prevention',
     description: 'Stop gophers from getting in. Best installed before planting or during a rebuild.',
     slugs: ['gopher-mesh', 'exclusion-fencing', 'gopher-resistant-plants', 'barn-owl-box'],
   },
   {
     label: 'Repellents, Deterrents & Pro Help',
+    id: 'repellents-pro',
     description: 'Supplementary tools and when to hand it off to someone else.',
     slugs: ['castor-oil', 'sonic-stakes', 'hiring-a-pro'],
   },
@@ -86,9 +90,20 @@ const faqSchema = {
       </div>
     </section>
 
+    <nav class="card" style="border-left: 4px solid #059669; padding: 1rem 1.5rem;">
+      <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
+      <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
+        <li><a href="#active-removal">Active Removal</a></li>
+        <li><a href="#chemical-fumigation">Chemical &amp; Fumigation</a></li>
+        <li><a href="#barriers-prevention">Barriers &amp; Prevention</a></li>
+        <li><a href="#repellents-pro">Repellents, Deterrents &amp; Pro Help</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+      </ul>
+    </nav>
+
     {groups.map(group => (
       <section class="method-group">
-        <h2 class="group-label">{group.label}</h2>
+        <h2 id={group.id} class="group-label">{group.label}</h2>
         <p class="group-desc">{group.description}</p>
         <div class="method-grid">
           {group.slugs.map(slug => {
@@ -124,7 +139,7 @@ const faqSchema = {
     </section>
 
     <section class="card">
-      <h2>Frequently Asked Questions</h2>
+      <h2 id="faq">Frequently Asked Questions</h2>
       <div class="faq-list">
         <details class="faq-item">
           <summary>What is the most effective gopher control method?</summary>
