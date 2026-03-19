@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Most gopher problems are one-animal jobs you can handle yourself with a $15 trap. But there are situations where calling a professional is the right call — large infestations across multiple zones, commercial properties, HOA common areas, or when you've been at it for months with no results. Knowing when to escalate is part of the process.
+Most gopher problems are one-animal jobs you can handle yourself with a [$15 trap](/best-gopher-traps). But there are situations where calling a professional is the right call — large infestations across multiple zones, commercial properties, HOA common areas, or when you've been at it for months with no results. Knowing when to escalate is part of the process.
 
 ## When to Call a Pro
 
@@ -39,9 +39,9 @@ Most gopher problems are one-animal jobs you can handle yourself with a $15 trap
 
 ## The Process
 1. Get at least two quotes. Gopher control pricing varies wildly — $150 to $500+ for a residential job is a normal range depending on property size and method.
-2. Ask specifically what method they use. Trapping and <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">CO2 fumigation</a> are preferred. Be cautious with anyone who defaults immediately to poison bait on a property with kids, pets, or edible gardens.
+2. Ask specifically what method they use. [Trapping](/methods/victor-traps) and <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">CO2 fumigation</a> are preferred. Be cautious with anyone who defaults immediately to poison bait on a property with kids, pets, or edible gardens.
 3. Ask if they guarantee results and what the callback policy is. A reputable operator will come back if new activity appears within the treatment window.
-4. Check for a valid California Pest Control Operator license (PCO license) if they're applying any restricted-use products.
+4. Check for a valid [California](/southern-california-gopher-control) Pest Control Operator license (PCO license) if they're applying any restricted-use products.
 5. After treatment, ask for a written summary of what was done — this matters for foundation damage documentation or HOA records.
 
 ## Bagger Pro-Tip

@@ -29,13 +29,13 @@ The two biggest risks to pets in a gopher control program are poison bait and un
 
 ## The Process
 1. Map every trap and flag it before releasing your pets into the yard. Never set a trap and forget where it is.
-2. For mechanical traps near pet areas, build a simple wire cover from scrap hardware cloth — an inverted U-shape over the trap opening lets gophers pass but stops dogs from nosing in.
-3. Avoid poison bait stations entirely if you have dogs that dig or cats that hunt. Secondary poisoning from a gopher that ingested bait is a real risk.
+2. For mechanical traps near pet areas, build a simple wire cover from scrap [hardware cloth](/methods/gopher-mesh) — an inverted U-shape over the trap opening lets gophers pass but stops dogs from nosing in.
+3. Avoid [poison bait stations](/methods/poison-bait-stations) entirely if you have dogs that dig or cats that hunt. Secondary poisoning from a gopher that ingested bait is a real risk.
 4. After any trapping session, do a full sweep of the yard before letting pets out — especially curious dogs that investigate new smells.
 5. If a pet does get into bait or a trap, call your vet immediately. Don't wait for symptoms.
 
 ## Bagger Pro-Tip
-Taco — Mark's dog — is the reason this page exists. A chihuahua with a nose for gopher tunnels is an asset, but even the best working dog shouldn't have unsupervised access to a live trap set. Flag everything. Always.
+Taco — Mark's dog — is the reason this page exists. A [chihuahua with a nose for gopher tunnels](/methods/dog-hunting) is an asset, but even the best working dog shouldn't have unsupervised access to a live trap set. Flag everything. Always.
 
 ## Safety Warning
 Zinc phosphide and strychnine-based baits are extremely dangerous to dogs and can be fatal in small doses. If you use any bait product, store it locked up and treat every bait station as a serious hazard. When in doubt, use mechanical traps only.

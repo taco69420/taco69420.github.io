@@ -46,8 +46,8 @@ No special gear required — just smart plant choices.
 
 **High-risk plants to protect or relocate away from active zones:**
 - Roses
-- Fruit trees (especially young ones)
-- Root vegetables — carrots, beets, sweet potatoes
+- [Fruit trees](/problems/tree-shrub-damage) (especially young ones)
+- [Root vegetables](/problems/vegetable-garden) — carrots, beets, sweet potatoes
 - Tulip and other soft bulbs
 - Young ornamental trees
 
@@ -56,7 +56,7 @@ No special gear required — just smart plant choices.
 2. For high-value plants you can't replace (mature fruit trees, established roses), shift to <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">hardware cloth barriers</a> rather than hoping gophers will leave them alone.
 3. When replanting damaged areas, choose from the resistant list above where possible.
 4. Use resistant plants as a border around garden beds — a ring of lavender or rosemary won't stop a gopher but it reduces entry points.
-5. Combine plant selection with active trapping in any zone where you've had consistent pressure.
+5. Combine plant selection with [active trapping](/methods/victor-traps) in any zone where you've had consistent pressure.
 
 ## Bagger Pro-Tip
 "Gopher-resistant" doesn't mean gopher-proof. A hungry gopher in a bad year will eat things it normally ignores. Use resistant plants as a risk-reduction layer, not a replacement for trapping.

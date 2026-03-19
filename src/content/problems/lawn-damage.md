@@ -29,11 +29,11 @@ Gophers ruin turf fast — mounds smother grass, subsurface tunnels create soft 
 - Roller or tamper
 
 ## The Process
-1. Stop the infestation first — reseeding over an active gopher is a waste of money. Set traps or bait before any lawn repair.
+1. Stop the infestation first — reseeding over an active gopher is a waste of money. Set [traps](/best-gopher-traps) or bait before any lawn repair.
 2. Once activity stops (no new mounds for 5–7 days), flatten existing mounds by raking the soil outward across the turf.
-3. Probe collapsed tunnel areas and fill voids with topsoil, tamping in layers to prevent future sinking.
+3. [Probe collapsed tunnel areas](/methods/flooding-tactics) and fill voids with topsoil, tamping in layers to prevent future sinking.
 4. Overseed dead patches or lay sod, then water consistently for 2–3 weeks.
-5. Monitor for new mounds — a single missed gopher will undo the repair in days.
+5. Monitor for [new mounds](/problems/mound-id) — a single missed gopher will undo the repair in days.
 
 ## Bagger Pro-Tip
 Don't haul the mound soil away — it came out of your yard and it's perfectly good fill. I used to bag it and drag it to the trash. Wasted effort. Just spread it thin over the surrounding grass with a rake. It settles in and the grass grows right through it within a few weeks.

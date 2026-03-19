@@ -29,9 +29,9 @@ The best time to gopher-proof a yard is before you plant anything. Once landscap
 - Sonic stakes for perimeter pressure (optional)
 
 ## The Process
-1. Before any soil prep or planting, walk the lot and probe for existing tunnel activity. Eliminate any active gophers first — you don't want to bury one inside your new barrier system.
-2. For garden beds and planting areas: line the entire bottom with hardware cloth, folding edges 4–6 inches up the sides. Cover with soil and plant as normal.
-3. For lawn areas: a full subsurface mesh install is expensive but permanent. A practical alternative is a perimeter trench with vertical mesh sunk 18 inches deep around the yard boundary.
+1. Before any soil prep or planting, walk the lot and [probe for existing tunnel activity](/methods/flooding-tactics). Eliminate any active gophers first — you don't want to bury one inside your new barrier system.
+2. For garden beds and planting areas: line the entire bottom with [hardware cloth](/methods/gopher-mesh), folding edges 4–6 inches up the sides. Cover with soil and plant as normal.
+3. For lawn areas: a full subsurface mesh install is expensive but permanent. A practical alternative is a [perimeter trench with vertical mesh](/methods/exclusion-fencing) sunk 18 inches deep around the yard boundary.
 4. For individual trees and shrubs: install hardware cloth root baskets before every single planting. Non-negotiable on fruit trees and ornamentals.
 5. Set sonic stakes along the property perimeter to push pressure outward. They won't stop a determined gopher but they add a layer of discouragement.
 6. Establish a monthly walk-through habit from day one. Catching a new mound in week one costs you 20 minutes. Catching it after a season costs you a lot more.

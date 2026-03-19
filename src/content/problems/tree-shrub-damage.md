@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Gophers kill trees and shrubs by girdling the root crown — chewing all the way around the base of the root system until the plant can no longer move water and nutrients. By the time the tree shows symptoms above ground (yellowing, wilting, sudden dieback), the damage is usually already done. Act fast at the first sign of mounds near any woody plant.
+Gophers kill trees and shrubs by girdling the root crown — chewing all the way around the base of the root system until the plant can no longer move water and nutrients. By the time the tree shows symptoms above ground (yellowing, wilting, sudden dieback), the damage is usually already done. Act fast at the [first sign of mounds](/problems/mound-id) near any woody plant.
 
 ## The Gear
 - Probe rod
@@ -30,10 +30,10 @@ Gophers kill trees and shrubs by girdling the root crown — chewing all the way
 
 ## The Process
 1. Check for fresh mounds within 10 feet of any tree or shrub base — gophers work the root zone aggressively.
-2. Set traps immediately in the active main run nearest the plant. Don't wait to see how bad the damage is.
+2. Set [traps](/best-gopher-traps) immediately in the active main run nearest the plant. Don't wait to see how bad the damage is.
 3. Once the gopher is removed, carefully excavate around the root crown to assess damage. Look for gnaw marks, missing bark, or severed feeder roots.
 4. Minor girdling (less than 25% of circumference) may recover on its own with proper watering. Major girdling is usually fatal to the plant — don't waste a season waiting on a dead tree.
-5. For new replacement plantings, install a hardware cloth basket around the root ball before planting. This is the only reliable protection for young trees.
+5. For new replacement plantings, install a [hardware cloth basket](/methods/gopher-mesh) around the root ball before planting. This is the only reliable protection for young trees.
 
 ## Bagger Pro-Tip
 Don't plant a $200 fruit tree without a $4 hardware cloth basket. It takes ten minutes and it's the difference between a tree and an expensive gopher snack. Every new tree Mark plants goes in with a basket. No exceptions.

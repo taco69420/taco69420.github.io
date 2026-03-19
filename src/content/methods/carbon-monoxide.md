@@ -37,8 +37,8 @@ Carbon monoxide treatment can be effective in dense tunnel networks when runs ar
 </div>
 
 ## The Process
-1. Confirm local regulations and label legality before any treatment begins.
-2. Identify active runs and pre-seal secondary openings to prevent gas escape.
+1. Confirm [local regulations](/southern-california-gopher-control) and label legality before any treatment begins.
+2. [Identify active runs](/problems/mound-id) and pre-seal secondary openings to prevent gas escape.
 3. Insert the <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">injection probe</a> into the main tunnel and start treatment per label timing.
 4. Seal the injection point immediately after dosing and monitor nearby vent points.
 5. Return after 24-48 hours to check for new mounds and retreat only per label limits.
@@ -47,7 +47,7 @@ Carbon monoxide treatment can be effective in dense tunnel networks when runs ar
 I use this method selectively — it's worth it when you're dealing with a large, established tunnel network that traps keep missing. For a single-gopher situation, it's overkill. Seal every opening you can find before you start, or you're just venting the tunnel to atmosphere. Gas work rewards precision, not cowboy energy.
 
 ## Safety Warning
-Carbon monoxide is lethal and odorless; never use in enclosed areas, near structures, or without certified safety equipment.
+Carbon monoxide is lethal and odorless; never use in enclosed areas, near [structures](/problems/foundation-damage), or without certified safety equipment.
 
 ## Get the Gear
 <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">Shop CO Burrow Treatment Devices on Amazon →</a>

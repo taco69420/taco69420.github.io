@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Castor oil repellents can reduce gopher activity in high-value turf when applied deeply and repeatedly. They work best as pressure-management, not guaranteed elimination.
+Castor oil repellents can reduce gopher activity in [high-value turf](/problems/lawn-damage) when applied deeply and repeatedly. They work best as pressure-management, not guaranteed elimination.
 
 ## The Gear
 - Castor-oil-based repellent concentrate
@@ -41,7 +41,7 @@ Castor oil repellents can reduce gopher activity in high-value turf when applied
 2. Mix and apply repellent according to label rate across active and buffer areas.
 3. Deep-water immediately after application to carry product into root-level soil.
 4. Repeat application in 7-14 days or after heavy rain for sustained pressure.
-5. Pair with <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">traps</a> at boundary mounds where displaced activity appears.
+5. Pair with [traps](/best-gopher-traps) and <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">traps</a> at boundary mounds where displaced activity appears.
 
 ## Bagger Pro-Tip
 Repellent alone is like sending a strongly worded letter—effective only when backed by enforcement at the border.

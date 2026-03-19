@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Vegetable gardens are a gopher buffet — soft soil that's easy to tunnel, and dense root crops (carrots, beets, sweet potatoes) that disappear from below overnight. A single gopher can destroy a season's worth of root vegetables in a week. The long-term fix is hardware cloth lining under your beds. The short-term fix is trapping fast.
+Vegetable gardens are a gopher buffet — soft soil that's easy to tunnel, and dense root crops (carrots, beets, sweet potatoes) that disappear from below overnight. A single gopher can destroy a season's worth of [root vegetables](/what-attracts-gophers) in a week. The long-term fix is hardware cloth lining under your beds. The short-term fix is trapping fast.
 
 ## The Gear
 - Cinch or Victor traps for immediate control
@@ -30,7 +30,7 @@ Vegetable gardens are a gopher buffet — soft soil that's easy to tunnel, and d
 - Work gloves
 
 ## The Process
-1. Set traps immediately in active runs near the garden — look for fresh mounds within 10 feet of the bed perimeter.
+1. Set traps immediately in active runs near the garden — look for [fresh mounds](/problems/mound-id) within 10 feet of the bed perimeter.
 2. Identify which crops are being hit. Gophers prefer roots and tubers; if you're losing carrots, beets, or potato starts, that's the tunnel entry point.
 3. Once the gopher is caught (no new mounds for 5–7 days), assess the damage. Pull affected plants and check roots for gnaw marks.
 4. For raised beds: line the bottom with ½-inch hardware cloth before adding soil. Fold it up 2–3 inches on each interior wall edge. This is the only permanent fix.
@@ -41,7 +41,7 @@ Vegetable gardens are a gopher buffet — soft soil that's easy to tunnel, and d
 Chicken wire is useless — gophers chew right through it. Use ½-inch galvanized hardware cloth only. It's more expensive but it's the difference between a one-time fix and redoing the job every two years.
 
 ## Safety Warning
-Avoid placing poison bait in or near active vegetable gardens. Soil contamination risk is low but not zero, and secondary poisoning of garden birds and beneficials (owls, hawks) is a real concern. Stick to mechanical traps inside garden perimeters.
+Avoid placing [poison bait](/methods/poison-bait-stations) in or near active vegetable gardens. Soil contamination risk is low but not zero, and secondary poisoning of garden birds and beneficials (owls, hawks) is a real concern. Stick to mechanical traps inside garden perimeters.
 
 ## Fix It
 Trap first, then harden the bed. In that order.

@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Gopher mesh is one of the most reliable long-term defenses for raised beds and sensitive planting areas. Proper depth and overlap are the difference between fortress and buffet.
+Gopher mesh is one of the most reliable long-term defenses for [raised beds](/problems/vegetable-garden) and sensitive planting areas. Proper depth and overlap are the difference between fortress and buffet.
 
 ## The Gear
 - 1/2-inch galvanized hardware cloth
@@ -38,7 +38,7 @@ Gopher mesh is one of the most reliable long-term defenses for raised beds and s
 
 ## The Process
 1. Measure the bed footprint and cut <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">hardware cloth panels</a> with at least 6 inches overlap on seams.
-2. Excavate around the bed perimeter 18-24 inches deep for a vertical barrier skirt.
+2. Excavate around the bed perimeter 18-24 inches deep for a [vertical barrier skirt](/methods/exclusion-fencing).
 3. Line the bed bottom with mesh and fold edges upward to connect with side barrier panels.
 4. Secure all seams with ties or staples so no gaps exceed 1/2 inch.
 5. Backfill soil, then inspect yearly for corrosion or disturbed edges.

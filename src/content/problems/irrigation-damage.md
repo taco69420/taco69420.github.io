@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Gophers chew irrigation tubing constantly — not because they're thirsty, but because their teeth never stop growing and they gnaw anything in their path. You'll notice it as dead zones in your drip system, soggy spots where a line is gushing underground, or a sudden pressure drop at the valve. The repair is straightforward but pointless until the gopher is gone.
+Gophers chew irrigation tubing constantly — not because they're thirsty, but because their teeth never stop growing and they gnaw anything in their path. You'll notice it as dead zones in your drip system, soggy spots where a line is gushing underground, or a sudden [pressure drop at the valve](/problems/drip-emitter-damage). The repair is straightforward but pointless until the gopher is gone.
 
 ## The Gear
 - Drip line repair couplings (barbed, matching your line diameter)
@@ -33,7 +33,7 @@ Gophers chew irrigation tubing constantly — not because they're thirsty, but b
 2. Probe along the wet/dead line to locate the gnawed section — gophers often chew in multiple spots along the same run.
 3. Dig down to expose the damaged tubing. Check 2 feet in each direction for additional bite marks before cutting.
 4. Cut out the damaged section and splice in new tubing with barbed repair couplings.
-5. Before reburying, wrap the repaired section loosely in wire mesh or hardware cloth to discourage future gnawing in the same spot.
+5. Before reburying, wrap the repaired section loosely in wire mesh or [hardware cloth](/methods/gopher-mesh) to discourage future gnawing in the same spot.
 6. Eliminate the gopher — this repair will fail again within weeks if the animal is still active.
 
 ## Bagger Pro-Tip

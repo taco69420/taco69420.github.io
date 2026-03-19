@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Exclusion fencing is the most labor-intensive method on this site — but on large properties, orchards, or yards that border open land with persistent gopher pressure, it's often the only approach that actually holds long-term. Done right, it stops migration at the boundary so you're not in a constant reactive trap cycle.
+Exclusion fencing is the most labor-intensive method on this site — but on large properties, orchards, or yards that border open land with [persistent gopher pressure](/what-attracts-gophers), it's often the only approach that actually holds long-term. Done right, it stops migration at the boundary so you're not in a constant reactive trap cycle.
 
 ## The Gear
 - 1/2-inch galvanized hardware cloth, 24–36 inches wide
@@ -38,7 +38,7 @@ Exclusion fencing is the most labor-intensive method on this site — but on lar
 </div>
 
 ## The Process
-1. Mark your perimeter line. For most residential properties this follows the property edge. For orchards or garden areas, fence just the zone you're protecting.
+1. Mark your perimeter line. For most residential properties this follows the property edge. For [orchards](/problems/tree-shrub-damage) or garden areas, fence just the zone you're protecting.
 2. Dig a trench 18–24 inches deep along the entire perimeter. Gophers rarely tunnel deeper than 12 inches but go to 18+ in soft soil — don't cut corners here.
 3. Install fence posts every 6–8 feet along the trench line.
 4. Unroll <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">hardware cloth</a> and attach it to the posts so it extends from the surface down to the bottom of the trench. The bottom 6 inches should be bent outward at a 90-degree angle (like an L) away from the protected area — this stops gophers from tunneling under the barrier.
@@ -46,7 +46,7 @@ Exclusion fencing is the most labor-intensive method on this site — but on lar
 6. Inspect the fence line annually for corrosion, settlement, or breaches.
 
 ## Bagger Pro-Tip
-Rent a mechanical trencher for anything over 50 feet. Hand-digging a 200-foot perimeter trench in Redlands clay is a full day of misery. The rental costs $80 and saves your back. Call 811 first — always.
+Rent a mechanical trencher for anything over 50 feet. Hand-digging a 200-foot perimeter trench in [Redlands](/southern-california-gopher-control) clay is a full day of misery. The rental costs $80 and saves your back. Call 811 first — always.
 
 ## Safety Warning
 Call 811 before any digging. Underground utility lines, irrigation mains, and electrical conduits all run in the same zones gophers love. One call is free; hitting a gas line is not.

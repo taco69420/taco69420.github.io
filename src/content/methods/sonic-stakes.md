@@ -35,17 +35,17 @@ Sonic stakes send low-frequency vibrations through the soil every 30 seconds or 
 </div>
 
 ## The Process
-1. Identify the active zone by locating fresh mounds and probing for main tunnels.
+1. Identify the active zone by locating [fresh mounds](/problems/mound-id) and probing for main tunnels.
 2. Drive stakes into the soil every 15–20 feet along the active perimeter — not just in the middle of the yard.
 3. Make sure the solar panel faces direct sun; shaded stakes lose charge fast and stop pulsing.
 4. Leave them running continuously for at least 2 weeks before judging results.
 5. If new mounds appear outside the staked zone, the gopher moved — reposition stakes to cut off the new run.
 
 ## Bagger Pro-Tip
-Think of sonic stakes like a fence, not a trap. They redirect gophers, they don't kill them. Use them to protect a specific bed or garden edge while you <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">trap</a> the main population elsewhere.
+Think of sonic stakes like a fence, not a trap. They redirect gophers, they don't kill them. Use them to protect a [specific bed or garden edge](/problems/garden-destruction) while you <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">trap</a> the main population elsewhere.
 
 ## Safety Warning
-Completely pet and kid safe. No chemicals, no trigger mechanisms. The only risk is driving the stake into an irrigation line — probe the soil first if you're near drip lines.
+Completely pet and kid safe. No chemicals, no trigger mechanisms. The only risk is driving the stake into an irrigation line — probe the soil first if you're near [drip lines](/problems/irrigation-damage).
 
 ## Get the Gear
 <a href="https://amzn.to/4sF1zUD" target="_blank" rel="sponsored noopener">Shop Solar Sonic Repeller Stakes on Amazon →</a>

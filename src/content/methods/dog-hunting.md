@@ -46,14 +46,14 @@ A dog with a strong prey drive is one of the best gopher detection tools you hav
 1. Let the dog work the yard on a long lead or off-leash in a fenced area. Don't direct them — let the nose take over.
 2. Watch for sustained interest in a specific area. A dog that circles back to the same spot, digs shallowly, or goes low and sniffs intensely is telling you something.
 3. Mark any spots the dog fixates on. Probe those areas — the dog is usually right.
-4. Set <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">traps</a> in the runs the dog identified. Let them do the scout work; you do the close.
+4. Set <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">traps</a> in the runs the dog identified. Let them do the scout work; you do the close. For gear, see [The Armory](/traps).
 5. If the dog is fast and the gopher surfaces — that's between them. Nature is nature.
 
 ## Bagger Pro-Tip
 The dog is reconnaissance, not the whole operation. Taco can find a run that would take Mark twenty minutes of probing to locate. But Taco doesn't set traps. Use your dog to shorten the detection phase, then finish the job with the right method. Together you're unbeatable.
 
 ## Safety Warning
-If you're running poison bait anywhere on the property, keep the dog out of those areas completely. A dog that hunts gophers is at elevated risk of secondary poisoning from a bait-killed gopher. Don't mix the Taco Method with any poison-based approach — it's not worth it.
+If you're running poison bait anywhere on the property, keep the dog out of those areas completely. A dog that hunts gophers is at elevated risk of [secondary poisoning](/problems/pet-safety) from a bait-killed gopher. Don't mix the Taco Method with any [poison-based approach](/methods/poison-bait-stations) — it's not worth it.
 
 ## Get the Gear
 The only gear the Taco Method requires is a good dog. But when it's time to set the trap after Taco finds the run:

@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Gopher issues often rebound when only one side of a boundary is treated. A simple shared plan can reduce conflict and improve control results for everyone.
+Gopher issues often rebound when only one side of a [boundary is treated](/methods/exclusion-fencing). A simple shared plan can reduce conflict and improve control results for everyone.
 
 ## The Gear
 - Property sketch or map
@@ -29,9 +29,9 @@ Gopher issues often rebound when only one side of a boundary is treated. A simpl
 - Written treatment plan
 
 ## The Process
-1. Document active mound zones on both sides of the boundary with dates.
+1. Document [active mound zones](/problems/mound-id) on both sides of the boundary with dates.
 2. Open a respectful conversation focused on shared damage, not blame.
-3. Agree on a coordinated 2-4 week control window and assign responsibilities.
+3. Agree on a coordinated 2-4 week [control window](/seasons) and assign responsibilities.
 4. Share updates after each treatment pass and adjust hotspots together.
 5. Set a monthly check-in to keep boundary pressure from returning.
 

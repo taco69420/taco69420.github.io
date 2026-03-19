@@ -29,11 +29,11 @@ Fresh gopher mounds are usually fan- or crescent-shaped with a plugged soil hole
 - Notebook
 
 ## The Process
-1. Inspect mound shape and locate the plugged hole, usually offset from center.
+1. Inspect [mound shape](/gopher-vs-mole) and locate the plugged hole, usually offset from center.
 2. Scrape smooth a test mound area and mark it to check for overnight rebuild.
 3. Probe for the main run on the plug side, about 6-12 inches from the mound.
-4. Compare signs with mole ridges (raised surface runs) to avoid misidentification.
-5. Log confirmed active sites and prioritize them for trapping first.
+4. Compare signs with [mole ridges](/gopher-vs-mole) (raised surface runs) to avoid misidentification.
+5. Log confirmed active sites and prioritize them for [trapping](/quick-start) first.
 
 ## Bagger Pro-Tip
 Don’t trap vibes, trap evidence—fresh plugs are your fingerprint match.

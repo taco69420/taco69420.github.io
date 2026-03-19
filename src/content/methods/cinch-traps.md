@@ -19,10 +19,10 @@ sources:
 ---
 
 ## Quick Answer
-Cinch traps are my backup when Victor sets aren't producing — and sometimes my first pick depending on the tunnel geometry. They're forgiving for beginners and the alignment is easier to nail. What matters most is finding the right run. In my experience, a mediocre trap in a great tunnel beats a great trap in the wrong spot every time.
+Cinch traps are my backup when [Victor sets](/methods/victor-traps) aren't producing — and sometimes my first pick depending on the tunnel geometry. They're forgiving for beginners and the alignment is easier to nail. What matters most is finding the right run. In my experience, a mediocre trap in a great tunnel beats a great trap in the wrong spot every time.
 
 ## The Gear
-- 2 cinch-style gopher traps
+- 2 [cinch-style gopher traps](/best-gopher-traps)
 - Probe rod
 - Trowel
 - Safety gloves
@@ -37,7 +37,7 @@ Cinch traps are my backup when Victor sets aren't producing — and sometimes my
 </div>
 
 ## The Process
-1. Use a <a href="https://amzn.to/4dlMbrU" target="_blank" rel="sponsored noopener">probe rod</a> around fresh mounds to find the smooth, straight main tunnel path.
+1. Use a <a href="https://amzn.to/4dlMbrU" target="_blank" rel="sponsored noopener">probe rod</a> around [fresh mounds](/problems/mound-id) to find the smooth, straight main tunnel path.
 2. Open the run and remove loose soil to keep the trigger loop unobstructed.
 3. Set two cinch traps back-to-back to intercept movement in both directions.
 4. Cover the opening with a board or soil cap to reduce light and airflow changes.

@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Gophers can destroy a garden bed in days by severing roots below the surface — you'll see healthy plants wilt overnight with no above-ground explanation. I've watched a gopher take out 4 tomato plants in a single week before I figured out where the run was. Combining barriers with active trapping gives the fastest recovery and best long-term protection.
+Gophers can destroy a garden bed in days by severing roots below the surface — you'll see healthy plants wilt overnight with no above-ground explanation. I've watched a gopher take out 4 [tomato plants](/problems/vegetable-garden) in a single week before I figured out where the run was. Combining barriers with active trapping gives the fastest recovery and best long-term protection.
 
 ## The Gear
 - 1/2-inch hardware cloth baskets or bed liner
@@ -30,8 +30,8 @@ Gophers can destroy a garden bed in days by severing roots below the surface —
 
 ## The Process
 1. Identify which beds show newest wilt, uprooting, or tunnel collapse.
-2. Install root baskets or mesh lining for high-value plants immediately.
-3. Set traps in nearby active main runs just outside bed edges.
+2. Install root baskets or [mesh lining](/methods/gopher-mesh) for high-value plants immediately.
+3. Set [traps](/best-gopher-traps) in nearby active main runs just outside bed edges.
 4. Replace damaged plants only after 3-5 days of no new mound activity.
 5. Maintain weekly inspections and repair barrier breaches as needed.
 
