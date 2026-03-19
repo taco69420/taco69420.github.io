@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Attracts Gophers to Your Yard — And How to Use That Against Them",
+  "description": "Gophers don't show up randomly. Loose soil, dense root systems, irrigation lines, and the wrong plants all make your yard a target. Here's what's drawing them in.",
+  "author": {
+    "@type": "Person",
+    "name": "Mark the Bagger",
+    "url": "https://howtokillgophers.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "How To Kill Gophers",
+    "url": "https://howtokillgophers.com"
+  },
+  "datePublished": "2026-03-18",
+  "dateModified": "2026-03-18",
+  "url": "https://howtokillgophers.com/what-attracts-gophers"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What kind of soil do gophers prefer?", "acceptedAnswer": { "@type": "Answer", "text": "Gophers prefer loose, friable soil — sandy loam, well-amended garden beds, and recently tilled ground are ideal for tunneling. Dense clay or compacted hardpan slows them down but doesn't stop them. Irrigated soil is especially attractive because consistent moisture keeps it workable year-round." } },
+    { "@type": "Question", "name": "Do gophers follow irrigation lines?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Gophers follow moisture through soil, and irrigation creates a reliable wet corridor they use as a highway. Drip lines are especially vulnerable — gophers chew through emitters and tubing to get to the moisture source. If you have irrigation damage showing up in a line pattern, that's usually what's happening." } },
+    { "@type": "Question", "name": "Are some plants more likely to attract gophers?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Gophers are drawn to anything with fleshy, tuberous, or starchy roots — dahlias, tulips, carrots, sweet potatoes, beets, and most fruit trees are high-value targets. Dense lawn grass is attractive because the thick root mat is both food and cover. Native bunch grasses are less appealing but not immune." } },
+    { "@type": "Question", "name": "Can I make my yard gopher-proof without trapping?", "acceptedAnswer": { "@type": "Answer", "text": "Not completely, but you can significantly reduce pressure. Underground hardware cloth barriers are the most effective passive defense — nothing gets through 1/2-inch galvanized mesh installed 18 inches deep with a 6-inch outward-facing lip. Swapping high-value target plants for gopher-resistant species and fixing irrigation leaks also helps. But if you already have an active gopher, trapping is still the only way to actually remove it." } },
+  ]
+};
+---
+
+<Layout
+  title="What Attracts Gophers to Your Yard (2026) | How To Kill Gophers"
+  description="Gophers don't show up randomly. Loose soil, dense root systems, drip irrigation, and the wrong plants all make your yard a target. Learn what's drawing them in and how to use it against them."
+  schemas={[articleSchema, faqSchema]}
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › What Attracts Gophers
+  </nav>
+
+  <header>
+    <h1>What Attracts Gophers to Your Yard</h1>
+    <p class="subtitle">And How to Use That Against Them</p>
+    <p style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.25rem;">Updated March 2026</p>
+  </header>
+
+  <main>
+
+    <nav class="card" style="border-left: 4px solid #059669; padding: 1rem 1.5rem;">
+      <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
+      <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
+        <li><a href="#short-version">The Short Version</a></li>
+        <li><a href="#soil">Soil Type and Texture</a></li>
+        <li><a href="#roots">Plant Roots and Food Supply</a></li>
+        <li><a href="#irrigation">Irrigation and Moisture</a></li>
+        <li><a href="#lawn">Lawn and Ground Cover Type</a></li>
+        <li><a href="#neighbors">Neighboring Pressure</a></li>
+        <li><a href="#reduce-attraction">How to Make Your Yard Less Attractive</a></li>
+        <li><a href="#already-in">If They're Already In</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+      </ul>
+    </nav>
+
+    <section class="card">
+      <h2 id="short-version">The Short Version</h2>
+      <p>Gophers aren't random. They move toward food, soft ground, and moisture — and away from hard soil, predators, and areas with nothing worth eating. If your yard has loose amended soil, a lawn, a vegetable garden, drip irrigation, or any combination of these, you're running a buffet. Understanding what attracts them tells you exactly what to protect and where to set your first trap.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="soil">Soil Type and Texture</h2>
+      <p>This is the foundation. Gophers are tunneling animals — the easier the soil is to move through, the more attractive it is. Here's what they look for:</p>
+      <ul>
+        <li><strong>Sandy loam and sandy clay</strong> — the sweet spot. Easy to tunnel, stable enough to hold a tunnel without collapse, and common across Southern California and the Southwest.</li>
+        <li><strong>Amended garden beds</strong> — freshly tilled soil with added compost is almost irresistible. You've done the work for them. If you install a new raised bed without hardware cloth underneath, you will have gophers in it.</li>
+        <li><strong>Irrigated soil</strong> — consistent moisture makes soil workable year-round even in dry climates. A yard that gets regular irrigation is softer and easier to tunnel through than a dry, unwatered field next door.</li>
+        <li><strong>Dense clay and hardpan</strong> — these slow gophers down but don't stop them. They'll still push through if the food reward is worth it. Don't assume heavy clay soil makes you safe.</li>
+      </ul>
+
+      <div style="background: #fdfdfd; padding: 1.25rem; border: 1px solid #ddd; border-left: 5px solid #d4af37; border-radius: 4px; margin-top: 1.25rem;">
+        <p style="margin: 0; font-style: italic; color: #555; font-size: 0.9rem;">"The yard I catch gophers in fastest is always the yard with freshly amended garden beds. It's like they can smell the compost from across the street. New raised bed, no mesh — you've got a gopher in there within two weeks. Every time."</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 id="roots">Plant Roots and Food Supply</h2>
+      <p>Gophers are pure herbivores. They eat roots, bulbs, corms, and tubers — anything underground with nutritional value. The more of these you have, the more attractive your yard is. The worst offenders:</p>
+
+      <ul>
+        <li><strong>Vegetable gardens</strong> — carrots, beets, potatoes, sweet potatoes, onions, daikon. If it grows underground, it's gopher food. Leafy vegetables like lettuce and kale get pulled down by the stem.</li>
+        <li><strong>Flowering bulbs</strong> — tulips, dahlias, gladiolus, daffodils (though daffodils are actually toxic to gophers and somewhat repellent). One gopher can strip an entire bed of tulip bulbs in a night.</li>
+        <li><strong>Fruit trees</strong> — young citrus, apple, avocado, and stone fruit trees are especially vulnerable because the root bark is soft and nutritious. A gopher that girdles the roots of a young tree will kill it.</li>
+        <li><strong>Dense lawn grass</strong> — the root mat of a well-established lawn is a continuous food source. It's not as dramatic as a vegetable garden, but it sustains gophers all year.</li>
+        <li><strong>Ornamental plants with fleshy roots</strong> — agapanthus, gazania, bird of paradise, and many succulents have root systems gophers will work through.</li>
+      </ul>
+
+      <p>Gopher-resistant plants exist — see the <a href="/methods/gopher-resistant-plants">full guide on gopher-resistant plant selection</a> — but no plant is completely immune if a gopher is hungry enough and the surrounding soil is easy to work through.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="irrigation">Irrigation and Moisture</h2>
+      <p>Water is a bigger attractor than most people realize. Here's why:</p>
+      <ul>
+        <li><strong>Moist soil is easy soil.</strong> Gophers can tunnel through irrigated ground faster and with less effort than dry hardpack. If your neighbor's unwatered field is like concrete and your lawn is on a daily irrigation schedule, you will draw gophers in from the surrounding area.</li>
+        <li><strong>Roots concentrate near water.</strong> Drip lines create linear corridors of moisture, and plant roots follow those corridors. Gophers follow the roots. This is why you see gopher damage running in straight lines parallel to drip irrigation — they've found the root highway.</li>
+        <li><strong>Drip emitters are targets.</strong> Gophers chew through drip line tubing and emitters to get to moisture. See the guides on <a href="/problems/irrigation-damage">gopher irrigation line damage</a> and <a href="/problems/drip-emitter-damage">drip emitter damage</a> for what this looks like and how to address it.</li>
+        <li><strong>Overwatering makes it worse.</strong> Saturated soil produces lush, dense root systems — more food, easier tunneling. If you're watering more than necessary, you're actively making your yard more attractive.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 id="lawn">Lawn and Ground Cover Type</h2>
+      <p>A standard lawn is attractive to gophers for two reasons: food (the root mat) and cover. Gopher tunnel exits are vulnerable points — when a gopher surfaces to push soil out of a new mound, it's briefly exposed. Dense lawn coverage above the soil gives some visual cover that the animal instinctively prefers.</p>
+
+      <p>Ground covers matter too. Thick, low-growing plants like iceplant, dichondra, or kikuyu grass create a canopy at ground level that gophers prefer for the same reason. Open, bare dirt or gravel gives gophers less surface cover and makes open areas slightly less preferred — but only slightly. If the food and soil are right, they'll work in open areas too.</p>
+
+      <p>Lawns with thatch buildup — where dead grass accumulates above the soil surface — are especially attractive because the thatch layer adds additional insulation and concealment around tunnel entrances.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="neighbors">Neighboring Pressure</h2>
+      <p>One factor people consistently underestimate: gophers expand territorially. A single gopher claims roughly 200–2,000 square feet of tunnel system. When gophers breed in spring and fall, offspring disperse to find new territory. If your neighbors have an untreated infestation, their surplus gophers will scout your yard.</p>
+
+      <p>This is why treating your own yard in isolation only works to a point. If the source population next door is healthy and expanding, you're playing defense against a steady incoming pressure. At some point, <a href="/methods/gopher-mesh">underground exclusion barriers</a> or consistent perimeter trapping is the only durable answer. The <a href="/seasons">seasonal guide</a> covers when these expansion events happen.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="reduce-attraction">How to Make Your Yard Less Attractive</h2>
+      <p>You can't make your yard completely gopher-proof through attraction reduction alone — but you can make it significantly less of a target:</p>
+
+      <ul>
+        <li><strong>Install hardware cloth underground.</strong> Galvanized wire mesh (1/2-inch opening) installed 18 inches deep with a 6-inch outward-facing lip at the bottom is the most effective passive defense. See the full <a href="/methods/gopher-mesh">gopher mesh installation guide</a>. Do this before planting anything valuable.</li>
+        <li><strong>Swap high-value plants.</strong> Replace tulips and dahlias with daffodils (which gophers avoid), and replace edible root vegetables with above-ground crops in raised beds with mesh bottoms. The <a href="/methods/gopher-resistant-plants">gopher-resistant plant guide</a> has a full list.</li>
+        <li><strong>Fix irrigation leaks and reduce overwatering.</strong> Drip line damage should be repaired immediately — a wet patch from a broken emitter is an active attractor. Dial back irrigation schedules where you can without stressing plants.</li>
+        <li><strong>Eliminate thatch.</strong> Dethatch your lawn annually. Less thatch means less ground-level cover around tunnel entrances, which gophers instinctively prefer to avoid.</li>
+        <li><strong>Use repellents as a perimeter hold.</strong> Castor oil granules and sonic stakes won't stop an active gopher, but they can discourage scouts from establishing in treated areas. See the <a href="/methods/castor-oil">castor oil guide</a> and the <a href="/methods/sonic-stakes">sonic stakes guide</a> for realistic expectations.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 id="already-in">If They're Already In</h2>
+      <p>Attraction reduction doesn't remove a gopher that's already in your tunnel system. For that, you need active removal. The fastest and most reliable methods:</p>
+
+      <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 1.25rem 0;">
+        <div style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
+          <h3 style="margin-top: 0; font-size: 1rem;">Mechanical Trapping</h3>
+          <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 1rem;">Fastest results. Catches within 24–48 hours with a good set.</p>
+          <a href="/methods/victor-traps" class="btn">Victor Trap Guide</a>
+        </div>
+        <div style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
+          <h3 style="margin-top: 0; font-size: 1rem;">Bait Stations</h3>
+          <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 1rem;">Effective for larger infestations. Higher pet risk — read the guide first.</p>
+          <a href="/methods/poison-bait-stations" class="btn">Bait Station Guide</a>
+        </div>
+        <div style="padding: 1rem; border: 1px solid #e4e4e7; border-radius: 8px; background: #fafafa;">
+          <h3 style="margin-top: 0; font-size: 1rem;">Not Sure Where to Start?</h3>
+          <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 1rem;">Browse all 13 methods or take the 3-question quiz.</p>
+          <a href="/methods" class="btn">All Methods</a>
+        </div>
+      </div>
+
+      <p style="margin-bottom: 0;">For gear, Mark's tested picks are in <a href="/traps">The Armory</a> — traps, probes, and the tools actually in rotation on real jobs.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What kind of soil do gophers prefer?</summary>
+          <p>Gophers prefer loose, friable soil — sandy loam, well-amended garden beds, and recently tilled ground are ideal. Dense clay or compacted hardpan slows them down but doesn't stop them. Irrigated soil is especially attractive because consistent moisture keeps it workable year-round, even in dry climates.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do gophers follow irrigation lines?</summary>
+          <p>Yes. Gophers follow moisture through soil, and irrigation creates a reliable wet corridor they use as a highway. Drip lines are especially vulnerable — gophers chew through emitters and tubing to reach moisture. If your gopher damage appears in a straight line running parallel to an irrigation run, that's almost certainly what's happening.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are some plants more likely to attract gophers?</summary>
+          <p>Yes. Gophers are drawn to anything with fleshy, tuberous, or starchy roots — dahlias, tulips, carrots, sweet potatoes, and most fruit trees are high-value targets. Dense lawn grass is also attractive because the thick root mat provides both food and tunnel cover. Daffodils are one of the few plants gophers consistently avoid.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I make my yard gopher-proof without trapping?</summary>
+          <p>Not completely, but you can significantly reduce pressure. Underground hardware cloth barriers are the most effective passive defense — nothing gets through 1/2-inch galvanized mesh installed 18 inches deep with a 6-inch outward-facing lip. Swapping in gopher-resistant plants and fixing irrigation leaks also helps. But if you already have an active gopher, trapping is the only way to actually remove it.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+</Layout>
