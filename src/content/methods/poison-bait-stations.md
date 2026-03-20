@@ -38,7 +38,7 @@ Underground bait stations place zinc phosphide or diphacinone pellets directly i
 </div>
 
 ## The Process
-1. Use a <a href="https://amzn.to/4dlMbrU" target="_blank" rel="sponsored noopener">soil probe</a> around [fresh mounds](/problems/mound-id) to locate the main lateral tunnel — you'll feel the probe drop 2–4 inches when it hits the void.
+1. Use a <a href="https://amzn.to/40JUZ3u" target="_blank" rel="sponsored noopener">soil probe</a> around [fresh mounds](/problems/mound-id) to locate the main lateral tunnel — you'll feel the probe drop 2–4 inches when it hits the void.
 2. Open a small access hole with your trowel — just wide enough to insert the applicator.
 3. Place the labeled dose of bait inside the tunnel, not at the entrance. Gophers are suspicious of openings.
 4. Plug the hole completely with soil or a clod to block light. Light in the tunnel causes gophers to avoid and seal off the area.

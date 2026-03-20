@@ -37,7 +37,7 @@ Cinch traps are my backup when [Victor sets](/methods/victor-traps) aren't produ
 </div>
 
 ## The Process
-1. Use a <a href="https://amzn.to/4dlMbrU" target="_blank" rel="sponsored noopener">probe rod</a> around [fresh mounds](/problems/mound-id) to find the smooth, straight main tunnel path.
+1. Use a <a href="https://amzn.to/40JUZ3u" target="_blank" rel="sponsored noopener">probe rod</a> around [fresh mounds](/problems/mound-id) to find the smooth, straight main tunnel path.
 2. Open the run and remove loose soil to keep the trigger loop unobstructed.
 3. Set two cinch traps back-to-back to intercept movement in both directions.
 4. Cover the opening with a board or soil cap to reduce light and airflow changes.

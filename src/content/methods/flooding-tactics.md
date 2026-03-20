@@ -33,7 +33,7 @@ Flooding can reveal active tunnel branches and occasionally push gophers toward 
   <h4 class="mpb-name">Basic Gopher Probe</h4>
   <p class="mpb-desc">Flooding reveals active tunnel branches — but you still need to probe to pinpoint the main run before setting traps. A dedicated soil probe makes that step fast and accurate.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Locating the exact tunnel position after flooding maps the network — saves you guessing when you transition to traps.</p>
-  <a href="https://amzn.to/4dlMbrU" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Gopher Probe on Amazon →</a>
+  <a href="https://amzn.to/40JUZ3u" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Gopher Probe on Amazon →</a>
 </div>
 
 ## The Process

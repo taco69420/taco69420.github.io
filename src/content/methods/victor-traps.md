@@ -37,7 +37,7 @@ Victor traps are my go-to — they're what I started with at 15 and what I still
 </div>
 
 ## The Process
-1. Find a [fresh mound](/problems/mound-id) and use a <a href="https://amzn.to/4dlMbrU" target="_blank" rel="sponsored noopener">gopher probe</a> 6-12 inches from the plug side to locate the main tunnel.
+1. Find a [fresh mound](/problems/mound-id) and use a <a href="https://amzn.to/40JUZ3u" target="_blank" rel="sponsored noopener">gopher probe</a> 6-12 inches from the plug side to locate the main tunnel.
 2. Open the tunnel cleanly and clear enough space so trap jaws move without rubbing dirt.
 3. Set two traps facing opposite directions in the main run and secure them with wire or cord.
 4. Cover the opening to block light and airflow while keeping trap triggers unobstructed.
