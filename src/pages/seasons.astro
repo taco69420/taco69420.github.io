@@ -22,10 +22,16 @@ const faqSchema = {
     <a href="/">Home</a> › Seasonal Guide
   </nav>
 
-  <header>
-    <h1>Seasonal Gopher Guide</h1>
-    <p class="subtitle">When they move, why they move, and what you should be doing about it.</p>
-    <p class="dateline">Updated March 2026</p>
+  <header class="calendar-hero">
+    <h1>Gophers Don't Take Seasons Off. But They Have Patterns.</h1>
+    <p class="cal-sub">Know when they surge, when they go deep, and when to hit hard.</p>
+    <p class="cal-dateline">Updated March 2026</p>
+    <ul class="season-strip" aria-label="Season overview">
+      <li class="season-chip"><span class="s-icon">🌸</span><span class="s-name">Spring</span><span class="s-note">Peak season</span></li>
+      <li class="season-chip"><span class="s-icon">☀️</span><span class="s-name">Summer</span><span class="s-note">They go deep</span></li>
+      <li class="season-chip"><span class="s-icon">🍂</span><span class="s-name">Fall</span><span class="s-note">Second surge</span></li>
+      <li class="season-chip"><span class="s-icon">❄️</span><span class="s-name">Winter</span><span class="s-note">Slower, not gone</span></li>
+    </ul>
   </header>
 
   <main>
@@ -162,6 +168,80 @@ const faqSchema = {
 </Layout>
 
 <style>
+  /* ── Calendar hero ── */
+  .calendar-hero {
+    background: #1a3a3a;
+    color: #e0f2f1;
+    padding: 2.25rem 2rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .calendar-hero h1 {
+    font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+    color: #ffffff;
+    margin: 0 0 0.75rem;
+    line-height: 1.25;
+    max-width: 26ch;
+  }
+
+  .cal-sub {
+    font-size: 1rem;
+    color: #99d6cc;
+    margin: 0 0 0.85rem;
+    line-height: 1.6;
+    max-width: 50ch;
+  }
+
+  .cal-dateline {
+    font-size: 0.78rem;
+    color: #5fa898;
+    margin: 0 0 1.6rem;
+  }
+
+  .season-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .season-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    min-width: 5.5rem;
+    gap: 0.2rem;
+  }
+
+  .s-icon { font-size: 1.25rem; line-height: 1; }
+
+  .s-name {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #e0f2f1;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .s-note {
+    font-size: 0.68rem;
+    color: #7fc9be;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .season-strip { gap: 0.4rem; }
+    .season-chip { min-width: 4.5rem; padding: 0.5rem 0.65rem; }
+  }
+
+  /* ── Season content grid ── */
   .season-grid {
     display: grid;
     gap: 1.5rem;

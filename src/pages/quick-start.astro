@@ -36,10 +36,22 @@ const howToSchema = {
     <a href="/">Home</a> › Quick Start
   </nav>
 
-  <header>
-    <h1>Quick Start Guide</h1>
-    <p class="subtitle">The exact process I run every time I work a yard.</p>
-    <p class="dateline">Updated March 2026</p>
+  <header class="mission-hero">
+    <p class="mission-eyebrow">Field Briefing</p>
+    <h1>The Taco Method: Start Here</h1>
+    <p class="mission-sub">5 steps. No fluff. This is exactly how me and Taco did it — and it works.</p>
+    <p class="mission-dateline">Updated March 2026</p>
+    <ol class="step-track" aria-label="Process steps">
+      <li class="step-node"><span class="step-circle">1</span><span class="step-label">Scout</span></li>
+      <li class="step-connector" aria-hidden="true"></li>
+      <li class="step-node"><span class="step-circle">2</span><span class="step-label">Open</span></li>
+      <li class="step-connector" aria-hidden="true"></li>
+      <li class="step-node"><span class="step-circle">3</span><span class="step-label">Probe</span></li>
+      <li class="step-connector" aria-hidden="true"></li>
+      <li class="step-node"><span class="step-circle">4</span><span class="step-label">Flush</span></li>
+      <li class="step-connector" aria-hidden="true"></li>
+      <li class="step-node"><span class="step-circle">5</span><span class="step-label">Trap</span></li>
+    </ol>
   </header>
 
   <main>
@@ -130,3 +142,99 @@ const howToSchema = {
 
   </main>
 </Layout>
+
+<style>
+  /* ── Mission briefing hero ── */
+  .mission-hero {
+    background: #3b2a1a;
+    color: #fdf6ee;
+    padding: 2.25rem 2rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .mission-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #d4af37;
+    margin: 0 0 0.65rem;
+  }
+
+  .mission-hero h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #fff8f0;
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+  }
+
+  .mission-sub {
+    font-size: 1rem;
+    color: #e8d5be;
+    margin: 0 0 0.9rem;
+    line-height: 1.65;
+    max-width: 52ch;
+  }
+
+  .mission-dateline {
+    font-size: 0.78rem;
+    color: #a88060;
+    margin: 0 0 1.75rem;
+  }
+
+  /* ── Step progress track ── */
+  .step-track {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .step-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .step-circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #d4af37;
+    color: #1c1008;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .step-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #c8a87a;
+  }
+
+  .step-connector {
+    flex: 1;
+    height: 2px;
+    background: #6b4c2a;
+    min-width: 1.25rem;
+    max-width: 3rem;
+    margin-bottom: 1.1rem;
+    list-style: none;
+  }
+
+  @media (max-width: 480px) {
+    .step-connector { min-width: 0.5rem; }
+    .step-label { font-size: 0.62rem; }
+  }
+</style>

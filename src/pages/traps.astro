@@ -22,10 +22,11 @@ const faqSchema = {
     <a href="/">Home</a> › Gopher Traps & Gear
   </nav>
 
-  <header>
-    <h1>The Armory: Gopher Traps & Gear</h1>
-    <p class="subtitle">My actual picks — the stuff I've used, tested, and kept using.</p>
-    <p class="dateline">Updated March 2026</p>
+  <header class="locker-hero">
+    <h1>The Armory</h1>
+    <p class="locker-sub">Every piece of gear on this page has been used in the field. If I list it, it earned its spot. If it didn't work, it's not here.</p>
+    <p class="locker-trust">No sponsored placements. No affiliate junk. Just what works.</p>
+    <p class="locker-dateline">Updated March 2026</p>
   </header>
 
   <main>
@@ -335,6 +336,52 @@ const faqSchema = {
 </Layout>
 
 <style>
+  /* ── Gear locker hero ── */
+  .locker-hero {
+    background: #111111;
+    color: #f4f4f5;
+    padding: 2.25rem 2rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #3f3f46;
+  }
+
+  .locker-hero h1 {
+    font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+    color: #ffffff;
+    margin: 0 0 0.75rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .locker-sub {
+    font-size: 1rem;
+    color: #a1a1aa;
+    margin: 0 0 0.85rem;
+    line-height: 1.65;
+    max-width: 52ch;
+  }
+
+  .locker-trust {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #f4f4f5;
+    background: #27272a;
+    border: 1px solid #3f3f46;
+    border-radius: 4px;
+    padding: 0.3rem 0.75rem;
+    margin: 0 0 0.9rem;
+    letter-spacing: 0.01em;
+  }
+
+  .locker-dateline {
+    font-size: 0.78rem;
+    color: #52525b;
+    margin: 0;
+    display: block;
+  }
+
   /* ── Category section spacing ── */
   .armory-category { margin-bottom: 2rem; }
 
