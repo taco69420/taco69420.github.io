@@ -42,6 +42,20 @@ const startPicks = [
   { slug: 'vegetable-garden', cta: 'Highest urgency fix →' },
 ];
 
+const slugEmoji: Record<string, string> = {
+  'drip-emitter-damage': '💧',
+  'foundation-damage': '🏠',
+  'garden-destruction': '🌿',
+  'irrigation-damage': '💧',
+  'lawn-damage': '🌱',
+  'mound-id': '🔍',
+  'neighbor-disputes': '🤝',
+  'new-yard-prep': '🏡',
+  'pet-safety': '🐾',
+  'tree-shrub-damage': '🌳',
+  'vegetable-garden': '🥕',
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -63,10 +77,10 @@ const faqSchema = {
     <a href="/">Home</a> › Gopher Problems
   </nav>
 
-  <header>
-    <h1>Common Gopher Problems</h1>
-    <p class="subtitle">Identify the damage and know exactly what to do about it.</p>
-    <p class="dateline">Updated March 2026</p>
+  <header class="diagnostic-hero">
+    <h1>What's Happening in Your Yard?</h1>
+    <p class="diag-sub">Start with the damage you're seeing — each guide tells you exactly what to do about it.</p>
+    <p class="diag-dateline">Updated March 2026</p>
   </header>
 
   <main>
@@ -110,7 +124,7 @@ const faqSchema = {
             if (!p) return null;
             return (
               <article class="problem-card">
-                <h3>{p.data.title}</h3>
+                <h3>{slugEmoji[slug] ? `${slugEmoji[slug]} ` : ''}{p.data.title}</h3>
                 <p>{p.data.description}</p>
                 <div class="badge-row">
                   <span class="badge" style={`background: ${difficultyColor[p.data.difficulty]}`}>{p.data.difficulty}</span>
@@ -286,5 +300,36 @@ const faqSchema = {
   @media (max-width: 640px) {
     .picks-grid { grid-template-columns: 1fr; }
     .problem-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── Diagnostic hero ── */
+  .diagnostic-hero {
+    background: #f0f9ff;
+    border: 1.5px solid #bae6fd;
+    border-left: 5px solid #0284c7;
+    border-radius: 8px;
+    padding: 2rem 2rem 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .diagnostic-hero h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #0c4a6e;
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+  }
+
+  .diagnostic-hero .diag-sub {
+    font-size: 1rem;
+    color: #374151;
+    margin: 0 0 1rem;
+    line-height: 1.6;
+    max-width: 54ch;
+  }
+
+  .diagnostic-hero .diag-dateline {
+    font-size: 0.78rem;
+    color: #6b7280;
+    margin: 0;
   }
 </style>

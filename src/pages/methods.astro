@@ -64,10 +64,11 @@ const faqSchema = {
     <a href="/">Home</a> › Gopher Control Methods
   </nav>
 
-  <header>
-    <h1>The Playbook</h1>
-    <p class="subtitle">13 field-tested methods — from first trap to full perimeter defense.</p>
-    <p class="dateline">Updated March 2026</p>
+  <header class="war-room-hero">
+    <p class="hero-eyebrow">The Playbook</p>
+    <h1>13 Ways to Kill a Gopher</h1>
+    <p class="hero-sub">Pick your weapon. Every method below has been field-tested. Some are fast. Some are permanent. Some are both.</p>
+    <p class="hero-dateline">Updated March 2026</p>
   </header>
 
   <main>
@@ -312,5 +313,45 @@ const faqSchema = {
   @media (max-width: 640px) {
     .picks-grid { grid-template-columns: 1fr; }
     .method-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── War room hero ── */
+  .war-room-hero {
+    background: #0d1f13;
+    color: #f0fdf4;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .war-room-hero .hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #6ee7b7;
+    margin: 0 0 0.75rem;
+  }
+
+  .war-room-hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    color: #ffffff;
+    margin: 0 0 0.85rem;
+    line-height: 1.15;
+  }
+
+  .war-room-hero .hero-sub {
+    font-size: 1rem;
+    color: #d1fae5;
+    margin: 0 0 1.1rem;
+    line-height: 1.65;
+    max-width: 54ch;
+  }
+
+  .war-room-hero .hero-dateline {
+    font-size: 0.78rem;
+    color: #6ee7b7;
+    margin: 0;
+    opacity: 0.75;
   }
 </style>
