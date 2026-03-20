@@ -22,7 +22,7 @@ sources:
 Gopher tunneling near foundations can increase soil voids and moisture movement around structures. Early intervention protects hardscape and reduces expensive repairs.
 
 ## The Gear
-- Soil probe
+- [Soil probe](/traps)
 - Traps for perimeter runs
 - Compaction tamper
 - Marker paint

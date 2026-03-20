@@ -23,7 +23,7 @@ Most gopher problems are one-animal jobs you can handle yourself with a [$15 tra
 
 ## When to Call a Pro
 
-- More than 5–6 active mound clusters across different parts of the yard simultaneously
+- More than 5–6 active [mound](/problems/mound-id) clusters across different parts of the yard simultaneously
 - Recurring pressure despite consistent trapping for 4+ weeks
 - Commercial properties, orchards, or large acreage where systematic treatment is needed
 - Active gopher activity near foundations, retaining walls, or infrastructure where you need documented treatment records
