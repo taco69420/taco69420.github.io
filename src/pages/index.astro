@@ -16,6 +16,12 @@ const difficultyColors = {
   hard: '#b91c1c',
 };
 
+const featuredMeta = {
+  'victor-traps': { speed: '12–48 hours',  bestFor: 'Active main tunnel runs' },
+  'cinch-traps':  { speed: '12–72 hours',  bestFor: 'Open tunnel runs' },
+  'gopher-mesh':  { speed: 'Immediate',    bestFor: 'Garden beds & raised beds' },
+};
+
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -104,11 +110,19 @@ const faqSchema = {
           <article class="method-card">
             <h3>{method.data.title}</h3>
             <p>{method.data.description}</p>
-            <div class="method-meta">
-              <span class="badge" style={`background: ${difficultyColors[method.data.difficulty]};`}>
-                {method.data.difficulty}
-              </span>
-              <span class="meta-item">Results: {method.data.timeToResults}</span>
+            <div class="method-stats">
+              <div class="stat-row">
+                <span class="stat-label">Difficulty</span>
+                <span class="stat-value" style={`color: ${difficultyColors[method.data.difficulty]}`}>{method.data.difficulty.charAt(0).toUpperCase() + method.data.difficulty.slice(1)}</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Speed</span>
+                <span class="stat-value">{featuredMeta[method.slug]?.speed}</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Best for</span>
+                <span class="stat-value">{featuredMeta[method.slug]?.bestFor}</span>
+              </div>
             </div>
             <a href={`/methods/${method.slug}`} class="btn">Read the Guide</a>
           </article>
@@ -279,27 +293,35 @@ const faqSchema = {
     margin-bottom: 0.75rem;
   }
 
-  .method-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+  .method-stats {
     margin-bottom: 0.75rem;
-    flex-wrap: wrap;
+    border-top: 1px solid #e4e4e7;
+    padding-top: 0.55rem;
   }
 
-  .badge {
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
-    color: white;
-    font-weight: 700;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-  }
-
-  .meta-item {
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.18rem 0;
     font-size: 0.8rem;
-    color: #71717a;
+  }
+
+  .stat-label {
+    color: #6b7280;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+  }
+
+  .stat-value {
+    color: #18181b;
+    font-weight: 500;
+    text-align: right;
+    font-size: 0.8rem;
   }
 
   /* Quick Links */
