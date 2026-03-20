@@ -86,11 +86,11 @@ const localBusinessSchema = {
       h1 { color: #065f46; font-size: 2.2rem; margin-bottom: 0.25rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; }
       h2 { color: #111827; margin-top: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; }
       h3 { color: #1f2937; font-size: 1.05rem; font-weight: 600; }
-      .subtitle { color: #6b7280; font-size: 1.05rem; margin-top: 0.25rem; }
+      .subtitle { color: #52525b; font-size: 1.05rem; margin-top: 0.25rem; }
       .card { background: white; padding: 1.75rem; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.04); margin-bottom: 1.5rem; border: 1px solid #e9eaec; }
       .btn { display: inline-block; background: #059669; color: white !important; padding: 0.65rem 1.4rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.875rem; margin-top: 0.75rem; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; border-bottom: none !important; box-shadow: 0 1px 3px rgba(5,150,105,0.3); letter-spacing: 0.01em; }
       .btn:hover { background: #047857; border-bottom: none !important; color: white !important; transform: translateY(-1px); box-shadow: 0 4px 10px rgba(5,150,105,0.3); }
-      .disclaimer { border-top: 2px solid #e8e8eb; padding-top: 2rem; margin-top: 4rem; font-size: 0.85rem; color: #9ca3af; text-align: center; }
+      .disclaimer { border-top: 2px solid #e8e8eb; padding-top: 2rem; margin-top: 4rem; font-size: 0.85rem; color: #6b7280; text-align: center; }
       nav[aria-label="Main navigation"] { display: flex; align-items: center; gap: 0.2rem; margin-bottom: 2.5rem; flex-wrap: wrap; padding-bottom: 1.25rem; border-bottom: 2px solid #e8e8eb; row-gap: 0.4rem; }
       .nav-brand { font-weight: 800; font-size: 0.95rem; color: #065f46; text-decoration: none; letter-spacing: -0.025em; margin-right: auto; padding: 0.35rem 0; flex-shrink: 0; }
       .nav-brand:hover { color: #047857; background: none; }
@@ -109,7 +109,7 @@ const localBusinessSchema = {
       .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
       .legal-link { color: #047857; text-decoration: none; }
       .legal-link:hover { text-decoration: underline; }
-      .breadcrumb { font-size: 0.82rem; color: #9ca3af; margin-bottom: 1.25rem; display: block; }
+      .breadcrumb { font-size: 0.82rem; color: #6b7280; margin-bottom: 1.25rem; display: block; }
       .breadcrumb a { color: #6b7280; text-decoration: none; padding: 0; background: none; border-radius: 0; font-weight: normal; }
       .breadcrumb a:hover { background: none; color: #047857; text-decoration: underline; }
       .card a { color: #047857; font-weight: 500; text-decoration: none; border-bottom: 1px solid #d1fae5; transition: border-color 0.15s, color 0.15s; }
@@ -126,6 +126,11 @@ const localBusinessSchema = {
       .card a[href^="http"] { padding-right: 0.9rem; position: relative; }
       .card a[href^="http"]::after { content: "↗"; font-size: 0.7em; position: absolute; right: 0; top: 0.1em; opacity: 0.5; }
 
+      .dateline { font-size: 0.8rem; color: #6b7280; margin-top: 0.25rem; }
+      .skip-link { position: absolute; top: -40px; left: 0; background: #065f46; color: white !important; padding: 0.5rem 1rem; text-decoration: none; z-index: 10000; font-weight: 600; border-radius: 0 0 6px 0; }
+      .skip-link:focus { top: 0; }
+      :focus-visible { outline: 2px solid #047857; outline-offset: 3px; border-radius: 3px; }
+
       @media (max-width: 640px) {
         body { padding: 1rem; }
         h1 { font-size: 1.75rem; }
@@ -137,13 +142,14 @@ const localBusinessSchema = {
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav aria-label="Main navigation">
       <a href="/" class="nav-brand">How To Kill Gophers</a>
       <a href="/quick-start" class={pathname === '/quick-start' ? 'nav-active' : ''}>Quick Start</a>
       <a href="/seasons" class={pathname === '/seasons' ? 'nav-active' : ''}>Seasonal Guide</a>
       <div class="nav-dropdown">
-        <button class={`nav-dropdown-btn${pathname.startsWith('/methods') ? ' nav-active' : ''}`}>The Playbook</button>
-        <ul class="nav-dropdown-menu">
+        <button class={`nav-dropdown-btn${pathname.startsWith('/methods') ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="playbook-menu">The Playbook</button>
+        <ul class="nav-dropdown-menu" id="playbook-menu" role="menu">
           <li><a href="/methods/victor-traps">Victor Trap Tunnel Intercept</a></li>
           <li><a href="/methods/cinch-traps">Cinch Trap Mainline Set</a></li>
           <li><a href="/methods/gopher-mesh">Install Gopher Mesh Barriers</a></li>
@@ -160,8 +166,8 @@ const localBusinessSchema = {
         </ul>
       </div>
       <div class="nav-dropdown">
-        <button class={`nav-dropdown-btn${pathname.startsWith('/problems') ? ' nav-active' : ''}`}>Problems</button>
-        <ul class="nav-dropdown-menu">
+        <button class={`nav-dropdown-btn${pathname.startsWith('/problems') ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="problems-menu">Problems</button>
+        <ul class="nav-dropdown-menu" id="problems-menu" role="menu">
           <li><a href="/problems/drip-emitter-damage">Gophers Destroying Drip Emitters</a></li>
           <li><a href="/problems/foundation-damage">Managing Gopher Risk Near Foundations</a></li>
           <li><a href="/problems/garden-destruction">Stopping Gopher Garden Destruction</a></li>
@@ -177,8 +183,8 @@ const localBusinessSchema = {
       </div>
       <a href="/traps" class={pathname === '/traps' ? 'nav-active' : ''}>The Armory</a>
       <div class="nav-dropdown">
-        <button class={`nav-dropdown-btn${['/best-gopher-traps', '/best-gopher-baits', '/best-gopher-poison'].includes(pathname) ? ' nav-active' : ''}`}>Best Of</button>
-        <ul class="nav-dropdown-menu">
+        <button class={`nav-dropdown-btn${['/best-gopher-traps', '/best-gopher-baits', '/best-gopher-poison'].includes(pathname) ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="bestof-menu">Best Of</button>
+        <ul class="nav-dropdown-menu" id="bestof-menu" role="menu">
           <li><a href="/best-gopher-traps">Best Gopher Traps of 2026</a></li>
           <li><a href="/best-gopher-baits">Best Gopher Baits of 2026</a></li>
           <li><a href="/best-gopher-poison">Best Gopher Poison of 2026</a></li>
@@ -191,7 +197,7 @@ const localBusinessSchema = {
 
     <footer class="disclaimer">
       <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-        <img src="https://howtokillgophers.com/markwt.jpg" alt="Mark the Bagger" width="56" height="56" style="border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid #e4e4e7;" />
+        <img src="https://howtokillgophers.com/markwt.jpg" alt="Mark the Bagger, founder of howtokillgophers.com" width="56" height="56" style="border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid #e4e4e7;" />
         <span>I'm Mark — I've been trapping gophers since I was 15, starting in my dad's yard in Redlands, CA at $5 a head. My dog Taco was my hunting partner for years. This site is what we learned.
         <a href="/about" class="legal-link" style="margin-left: 0.25rem;">Read the full story →</a></span>
       </p>
@@ -210,5 +216,38 @@ const localBusinessSchema = {
     </footer>
 
     <CookieBanner />
+
+    <script is:inline>
+      // Skip-to-main: give the page's <main> element an id so the skip link works
+      (function () {
+        var main = document.querySelector('main');
+        if (main && !main.id) { main.id = 'main-content'; main.setAttribute('tabindex', '-1'); }
+      })();
+
+      // Dropdown ARIA: sync aria-expanded with CSS focus-within open/close state
+      (function () {
+        document.querySelectorAll('.nav-dropdown').forEach(function (dd) {
+          var btn = dd.querySelector('.nav-dropdown-btn');
+
+          dd.addEventListener('focusin', function () {
+            btn.setAttribute('aria-expanded', 'true');
+          });
+
+          dd.addEventListener('focusout', function (e) {
+            if (!dd.contains(e.relatedTarget)) {
+              btn.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          btn.addEventListener('mouseenter', function () {
+            btn.setAttribute('aria-expanded', 'true');
+          });
+
+          dd.addEventListener('mouseleave', function () {
+            btn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

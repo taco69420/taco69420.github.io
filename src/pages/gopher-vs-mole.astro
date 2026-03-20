@@ -44,12 +44,12 @@ const faqSchema = {
   <header>
     <h1>Gopher vs Mole</h1>
     <p class="subtitle">How To Tell Which One Is Destroying Your Yard</p>
-    <p style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.25rem;">Updated March 2026</p>
+    <p class="dateline">Updated March 2026</p>
   </header>
 
   <main>
 
-    <nav class="card" style="border-left: 4px solid #059669; padding: 1rem 1.5rem;">
+    <nav class="card" aria-label="Table of contents" style="border-left: 4px solid #059669; padding: 1rem 1.5rem;">
       <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
       <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
         <li><a href="#quick-answer">Quick Answer</a></li>
@@ -72,9 +72,9 @@ const faqSchema = {
         <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
           <thead>
             <tr style="background: #f4f4f5;">
-              <th style="text-align: left; padding: 0.6rem 1rem; border-bottom: 2px solid #e4e4e7;"></th>
-              <th style="text-align: left; padding: 0.6rem 1rem; border-bottom: 2px solid #e4e4e7; color: #b91c1c;">Gopher</th>
-              <th style="text-align: left; padding: 0.6rem 1rem; border-bottom: 2px solid #e4e4e7; color: #1d4ed8;">Mole</th>
+              <th scope="col" style="text-align: left; padding: 0.6rem 1rem; border-bottom: 2px solid #e4e4e7;">Feature</th>
+              <th scope="col" style="text-align: left; padding: 0.6rem 1rem; border-bottom: 2px solid #e4e4e7; color: #b91c1c;">Gopher</th>
+              <th scope="col" style="text-align: left; padding: 0.6rem 1rem; border-bottom: 2px solid #e4e4e7; color: #1d4ed8;">Mole</th>
             </tr>
           </thead>
           <tbody>
