@@ -50,10 +50,11 @@ const faqSchema = {
     <a href="/">Home</a> › Best Gopher Poison
   </nav>
 
-  <header>
+  <header class="poison-hero">
+    <span class="hero-badge">🐾 Check Pet Safety First</span>
     <h1>Best Gopher Poison of 2026</h1>
-    <p class="subtitle">What's actually effective, what requires a license, and when you should skip chemical control entirely.</p>
-    <p class="dateline">Updated March 2026</p>
+    <p class="hero-sub">Last resort. Not first move. If you're here, make sure you've read the safety section before you buy anything.</p>
+    <p class="hero-dateline">Updated March 2026</p>
   </header>
 
   <main>
@@ -259,6 +260,50 @@ const faqSchema = {
 
 <style>
   .product-section { margin-bottom: 1.5rem; }
+
+  /* ── Poison hero ── */
+  .poison-hero {
+    background: #18181b;
+    color: #f4f4f5;
+    padding: 2.25rem 2rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #3f3f46;
+  }
+
+  .poison-hero .hero-badge {
+    display: inline-block;
+    background: #3f3f46;
+    color: #e4e4e7;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 0.85rem;
+  }
+
+  .poison-hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    color: #ffffff;
+    margin: 0 0 0.75rem;
+    line-height: 1.15;
+  }
+
+  .poison-hero .hero-sub {
+    font-size: 1rem;
+    color: #a1a1aa;
+    margin: 0 0 0.9rem;
+    line-height: 1.65;
+    max-width: 52ch;
+  }
+
+  .poison-hero .hero-dateline {
+    font-size: 0.78rem;
+    color: #52525b;
+    margin: 0;
+  }
 
   .ps-name {
     font-size: 1.3rem;

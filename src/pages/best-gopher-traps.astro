@@ -50,10 +50,11 @@ const faqSchema = {
     <a href="/">Home</a> › Best Gopher Traps
   </nav>
 
-  <header>
+  <header class="traps-hero">
+    <span class="hero-badge">⚡ Fastest Results</span>
     <h1>Best Gopher Traps of 2026</h1>
-    <p class="subtitle">Picks from someone who has been setting these since he was 15 and charging $5 a catch.</p>
-    <p class="dateline">Updated March 2026</p>
+    <p class="hero-sub">I've been setting these since I was 15. These three are the ones that actually catch gophers.</p>
+    <p class="hero-dateline">Updated March 2026</p>
   </header>
 
   <main>
@@ -243,6 +244,50 @@ const faqSchema = {
 
 <style>
   .product-section { margin-bottom: 1.5rem; }
+
+  /* ── Traps hero ── */
+  .traps-hero {
+    background: #7f1d1d;
+    color: #fff1f2;
+    padding: 2.25rem 2rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .traps-hero .hero-badge {
+    display: inline-block;
+    background: #fca5a5;
+    color: #450a0a;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 0.85rem;
+  }
+
+  .traps-hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    color: #ffffff;
+    margin: 0 0 0.75rem;
+    line-height: 1.15;
+  }
+
+  .traps-hero .hero-sub {
+    font-size: 1rem;
+    color: #fecaca;
+    margin: 0 0 0.9rem;
+    line-height: 1.65;
+    max-width: 52ch;
+  }
+
+  .traps-hero .hero-dateline {
+    font-size: 0.78rem;
+    color: #f87171;
+    margin: 0;
+    opacity: 0.8;
+  }
 
   .ps-name {
     font-size: 1.3rem;

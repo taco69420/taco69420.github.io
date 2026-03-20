@@ -50,10 +50,11 @@ const faqSchema = {
     <a href="/">Home</a> › Best Gopher Baits
   </nav>
 
-  <header>
+  <header class="baits-hero">
+    <span class="hero-badge">⚠️ Read Before Buying</span>
     <h1>Best Gopher Baits of 2026</h1>
-    <p class="subtitle">What works, what doesn't, and when bait is the wrong tool entirely.</p>
-    <p class="dateline">Updated March 2026</p>
+    <p class="hero-sub">Effective when used right. Dangerous when used wrong. Here's what I actually recommend — and what I won't touch.</p>
+    <p class="hero-dateline">Updated March 2026</p>
   </header>
 
   <main>
@@ -254,6 +255,50 @@ const faqSchema = {
 
 <style>
   .product-section { margin-bottom: 1.5rem; }
+
+  /* ── Baits hero ── */
+  .baits-hero {
+    background: #78350f;
+    color: #fffbeb;
+    padding: 2.25rem 2rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .baits-hero .hero-badge {
+    display: inline-block;
+    background: #fde68a;
+    color: #451a03;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 0.85rem;
+  }
+
+  .baits-hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    color: #ffffff;
+    margin: 0 0 0.75rem;
+    line-height: 1.15;
+  }
+
+  .baits-hero .hero-sub {
+    font-size: 1rem;
+    color: #fde68a;
+    margin: 0 0 0.9rem;
+    line-height: 1.65;
+    max-width: 52ch;
+  }
+
+  .baits-hero .hero-dateline {
+    font-size: 0.78rem;
+    color: #d97706;
+    margin: 0;
+    opacity: 0.8;
+  }
 
   .ps-name {
     font-size: 1.3rem;
