@@ -64,10 +64,13 @@ const faqSchema = {
       <figcaption>Taco with a fresh catch. He never missed.</figcaption>
     </figure>
     <div class="hero-ctas">
-      <a href="/methods" class="btn">The Playbook</a>
-      <a href="/problems" class="btn">Find Your Problem</a>
-      <a href="/traps" class="btn">The Armory</a>
-      <a href="/quiz" class="btn">Not sure? Take the quiz →</a>
+      <a href="/quiz" class="btn btn-quiz">Not sure where to start? Take the 30-second quiz →</a>
+      <p class="ctas-divider">or jump straight to:</p>
+      <div class="ctas-secondary">
+        <a href="/methods" class="btn">The Playbook</a>
+        <a href="/problems" class="btn">Find Your Problem</a>
+        <a href="/traps" class="btn">The Armory</a>
+      </div>
     </div>
   </header>
 
@@ -223,9 +226,29 @@ const faqSchema = {
 
   .hero-ctas {
     display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn-quiz {
+    width: 100%;
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 0.85rem 1.5rem;
+  }
+
+  .ctas-divider {
+    margin: 0;
+    font-size: 0.78rem;
+    color: #a88060;
+    letter-spacing: 0.03em;
+  }
+
+  .ctas-secondary {
+    display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
-    margin-top: 1.5rem;
   }
 
   /* Start Here */
@@ -393,8 +416,8 @@ const faqSchema = {
   }
 
   @media (max-width: 640px) {
-    .hero-ctas { flex-direction: column; }
-    .hero-ctas .btn { text-align: center; }
+    .ctas-secondary { flex-direction: column; }
+    .ctas-secondary .btn { text-align: center; }
     .quick-links { grid-template-columns: 1fr 1fr; }
   }
 </style>
