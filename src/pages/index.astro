@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import RandomLore from '../components/RandomLore.astro';
+import BrevoForm from '../components/BrevoForm.astro';
 
 const methods = await getCollection('methods');
 
@@ -145,6 +146,8 @@ const faqSchema = {
       <p style="margin: 0; color: #52525b;">Dealing with something specific?</p>
       <a href="/problems" class="btn" style="margin-top: 0;">Browse all 11 problem guides →</a>
     </section>
+
+    <BrevoForm />
 
     <section class="quick-links">
       <a href="/traps" class="quick-card">
