@@ -20,26 +20,25 @@ const siteURL = "https://howtokillgophers.com";
 const pathname = Astro.url.pathname;
 const fullOgImage = ogImage.startsWith("http") ? ogImage : siteURL + ogImage;
 
-const localBusinessSchema = {
+const websiteSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Mark the Bagger",
-  "image": "https://howtokillgophers.com/taco.jpg",
-  "@id": "https://howtokillgophers.com",
+  "@type": "WebSite",
+  "name": "How To Kill Gophers",
   "url": "https://howtokillgophers.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Redlands",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 34.0556,
-    "longitude": -117.1825
-  },
-  "description": "Expert gopher trapping advice and gear reviews from Mark the Bagger, serving Redlands, CA since 2022.",
-  "openingHours": "Mo-Su 00:00-23:59"
+  "description": "Field-tested gopher control methods and gear recommendations from Mark the Bagger, who has been trapping gophers since age 15.",
+  "publisher": {
+    "@type": "Person",
+    "name": "Mark the Bagger"
+  }
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mark the Bagger",
+  "url": "https://howtokillgophers.com/about",
+  "description": "Gopher trapper since age 15. Started catching gophers in Redlands, CA for $5 a head. Built howtokillgophers.com to share real hands-on knowledge.",
+  "knowsAbout": ["gopher control", "gopher trapping", "pest control", "Victor traps", "Cinch traps"]
 };
 ---
 
@@ -138,7 +137,7 @@ const localBusinessSchema = {
       }
     </style>
 
-    <Fragment set:html={[localBusinessSchema, ...schemas].map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('')} />
+    <Fragment set:html={[websiteSchema, personSchema, ...schemas].map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('')} />
   </head>
 
   <body>
