@@ -60,6 +60,7 @@ const faqSchema = {
         <li><a href="#regions">SoCal Regions With the Worst Pressure</a></li>
         <li><a href="#regulations">California Regulations on Gopher Control</a></li>
         <li><a href="#what-works">What Works in SoCal (and What Doesn't)</a></li>
+        <li><a href="#calendar">Month-by-Month Maintenance Calendar</a></li>
         <li><a href="#faq">Frequently Asked Questions</a></li>
       </ul>
     </nav>
@@ -170,6 +171,70 @@ const faqSchema = {
     </section>
 
     <section class="card">
+      <h2 id="calendar">SoCal Gopher Control — Month-by-Month</h2>
+      <p>No winter break means you need a year-round rhythm. Here's what to do each month in Southern California:</p>
+      <div class="table-wrap">
+        <table class="calendar-table">
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Activity Level</th>
+              <th>What to Do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>January</strong></td>
+              <td class="level-low">Low–Moderate</td>
+              <td>Walk the yard weekly. Set traps on any fresh mound — winter doesn't stop them here. Good time to install mesh barriers while soil is softer from rain.</td>
+            </tr>
+            <tr>
+              <td><strong>February</strong></td>
+              <td class="level-high">Surge begins</td>
+              <td>Breeding season starts. First major push of the year. Get traps in the ground now — before the mound count doubles.</td>
+            </tr>
+            <tr>
+              <td><strong>March–April</strong></td>
+              <td class="level-peak">Peak activity</td>
+              <td>Highest activity of the year. Check traps every 12–24 hours. Walk the perimeter daily. New mounds overnight are normal — keep pace with trapping.</td>
+            </tr>
+            <tr>
+              <td><strong>May</strong></td>
+              <td class="level-high">Still elevated</td>
+              <td>Second litters arriving. Don't let up on trapping. If you got ahead of it in March, this month is maintenance. If you didn't, catch up now.</td>
+            </tr>
+            <tr>
+              <td><strong>June–July</strong></td>
+              <td class="level-low">Slower</td>
+              <td>Gophers go deeper to escape heat. Fewer surface mounds but root feeding continues underground. Good time to install mesh barriers and do property-wide inspection.</td>
+            </tr>
+            <tr>
+              <td><strong>August</strong></td>
+              <td class="level-low">Low baseline</td>
+              <td>Quietest stretch of the year. Maintain traps on any active run. Check irrigation lines — heat and dry conditions push gophers toward drip zones.</td>
+            </tr>
+            <tr>
+              <td><strong>September</strong></td>
+              <td class="level-high">Surge begins</td>
+              <td>Fall food-caching surge starts. Gophers expand tunnel networks aggressively. Set traps at the first new mound — don't wait.</td>
+            </tr>
+            <tr>
+              <td><strong>October–November</strong></td>
+              <td class="level-peak">Peak activity</td>
+              <td>Second peak of the year. Vegetable gardens especially vulnerable as fall crops finish. Trap hard. Check drip lines for damage.</td>
+            </tr>
+            <tr>
+              <td><strong>December</strong></td>
+              <td class="level-low">Moderate</td>
+              <td>Activity slows slightly. Keep traps in rotation on any active property. Install any remaining barriers before spring surge returns in February.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-bottom:0; font-size: 0.875rem; color: #6b7280;">For more detail on seasonal timing, see the <a href="/seasons">full Seasonal Guide</a>.</p>
+    </section>
+
+    <section class="card">
       <h2 id="faq">Frequently Asked Questions</h2>
       <div class="faq-list">
         <details class="faq-item">
@@ -191,5 +256,106 @@ const faqSchema = {
       </div>
     </section>
 
+    <section class="card related-section">
+      <p class="related-label">Related guides</p>
+      <div class="related-grid">
+        <a href="/seasons" class="related-card">Seasonal Guide — month-by-month gopher activity →</a>
+        <a href="/redlands" class="related-card">Redlands, CA — hyperlocal field notes →</a>
+        <a href="/methods/victor-traps" class="related-card">Victor Trap Tunnel Intercept — core SoCal method →</a>
+        <a href="/methods/gopher-mesh" class="related-card">Install Gopher Mesh Barriers — permanent fix for gardens →</a>
+        <a href="/cost" class="related-card">Gopher Control Cost Guide — what every method actually costs →</a>
+      </div>
+    </section>
+
   </main>
 </Layout>
+
+<style>
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    min-width: 480px;
+  }
+
+  .calendar-table th {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    background: #f4f4f5;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    border-bottom: 2px solid #e4e4e7;
+  }
+
+  .calendar-table td {
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+    color: #374151;
+    line-height: 1.5;
+  }
+
+  .calendar-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .level-peak { color: #b91c1c; font-weight: 600; }
+  .level-high { color: #b45309; font-weight: 600; }
+  .level-low  { color: #374151; }
+
+  .related-section {
+    border-left: 4px solid #059669;
+    padding: 1rem 1.5rem;
+  }
+
+  .related-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    margin: 0 0 0.75rem;
+  }
+
+  .related-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .related-card {
+    display: block;
+    background: #f0fdf4;
+    border: 1px solid #6ee7b7;
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #047857;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .related-card:hover {
+    background: #dcfce7;
+    border-color: #34d399;
+    text-decoration: none;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 1.25rem 0 0.35rem;
+  }
+
+  h3:first-of-type {
+    margin-top: 0.5rem;
+  }
+</style>
