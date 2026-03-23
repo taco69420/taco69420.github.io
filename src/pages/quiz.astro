@@ -98,13 +98,17 @@ import Layout from '../layouts/Layout.astro';
         <div class="quiz-progress"><div class="quiz-progress-bar" style="width: 100%; background: #10b981;"></div></div>
         <p class="quiz-label">Mark's pick for your situation</p>
         <section class="card result-card">
-          <p class="result-tag">Recommended</p>
+          <p class="result-tag">Best match</p>
           <h2 id="result-title"></h2>
           <p id="result-reason" style="color: #374151;"></p>
           <a id="result-link" href="#" class="btn" style="margin-top: 1rem;">Go there →</a>
         </section>
-        <section class="card" id="result-also" style="border-left: 4px solid #e4e4e7;">
-          <h2 style="font-size: 1rem; margin-bottom: 0.75rem;">Also worth reading</h2>
+        <section class="card result-alternates-section">
+          <p class="result-alt-label">If that doesn't fit, also consider</p>
+          <div id="result-alternates-list" class="result-alt-grid"></div>
+        </section>
+        <section class="card" id="result-also" style="border-left: 4px solid #e4e4e7; padding: 1rem 1.5rem;">
+          <h2 style="font-size: 1rem; margin-bottom: 0.75rem;">Further reading</h2>
           <ul id="result-also-list" style="margin: 0; padding-left: 1.2rem;"></ul>
         </section>
         <button class="quiz-back" id="back-result">← Start over</button>
@@ -128,6 +132,13 @@ import Layout from '../layouts/Layout.astro';
   .hidden { display: none; }
   .result-card { border-left: 4px solid #10b981; }
   .result-tag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #059669; margin-bottom: 0.4rem; }
+  .result-alternates-section { border-left: 4px solid #6ee7b7; padding: 1rem 1.5rem; }
+  .result-alt-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #6b7280; margin: 0 0 0.75rem; }
+  .result-alt-grid { display: flex; flex-direction: column; gap: 0.5rem; }
+  .result-alt-card { display: flex; flex-direction: column; gap: 0.15rem; background: #f0fdf4; border: 1px solid #6ee7b7; border-radius: 6px; padding: 0.6rem 0.9rem; text-decoration: none; transition: background 0.15s, border-color 0.15s; }
+  .result-alt-card:hover { background: #dcfce7; border-color: #34d399; text-decoration: none; }
+  .result-alt-card strong { font-size: 0.9rem; color: #047857; font-weight: 600; }
+  .result-alt-card span { font-size: 0.8rem; color: #6b7280; }
 </style>
 
 <script is:inline>
@@ -138,6 +149,10 @@ import Layout from '../layouts/Layout.astro';
       title: 'Victor Trap Tunnel Intercept',
       url: '/methods/victor-traps',
       reason: "You want results fast with no restrictions — Victor-style pinch traps set correctly in the main run are the fastest, most reliable method. Set two back-to-back, block all light after setting, and check in 12 hours.",
+      alternates: [
+        { title: 'Cinch Trap Mainline Set', url: '/methods/cinch-traps', note: 'More enclosed design — good if you want a slightly safer trap' },
+        { title: 'The Taco Method: Dog Hunting', url: '/methods/dog-hunting', note: 'If you have a high-prey-drive dog, combine with trapping for faster results' },
+      ],
       also: [
         { title: 'The Quick Start Guide (full field process)', url: '/quick-start' },
         { title: 'The Armory (gear picks)', url: '/traps' },
@@ -147,15 +162,24 @@ import Layout from '../layouts/Layout.astro';
       title: 'Cinch Trap Mainline Set',
       url: '/methods/cinch-traps',
       reason: "With pets or kids in the yard, mechanical traps are the right call — no bait, nothing dangerous if a dog digs it up. Cinch traps are just as effective as Victor-style and slightly more enclosed.",
+      alternates: [
+        { title: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps', note: 'Slightly less enclosed but equally effective — if you want the classic option' },
+        { title: 'The Taco Method: Dog Hunting', url: '/methods/dog-hunting', note: 'Completely safe with dogs — uses a trained dog to locate and flush gophers' },
+      ],
       also: [
         { title: 'The Quick Start Guide (full field process)', url: '/quick-start' },
-        { title: 'Victor Traps (alternative)', url: '/methods/victor-traps' },
+        { title: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
       ]
     },
     'quick-start': {
       title: 'The Quick Start Guide',
       url: '/quick-start',
       reason: "Since you have time to do it right, start here. It's the full field process — scout, probe, flush, trap — in the exact order Mark runs it. Following the sequence is more reliable than jumping straight to setting traps.",
+      alternates: [
+        { title: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps', note: 'Skip ahead to the trapping step if you\'ve already scouted the run' },
+        { title: 'Cinch Trap Mainline Set', url: '/methods/cinch-traps', note: 'The pet-safe mechanical option if dogs or kids use the yard' },
+        { title: 'Flooding Active Gopher Runs', url: '/methods/flooding-tactics', note: 'Use water to map the tunnel network before you trap' },
+      ],
       also: [
         { title: 'Victor Traps', url: '/methods/victor-traps' },
         { title: 'Cinch Traps', url: '/methods/cinch-traps' },
@@ -165,36 +189,55 @@ import Layout from '../layouts/Layout.astro';
       title: 'Install Gopher Mesh Barriers',
       url: '/methods/gopher-mesh',
       reason: "For prevention, physical exclusion is the only thing that actually keeps gophers out long-term. Mesh barriers under planting beds and lawns are the permanent fix — nothing else comes close.",
+      alternates: [
+        { title: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing', note: 'If you\'re protecting a larger area or full property perimeter' },
+        { title: 'Barn Owl Box Installation', url: '/methods/barn-owl-box', note: 'Layer in natural predator control — works every night passively' },
+        { title: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants', note: 'If you can\'t install mesh, choose plants gophers naturally avoid' },
+      ],
       also: [
-        { title: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants' },
-        { title: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing' },
+        { title: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep' },
+        { title: 'The Armory (gear picks)', url: '/traps' },
       ]
     },
     'gopher-vs-mole': {
       title: 'Gopher vs Mole ID Guide',
       url: '/gopher-vs-mole',
       reason: "Raised ridges and surface runways are more often moles than gophers — and the fix is completely different. Trapping the wrong animal is wasted time and money. Get the ID right first.",
+      alternates: [
+        { title: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps', note: 'If you confirm it\'s a gopher — fastest removal method' },
+        { title: 'How to Identify Fresh Gopher Mounds', url: '/problems/mound-id', note: 'Detailed mound identification guide with photos and field notes' },
+      ],
       also: [
-        { title: 'Victor Traps (if it turns out to be a gopher)', url: '/methods/victor-traps' },
         { title: 'Flooding Active Gopher Runs', url: '/methods/flooding-tactics' },
+        { title: 'The Quick Start Guide', url: '/quick-start' },
       ]
     },
     'new-yard-prep': {
       title: 'Gopher-Proofing a New Yard',
       url: '/problems/new-yard-prep',
       reason: "Starting fresh is the best time to set this up right. This guide covers what to install before you plant — mesh placement, what to watch for in the first year — so you're preventing damage instead of reacting to it.",
+      alternates: [
+        { title: 'Install Gopher Mesh Barriers', url: '/methods/gopher-mesh', note: 'The main tool for new yard prep — how to install it correctly' },
+        { title: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing', note: 'If you\'re protecting a large lot or orchard-scale area' },
+        { title: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants', note: 'Choose plants that naturally deter gophers from the start' },
+      ],
       also: [
-        { title: 'Gopher Mesh Barriers', url: '/methods/gopher-mesh' },
-        { title: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing' },
+        { title: 'Barn Owl Box Installation', url: '/methods/barn-owl-box' },
+        { title: 'The Armory (gear picks)', url: '/traps' },
       ]
     },
     'garden-destruction': {
       title: 'Stopping Gopher Garden Destruction',
       url: '/problems/garden-destruction',
       reason: "When they're actively destroying plants you need to stop the bleeding fast and trap the problem out. Victor traps in the main run are usually the fastest way to end active garden damage — this guide covers both.",
+      alternates: [
+        { title: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps', note: 'Go straight to the fastest removal method if you know where the run is' },
+        { title: 'Install Gopher Mesh Barriers', url: '/methods/gopher-mesh', note: 'After you trap it out — the permanent fix to protect future plantings' },
+        { title: 'Gopher Damage in Vegetable Gardens', url: '/problems/vegetable-garden', note: 'Specific guide for veggie beds and raised planters' },
+      ],
       also: [
-        { title: 'Victor Traps', url: '/methods/victor-traps' },
-        { title: 'Gopher Mesh (protect future plantings)', url: '/methods/gopher-mesh' },
+        { title: 'The Quick Start Guide', url: '/quick-start' },
+        { title: 'The Armory (gear picks)', url: '/traps' },
       ]
     },
   };
@@ -223,6 +266,10 @@ import Layout from '../layouts/Layout.astro';
     const link = document.getElementById('result-link');
     link.href = r.url;
     link.textContent = 'Read: ' + r.title + ' →';
+    const altList = document.getElementById('result-alternates-list');
+    altList.innerHTML = r.alternates
+      .map(a => `<a href="${a.url}" class="result-alt-card"><strong>${a.title}</strong><span>${a.note}</span></a>`)
+      .join('');
     const alsoList = document.getElementById('result-also-list');
     alsoList.innerHTML = r.also
       .map(a => `<li><a href="${a.url}">${a.title}</a></li>`)
