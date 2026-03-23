@@ -268,7 +268,7 @@ import Layout from '../layouts/Layout.astro';
     link.textContent = 'Read: ' + r.title + ' →';
     const altList = document.getElementById('result-alternates-list');
     altList.innerHTML = r.alternates
-      .map(a => `<a href="${a.url}" class="result-alt-card"><strong>${a.title}</strong><span>${a.note}</span></a>`)
+      .map(a => `<a href="${a.url}" class="result-alt-card"><strong style="display:block;font-weight:600;color:#047857;margin-bottom:0.2rem;">${a.title}</strong><span style="display:block;font-size:0.8rem;color:#6b7280;">${a.note}</span></a>`)
       .join('');
     const alsoList = document.getElementById('result-also-list');
     alsoList.innerHTML = r.also
