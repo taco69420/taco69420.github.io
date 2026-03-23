@@ -90,6 +90,18 @@ const howToSchema = {
       <h2 id="step-3">Step 3 — Probe for the main run</h2>
       <p>Use a probe to poke around the area, a few inches out from the mound in a semicircle pattern. You're feeling for the drop — when the probe suddenly sinks deeper, you've hit the main tunnel run. <strong>The main run is never directly under the mound.</strong></p>
       <p>Rebar works fine. A purpose-built probe gives you better feedback and saves your wrist on hard ground.</p>
+      <figure class="yt-short">
+        <iframe
+          width="315"
+          height="560"
+          src="https://www.youtube.com/embed/rktXf9k4lPU"
+          title="Finding the gopher main run with a probe"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <figcaption>Exactly how I probe for the main run — the semicircle pattern and what the drop feels like when you find it.</figcaption>
+      </figure>
       <p style="margin: 0;"><a href="https://amzn.to/40JUZ3u" target="_blank" rel="sponsored noopener" style="color: #6b7280; font-size: 0.875rem;">→ Probe tools on Amazon</a></p>
     </section>
 
@@ -243,5 +255,27 @@ const howToSchema = {
   @media (max-width: 480px) {
     .step-connector { min-width: 0.5rem; }
     .step-label { font-size: 0.62rem; }
+  }
+
+  /* ── YouTube Short embed ── */
+  .yt-short {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.25rem 0;
+    gap: 0.75rem;
+  }
+
+  .yt-short iframe {
+    border-radius: 8px;
+    max-width: 100%;
+  }
+
+  .yt-short figcaption {
+    font-size: 0.85rem;
+    color: #6b7280;
+    text-align: center;
+    max-width: 315px;
+    line-height: 1.5;
   }
 </style>
