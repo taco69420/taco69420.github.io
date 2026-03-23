@@ -12,14 +12,12 @@ timeToResults: "1 day"
 petRisk: low
 cost: low
 sources:
-  - label: "UC IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
-  - label: "USDA Wildlife Services"
-    url: "https://www.aphis.usda.gov/aphis/ourfocus/wildlifedamage"
+  - label: "Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers (UC ANR Pub. 7433, 2025)"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
 ---
 
 ## Quick Answer
-Fresh gopher mounds are usually fan- or crescent-shaped with a plugged soil hole off to one side. Correct ID prevents wasted effort on the wrong pest.
+Fresh gopher mounds are usually fan- or crescent-shaped with a plugged soil hole off to one side. Correct ID prevents wasted effort on the wrong pest. A single gopher can create several mounds in a single day, and their burrow systems cover 200–2,000 square feet of ground. *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
 
 ## The Gear
 - Probe rod or screwdriver
@@ -31,7 +29,7 @@ Fresh gopher mounds are usually fan- or crescent-shaped with a plugged soil hole
 ## The Process
 1. Inspect [mound shape](/gopher-vs-mole) and locate the plugged hole, usually offset from center.
 2. Scrape smooth a test mound area and mark it to check for overnight rebuild.
-3. [Probe](/traps) for the main run on the plug side, about 6-12 inches from the mound.
+3. [Probe](/traps) for the main run on the plug side, about 6–12 inches from the mound. Feeding tunnels run 6–12 inches below the surface; nesting chambers can go as deep as 6 feet. *(Source: [UC IPM, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
 4. Compare signs with [mole ridges](/gopher-vs-mole) (raised surface runs) to avoid misidentification.
 5. Log confirmed active sites and prioritize them for [trapping](/quick-start) first.
 

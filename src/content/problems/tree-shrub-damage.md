@@ -12,14 +12,12 @@ timeToResults: "1-3 weeks"
 petRisk: low
 cost: medium
 sources:
-  - label: "UC IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
-  - label: "UC Cooperative Extension - Tree Care"
-    url: "https://ucanr.edu/"
+  - label: "Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers (UC ANR Pub. 7433, 2025)"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
 ---
 
 ## Quick Answer
-Gophers kill trees and shrubs by girdling the root crown — chewing all the way around the base of the root system until the plant can no longer move water and nutrients. By the time the tree shows symptoms above ground (yellowing, wilting, sudden dieback), the damage is usually already done. Act fast at the [first sign of mounds](/problems/mound-id) near any woody plant.
+Gophers kill trees and shrubs by girdling the root crown — chewing all the way around the base of the root system until the plant can no longer move water and nutrients. UC IPM confirms gophers "girdle tree bark belowground on trunks and large roots." *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))* By the time the tree shows symptoms above ground (yellowing, wilting, sudden dieback), the damage is usually already done. Act fast at the [first sign of mounds](/problems/mound-id) near any woody plant.
 
 ## The Gear
 - Probe rod

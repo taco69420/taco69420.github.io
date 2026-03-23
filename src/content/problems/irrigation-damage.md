@@ -12,14 +12,14 @@ timeToResults: "1-2 weeks"
 petRisk: low
 cost: medium
 sources:
-  - label: "UC IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
-  - label: "UC Cooperative Extension - Irrigation"
-    url: "https://ucanr.edu/"
+  - label: "Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers (UC ANR Pub. 7433, 2025)"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
+  - label: "Baldwin, R.A. — UC IPM Pest Management Guidelines: Alfalfa (UC ANR Pub. 3430, 2016)"
+    url: "https://ipm.ucanr.edu/agriculture/alfalfa/pocket-gophers/"
 ---
 
 ## Quick Answer
-Gophers chew irrigation tubing constantly — not because they're thirsty, but because their teeth never stop growing and they gnaw anything in their path. You'll notice it as dead zones in your drip system, soggy spots where a line is gushing underground, or a sudden [pressure drop at the valve](/problems/drip-emitter-damage). The repair is straightforward but pointless until the gopher is gone.
+Gophers chew irrigation tubing constantly — not because they're thirsty, but because their teeth never stop growing and they gnaw anything in their path. UC IPM documents that gophers "gnaw flexible plastic water lines and drip irrigation systems," and their tunnels also "divert and carry away irrigation water, causing soil erosion." *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))* You'll notice it as dead zones in your drip system, soggy spots where a line is gushing underground, or a sudden [pressure drop at the valve](/problems/drip-emitter-damage). The repair is straightforward but pointless until the gopher is gone.
 
 ## The Gear
 - Drip line repair couplings (barbed, matching your line diameter)

@@ -12,10 +12,12 @@ timeToResults: "12-48 hours"
 petRisk: medium
 cost: low
 sources:
-  - label: "University of California IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
-  - label: "Colorado State Extension - Pocket Gophers"
-    url: "https://extension.colostate.edu/topic-areas/natural-resources/managing-pocket-gophers-6-515/"
+  - label: "Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers (UC ANR Pub. 7433, 2025)"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
+  - label: "Baldwin, R.A. — UC IPM Pest Management Guidelines: Alfalfa (UC ANR Pub. 3430, 2016)"
+    url: "https://ipm.ucanr.edu/agriculture/alfalfa/pocket-gophers/"
+  - label: "Baldwin et al. — The influence of trap type and cover status on capture rates (Crop Protection, 2013)"
+    url: "https://doi.org/10.1016/j.cropro.2013.01.003"
 ---
 
 ## Quick Answer
@@ -45,6 +47,8 @@ Victor traps are my go-to — they're what I started with at 15 and what I still
 
 ## Bagger Pro-Tip
 Always run two traps back-to-back facing opposite directions. I learned this early on — set one trap and the gopher often feels the disturbance and reverses before hitting it. Set two and there's nowhere to go. If the tunnel feels like a freeway, you're in the right spot.
+
+UC IPM research confirms trapping is the most reliable method: "trapping often results in greater control of gophers than baiting," and UC Davis studies found no benefit from adding bait to traps — placement and technique are what matter. *(Source: [Baldwin, R.A. — UC IPM, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html); [UC IPM Alfalfa Guidelines, 2016](https://ipm.ucanr.edu/agriculture/alfalfa/pocket-gophers/))*
 
 ## Safety Warning
 Keep children and [pets](/problems/pet-safety) away from set traps; the spring force can injure fingers, paws, or curious noses.

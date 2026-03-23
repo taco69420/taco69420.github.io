@@ -12,14 +12,16 @@ timeToResults: "Same day"
 petRisk: low
 cost: low
 sources:
-  - label: "University of California IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
-  - label: "USDA NRCS - Pocket Gopher Overview"
-    url: "https://www.nrcs.usda.gov/resources/guides-and-instructions"
+  - label: "Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers (UC ANR Pub. 7433, 2025)"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
+  - label: "Baldwin, R.A. — UC IPM Pest Management Guidelines: Alfalfa (UC ANR Pub. 3430, 2016)"
+    url: "https://ipm.ucanr.edu/agriculture/alfalfa/pocket-gophers/"
 ---
 
 ## Quick Answer
 Flooding is primarily a dog-hunting tactic. The goal is to push gophers toward the surface where a hunting dog can catch them — that's why Taco and I ran this step together. Without a dog on the yard, skip it. Go straight to trapping. The gopher will come back to repair any tunnel disturbance and that's exactly when they hit the trap.
+
+UC IPM notes that "pocket gophers can easily withstand normal garden or home landscape irrigation, but you can sometimes use flooding to force them from their burrows, enabling you to use a shovel or a dog to kill the rodent." *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
 
 ## The Gear
 - Garden hose with shutoff nozzle

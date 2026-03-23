@@ -12,14 +12,12 @@ timeToResults: "3-10 days"
 petRisk: low
 cost: medium
 sources:
-  - label: "UC Master Gardener Resources"
-    url: "https://mg.ucanr.edu/"
-  - label: "UC IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
+  - label: "Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers (UC ANR Pub. 7433, 2025)"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
 ---
 
 ## Quick Answer
-Gophers can destroy a garden bed in days by severing roots below the surface — you'll see healthy plants wilt overnight with no above-ground explanation. I've watched a gopher take out 4 [tomato plants](/problems/vegetable-garden) in a single week before I figured out where the run was. Combining barriers with active trapping gives the fastest recovery and best long-term protection.
+Gophers can destroy a garden bed in days by severing roots below the surface — you'll see healthy plants wilt overnight with no above-ground explanation. I've watched a gopher take out 4 [tomato plants](/problems/vegetable-garden) in a single week before I figured out where the run was. UC IPM confirms gophers "pull entire plants into their tunnel from below" and girdle the bark of trees and large roots underground. *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))* Combining barriers with active trapping gives the fastest recovery and best long-term protection.
 
 ## The Gear
 - 1/2-inch hardware cloth baskets or bed liner
