@@ -9,7 +9,7 @@ tags:
   - burrow
 difficulty: hard
 timeToResults: "Same day to 48 hours"
-petRisk: high
+petRisk: medium
 cost: high
 sources:
   - label: "EPA Pesticide Safety"
