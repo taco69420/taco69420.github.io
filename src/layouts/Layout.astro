@@ -223,11 +223,12 @@ const personSchema = {
       </div>
       <a href="/traps" class={pathname === '/traps' ? 'nav-active' : ''}>The Armory</a>
       <div class="nav-dropdown">
-        <button class={`nav-dropdown-btn${['/best-gopher-traps', '/best-gopher-baits', '/best-gopher-poison'].includes(pathname) ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="bestof-menu">Best Of</button>
+        <button class={`nav-dropdown-btn${['/best-gopher-traps', '/best-gopher-baits', '/best-gopher-poison', '/cost'].includes(pathname) ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="bestof-menu">Best Of</button>
         <ul class="nav-dropdown-menu" id="bestof-menu" role="menu">
           <li><a href="/best-gopher-traps">Best Gopher Traps of 2026</a></li>
           <li><a href="/best-gopher-baits">Best Gopher Baits of 2026</a></li>
           <li><a href="/best-gopher-poison">Best Gopher Poison of 2026</a></li>
+          <li><a href="/cost">Gopher Control Cost Guide</a></li>
         </ul>
       </div>
       <a href="/about" class={pathname === '/about' ? 'nav-active' : ''}>About Mark</a>

@@ -1,0 +1,410 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the cheapest way to get rid of gophers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Victor pinch traps are the cheapest effective method — a 2-pack runs about $15 and you reuse them indefinitely. Set two back-to-back in the main run, block the light, check in 12 hours. Most single-gopher jobs are done for under $20 total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does professional gopher trapping cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Residential gopher control runs $150 to $500+ depending on property size, method, and whether it's a one-time treatment or a recurring contract. Get at least two quotes — pricing varies wildly between operators."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is gopher mesh worth the cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For vegetable gardens and raised beds, yes — it's the only method that provides permanent protection. Cost depends on square footage: a single 4x8 raised bed runs $30–60 in hardware cloth. A full lawn can run $500–1,500 installed. Install it before you plant, not after gophers show up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do sonic stakes actually work and are they worth buying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sonic stakes are cheap ($20–40 each) but the results are inconsistent. Gophers habituate to the vibration within days to weeks in most cases. They work best as a temporary deterrent while you're setting up a real control program — not as a standalone fix."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Gopher Control Cost Guide 2026 | How Much Does It Actually Cost?"
+  description="Honest breakdown of what every gopher control method costs — from $15 traps to $500 pro jobs. Mark the Bagger compares all 13 methods by price, reusability, and value."
+  schemas={[faqSchema]}
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › Gopher Control Costs
+  </nav>
+
+  <header>
+    <h1>How Much Does Gopher Control Cost?</h1>
+    <p class="subtitle">Honest numbers for every method — from a $0 garden hose trick to $500 pro jobs.</p>
+    <p class="dateline">Updated March 2026</p>
+  </header>
+
+  <main>
+
+    <section class="card" style="border-left: 4px solid #10b981;">
+      <p style="margin: 0; color: #374151; font-size: 0.95rem;">Most gopher problems are solved with a $15 pair of Victor traps and an hour of work. But not every situation calls for the same approach — and knowing what things actually cost before you start saves you from blowing money on methods that won't work for your yard. Here's every method I cover on this site, broken down by real cost.</p>
+    </section>
+
+    <nav class="card" aria-label="Table of contents" style="border-left: 4px solid #059669; padding: 1rem 1.5rem;">
+      <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
+      <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
+        <li><a href="#full-comparison">Full Cost Comparison Table</a></li>
+        <li><a href="#under-30">Under $30 — Cheap &amp; Effective</a></li>
+        <li><a href="#30-to-150">$30–$150 — Mid-Range Options</a></li>
+        <li><a href="#150-plus">$150+ — Big Property &amp; Pro-Level</a></li>
+        <li><a href="#best-value">Mark's Best Value Picks</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+      </ul>
+    </nav>
+
+    <!-- Full Comparison Table -->
+    <section class="card">
+      <h2 id="full-comparison">Full Cost Comparison — All 13 Methods</h2>
+      <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">Sorted cheapest to most expensive. "Ongoing" means you'll spend money repeatedly. "One-time" means buy it once and you're done.</p>
+      <div class="table-wrap">
+        <table class="cost-table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Upfront Cost</th>
+              <th>Ongoing Cost</th>
+              <th>Reusable?</th>
+              <th>DIY or Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="/methods/flooding-tactics">Flooding Active Runs</a></td>
+              <td class="cost-free">$0</td>
+              <td>$0</td>
+              <td>—</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/dog-hunting">The Taco Method (Dog Hunting)</a></td>
+              <td class="cost-free">$0 <span class="cost-note">if you have a dog</span></td>
+              <td>$0</td>
+              <td>—</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/victor-traps">Victor Trap Tunnel Intercept</a></td>
+              <td class="cost-low">~$15 <span class="cost-note">2-pack</span></td>
+              <td>$0</td>
+              <td>Yes</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/poison-bait-stations">Underground Bait Station</a></td>
+              <td class="cost-low">~$20–30</td>
+              <td>~$15–25 <span class="cost-note">per refill</span></td>
+              <td>Partial</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/sonic-stakes">Sonic Repeller Stakes</a></td>
+              <td class="cost-low">~$20–40 each</td>
+              <td>$0</td>
+              <td>Yes</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/gopher-resistant-plants">Gopher-Resistant Plant Selection</a></td>
+              <td class="cost-low">Varies</td>
+              <td>Varies</td>
+              <td>—</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/cinch-traps">Cinch Trap Mainline Set</a></td>
+              <td class="cost-mid">~$30–35 each</td>
+              <td>$0</td>
+              <td>Yes</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/castor-oil">Castor Oil Repellent Program</a></td>
+              <td class="cost-mid">~$20–40</td>
+              <td>~$20–40 <span class="cost-note">per treatment</span></td>
+              <td>No</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/barn-owl-box">Barn Owl Box Installation</a></td>
+              <td class="cost-mid">~$60–100</td>
+              <td>$0</td>
+              <td>Yes</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/gopher-mesh">Install Gopher Mesh Barriers</a></td>
+              <td class="cost-mid">~$50–800+</td>
+              <td>$0</td>
+              <td>Yes</td>
+              <td>DIY</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/exclusion-fencing">Exclusion Fencing for Large Properties</a></td>
+              <td class="cost-high">~$300–800+</td>
+              <td>$0</td>
+              <td>Yes</td>
+              <td>DIY / Pro</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/carbon-monoxide">Carbon Monoxide Burrow Treatment</a></td>
+              <td class="cost-high">~$300–500 <span class="cost-note">equipment</span></td>
+              <td>Low</td>
+              <td>Yes</td>
+              <td>DIY (advanced)</td>
+            </tr>
+            <tr>
+              <td><a href="/methods/hiring-a-pro">Hiring a Professional Trapper</a></td>
+              <td class="cost-high">~$150–500+</td>
+              <td>Varies</td>
+              <td>—</td>
+              <td>Pro</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Under $30 -->
+    <section class="card">
+      <h2 id="under-30">Under $30 — Cheap &amp; Effective</h2>
+
+      <h3><a href="/methods/flooding-tactics">Flooding Active Runs</a> — $0</h3>
+      <p>A garden hose and 20 minutes. Flood the tunnel to push the gopher to the surface, then use a dog or a trap at the exit. Not a standalone removal method, but a great scouting tool and a legitimate way to map the tunnel network before you set traps. Cost: whatever your water bill adds up to.</p>
+
+      <h3><a href="/methods/dog-hunting">The Taco Method (Dog Hunting)</a> — $0</h3>
+      <p>If you have a high-prey-drive dog, this costs nothing. Taco has caught more gophers than all my traps combined in certain seasons. The dog does the detection and the surface work — you follow up with traps on any runs she marks. The catch is you need the right dog. Not every dog has the drive for this.</p>
+
+      <h3><a href="/methods/victor-traps">Victor Trap Tunnel Intercept</a> — ~$15 for a 2-pack</h3>
+      <p>The best value on this entire list. A 2-pack of Victor Easy Set or Macabee traps runs about $15. They're reusable indefinitely — I have traps that have caught dozens of gophers. Most single-gopher jobs are done for under $20 total. This is the method I recommend to almost everyone starting out.</p>
+
+      <h3><a href="/methods/poison-bait-stations">Underground Bait Station</a> — ~$20–30 upfront + recurring bait costs</h3>
+      <p>The bait station itself is cheap, but zinc phosphide or diphacinone bait isn't a one-time purchase — you're replenishing it. Ongoing cost adds up if gopher pressure is high or persistent. Also carries pet and wildlife risk, which is a real cost some people don't factor in.</p>
+    </section>
+
+    <!-- $30–$150 -->
+    <section class="card">
+      <h2 id="30-to-150">$30–$150 — Mid-Range Options</h2>
+
+      <h3><a href="/methods/cinch-traps">Cinch Trap Mainline Set</a> — ~$30–35 per trap</h3>
+      <p>More expensive than Victor traps but the scissor-jaw design is more forgiving on placement — you lose fewer catches to bad alignment. If you have pets or kids in the yard, the more enclosed design is worth the extra cost. Budget for 2–4 traps to work multiple runs at once: $60–140 total.</p>
+
+      <h3><a href="/methods/castor-oil">Castor Oil Repellent Program</a> — ~$20–40 per application</h3>
+      <p>Cheap per application, but it's ongoing. Castor oil doesn't kill gophers — it pushes them. As soon as you stop applying, they come back. Best used as a short-term displacement while you set up traps or install permanent barriers, not as a long-term strategy on its own.</p>
+
+      <h3><a href="/methods/barn-owl-box">Barn Owl Box Installation</a> — ~$60–100 one-time</h3>
+      <p>Buy or build a nesting box, mount it on a 12–16 foot post, and wait. A resident barn owl family eats 1,000+ rodents per year. Once they move in, the cost drops to zero and they work every night. The catch: it takes 1–2 seasons for owls to discover and adopt the box. Not a fast fix.</p>
+
+      <h3><a href="/methods/gopher-mesh">Gopher Mesh — Small Area</a> — ~$50–150</h3>
+      <p>A single 4x8 raised bed runs $30–60 in hardware cloth. A small garden area of 100–200 sq ft runs $50–150 depending on depth and material quality. This is one-time spend — install it right and you never pay again. For small gardens and raised beds, it's the best value permanent fix available.</p>
+    </section>
+
+    <!-- $150+ -->
+    <section class="card">
+      <h2 id="150-plus">$150+ — Big Property &amp; Pro-Level</h2>
+
+      <h3><a href="/methods/gopher-mesh">Gopher Mesh — Full Lawn or Large Area</a> — ~$200–800+</h3>
+      <p>Mesh cost scales directly with square footage. A typical 1,500 sq ft lawn runs $200–400 in materials plus labor if you hire it out. Large yards can run $800 or more installed. Still one-time spend — but the upfront cost is real. Worth it for high-value landscaping or anywhere you can't afford repeat gopher damage.</p>
+
+      <h3><a href="/methods/exclusion-fencing">Exclusion Fencing for Large Properties</a> — ~$300–800+</h3>
+      <p>Underground perimeter fencing for large lots, orchards, or properties with ongoing migration pressure. Material cost depends on perimeter length — figure $3–6 per linear foot plus post and labor costs. A 200-foot perimeter runs $600–1,200+ installed. Long-term value is strong if you're dealing with recurring infestation from neighboring properties.</p>
+
+      <h3><a href="/methods/carbon-monoxide">Carbon Monoxide Burrow Treatment</a> — ~$300–500 for equipment</h3>
+      <p>Equipment cost is the barrier here — a Rodent Riddler or similar CO unit runs $300–500. After that, operating costs are low. This is an advanced method that works fast on large or sealed tunnel systems, but it requires training and safety discipline. Most homeowners don't need it — if you're considering it, read the full guide first.</p>
+
+      <h3><a href="/methods/hiring-a-pro">Hiring a Professional Gopher Trapper</a> — ~$150–500+ per job</h3>
+      <p>Residential gopher control varies wildly by operator and region — $150 to $500+ for a single job is a normal range. Ongoing contracts for properties with recurring pressure run $50–150/month. Get at least two quotes. The cheapest operator isn't always the best — ask how they trap, what they guarantee, and what happens if the gopher comes back.</p>
+    </section>
+
+    <!-- Best Value -->
+    <section class="card" style="border-left: 4px solid #10b981;">
+      <h2 id="best-value">Mark's Best Value Picks</h2>
+      <p>If I'm being direct about where your money actually goes the furthest:</p>
+      <ul>
+        <li><strong>Best overall value:</strong> <a href="/methods/victor-traps">Victor traps</a> — $15, reusable, fastest results, works on almost every job.</li>
+        <li><strong>Best for gardens:</strong> <a href="/methods/gopher-mesh">Gopher mesh</a> — one-time cost, permanent fix, nothing else comes close for vegetable beds.</li>
+        <li><strong>Best long-term investment:</strong> <a href="/methods/barn-owl-box">Barn owl box</a> — costs $80 once, then works free every night for years.</li>
+        <li><strong>Worst value for most yards:</strong> <a href="/methods/sonic-stakes">Sonic stakes</a> — cheap upfront but gophers habituate fast. You're usually better off spending that $30 on more traps.</li>
+        <li><strong>Skip unless you have a specific reason:</strong> <a href="/methods/castor-oil">Castor oil</a> — fine as a short-term push, but recurring cost and no permanent results make it a poor standalone strategy.</li>
+      </ul>
+      <p style="margin-bottom: 0;">Not sure where to start? <a href="/quiz">Take the quiz →</a> — 3 questions and I'll point you to the right method for your situation.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="card">
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <details>
+        <summary>What is the cheapest way to get rid of gophers?</summary>
+        <p>Victor pinch traps are the cheapest effective method — a 2-pack runs about $15 and you reuse them indefinitely. Set two back-to-back in the main run, block the light, check in 12 hours. Most single-gopher jobs are done for under $20 total.</p>
+      </details>
+      <details>
+        <summary>How much does professional gopher trapping cost?</summary>
+        <p>Residential gopher control runs $150 to $500+ depending on property size, method, and whether it's a one-time treatment or a recurring contract. Get at least two quotes — pricing varies wildly between operators.</p>
+      </details>
+      <details>
+        <summary>Is gopher mesh worth the cost?</summary>
+        <p>For vegetable gardens and raised beds, yes — it's the only method that provides permanent protection. Cost depends on square footage: a single 4x8 raised bed runs $30–60 in hardware cloth. A full lawn can run $500–1,500 installed. Install it before you plant, not after gophers show up.</p>
+      </details>
+      <details>
+        <summary>Do sonic stakes actually work and are they worth buying?</summary>
+        <p>Sonic stakes are cheap ($20–40 each) but the results are inconsistent. Gophers habituate to the vibration within days to weeks in most cases. They work best as a temporary deterrent while you're setting up a real control program — not as a standalone fix.</p>
+      </details>
+    </section>
+
+    <section class="card related-section">
+      <p class="related-label">Related guides</p>
+      <div class="related-grid">
+        <a href="/methods" class="related-card">Browse all 13 methods →</a>
+        <a href="/traps" class="related-card">The Armory — gear picks with Amazon links →</a>
+        <a href="/best-gopher-traps" class="related-card">Best Gopher Traps compared →</a>
+        <a href="/quiz" class="related-card">Not sure what to use? Take the quiz →</a>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    min-width: 520px;
+  }
+
+  .cost-table th {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    background: #f4f4f5;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    border-bottom: 2px solid #e4e4e7;
+  }
+
+  .cost-table td {
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+    color: #374151;
+  }
+
+  .cost-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .cost-table tr:hover td {
+    background: #fafafa;
+  }
+
+  .cost-free { color: #059669; font-weight: 600; }
+  .cost-low  { color: #16a34a; font-weight: 600; }
+  .cost-mid  { color: #b45309; font-weight: 600; }
+  .cost-high { color: #b91c1c; font-weight: 600; }
+
+  .cost-note {
+    font-size: 0.78rem;
+    color: #9ca3af;
+    font-weight: 400;
+  }
+
+  .related-section {
+    border-left: 4px solid #059669;
+    padding: 1rem 1.5rem;
+  }
+
+  .related-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    margin: 0 0 0.75rem;
+  }
+
+  .related-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .related-card {
+    display: block;
+    background: #f0fdf4;
+    border: 1px solid #6ee7b7;
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #047857;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .related-card:hover {
+    background: #dcfce7;
+    border-color: #34d399;
+    text-decoration: none;
+  }
+
+  details {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0.75rem 0;
+  }
+
+  details:last-child {
+    border-bottom: none;
+  }
+
+  details summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #18181b;
+    font-size: 0.95rem;
+  }
+
+  details p {
+    margin: 0.6rem 0 0;
+    color: #374151;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 1.25rem 0 0.35rem;
+    color: #18181b;
+  }
+
+  h3:first-of-type {
+    margin-top: 0.5rem;
+  }
+</style>
