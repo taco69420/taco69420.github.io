@@ -55,6 +55,11 @@ Victor traps are my go-to — they're what I started with at 15 and what I still
   <figcaption style="font-size:0.85rem;color:#6b7280;text-align:center;max-width:315px;line-height:1.5;">How I place traps in the run.</figcaption>
 </figure>
 
+<figure style="display:flex;flex-direction:column;align-items:center;margin:1.5rem 0;gap:0.75rem;">
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/rShf60kz2Q4" title="What the finished back-to-back Victor trap set looks like" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius:8px;max-width:100%;"></iframe>
+  <figcaption style="font-size:0.85rem;color:#6b7280;text-align:center;max-width:315px;line-height:1.5;">What the finished back-to-back set looks like in the tunnel.</figcaption>
+</figure>
+
 ## Bagger Pro-Tip
 Always run two traps back-to-back facing opposite directions. I learned this early on — set one trap and the gopher often feels the disturbance and reverses before hitting it. Set two and there's nowhere to go. If the tunnel feels like a freeway, you're in the right spot.
 
