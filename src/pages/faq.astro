@@ -84,6 +84,46 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Main lateral runs are typically 6–18 inches deep. Nesting chambers and food caches can go down 2–6 feet. This is why shallow barriers, surface sprays, and most repellents fail — the gopher is just working below them."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does gopher control cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Victor-style pinch traps run about $15 for a 2-pack and are reusable indefinitely — most single-gopher jobs cost under $20. Gopher mesh for a raised bed runs $30–60. Professional trapping runs $150–500+ per job. See the full cost breakdown for every method."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to trap gophers with dogs or kids in the yard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mechanical traps are the safest option with pets and kids around — no bait, no poison, no risk if a dog digs one up. Cinch traps are slightly more enclosed than Victor-style and a good choice if safety is a concern. Avoid poison bait stations entirely if you have dogs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if a gopher mound is fresh and active?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fresh mound has moist, loose soil that crumbles easily and a crescent or fan shape with a plugged hole off to one side. If the soil is dry and hard-packed, it's old spoil. Poke the plug — if it's soft and gives easily, the tunnel below is active. Set traps within 24 hours of spotting fresh mounds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is gopher season?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spring (February–May) and fall (September–November) are the two peak activity windows. Spring is breeding season — mounds multiply fast. Fall is food-caching season — gophers expand tunnels aggressively. In Southern California, activity never fully stops. In colder regions, winter slows things down but doesn't eliminate activity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can gophers damage drip irrigation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — gophers chew through drip lines and emitters constantly. They follow moisture corridors underground, and drip tubing runs directly through their tunnel zones. If you're finding chewed lines with no obvious entry point, gophers are working below the surface. Trap the run first, then repair and sleeve the lines."
+      }
     }
   ]
 };
@@ -166,6 +206,40 @@ const faqSchema = {
         a: "Main lateral runs are typically 6–18 inches deep. Nesting chambers and food caches can go down 2–6 feet. This is why shallow barriers, surface sprays, and most repellents fail — the gopher is just working below them.",
         links: [{ href: "/methods/gopher-mesh", text: "Gopher Mesh Barrier Guide" }]
       },
+      {
+        q: "How much does gopher control cost?",
+        a: "Victor-style pinch traps run about $15 for a 2-pack and are reusable indefinitely — most single-gopher jobs cost under $20. Gopher mesh for a raised bed runs $30–60. Professional trapping runs $150–500+ per job.",
+        links: [{ href: "/cost", text: "Full Cost Breakdown for Every Method" }]
+      },
+      {
+        q: "Is it safe to trap gophers with dogs or kids in the yard?",
+        a: "Mechanical traps are the safest option with pets and kids around — no bait, no poison, no risk if a dog digs one up. Cinch traps are slightly more enclosed than Victor-style and a good choice if safety is a concern. Avoid poison bait stations entirely if you have dogs.",
+        links: [
+          { href: "/problems/pet-safety", text: "Keeping Pets Safe Guide" },
+          { href: "/methods/cinch-traps", text: "Cinch Trap Guide" },
+        ]
+      },
+      {
+        q: "How do I know if a gopher mound is fresh and active?",
+        a: "A fresh mound has moist, loose soil that crumbles easily and a crescent or fan shape with a plugged hole off to one side. If the soil is dry and hard-packed, it's old spoil. Poke the plug — if it's soft and gives easily, the tunnel below is active. Set traps within 24 hours of spotting fresh mounds.",
+        links: [{ href: "/problems/mound-id", text: "Mound ID Guide" }]
+      },
+      {
+        q: "When is gopher season?",
+        a: "Spring (February–May) and fall (September–November) are the two peak activity windows. Spring is breeding season — mounds multiply fast. Fall is food-caching season — gophers expand tunnels aggressively. In Southern California, activity never fully stops. In colder regions, winter slows things down but doesn't eliminate activity.",
+        links: [
+          { href: "/seasons", text: "Full Seasonal Guide" },
+          { href: "/southern-california-gopher-control", text: "Southern California Guide" },
+        ]
+      },
+      {
+        q: "Can gophers damage drip irrigation?",
+        a: "Yes — gophers chew through drip lines and emitters constantly. They follow moisture corridors underground, and drip tubing runs directly through their tunnel zones. If you're finding chewed lines with no obvious entry point, gophers are working below the surface. Trap the run first, then repair and sleeve the lines.",
+        links: [
+          { href: "/problems/irrigation-damage", text: "Irrigation Damage Guide" },
+          { href: "/problems/drip-emitter-damage", text: "Drip Emitter Damage Guide" },
+        ]
+      },
     ].map(({ q, a, links, amazon }) => (
       <section class="card">
         <h2 style="font-size: 1.15rem;">{q}</h2>
@@ -189,5 +263,24 @@ const faqSchema = {
       </section>
     ))}
 
+    <section class="card related-section">
+      <p class="related-label">Related guides</p>
+      <div class="related-grid">
+        <a href="/quick-start" class="related-card">Quick Start Guide — full field process →</a>
+        <a href="/gopher-vs-mole" class="related-card">Gopher vs Mole ID Guide →</a>
+        <a href="/what-doesnt-work" class="related-card">What Doesn't Work — myth busting →</a>
+        <a href="/cost" class="related-card">Gopher Control Cost Guide →</a>
+        <a href="/methods" class="related-card">Browse all 13 methods →</a>
+      </div>
+    </section>
+
   </main>
 </Layout>
+
+<style>
+  .related-section { border-left: 4px solid #059669; padding: 1rem 1.5rem; }
+  .related-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.75rem; }
+  .related-grid { display: flex; flex-direction: column; gap: 0.5rem; }
+  .related-card { display: block; background: #f0fdf4; border: 1px solid #6ee7b7; border-radius: 6px; padding: 0.6rem 0.9rem; font-size: 0.9rem; font-weight: 500; color: #047857; text-decoration: none; transition: background 0.15s, border-color 0.15s; }
+  .related-card:hover { background: #dcfce7; border-color: #34d399; text-decoration: none; }
+</style>
