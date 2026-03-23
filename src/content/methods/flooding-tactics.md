@@ -1,6 +1,6 @@
 ---
 title: "Flooding Active Gopher Runs"
-description: "Use controlled water flushing to expose tunnel exits and force movement in shallow systems."
+description: "Flooding is a dog-hunting tactic — it pushes gophers toward the surface where a dog can catch them. Without a dog, skip it and trap instead."
 date: 2026-03-01
 updated: 2026-03-18
 tags:
@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Flooding can reveal active tunnel branches and occasionally push gophers toward visible exits. It is usually a short-term tactic, but it helps map the network before trapping.
+Flooding is primarily a dog-hunting tactic. The goal is to push gophers toward the surface where a hunting dog can catch them — that's why Taco and I ran this step together. Without a dog on the yard, skip it. Go straight to trapping. The gopher will come back to repair any tunnel disturbance and that's exactly when they hit the trap.
 
 ## The Gear
 - Garden hose with shutoff nozzle
@@ -44,7 +44,7 @@ Flooding can reveal active tunnel branches and occasionally push gophers toward 
 5. Let soil settle, then transition to [traps](/best-gopher-traps) — set via <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">traps</a> at the most active main run locations.
 
 ## Bagger Pro-Tip
-Flooding is reconnaissance, not a final boss move—think of it as turning tunnel Wi-Fi on so you can see the signal.
+This only made sense for me because I had Taco. I'd run the hose, he'd work the yard, and we'd catch them as they surfaced. No dog? Don't bother flooding — set your traps, cover the hole, and let the gopher come back to repair the damage. They always do. That's when they hit.
 
 ## Safety Warning
 Avoid flooding near [foundations](/problems/foundation-damage), retaining walls, or slopes where water saturation can trigger soil movement.

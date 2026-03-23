@@ -8,7 +8,7 @@ const faqSchema = {
   "mainEntity": [
     { "@type": "Question", "name": "Why isn't my gopher trap catching anything?", "acceptedAnswer": { "@type": "Answer", "text": "The most common reason is light entering the tunnel from the trap opening. Gophers sense the disruption and won't approach a trap that lets in daylight. Cover the hole completely with a dirt clod, board, or piece of sod — this single step is the difference between a trap that sits for days and one that catches within hours." } },
     { "@type": "Question", "name": "How do I find the gopher's main tunnel?", "acceptedAnswer": { "@type": "Answer", "text": "Probe in a semicircle 3–4 inches out from the mound edge. When the probe drops suddenly deeper, you've found the main run. The main tunnel is never directly under the mound — it runs alongside it. Rebar works fine for probing; a purpose-built probe just has better ergonomics." } },
-    { "@type": "Question", "name": "Should I flood the burrow before trapping?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — flushing with water softens the soil, can drive gophers toward the surface, and reaches deep nesting chambers. Set traps immediately after flooding while the gopher is agitated and moving to repair the damage." } },
+    { "@type": "Question", "name": "Should I flood the burrow before trapping?", "acceptedAnswer": { "@type": "Answer", "text": "Only if you have a dog working the yard — flooding can push gophers to the surface where a hunting dog can catch them. Without a dog, skip the flooding and go straight to trapping. Either way, the gopher will come back to repair any tunnel damage, and that's exactly when they hit the trap." } },
     { "@type": "Question", "name": "How many traps should I set at once?", "acceptedAnswer": { "@type": "Answer", "text": "Set two traps back-to-back in the same main run section, facing in opposite directions. Two traps cover both directions of travel and double your chances of a quick catch." } },
   ]
 };
@@ -22,8 +22,8 @@ const howToSchema = {
     { "@type": "HowToStep", "name": "Scout the yard", "text": "Walk the whole yard first to get a general layout of where gopher activity is. Look for all the mounds before touching anything." },
     { "@type": "HowToStep", "name": "Open the mounds", "text": "Open up the holes where the actual mounds are." },
     { "@type": "HowToStep", "name": "Probe for the main run", "text": "Use a probe a few inches out from the mound in a semicircle pattern. You're feeling for the drop — when the probe sinks deeper, you've hit the main run." },
-    { "@type": "HowToStep", "name": "Flush with water", "text": "Put a hose into the hole and flood it. This can flush gophers out toward the surface." },
-    { "@type": "HowToStep", "name": "Set traps", "text": "Set Victor-style pinch traps back-to-back in pairs in the two best spots along the flooded main run. Cover the hole completely — no light must enter the tunnel." }
+    { "@type": "HowToStep", "name": "Flush with water (dog owners only)", "text": "If you have a hunting dog, put a hose into the hole and flood it — this can push gophers toward the surface where the dog can catch them. No dog? Skip this step and go straight to trapping." },
+    { "@type": "HowToStep", "name": "Set traps", "text": "Set Victor-style pinch traps back-to-back in pairs in the two best spots along the main run. Cover the hole completely — no light must enter the tunnel. The gopher will return to repair the damage and hit the trap." }
   ]
 };
 ---
@@ -67,7 +67,7 @@ const howToSchema = {
         <li><a href="#step-1">Step 1 — Scout the yard</a></li>
         <li><a href="#step-2">Step 2 — Open the mounds</a></li>
         <li><a href="#step-3">Step 3 — Probe for the main run</a></li>
-        <li><a href="#step-4">Step 4 — Flush with water</a></li>
+        <li><a href="#step-4">Step 4 — Flush with water (dog owners only)</a></li>
         <li><a href="#step-5">Step 5 — Set traps</a></li>
         <li><a href="#no-light">The Secret — No Light in the Tunnel</a></li>
         <li><a href="#faq">Frequently Asked Questions</a></li>
@@ -118,14 +118,14 @@ const howToSchema = {
     </section>
 
     <section class="card">
-      <h2 id="step-4">Step 4 — Flush with water</h2>
-      <p>Once the main run is found, put a <a href="/methods/flooding-tactics">hose into the hole and flood it</a>. This can flush gophers out toward the surface where they can be caught.</p>
-      <p style="margin: 0; color: #374151; font-size: 0.9rem;"><strong>Note:</strong> Flooding also reaches the deepest chambers where young gophers nest — they live in the deepest part of the system.</p>
+      <h2 id="step-4">Step 4 — Flush with water (dog owners only)</h2>
+      <p><strong>Only do this step if you have a hunting dog working the yard.</strong> The point of flooding is to push gophers toward the surface where the dog can catch them. Taco was the reason we flooded — he'd work the yard while I ran the hose and we'd nail them as they came up.</p>
+      <p style="margin: 0; color: #374151; font-size: 0.9rem;"><strong>No dog?</strong> Skip this step entirely and go straight to Step 5. You don't need to flood before trapping — and doing it without a dog just warns the gopher and muddies your trap set.</p>
     </section>
 
     <section class="card">
-      <h2 id="step-5">Step 5 — Set traps if flushing didn't finish the job</h2>
-      <p>If no catch from flushing, set traps. Use steel pinch traps (Victor-style) back-to-back in pairs in the two best spots along the flooded main run.</p>
+      <h2 id="step-5">Step 5 — Set traps</h2>
+      <p>Set two steel pinch traps (Victor-style) back-to-back facing opposite directions in the main run. Cover the hole completely — no light in the tunnel. The gopher will come back to repair the damage and hit the trap. That's the whole game.</p>
       <figure class="trap-diagram">
         <img
           src="/diagrams/trap-set-diagram.svg"
@@ -169,7 +169,7 @@ const howToSchema = {
         </details>
         <details class="faq-item">
           <summary>Should I flood the burrow before trapping?</summary>
-          <p>Yes — flushing with water softens the soil, can drive gophers toward the surface, and reaches deep nesting chambers. Set traps immediately after flooding while the gopher is agitated and moving to repair the damage.</p>
+          <p>Only if you have a dog working the yard. Flooding pushes gophers toward the surface — useful when a hunting dog is there to catch them. Without a dog, skip it. Go straight to trapping. Either way, the gopher comes back to repair the tunnel and hits the trap.</p>
         </details>
         <details class="faq-item">
           <summary>How many traps should I set at once?</summary>
