@@ -169,16 +169,57 @@ const breadcrumbSchema = {
     <Content />
   </main>
 
-  <section class="card" style="border-left: 4px solid #e4e4e7; padding: 1rem 1.5rem;">
-    <h2 style="margin-bottom: 0.75rem; font-size: 1rem;">Also worth reading</h2>
-    <ul style="margin-top: 0; padding-left: 1.2rem;">
-      {related.map(link => <li><a href={link.url}>{link.label}</a></li>)}
-    </ul>
+  <section class="card related-section">
+    <p class="related-label">Related guides</p>
+    <div class="related-grid">
+      {related.map(link => (
+        <a href={link.url} class="related-card">{link.label} →</a>
+      ))}
+    </div>
     <p style="margin: 0.75rem 0 0;"><a href="/problems" style="color: #6b7280; font-size: 0.85rem;">Browse all 11 problem guides →</a></p>
   </section>
 </Layout>
 
 <style>
+  .related-section {
+    border-left: 4px solid #059669;
+    padding: 1rem 1.5rem;
+  }
+
+  .related-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    margin: 0 0 0.75rem;
+  }
+
+  .related-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .related-card {
+    display: block;
+    background: #f0fdf4;
+    border: 1px solid #6ee7b7;
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #047857;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .related-card:hover {
+    background: #dcfce7;
+    border-color: #34d399;
+    text-decoration: none;
+  }
+
   .yt-short {
     display: flex;
     flex-direction: column;
