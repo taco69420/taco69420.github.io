@@ -176,6 +176,18 @@ const breadcrumbSchema = {
     </nav>
   )}
 
+  {entry.slug === 'victor-traps' && (
+    <figure class="trap-diagram">
+      <img
+        src="/diagrams/trap-set-diagram.svg"
+        alt="Three-step diagram showing how to set Victor gopher traps: probe the surface, dig to the main run and set traps back-to-back facing both directions, then leave the mound closed"
+        width="900"
+        height="420"
+      />
+      <figcaption>The no-open-mounds method — probe, dig to the run, set two traps facing opposite directions, cover the hole. Gopher never knows you were there.</figcaption>
+    </figure>
+  )}
+
   <main class="card">
     <Content />
   </main>
@@ -192,6 +204,26 @@ const breadcrumbSchema = {
     <p style="margin: 0.75rem 0 0;"><a href="/methods" style="color: #6b7280; font-size: 0.85rem;">Browse all 13 methods →</a></p>
   </section>
 </Layout>
+
+<style>
+  .trap-diagram {
+    margin: 0 0 1.5rem;
+  }
+
+  .trap-diagram img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+  }
+
+  .trap-diagram figcaption {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 0.6rem;
+    line-height: 1.5;
+  }
+</style>
 
 <style is:global>
   .method-product-box {
