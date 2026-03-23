@@ -43,6 +43,11 @@ Cinch traps are my backup when [Victor sets](/methods/victor-traps) aren't produ
 4. Cover the opening with a board or soil cap to reduce light and airflow changes.
 5. Recheck daily and reset in a new active run if no sign after 48 hours.
 
+<figure style="display:flex;flex-direction:column;align-items:center;margin:1.5rem 0;gap:0.75rem;">
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/letIRC4vG4o" title="How and why to tie gopher traps to a stake" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius:8px;max-width:100%;"></iframe>
+  <figcaption style="font-size:0.85rem;color:#6b7280;text-align:center;max-width:315px;line-height:1.5;">Why I always tie off to a stake.</figcaption>
+</figure>
+
 ## Bagger Pro-Tip
 Straight alignment is everything with cinch traps. I've pulled failed sets where the trap was off by 15 degrees and the gopher just pushed it aside. Treat it like parking in a narrow garage — any angle and you're done. Get it centered, get it level, then cover the light.
 

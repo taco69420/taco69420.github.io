@@ -38,6 +38,11 @@ Victor traps are my go-to — they're what I started with at 15 and what I still
   <a href="https://amzn.to/4bqUakW" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
 </div>
 
+<figure style="display:flex;flex-direction:column;align-items:center;margin:1.5rem 0;gap:0.75rem;">
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/llkIEVCnlzM" title="How to arm a Victor gopher trap" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius:8px;max-width:100%;"></iframe>
+  <figcaption style="font-size:0.85rem;color:#6b7280;text-align:center;max-width:315px;line-height:1.5;">How I arm a Victor trap before setting it.</figcaption>
+</figure>
+
 ## The Process
 1. Find a [fresh mound](/problems/mound-id) and use a <a href="https://amzn.to/40JUZ3u" target="_blank" rel="sponsored noopener">gopher probe</a> 6-12 inches from the plug side to locate the main tunnel.
 2. Open the tunnel cleanly and clear enough space so trap jaws move without rubbing dirt.
@@ -45,8 +50,18 @@ Victor traps are my go-to — they're what I started with at 15 and what I still
 4. Cover the opening to block light and airflow while keeping trap triggers unobstructed.
 5. Check in 12-24 hours, reset in a nearby active run if no activity.
 
+<figure style="display:flex;flex-direction:column;align-items:center;margin:1.5rem 0;gap:0.75rem;">
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/zyDy1dnUruQ" title="How to place a Victor gopher trap in the tunnel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius:8px;max-width:100%;"></iframe>
+  <figcaption style="font-size:0.85rem;color:#6b7280;text-align:center;max-width:315px;line-height:1.5;">How I place traps in the run.</figcaption>
+</figure>
+
 ## Bagger Pro-Tip
 Always run two traps back-to-back facing opposite directions. I learned this early on — set one trap and the gopher often feels the disturbance and reverses before hitting it. Set two and there's nowhere to go. If the tunnel feels like a freeway, you're in the right spot.
+
+<figure style="display:flex;flex-direction:column;align-items:center;margin:1.5rem 0;gap:0.75rem;">
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/letIRC4vG4o" title="How and why to tie gopher traps to a stake" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius:8px;max-width:100%;"></iframe>
+  <figcaption style="font-size:0.85rem;color:#6b7280;text-align:center;max-width:315px;line-height:1.5;">Why I always tie off to a stake.</figcaption>
+</figure>
 
 UC IPM research confirms trapping is the most reliable method: "trapping often results in greater control of gophers than baiting," and UC Davis studies found no benefit from adding bait to traps — placement and technique are what matter. *(Source: [Baldwin, R.A. — UC IPM, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html); [UC IPM Alfalfa Guidelines, 2016](https://ipm.ucanr.edu/agriculture/alfalfa/pocket-gophers/))*
 
