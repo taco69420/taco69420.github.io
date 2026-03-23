@@ -231,6 +231,13 @@ const personSchema = {
           <li><a href="/cost">Gopher Control Cost Guide</a></li>
         </ul>
       </div>
+      <div class="nav-dropdown">
+        <button class={`nav-dropdown-btn${['/southern-california-gopher-control', '/redlands'].includes(pathname) ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="local-menu">Local</button>
+        <ul class="nav-dropdown-menu" id="local-menu" role="menu">
+          <li><a href="/southern-california-gopher-control">Southern California Guide</a></li>
+          <li><a href="/redlands">Redlands, CA</a></li>
+        </ul>
+      </div>
       <a href="/about" class={pathname === '/about' ? 'nav-active' : ''}>About Mark</a>
     </nav>
 
