@@ -255,6 +255,16 @@ const faqSchema = {
       </div>
     </section>
 
+    <section class="card related-section">
+      <p class="related-label">Related guides</p>
+      <div class="related-grid">
+        <a href="/best-gopher-traps" class="related-card">Best Gopher Traps of 2026 — safer alternative →</a>
+        <a href="/best-gopher-baits" class="related-card">Best Gopher Baits of 2026 →</a>
+        <a href="/problems/pet-safety" class="related-card">Keeping Pets Safe Around Gopher Control →</a>
+        <a href="/cost" class="related-card">Gopher Control Cost Guide →</a>
+      </div>
+    </section>
+
   </main>
 </Layout>
 
@@ -483,4 +493,9 @@ const faqSchema = {
     .compare-table th:nth-child(2),
     .compare-table td:nth-child(2) { display: none; }
   }
+  .related-section { border-left: 4px solid #059669; padding: 1rem 1.5rem; }
+  .related-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.75rem; }
+  .related-grid { display: flex; flex-direction: column; gap: 0.5rem; }
+  .related-card { display: block; background: #f0fdf4; border: 1px solid #6ee7b7; border-radius: 6px; padding: 0.6rem 0.9rem; font-size: 0.9rem; font-weight: 500; color: #047857; text-decoration: none; transition: background 0.15s, border-color 0.15s; }
+  .related-card:hover { background: #dcfce7; border-color: #34d399; text-decoration: none; }
 </style>
