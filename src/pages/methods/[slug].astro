@@ -177,15 +177,29 @@ const breadcrumbSchema = {
   )}
 
   {entry.slug === 'victor-traps' && (
-    <figure class="trap-diagram">
-      <img
-        src="/diagrams/trap-set-diagram.svg"
-        alt="Three-step diagram showing how to set Victor gopher traps: probe the surface, dig to the main run and set traps back-to-back facing both directions, then leave the mound closed"
-        width="900"
-        height="420"
-      />
-      <figcaption>The no-open-mounds method — probe, dig to the run, set two traps facing opposite directions, cover the hole. Gopher never knows you were there.</figcaption>
-    </figure>
+    <>
+      <figure class="trap-diagram">
+        <img
+          src="/diagrams/trap-set-diagram.svg"
+          alt="Three-step diagram showing how to set Victor gopher traps: probe the surface, dig to the main run and set traps back-to-back facing both directions, then leave the mound closed"
+          width="900"
+          height="420"
+        />
+        <figcaption>The no-open-mounds method — probe, dig to the run, set two traps facing opposite directions, cover the hole. Gopher never knows you were there.</figcaption>
+      </figure>
+      <figure class="yt-short">
+        <iframe
+          width="315"
+          height="560"
+          src="https://www.youtube.com/embed/llkIEVCnlzM"
+          title="How to set a Victor gopher trap"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <figcaption>How I set a Victor trap — arming the spring, positioning it in the run, and covering the hole so no light gets in.</figcaption>
+      </figure>
+    </>
   )}
 
   <main class="card">
@@ -206,6 +220,27 @@ const breadcrumbSchema = {
 </Layout>
 
 <style>
+  .yt-short {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .yt-short iframe {
+    border-radius: 8px;
+    max-width: 100%;
+  }
+
+  .yt-short figcaption {
+    font-size: 0.85rem;
+    color: #6b7280;
+    text-align: center;
+    max-width: 315px;
+    line-height: 1.5;
+  }
+
   .trap-diagram {
     margin: 0 0 1.5rem;
   }
