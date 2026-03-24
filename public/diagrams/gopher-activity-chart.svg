@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img" aria-label="Bar chart showing pocket gopher surface activity by month in Southern California. Activity peaks in March–April during breeding season and again in October during food caching season. Activity is lowest in July–August and December–January.">
+
+  <!-- Background -->
+  <rect width="900" height="400" fill="#fafaf8" rx="8"/>
+
+  <!-- Title -->
+  <text x="67" y="30" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#18181b">Pocket Gopher Surface Activity by Month</text>
+  <text x="67" y="48" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280">Southern California — relative surface activity based on breeding cycle and food-caching behavior</text>
+
+  <!-- ── Y-axis grid lines & labels ── -->
+  <!-- baseline y=290, chart top y=65, height=225 -->
+  <!-- grid at 25%=y234, 50%=y178, 75%=y121, 100%=y65 -->
+
+  <line x1="65" y1="290" x2="885" y2="290" stroke="#e4e4e7" stroke-width="1.5"/>
+  <line x1="65" y1="234" x2="885" y2="234" stroke="#e4e4e7" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="65" y1="178" x2="885" y2="178" stroke="#e4e4e7" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="65" y1="121" x2="885" y2="121" stroke="#e4e4e7" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="65" y1="65"  x2="885" y2="65"  stroke="#e4e4e7" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <text x="60" y="238" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#9ca3af">Low</text>
+  <text x="60" y="182" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#9ca3af">Moderate</text>
+  <text x="60" y="125" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#9ca3af">High</text>
+  <text x="60" y="69"  text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#9ca3af">Peak</text>
+
+  <!-- ── Bars ──
+    slot width=68, bar width=50, padding=9
+    bar_x = 67 + index*68 + 9
+    center_x = 67 + index*68 + 34
+    bar_y = 290 - bar_height
+    bar_height = (activity/10) * 225
+
+    Activity:
+      Jan=2.0 → h=45  → y=245  winter  #818cf8
+      Feb=5.5 → h=124 → y=166  spring  #34d399
+      Mar=9.0 → h=202 → y=88   spring  #10b981
+      Apr=9.0 → h=202 → y=88   spring  #10b981
+      May=7.0 → h=158 → y=132  spring  #34d399
+      Jun=5.0 → h=112 → y=178  summer  #fbbf24
+      Jul=3.0 → h=68  → y=222  summer  #fbbf24
+      Aug=3.0 → h=68  → y=222  summer  #fbbf24
+      Sep=7.0 → h=158 → y=132  fall    #fb923c
+      Oct=8.5 → h=191 → y=99   fall    #f97316
+      Nov=5.0 → h=112 → y=178  fall    #fb923c
+      Dec=2.0 → h=45  → y=245  winter  #818cf8
+  -->
+
+  <!-- Jan -->
+  <rect x="76"  y="245" width="50" height="45"  fill="#818cf8" rx="3"/>
+  <!-- Feb -->
+  <rect x="144" y="166" width="50" height="124" fill="#34d399" rx="3"/>
+  <!-- Mar -->
+  <rect x="212" y="88"  width="50" height="202" fill="#10b981" rx="3"/>
+  <!-- Apr -->
+  <rect x="280" y="88"  width="50" height="202" fill="#10b981" rx="3"/>
+  <!-- May -->
+  <rect x="348" y="132" width="50" height="158" fill="#34d399" rx="3"/>
+  <!-- Jun -->
+  <rect x="416" y="178" width="50" height="112" fill="#fbbf24" rx="3"/>
+  <!-- Jul -->
+  <rect x="484" y="222" width="50" height="68"  fill="#fbbf24" rx="3"/>
+  <!-- Aug -->
+  <rect x="552" y="222" width="50" height="68"  fill="#fbbf24" rx="3"/>
+  <!-- Sep -->
+  <rect x="620" y="132" width="50" height="158" fill="#fb923c" rx="3"/>
+  <!-- Oct -->
+  <rect x="688" y="99"  width="50" height="191" fill="#f97316" rx="3"/>
+  <!-- Nov -->
+  <rect x="756" y="178" width="50" height="112" fill="#fb923c" rx="3"/>
+  <!-- Dec -->
+  <rect x="824" y="245" width="50" height="45"  fill="#818cf8" rx="3"/>
+
+  <!-- ── Month labels ── -->
+  <text x="101" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Jan</text>
+  <text x="169" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Feb</text>
+  <text x="237" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Mar</text>
+  <text x="305" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Apr</text>
+  <text x="373" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">May</text>
+  <text x="441" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Jun</text>
+  <text x="509" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Jul</text>
+  <text x="577" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Aug</text>
+  <text x="645" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Sep</text>
+  <text x="713" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Oct</text>
+  <text x="781" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Nov</text>
+  <text x="849" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#374151">Dec</text>
+
+  <!-- ── Season band ── -->
+  <!-- Winter: Jan slot x=67–135, Dec slot x=815–883 -->
+  <rect x="67"  y="315" width="68"  height="20" fill="#e0e7ff" rx="2"/>
+  <!-- Spring: slots 1–4, x=135–543... wait: slot 1 start=135, slot 4 end=135+4*68=407 -->
+  <rect x="135" y="315" width="272" height="20" fill="#d1fae5" rx="2"/>
+  <!-- Summer: slots 5–7, x=407–611 -->
+  <rect x="407" y="315" width="204" height="20" fill="#fef3c7" rx="2"/>
+  <!-- Fall: slots 8–10, x=611–815 -->
+  <rect x="611" y="315" width="204" height="20" fill="#ffedd5" rx="2"/>
+  <!-- Winter Dec: slot 11, x=815–883 -->
+  <rect x="815" y="315" width="68"  height="20" fill="#e0e7ff" rx="2"/>
+
+  <!-- Season band labels -->
+  <text x="101" y="329" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9.5" font-weight="600" fill="#4338ca">Winter</text>
+  <text x="271" y="329" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9.5" font-weight="600" fill="#047857">Spring</text>
+  <text x="509" y="329" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9.5" font-weight="600" fill="#b45309">Summer</text>
+  <text x="713" y="329" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9.5" font-weight="600" fill="#c2410c">Fall</text>
+  <text x="849" y="329" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9.5" font-weight="600" fill="#4338ca">Winter</text>
+
+  <!-- ── Annotations ── -->
+  <!-- Peak Breeding over Mar–Apr -->
+  <line x1="237" y1="83" x2="305" y2="83" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="237" y1="78" x2="237" y2="88" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="305" y1="78" x2="305" y2="88" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="196" y="63" width="150" height="17" fill="white" rx="3" opacity="0.9"/>
+  <text x="271" y="75" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#047857">↑ Peak Breeding Season</text>
+
+  <!-- Food Caching over Oct -->
+  <line x1="713" y1="94" x2="713" y2="83" stroke="#f97316" stroke-width="1.5" marker-end="url(#none)"/>
+  <rect x="652" y="63" width="122" height="17" fill="white" rx="3" opacity="0.9"/>
+  <text x="713" y="75" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c2410c">↑ Food Caching Peak</text>
+
+  <!-- ── Source note ── -->
+  <text x="67" y="358" font-family="system-ui,sans-serif" font-size="9.5" fill="#9ca3af">
+    Activity levels are relative estimates based on breeding season and food-caching behavior documented in:
+    Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers (UC ANR Pub. 7433, 2025)
+  </text>
+
+</svg>
