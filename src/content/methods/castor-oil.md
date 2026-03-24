@@ -12,10 +12,10 @@ timeToResults: "3-14 days"
 petRisk: low
 cost: medium
 sources:
-  - label: "University of California IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
-  - label: "Minnesota Extension - Managing Burrowing Mammals"
-    url: "https://extension.umn.edu/"
+  - label: "Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers (UC ANR Pub. 7433, 2025)"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
+  - label: "Salmon, T.P. & Lickliter, R.E. — Wildlife Pest Control around Gardens and Homes (UC ANR Pub. 21385, 2nd ed.)"
+    url: "https://anrcatalog.ucanr.edu/pdf/21385e.pdf"
 ---
 
 ## Quick Answer
@@ -42,6 +42,11 @@ Castor oil repellents can reduce gopher activity in [high-value turf](/problems/
 3. Deep-water immediately after application to carry product into root-level soil.
 4. Repeat application in 7-14 days or after heavy rain for sustained pressure.
 5. Pair with [traps](/best-gopher-traps) and <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">traps</a> at boundary mounds where displaced activity appears.
+
+## What the Evidence Shows
+UC IPM does not list castor oil repellents as a primary recommended control method for pocket gophers — trapping and baiting are the methods with the strongest evidence behind them. Where repellents are discussed, the consensus is that results are inconsistent and heavily dependent on application depth and frequency. That's an honest read of the research, and it matches what I've seen in the field. *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
+
+Used correctly — deep application, repeated on schedule, paired with trapping at the perimeter — castor oil can reduce activity in a protected zone. Used as a standalone fix on an active infestation, it won't hold.
 
 ## Bagger Pro-Tip
 Repellent alone is like sending a strongly worded letter—effective only when backed by enforcement at the border.
