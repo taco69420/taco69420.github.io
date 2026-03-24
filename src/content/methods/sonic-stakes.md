@@ -12,10 +12,10 @@ timeToResults: "1-3 weeks"
 petRisk: low
 cost: low
 sources:
-  - label: "UC IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
-  - label: "Oregon State Extension - Managing Gophers"
-    url: "https://extension.oregonstate.edu/"
+  - label: "Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers (UC ANR Pub. 7433, 2025)"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
+  - label: "Salmon, T.P. & Lickliter, R.E. — Wildlife Pest Control around Gardens and Homes (UC ANR Pub. 21385, 2nd ed.)"
+    url: "https://anrcatalog.ucanr.edu/pdf/21385e.pdf"
 ---
 
 ## Quick Answer
@@ -40,6 +40,11 @@ Sonic stakes send low-frequency vibrations through the soil every 30 seconds or 
 3. Make sure the solar panel faces direct sun; shaded stakes lose charge fast and stop pulsing.
 4. Leave them running continuously for at least 2 weeks before judging results.
 5. If new mounds appear outside the staked zone, the gopher moved — reposition stakes to cut off the new run.
+
+## What the Research Says
+UC IPM's pest notes are direct about this: vibrating and sonic devices "haven't been shown to be effective" for gopher control, with habituation cited as the core problem — gophers stop responding to the vibration stimulus within weeks of consistent exposure. *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
+
+That's not a reason to never use them — it's a reason to use them correctly. Rotating stake positions every 2–3 weeks disrupts habituation. Pairing with active trapping means the stakes don't have to do all the work.
 
 ## Bagger Pro-Tip
 Think of sonic stakes like a fence, not a trap. They redirect gophers, they don't kill them. Use them to protect a [specific bed or garden edge](/problems/garden-destruction) while you <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">trap</a> the main population elsewhere.
