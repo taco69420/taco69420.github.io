@@ -42,6 +42,11 @@ A dog with a strong prey drive is one of the best gopher detection tools you hav
 
 **Taco's stats:** Chihuahua. Extremely high prey drive. Has located active runs the probe couldn't find. Track record includes multiple confirmed catches at tunnel openings and one legendary three-hour alert on a dry hole that ended in a 2-pound gopher. Never doubt the whiskers.
 
+<figure style="display:flex;flex-direction:column;align-items:center;margin:1.5rem 0;gap:0.75rem;">
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/Q7d9TVEaSQg" title="Taco digging for a gopher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius:8px;max-width:100%;"></iframe>
+  <figcaption style="font-size:0.85rem;color:#6b7280;text-align:center;max-width:315px;line-height:1.5;">Taco on the job — committed to the dig.</figcaption>
+</figure>
+
 ## The Process
 1. Let the dog work the yard on a long lead or off-leash in a fenced area. Don't direct them — let the nose take over.
 2. Watch for sustained interest in a specific area. A dog that circles back to the same spot, digs shallowly, or goes low and sniffs intensely is telling you something.
