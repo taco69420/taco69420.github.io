@@ -59,6 +59,19 @@
       window.gtag = gtag;
       gtag('js', new Date());
       gtag('config', GA_ID);
+
+      // Track Amazon affiliate link clicks
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href*="amzn.to"], a[href*="amazon.com"]');
+        if (!link) return;
+        var href = link.getAttribute('href') || '';
+        var text = (link.textContent || '').trim().slice(0, 100);
+        gtag('event', 'affiliate_click', {
+          link_url: href,
+          link_text: text,
+          page_location: window.location.href
+        });
+      });
     }
 
     var banner = document.getElementById('gdpr-banner');
