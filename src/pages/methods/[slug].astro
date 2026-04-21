@@ -130,7 +130,7 @@ const breadcrumbSchema = {
   schemas={[howToSchema, breadcrumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › <a href="/methods">Methods</a> › {entry.data.title}
+    <a href="/">Home</a> › <a href="/methods/">Methods</a> › {entry.data.title}
   </nav>
 
   <header>
@@ -153,7 +153,7 @@ const breadcrumbSchema = {
   {entry.data.petRisk === 'high' && (
     <div style="background: #fef2f2; border: 2px solid #fca5a5; border-left: 5px solid #dc2626; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
       <strong style="color: #991b1b; font-size: 0.95rem;">&#9888; High Pet &amp; Wildlife Risk</strong>
-      <p style="margin: 0.4rem 0 0; color: #7f1d1d; font-size: 0.9rem;">This method poses serious risk to dogs, cats, and wildlife. Keep pets away from treated areas. Read all label warnings before use. If you have pets, consider <a href="/methods/victor-traps" style="color: #991b1b;">Victor traps</a> or <a href="/methods/cinch-traps" style="color: #991b1b;">Cinch traps</a> instead.</p>
+      <p style="margin: 0.4rem 0 0; color: #7f1d1d; font-size: 0.9rem;">This method poses serious risk to dogs, cats, and wildlife. Keep pets away from treated areas. Read all label warnings before use. If you have pets, consider <a href="/methods/victor-traps/" style="color: #991b1b;">Victor traps</a> or <a href="/methods/cinch-traps/" style="color: #991b1b;">Cinch traps</a> instead.</p>
     </div>
   )}
 
@@ -195,7 +195,7 @@ const breadcrumbSchema = {
   </main>
 
   <div class="card" style="background: #fffbeb; border: 1.5px solid #fde68a; border-left: 4px solid #f59e0b; padding: 1rem 1.5rem;">
-    <p style="margin: 0; font-size: 0.9rem; color: #374151; line-height: 1.6;"><strong style="color: #92400e;">Timing matters more than most people think.</strong> Spring (Feb–May) and fall (Sep–Nov) are when gophers are most active — trap during a surge and you'll catch within hours. Miss those windows and you're chasing a slow target. <a href="/seasons" style="color: #92400e; font-weight: 600; border-bottom-color: #fcd34d;">See the full Seasonal Guide →</a></p>
+    <p style="margin: 0; font-size: 0.9rem; color: #374151; line-height: 1.6;"><strong style="color: #92400e;">Timing matters more than most people think.</strong> Spring (Feb–May) and fall (Sep–Nov) are when gophers are most active — trap during a surge and you'll catch within hours. Miss those windows and you're chasing a slow target. <a href="/seasons/" style="color: #92400e; font-weight: 600; border-bottom-color: #fcd34d;">See the full Seasonal Guide →</a></p>
   </div>
 
   <section class="card related-section">
@@ -205,7 +205,7 @@ const breadcrumbSchema = {
         <a href={link.url} class="related-card">{link.label} →</a>
       ))}
     </div>
-    <p style="margin: 0.75rem 0 0;"><a href="/methods" style="color: #6b7280; font-size: 0.85rem;">Browse all 13 methods →</a></p>
+    <p style="margin: 0.75rem 0 0;"><a href="/methods/" style="color: #6b7280; font-size: 0.85rem;">Browse all 13 methods →</a></p>
   </section>
 </Layout>
 

@@ -36,7 +36,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Mark the Bagger",
-  "url": "https://howtokillgophers.com/about",
+  "url": "https://howtokillgophers.com/about/",
   "description": "Gopher trapper since age 15. Started catching gophers in Redlands, CA for $5 a head. Built howtokillgophers.com to share real hands-on knowledge.",
   "knowsAbout": ["gopher control", "gopher trapping", "pest control", "Victor traps", "Cinch traps"]
 };
@@ -185,60 +185,60 @@ const personSchema = {
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav aria-label="Main navigation">
       <a href="/" class="nav-brand">How To Kill Gophers</a>
-      <a href="/quick-start" class={pathname === '/quick-start' ? 'nav-active' : ''}>Quick Start</a>
-      <a href="/seasons" class={pathname === '/seasons' ? 'nav-active' : ''}>Seasonal Guide</a>
+      <a href="/quick-start/" class={pathname === '/quick-start/' ? 'nav-active' : ''}>Quick Start</a>
+      <a href="/seasons/" class={pathname === '/seasons/' ? 'nav-active' : ''}>Seasonal Guide</a>
       <div class="nav-dropdown">
         <button class={`nav-dropdown-btn${pathname.startsWith('/methods') ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="playbook-menu">The Playbook</button>
         <ul class="nav-dropdown-menu" id="playbook-menu" role="menu">
-          <li><a href="/methods/victor-traps">Victor Trap Tunnel Intercept</a></li>
-          <li><a href="/methods/cinch-traps">Cinch Trap Mainline Set</a></li>
-          <li><a href="/methods/gopher-mesh">Install Gopher Mesh Barriers</a></li>
-          <li><a href="/methods/flooding-tactics">Flooding Active Gopher Runs</a></li>
-          <li><a href="/methods/carbon-monoxide">Carbon Monoxide Burrow Treatment</a></li>
-          <li><a href="/methods/poison-bait-stations">Underground Bait Station</a></li>
-          <li><a href="/methods/sonic-stakes">Sonic Repeller Stakes</a></li>
-          <li><a href="/methods/castor-oil">Castor Oil Soil Repellent Program</a></li>
-          <li><a href="/methods/gopher-resistant-plants">Gopher-Resistant Plant Selection</a></li>
-          <li><a href="/methods/exclusion-fencing">Exclusion Fencing for Large Properties</a></li>
-          <li><a href="/methods/barn-owl-box">Barn Owl Box Installation</a></li>
-          <li><a href="/methods/dog-hunting">The Taco Method: Using a Dog to Hunt Gophers</a></li>
-          <li><a href="/methods/hiring-a-pro">Hiring a Professional Gopher Trapper</a></li>
+          <li><a href="/methods/victor-traps/">Victor Trap Tunnel Intercept</a></li>
+          <li><a href="/methods/cinch-traps/">Cinch Trap Mainline Set</a></li>
+          <li><a href="/methods/gopher-mesh/">Install Gopher Mesh Barriers</a></li>
+          <li><a href="/methods/flooding-tactics/">Flooding Active Gopher Runs</a></li>
+          <li><a href="/methods/carbon-monoxide/">Carbon Monoxide Burrow Treatment</a></li>
+          <li><a href="/methods/poison-bait-stations/">Underground Bait Station</a></li>
+          <li><a href="/methods/sonic-stakes/">Sonic Repeller Stakes</a></li>
+          <li><a href="/methods/castor-oil/">Castor Oil Soil Repellent Program</a></li>
+          <li><a href="/methods/gopher-resistant-plants/">Gopher-Resistant Plant Selection</a></li>
+          <li><a href="/methods/exclusion-fencing/">Exclusion Fencing for Large Properties</a></li>
+          <li><a href="/methods/barn-owl-box/">Barn Owl Box Installation</a></li>
+          <li><a href="/methods/dog-hunting/">The Taco Method: Using a Dog to Hunt Gophers</a></li>
+          <li><a href="/methods/hiring-a-pro/">Hiring a Professional Gopher Trapper</a></li>
         </ul>
       </div>
       <div class="nav-dropdown">
         <button class={`nav-dropdown-btn${pathname.startsWith('/problems') ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="problems-menu">Problems</button>
         <ul class="nav-dropdown-menu" id="problems-menu" role="menu">
-          <li><a href="/problems/drip-emitter-damage">Gophers Destroying Drip Emitters</a></li>
-          <li><a href="/problems/foundation-damage">Managing Gopher Risk Near Foundations</a></li>
-          <li><a href="/problems/garden-destruction">Stopping Gopher Garden Destruction</a></li>
-          <li><a href="/problems/irrigation-damage">Gophers Chewing Irrigation Lines</a></li>
-          <li><a href="/problems/lawn-damage">Gopher Damage to Lawns & Turf</a></li>
-          <li><a href="/problems/mound-id">How to Identify Fresh Gopher Mounds</a></li>
-          <li><a href="/problems/neighbor-disputes">Handling Neighbor Disputes</a></li>
-          <li><a href="/problems/new-yard-prep">Gopher-Proofing a New Yard</a></li>
-          <li><a href="/problems/pet-safety">Keeping Pets Safe</a></li>
-          <li><a href="/problems/tree-shrub-damage">Gopher Damage to Trees & Shrubs</a></li>
-          <li><a href="/problems/vegetable-garden">Gopher Damage in Vegetable Gardens</a></li>
+          <li><a href="/problems/drip-emitter-damage/">Gophers Destroying Drip Emitters</a></li>
+          <li><a href="/problems/foundation-damage/">Managing Gopher Risk Near Foundations</a></li>
+          <li><a href="/problems/garden-destruction/">Stopping Gopher Garden Destruction</a></li>
+          <li><a href="/problems/irrigation-damage/">Gophers Chewing Irrigation Lines</a></li>
+          <li><a href="/problems/lawn-damage/">Gopher Damage to Lawns & Turf</a></li>
+          <li><a href="/problems/mound-id/">How to Identify Fresh Gopher Mounds</a></li>
+          <li><a href="/problems/neighbor-disputes/">Handling Neighbor Disputes</a></li>
+          <li><a href="/problems/new-yard-prep/">Gopher-Proofing a New Yard</a></li>
+          <li><a href="/problems/pet-safety/">Keeping Pets Safe</a></li>
+          <li><a href="/problems/tree-shrub-damage/">Gopher Damage to Trees & Shrubs</a></li>
+          <li><a href="/problems/vegetable-garden/">Gopher Damage in Vegetable Gardens</a></li>
         </ul>
       </div>
-      <a href="/traps" class={pathname === '/traps' ? 'nav-active' : ''}>The Armory</a>
+      <a href="/traps/" class={pathname === '/traps/' ? 'nav-active' : ''}>The Armory</a>
       <div class="nav-dropdown">
-        <button class={`nav-dropdown-btn${['/best-gopher-traps', '/best-gopher-baits', '/best-gopher-poison', '/cost'].includes(pathname) ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="bestof-menu">Best Of</button>
+        <button class={`nav-dropdown-btn${['/best-gopher-traps/', '/best-gopher-baits/', '/best-gopher-poison/', '/cost/'].includes(pathname) ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="bestof-menu">Best Of</button>
         <ul class="nav-dropdown-menu" id="bestof-menu" role="menu">
-          <li><a href="/best-gopher-traps">Best Gopher Traps of 2026</a></li>
-          <li><a href="/best-gopher-baits">Best Gopher Baits of 2026</a></li>
-          <li><a href="/best-gopher-poison">Best Gopher Poison of 2026</a></li>
-          <li><a href="/cost">Gopher Control Cost Guide</a></li>
+          <li><a href="/best-gopher-traps/">Best Gopher Traps of 2026</a></li>
+          <li><a href="/best-gopher-baits/">Best Gopher Baits of 2026</a></li>
+          <li><a href="/best-gopher-poison/">Best Gopher Poison of 2026</a></li>
+          <li><a href="/cost/">Gopher Control Cost Guide</a></li>
         </ul>
       </div>
       <div class="nav-dropdown">
-        <button class={`nav-dropdown-btn${['/southern-california-gopher-control', '/redlands'].includes(pathname) ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="local-menu">Local</button>
+        <button class={`nav-dropdown-btn${['/southern-california-gopher-control/', '/redlands/'].includes(pathname) ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="local-menu">Local</button>
         <ul class="nav-dropdown-menu" id="local-menu" role="menu">
-          <li><a href="/southern-california-gopher-control">Southern California Guide</a></li>
-          <li><a href="/redlands">Redlands, CA</a></li>
+          <li><a href="/southern-california-gopher-control/">Southern California Guide</a></li>
+          <li><a href="/redlands/">Redlands, CA</a></li>
         </ul>
       </div>
-      <a href="/about" class={pathname === '/about' ? 'nav-active' : ''}>About Mark</a>
+      <a href="/about/" class={pathname === '/about/' ? 'nav-active' : ''}>About Mark</a>
     </nav>
 
     <slot />
@@ -247,20 +247,20 @@ const personSchema = {
       <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
         <img src="https://howtokillgophers.com/markwt.jpg" alt="Mark the Bagger, founder of howtokillgophers.com" width="56" height="56" style="border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid #e4e4e7;" />
         <span>I'm Mark — I've been trapping gophers since I was 15, starting in my dad's yard in Redlands, CA at $5 a head. My dog Taco was my hunting partner for years. This site is what we learned.
-        <a href="/about" class="legal-link" style="margin-left: 0.25rem;">Read the full story →</a></span>
+        <a href="/about/" class="legal-link" style="margin-left: 0.25rem;">Read the full story →</a></span>
       </p>
       <p style="margin-bottom: 0.5rem;">
-        <a href="/quiz" class="legal-link">Take the Quiz</a>
+        <a href="/quiz/" class="legal-link">Take the Quiz</a>
         &nbsp;·&nbsp;
-        <a href="/gopher-vs-mole" class="legal-link">Gopher vs Mole</a>
+        <a href="/gopher-vs-mole/" class="legal-link">Gopher vs Mole</a>
         &nbsp;·&nbsp;
-        <a href="/seasons" class="legal-link">Seasonal Guide</a>
+        <a href="/seasons/" class="legal-link">Seasonal Guide</a>
         &nbsp;·&nbsp;
-        <a href="/faq" class="legal-link">FAQ</a>
+        <a href="/faq/" class="legal-link">FAQ</a>
       </p>
       <p><strong>Affiliate Disclosure:</strong> I participate in the Amazon Services LLC Associates Program. As an Amazon Associate I earn from qualifying purchases.</p>
-      <p style="margin-top: 10px;"><a href="/privacy" class="legal-link">Read the full Privacy Policy & Legal Disclaimers</a></p>
-      <p style="margin-top: 10px;"><a href="/privacy#do-not-sell" class="legal-link">Do Not Sell or Share My Personal Information</a></p>
+      <p style="margin-top: 10px;"><a href="/privacy/" class="legal-link">Read the full Privacy Policy & Legal Disclaimers</a></p>
+      <p style="margin-top: 10px;"><a href="/privacy/#do-not-sell" class="legal-link">Do Not Sell or Share My Personal Information</a></p>
     </footer>
 
     <CookieBanner />
