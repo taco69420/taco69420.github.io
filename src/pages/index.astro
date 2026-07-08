@@ -32,7 +32,7 @@ const websiteSchema = {
   "author": {
     "@type": "Person",
     "name": "Mark the Bagger",
-    "url": "https://howtokillgophers.com/about"
+    "url": "https://howtokillgophers.com/about/"
   }
 };
 
@@ -135,7 +135,7 @@ const faqSchema = {
                 <span class="stat-value">{featuredMeta[method.slug]?.bestFor}</span>
               </div>
             </div>
-            <a href={`/methods/${method.slug}`} class="btn">Read the Guide</a>
+            <a href={`/methods/${method.slug}/`} class="btn">Read the Guide</a>
           </article>
         ))}
       </div>

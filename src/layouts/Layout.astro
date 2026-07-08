@@ -188,7 +188,7 @@ const personSchema = {
       <a href="/quick-start/" class={pathname === '/quick-start/' ? 'nav-active' : ''}>Quick Start</a>
       <a href="/seasons/" class={pathname === '/seasons/' ? 'nav-active' : ''}>Seasonal Guide</a>
       <div class="nav-dropdown">
-        <button class={`nav-dropdown-btn${pathname.startsWith('/methods') ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="playbook-menu">The Playbook</button>
+        <button class={`nav-dropdown-btn${pathname.startsWith('/methods/') ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="playbook-menu">The Playbook</button>
         <ul class="nav-dropdown-menu" id="playbook-menu" role="menu">
           <li><a href="/methods/victor-traps/">Victor Trap Tunnel Intercept</a></li>
           <li><a href="/methods/cinch-traps/">Cinch Trap Mainline Set</a></li>
@@ -206,7 +206,7 @@ const personSchema = {
         </ul>
       </div>
       <div class="nav-dropdown">
-        <button class={`nav-dropdown-btn${pathname.startsWith('/problems') ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="problems-menu">Problems</button>
+        <button class={`nav-dropdown-btn${pathname.startsWith('/problems/') ? ' nav-active' : ''}`} aria-haspopup="true" aria-expanded="false" aria-controls="problems-menu">Problems</button>
         <ul class="nav-dropdown-menu" id="problems-menu" role="menu">
           <li><a href="/problems/drip-emitter-damage/">Gophers Destroying Drip Emitters</a></li>
           <li><a href="/problems/foundation-damage/">Managing Gopher Risk Near Foundations</a></li>

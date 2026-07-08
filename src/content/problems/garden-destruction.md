@@ -17,7 +17,7 @@ sources:
 ---
 
 ## Quick Answer
-Gophers can destroy a garden bed in days by severing roots below the surface — you'll see healthy plants wilt overnight with no above-ground explanation. I've watched a gopher take out 4 [tomato plants](/problems/vegetable-garden) in a single week before I figured out where the run was. UC IPM confirms gophers "pull entire plants into their tunnel from below" and girdle the bark of trees and large roots underground. *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))* Combining barriers with active trapping gives the fastest recovery and best long-term protection.
+Gophers can destroy a garden bed in days by severing roots below the surface — you'll see healthy plants wilt overnight with no above-ground explanation. I've watched a gopher take out 4 [tomato plants](/problems/vegetable-garden/) in a single week before I figured out where the run was. UC IPM confirms gophers "pull entire plants into their tunnel from below" and girdle the bark of trees and large roots underground. *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))* Combining barriers with active trapping gives the fastest recovery and best long-term protection.
 
 ## The Gear
 - 1/2-inch hardware cloth baskets or bed liner
@@ -28,8 +28,8 @@ Gophers can destroy a garden bed in days by severing roots below the surface —
 
 ## The Process
 1. Identify which beds show newest wilt, uprooting, or tunnel collapse.
-2. Install root baskets or [mesh lining](/methods/gopher-mesh) for high-value plants immediately.
-3. Set [traps](/best-gopher-traps) in nearby active main runs just outside bed edges.
+2. Install root baskets or [mesh lining](/methods/gopher-mesh/) for high-value plants immediately.
+3. Set [traps](/best-gopher-traps/) in nearby active main runs just outside bed edges.
 4. Replace damaged plants only after 3-5 days of no new mound activity.
 5. Maintain weekly inspections and repair barrier breaches as needed.
 
@@ -41,6 +41,6 @@ Avoid placing traps where pets roam freely; use covers or exclusion fencing duri
 
 ## Fix It
 Trap the gopher first, then harden the bed so it doesn't happen again.
-- [Install Gopher Mesh Barriers](/methods/gopher-mesh) — the only permanent protection for garden beds
-- [Victor Trap Tunnel Intercept](/methods/victor-traps) — eliminate the active gopher fast
-- [Cinch Trap Mainline Set](/methods/cinch-traps) — solid backup if Victor sets aren't producing
+- [Install Gopher Mesh Barriers](/methods/gopher-mesh/) — the only permanent protection for garden beds
+- [Victor Trap Tunnel Intercept](/methods/victor-traps/) — eliminate the active gopher fast
+- [Cinch Trap Mainline Set](/methods/cinch-traps/) — solid backup if Victor sets aren't producing

@@ -17,78 +17,78 @@ const contentH2s = headings.filter(h => h.depth === 2);
 
 const relatedLinks: Record<string, Array<{label: string, url: string}>> = {
   'victor-traps': [
-    { label: 'Cinch Trap Mainline Set', url: '/methods/cinch-traps' },
-    { label: 'Quick Start Guide — full field process', url: '/quick-start' },
-    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
-    { label: 'The Armory — gear picks', url: '/traps' },
+    { label: 'Cinch Trap Mainline Set', url: '/methods/cinch-traps/' },
+    { label: 'Quick Start Guide — full field process', url: '/quick-start/' },
+    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety/' },
+    { label: 'The Armory — gear picks', url: '/traps/' },
   ],
   'cinch-traps': [
-    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps' },
-    { label: 'Quick Start Guide — full field process', url: '/quick-start' },
-    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
+    { label: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps/' },
+    { label: 'Quick Start Guide — full field process', url: '/quick-start/' },
+    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety/' },
   ],
   'gopher-mesh': [
-    { label: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing' },
-    { label: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants' },
-    { label: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep' },
-    { label: 'Stopping Gopher Garden Destruction', url: '/problems/garden-destruction' },
+    { label: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing/' },
+    { label: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants/' },
+    { label: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep/' },
+    { label: 'Stopping Gopher Garden Destruction', url: '/problems/garden-destruction/' },
   ],
   'flooding-tactics': [
-    { label: 'Victor Trap Tunnel Intercept — follow-up after flooding', url: '/methods/victor-traps' },
-    { label: 'Quick Start Guide — flooding is Step 4', url: '/quick-start' },
-    { label: 'How to Identify Fresh Gopher Mounds', url: '/problems/mound-id' },
+    { label: 'Victor Trap Tunnel Intercept — follow-up after flooding', url: '/methods/victor-traps/' },
+    { label: 'Quick Start Guide — flooding is Step 4', url: '/quick-start/' },
+    { label: 'How to Identify Fresh Gopher Mounds', url: '/problems/mound-id/' },
   ],
   'carbon-monoxide': [
-    { label: 'Hiring a Professional Gopher Trapper', url: '/methods/hiring-a-pro' },
-    { label: 'Victor Trap Tunnel Intercept — safer DIY alternative', url: '/methods/victor-traps' },
-    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
+    { label: 'Hiring a Professional Gopher Trapper', url: '/methods/hiring-a-pro/' },
+    { label: 'Victor Trap Tunnel Intercept — safer DIY alternative', url: '/methods/victor-traps/' },
+    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety/' },
   ],
   'poison-bait-stations': [
-    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
-    { label: 'Victor Trap Tunnel Intercept — safer alternative', url: '/methods/victor-traps' },
-    { label: 'Cinch Trap Mainline Set — safer alternative', url: '/methods/cinch-traps' },
+    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety/' },
+    { label: 'Victor Trap Tunnel Intercept — safer alternative', url: '/methods/victor-traps/' },
+    { label: 'Cinch Trap Mainline Set — safer alternative', url: '/methods/cinch-traps/' },
   ],
   'sonic-stakes': [
-    { label: 'Victor Trap Tunnel Intercept — pair with for real results', url: '/methods/victor-traps' },
-    { label: 'Castor Oil Soil Repellent Program', url: '/methods/castor-oil' },
-    { label: 'Install Gopher Mesh Barriers — permanent fix', url: '/methods/gopher-mesh' },
+    { label: 'Victor Trap Tunnel Intercept — pair with for real results', url: '/methods/victor-traps/' },
+    { label: 'Castor Oil Soil Repellent Program', url: '/methods/castor-oil/' },
+    { label: 'Install Gopher Mesh Barriers — permanent fix', url: '/methods/gopher-mesh/' },
   ],
   'castor-oil': [
-    { label: 'Sonic Repeller Stakes — complementary repellent', url: '/methods/sonic-stakes' },
-    { label: 'Victor Trap Tunnel Intercept — for actual elimination', url: '/methods/victor-traps' },
-    { label: 'Install Gopher Mesh Barriers — permanent fix', url: '/methods/gopher-mesh' },
+    { label: 'Sonic Repeller Stakes — complementary repellent', url: '/methods/sonic-stakes/' },
+    { label: 'Victor Trap Tunnel Intercept — for actual elimination', url: '/methods/victor-traps/' },
+    { label: 'Install Gopher Mesh Barriers — permanent fix', url: '/methods/gopher-mesh/' },
   ],
   'gopher-resistant-plants': [
-    { label: 'Install Gopher Mesh Barriers', url: '/methods/gopher-mesh' },
-    { label: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep' },
-    { label: 'Stopping Gopher Garden Destruction', url: '/problems/garden-destruction' },
+    { label: 'Install Gopher Mesh Barriers', url: '/methods/gopher-mesh/' },
+    { label: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep/' },
+    { label: 'Stopping Gopher Garden Destruction', url: '/problems/garden-destruction/' },
   ],
   'exclusion-fencing': [
-    { label: 'Install Gopher Mesh Barriers — smaller-scale barrier', url: '/methods/gopher-mesh' },
-    { label: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep' },
-    { label: 'Barn Owl Box Installation — complementary prevention', url: '/methods/barn-owl-box' },
+    { label: 'Install Gopher Mesh Barriers — smaller-scale barrier', url: '/methods/gopher-mesh/' },
+    { label: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep/' },
+    { label: 'Barn Owl Box Installation — complementary prevention', url: '/methods/barn-owl-box/' },
   ],
   'barn-owl-box': [
-    { label: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants' },
-    { label: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing' },
-    { label: 'Castor Oil Soil Repellent Program', url: '/methods/castor-oil' },
+    { label: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants/' },
+    { label: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing/' },
+    { label: 'Castor Oil Soil Repellent Program', url: '/methods/castor-oil/' },
   ],
   'dog-hunting': [
-    { label: 'Quick Start Guide — Taco\'s role in the process', url: '/quick-start' },
-    { label: 'Victor Trap Tunnel Intercept — follow-up after dog finds the run', url: '/methods/victor-traps' },
-    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety' },
+    { label: 'Quick Start Guide — Taco\'s role in the process', url: '/quick-start/' },
+    { label: 'Victor Trap Tunnel Intercept — follow-up after dog finds the run', url: '/methods/victor-traps/' },
+    { label: 'Keeping Pets Safe Around Gopher Control', url: '/problems/pet-safety/' },
   ],
   'hiring-a-pro': [
-    { label: 'Carbon Monoxide Burrow Treatment — most advanced DIY', url: '/methods/carbon-monoxide' },
-    { label: 'Victor Trap Tunnel Intercept — DIY first option', url: '/methods/victor-traps' },
-    { label: 'Underground Bait Station — DIY alternative', url: '/methods/poison-bait-stations' },
+    { label: 'Carbon Monoxide Burrow Treatment — most advanced DIY', url: '/methods/carbon-monoxide/' },
+    { label: 'Victor Trap Tunnel Intercept — DIY first option', url: '/methods/victor-traps/' },
+    { label: 'Underground Bait Station — DIY alternative', url: '/methods/poison-bait-stations/' },
   ],
 };
 
 const related = relatedLinks[entry.slug] ?? [];
 
 const siteURL = "https://howtokillgophers.com";
-const pageURL = `${siteURL}/methods/${entry.slug}`;
+const pageURL = `${siteURL}/methods/${entry.slug}/`;
 
 const howToSchema: Record<string, unknown> = {
   "@context": "https://schema.org",
@@ -100,7 +100,7 @@ const howToSchema: Record<string, unknown> = {
   "author": {
     "@type": "Person",
     "name": "Mark the Bagger",
-    "url": `${siteURL}/about`
+    "url": `${siteURL}/about/`
   },
   "estimatedCost": {
     "@type": "MonetaryAmount",
@@ -118,7 +118,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": siteURL },
-    { "@type": "ListItem", "position": 2, "name": "Methods", "item": `${siteURL}/methods` },
+    { "@type": "ListItem", "position": 2, "name": "Methods", "item": `${siteURL}/methods/` },
     { "@type": "ListItem", "position": 3, "name": entry.data.title, "item": pageURL }
   ]
 };

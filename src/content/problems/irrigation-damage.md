@@ -19,7 +19,7 @@ sources:
 ---
 
 ## Quick Answer
-Gophers chew irrigation tubing constantly — not because they're thirsty, but because their teeth never stop growing and they gnaw anything in their path. UC IPM documents that gophers "gnaw flexible plastic water lines and drip irrigation systems," and their tunnels also "divert and carry away irrigation water, causing soil erosion." *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))* You'll notice it as dead zones in your drip system, soggy spots where a line is gushing underground, or a sudden [pressure drop at the valve](/problems/drip-emitter-damage). The repair is straightforward but pointless until the gopher is gone.
+Gophers chew irrigation tubing constantly — not because they're thirsty, but because their teeth never stop growing and they gnaw anything in their path. UC IPM documents that gophers "gnaw flexible plastic water lines and drip irrigation systems," and their tunnels also "divert and carry away irrigation water, causing soil erosion." *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))* You'll notice it as dead zones in your drip system, soggy spots where a line is gushing underground, or a sudden [pressure drop at the valve](/problems/drip-emitter-damage/). The repair is straightforward but pointless until the gopher is gone.
 
 ## The Gear
 - Drip line repair couplings (barbed, matching your line diameter)
@@ -33,7 +33,7 @@ Gophers chew irrigation tubing constantly — not because they're thirsty, but b
 2. Probe along the wet/dead line to locate the gnawed section — gophers often chew in multiple spots along the same run.
 3. Dig down to expose the damaged tubing. Check 2 feet in each direction for additional bite marks before cutting.
 4. Cut out the damaged section and splice in new tubing with barbed repair couplings.
-5. Before reburying, wrap the repaired section loosely in wire mesh or [hardware cloth](/methods/gopher-mesh) to discourage future gnawing in the same spot.
+5. Before reburying, wrap the repaired section loosely in wire mesh or [hardware cloth](/methods/gopher-mesh/) to discourage future gnawing in the same spot.
 6. Eliminate the gopher — this repair will fail again within weeks if the animal is still active.
 
 ## Bagger Pro-Tip
@@ -44,7 +44,7 @@ Gopher tunnels near irrigation lines create muddy, unstable soil. Watch your foo
 
 ## Fix It
 Repair the line, but eliminate the gopher or you'll be back digging in a month.
-- [Victor Trap Tunnel Intercept](/methods/victor-traps) — fastest way to pull the gopher out of the run
-- [Cinch Trap Mainline Set](/methods/cinch-traps) — set a pair in the main run near the damaged section
-- [Install Gopher Mesh Barriers](/methods/gopher-mesh) — wrap repaired lines in hardware cloth to stop repeat gnawing
-- [Flooding Active Gopher Runs](/methods/flooding-tactics) — use water to map the tunnel network before trapping
+- [Victor Trap Tunnel Intercept](/methods/victor-traps/) — fastest way to pull the gopher out of the run
+- [Cinch Trap Mainline Set](/methods/cinch-traps/) — set a pair in the main run near the damaged section
+- [Install Gopher Mesh Barriers](/methods/gopher-mesh/) — wrap repaired lines in hardware cloth to stop repeat gnawing
+- [Flooding Active Gopher Runs](/methods/flooding-tactics/) — use water to map the tunnel network before trapping

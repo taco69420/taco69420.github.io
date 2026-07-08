@@ -95,7 +95,7 @@ const faqSchema = {
           const m = bySlug[slug];
           if (!m) return null;
           return (
-            <a href={`/methods/${slug}`} class="pick-card">
+            <a href={`/methods/${slug}/`} class="pick-card">
               <strong>{m.data.title}</strong>
               <p>{m.data.description}</p>
               <span class="pick-cta">{cta}</span>
@@ -152,7 +152,7 @@ const faqSchema = {
                     <span class="stat-value">{methodMeta[slug]?.bestFor}</span>
                   </div>
                 </div>
-                <a href={`/methods/${slug}`} class="btn">Read the Guide</a>
+                <a href={`/methods/${slug}/`} class="btn">Read the Guide</a>
               </article>
             );
           })}

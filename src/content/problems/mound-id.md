@@ -27,11 +27,11 @@ Fresh gopher mounds are usually fan- or crescent-shaped with a plugged soil hole
 - Notebook
 
 ## The Process
-1. Inspect [mound shape](/gopher-vs-mole) and locate the plugged hole, usually offset from center.
+1. Inspect [mound shape](/gopher-vs-mole/) and locate the plugged hole, usually offset from center.
 2. Scrape smooth a test mound area and mark it to check for overnight rebuild.
-3. [Probe](/traps) for the main run on the plug side, about 6–12 inches from the mound. Feeding tunnels run 6–12 inches below the surface; nesting chambers can go as deep as 6 feet. *(Source: [UC IPM, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
-4. Compare signs with [mole ridges](/gopher-vs-mole) (raised surface runs) to avoid misidentification.
-5. Log confirmed active sites and prioritize them for [trapping](/quick-start) first.
+3. [Probe](/traps/) for the main run on the plug side, about 6–12 inches from the mound. Feeding tunnels run 6–12 inches below the surface; nesting chambers can go as deep as 6 feet. *(Source: [UC IPM, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
+4. Compare signs with [mole ridges](/gopher-vs-mole/) (raised surface runs) to avoid misidentification.
+5. Log confirmed active sites and prioritize them for [trapping](/quick-start/) first.
 
 ## Bagger Pro-Tip
 Don’t trap vibes, trap evidence—fresh plugs are your fingerprint match.
@@ -41,6 +41,6 @@ Use caution when probing near irrigation lines, cable runs, or shallow utility r
 
 ## Fix It
 Confirmed it's a gopher? Time to act fast.
-- [Victor Trap Tunnel Intercept](/methods/victor-traps) — the go-to first set once you've found the main run
-- [Cinch Trap Mainline Set](/methods/cinch-traps) — great paired option for higher capture rates
-- Not sure if it's a gopher or a mole? [Use the Gopher vs Mole ID guide →](/gopher-vs-mole)
+- [Victor Trap Tunnel Intercept](/methods/victor-traps/) — the go-to first set once you've found the main run
+- [Cinch Trap Mainline Set](/methods/cinch-traps/) — great paired option for higher capture rates
+- Not sure if it's a gopher or a mole? [Use the Gopher vs Mole ID guide →](/gopher-vs-mole/)

@@ -93,7 +93,7 @@ const faqSchema = {
           const p = bySlug[slug];
           if (!p) return null;
           return (
-            <a href={`/problems/${slug}`} class="pick-card">
+            <a href={`/problems/${slug}/`} class="pick-card">
               <strong>{p.data.title}</strong>
               <p>{p.data.description}</p>
               <span class="pick-cta">{cta}</span>
@@ -136,7 +136,7 @@ const faqSchema = {
                   </span>
                 </div>
                 <div class="time-to-results">Results: {p.data.timeToResults}</div>
-                <a href={`/problems/${slug}`} class="btn">Read the Guide</a>
+                <a href={`/problems/${slug}/`} class="btn">Read the Guide</a>
               </article>
             );
           })}
