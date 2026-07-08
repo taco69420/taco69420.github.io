@@ -2,7 +2,7 @@
 title: "Gophers Chewing Irrigation Lines"
 description: "Find and fix underground drip and soaker lines destroyed by gopher gnawing, and stop repeat damage."
 date: 2026-03-11
-updated: 2026-03-18
+updated: 2026-07-08
 tags:
   - irrigation
   - drip-lines

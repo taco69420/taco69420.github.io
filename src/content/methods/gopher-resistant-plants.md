@@ -2,7 +2,7 @@
 title: "Gopher-Resistant Plant Selection"
 description: "Choose plants that gophers avoid eating so your landscaping survives without constant intervention."
 date: 2026-03-14
-updated: 2026-03-18
+updated: 2026-07-08
 tags:
   - prevention
   - plants

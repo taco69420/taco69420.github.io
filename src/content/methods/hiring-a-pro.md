@@ -2,7 +2,7 @@
 title: "Hiring a Professional Gopher Trapper"
 description: "Know when DIY isn't enough and how to find, evaluate, and work with a professional gopher control service."
 date: 2026-03-14
-updated: 2026-03-18
+updated: 2026-07-08
 tags:
   - professional
   - service

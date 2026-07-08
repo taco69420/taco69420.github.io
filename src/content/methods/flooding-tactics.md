@@ -2,7 +2,7 @@
 title: "Flooding Active Gopher Runs"
 description: "Flooding is a dog-hunting tactic — it pushes gophers toward the surface where a dog can catch them. Without a dog, skip it and trap instead."
 date: 2026-03-01
-updated: 2026-03-18
+updated: 2026-07-08
 tags:
   - water
   - suppression

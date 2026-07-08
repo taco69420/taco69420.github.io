@@ -2,7 +2,7 @@
 title: "How to Identify Fresh Gopher Mounds"
 description: "Distinguish active gopher mounds from mole hills and old tunnel spoil to target control correctly."
 date: 2026-03-01
-updated: 2026-03-18
+updated: 2026-07-08
 tags:
   - identification
   - diagnostics

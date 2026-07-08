@@ -2,7 +2,7 @@
 title: "Stopping Gopher Garden Destruction"
 description: "Protect vegetables, ornamentals, and roots from rapid underground feeding damage."
 date: 2026-03-01
-updated: 2026-03-18
+updated: 2026-07-08
 tags:
   - garden
   - plants

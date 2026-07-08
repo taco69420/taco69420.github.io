@@ -2,7 +2,7 @@
 title: "Handling Neighbor Disputes Over Gophers"
 description: "Coordinate control plans across property lines to reduce recurring infestations and tension."
 date: 2026-03-01
-updated: 2026-03-18
+updated: 2026-07-08
 tags:
   - neighbors
   - communication
