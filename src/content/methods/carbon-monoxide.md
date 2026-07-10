@@ -15,7 +15,7 @@ sources:
   - label: "EPA Pesticide Safety"
     url: "https://www.epa.gov/safepestcontrol"
   - label: "UC IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
 ---
 
 ## Quick Answer

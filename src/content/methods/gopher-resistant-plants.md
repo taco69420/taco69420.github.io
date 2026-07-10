@@ -13,7 +13,7 @@ petRisk: low
 cost: low
 sources:
   - label: "UC IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
   - label: "UC Cooperative Extension - Landscape Plants"
     url: "https://ucanr.edu/"
 ---

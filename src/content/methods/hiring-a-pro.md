@@ -15,7 +15,7 @@ sources:
   - label: "California Department of Pesticide Regulation"
     url: "https://www.cdpr.ca.gov/"
   - label: "UC IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
 ---
 
 ## Quick Answer
@@ -31,15 +31,15 @@ Most gopher problems are one-animal jobs you can handle yourself with a [$15 tra
 
 <div class="method-product-box">
   <p class="mpb-label">Before You Make the Call</p>
-  <h4 class="mpb-name">Victor Macabee Gopher Trap</h4>
+  <h4 class="mpb-name">Victor Easy Set Gopher Trap</h4>
   <p class="mpb-desc">Most single-gopher situations resolve with a pair of $15 traps set correctly in the right run. If you haven't tried trapping yet, start here before paying for a service call.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> 1–3 active mound clusters — the most common residential gopher situation, and the one DIY trapping handles best.</p>
-  <a href="https://amzn.to/4bqUakW" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
+  <a href="https://amzn.to/4cIJ64V" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
 </div>
 
 ## The Process
 1. Get at least two quotes. Gopher control pricing varies wildly — $150 to $500+ for a residential job is a normal range depending on property size and method.
-2. Ask specifically what method they use. [Trapping](/methods/victor-traps/) and <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">CO2 fumigation</a> are preferred. Be cautious with anyone who defaults immediately to poison bait on a property with kids, pets, or edible gardens.
+2. Ask specifically what method they use. [Trapping](/methods/victor-traps/) and <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">CO fumigation</a> are preferred. Be cautious with anyone who defaults immediately to poison bait on a property with kids, pets, or edible gardens.
 3. Ask if they guarantee results and what the callback policy is. A reputable operator will come back if new activity appears within the treatment window.
 4. Check for a valid [California](/southern-california-gopher-control/) Pest Control Operator license (PCO license) if they're applying any restricted-use products.
 5. After treatment, ask for a written summary of what was done — this matters for foundation damage documentation or HOA records.
@@ -53,4 +53,4 @@ Never allow an unlicensed operator to apply fumigants or restricted pesticides o
 ## Get the Gear
 If you're still evaluating whether to DIY or call a pro, these are the tools worth trying first:
 
-<a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon →</a>
+<a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon →</a>

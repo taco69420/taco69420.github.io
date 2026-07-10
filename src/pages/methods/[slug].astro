@@ -87,6 +87,10 @@ const relatedLinks: Record<string, Array<{label: string, url: string}>> = {
 
 const related = relatedLinks[entry.slug] ?? [];
 
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const updatedDate = entry.data.updated ?? entry.data.date;
+const updatedDisplay = `${MONTHS[updatedDate.getUTCMonth()]} ${updatedDate.getUTCFullYear()}`;
+
 const siteURL = "https://howtokillgophers.com";
 const pageURL = `${siteURL}/methods/${entry.slug}/`;
 
@@ -136,7 +140,7 @@ const breadcrumbSchema = {
   <header>
     <h1>{entry.data.title}</h1>
     <p class="subtitle">{entry.data.description}</p>
-    <p class="dateline">Updated July 2026</p>
+    <p class="dateline">Updated {updatedDisplay}</p>
   </header>
 
   {entry.slug === 'dog-hunting' && (

@@ -31,10 +31,10 @@ Underground bait stations place zinc phosphide or diphacinone pellets directly i
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">Underground Gopher Bait Stations</h4>
-  <p class="mpb-desc">Zinc phosphide or diphacinone bait formulated specifically for underground placement in active gopher tunnels. Placed correctly inside the run — not at the entrance — where gophers actively feed.</p>
+  <h4 class="mpb-name">Underground Bait Applicator</h4>
+  <p class="mpb-desc">The applicator tool that places bait at tunnel depth — inside the run, not at the entrance, where gophers actively feed. Load it with registered zinc phosphide or diphacinone pellets (sold separately).</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Large or inaccessible tunnel networks only — and only where there is zero risk of exposure to pets, dogs, or raptors.</p>
-  <a href="https://amzn.to/46XnfTH" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Gopher Bait Stations on Amazon →</a>
+  <a href="https://amzn.to/46XnfTH" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Bait Applicator on Amazon →</a>
 </div>
 
 ## The Process
@@ -54,4 +54,4 @@ UC IPM's pest notes confirm both zinc phosphide and diphacinone as registered ro
 Keep all bait away from children and pets. Never place bait in open boxes or above ground. Secondary poisoning of raptors, dogs, and cats is a real risk with zinc phosphide — if wildlife is present, use traps instead. Check your [local regulations](/southern-california-gopher-control/); some bait products require a pest control license to purchase.
 
 ## Get the Gear
-<a href="https://amzn.to/46XnfTH" target="_blank" rel="sponsored noopener">Shop Underground Gopher Bait Stations on Amazon →</a>
+<a href="https://amzn.to/46XnfTH" target="_blank" rel="sponsored noopener">Shop Underground Bait Applicator on Amazon →</a>

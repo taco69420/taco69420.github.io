@@ -43,7 +43,7 @@ UC IPM notes that "pocket gophers can easily withstand normal garden or home lan
 2. Insert the hose 1-2 feet into the run and start with moderate flow, not full blast.
 3. Watch nearby mounds for bubbling, collapse, or water seepage to map active branches.
 4. Mark active points and stop watering once flow returns at multiple exits.
-5. Let soil settle, then transition to [traps](/best-gopher-traps/) — set via <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">traps</a> at the most active main run locations.
+5. Let soil settle, then transition to [traps](/best-gopher-traps/) — set via <a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">traps</a> at the most active main run locations.
 
 ## Bagger Pro-Tip
 This only made sense for me because I had Taco. I'd run the hose, he'd work the yard, and we'd catch them as they surfaced. No dog? Don't bother flooding — set your traps, cover the hole, and let the gopher come back to repair the damage. They always do. That's when they hit.
@@ -54,4 +54,4 @@ Avoid flooding near [foundations](/problems/foundation-damage/), retaining walls
 ## Get the Gear
 Flooding is reconnaissance — it sets up your trap sets. When you're ready to close the job:
 
-<a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon →</a>
+<a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon →</a>

@@ -32,10 +32,10 @@ Victor traps are my go-to — they're what I started with at 15 and what I still
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">Victor Macabee Gopher Trap</h4>
+  <h4 class="mpb-name">Victor Easy Set Gopher Trap</h4>
   <p class="mpb-desc">High-tension wire trap that fires clean and holds up to years of daily use. The go-to for any main-tunnel set — nothing I've tested beats it for speed and reliability.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Active main tunnel intercept — place two facing opposite directions for the highest catch rate.</p>
-  <a href="https://amzn.to/4bqUakW" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
+  <a href="https://amzn.to/4cIJ64V" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
 </div>
 
 <figure style="display:flex;flex-direction:column;align-items:center;margin:1.5rem 0;gap:0.75rem;">
@@ -74,4 +74,4 @@ UC IPM research confirms trapping is the most reliable method: "trapping often r
 Keep children and [pets](/problems/pet-safety/) away from set traps; the spring force can injure fingers, paws, or curious noses.
 
 ## Get the Gear
-<a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon →</a>
+<a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon →</a>

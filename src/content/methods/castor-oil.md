@@ -41,7 +41,7 @@ Castor oil repellents can reduce gopher activity in [high-value turf](/problems/
 2. Mix and apply repellent according to label rate across active and buffer areas.
 3. Deep-water immediately after application to carry product into root-level soil.
 4. Repeat application in 7-14 days or after heavy rain for sustained pressure.
-5. Pair with [traps](/best-gopher-traps/) and <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">traps</a> at boundary mounds where displaced activity appears.
+5. Pair with [traps](/best-gopher-traps/) and <a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">traps</a> at boundary mounds where displaced activity appears.
 
 ## What the Evidence Shows
 UC IPM does not list castor oil repellents as a primary recommended control method for pocket gophers — trapping and baiting are the methods with the strongest evidence behind them. Where repellents are discussed, the consensus is that results are inconsistent and heavily dependent on application depth and frequency. That's an honest read of the research, and it matches what I've seen in the field. *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*

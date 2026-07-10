@@ -15,7 +15,7 @@ sources:
   - label: "Mediation Basics - California Courts"
     url: "https://selfhelp.courts.ca.gov/adr"
   - label: "UC IPM - Pocket Gophers"
-    url: "https://ipm.ucanr.edu/home-and-landscape/pocket-gophers/pest-notes/"
+    url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html"
 ---
 
 ## Quick Answer

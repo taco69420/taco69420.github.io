@@ -47,7 +47,7 @@ UC IPM's pest notes are direct about this: vibrating and sonic devices "haven't 
 That's not a reason to never use them — it's a reason to use them correctly. Rotating stake positions every 2–3 weeks disrupts habituation. Pairing with active trapping means the stakes don't have to do all the work.
 
 ## Bagger Pro-Tip
-Think of sonic stakes like a fence, not a trap. They redirect gophers, they don't kill them. Use them to protect a [specific bed or garden edge](/problems/garden-destruction/) while you <a href="https://amzn.to/4bqUakW" target="_blank" rel="sponsored noopener">trap</a> the main population elsewhere.
+Think of sonic stakes like a fence, not a trap. They redirect gophers, they don't kill them. Use them to protect a [specific bed or garden edge](/problems/garden-destruction/) while you <a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">trap</a> the main population elsewhere.
 
 ## Safety Warning
 Completely pet and kid safe. No chemicals, no trigger mechanisms. The only risk is driving the stake into an irrigation line — probe the soil first if you're near [drip lines](/problems/irrigation-damage/).
