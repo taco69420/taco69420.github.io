@@ -1,5 +1,6 @@
 ---
 import CookieBanner from '../components/CookieBanner.astro';
+import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 
 interface Props {
   title: string;
@@ -40,6 +41,24 @@ const personSchema = {
   "description": "Gopher trapper since age 15. Started catching gophers in Redlands, CA for $5 a head. Built howtokillgophers.com to share real hands-on knowledge.",
   "knowsAbout": ["gopher control", "gopher trapping", "pest control", "Victor traps", "Cinch traps"]
 };
+
+// Affiliate disclosure placement. Render the page's own content to a string so
+// we can look for Amazon links in it: scanning the finished document instead
+// would match CookieBanner's a[href*="amzn.to"] click-tracking selector and
+// stamp a disclosure onto all 43 pages. Markdown bodies render inside this slot
+// too, so this one check covers static pages and content collections alike.
+const pageHtml = Astro.slots.has('default') ? await Astro.slots.render('default') : '';
+const hasAmazonLink = /href=["']https?:\/\/(?:www\.)?(?:amzn\.to|amazon\.com)/i.test(pageHtml);
+
+// Every H1 on this site sits in a <header> next to its subtitle and dateline, so
+// splitting at </h1> would wedge the disclosure into the middle of that block.
+// Split after the header instead, falling back to the H1, then the page top.
+const anchor = hasAmazonLink
+  ? (pageHtml.match(/<\/header>/i) ?? pageHtml.match(/<\/h1>/i))
+  : null;
+const splitAt = anchor?.index != null ? anchor.index + anchor[0].length : 0;
+const beforeDisclosure = hasAmazonLink ? pageHtml.slice(0, splitAt) : pageHtml;
+const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
 ---
 
 <html lang="en">
@@ -241,7 +260,9 @@ const personSchema = {
       <a href="/about/" class={pathname === '/about/' ? 'nav-active' : ''}>About Mark</a>
     </nav>
 
-    <slot />
+    <Fragment set:html={beforeDisclosure} />
+    {hasAmazonLink && <AffiliateDisclosure />}
+    <Fragment set:html={afterDisclosure} />
 
     <footer class="disclaimer">
       <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
