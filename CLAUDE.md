@@ -9,12 +9,38 @@ npm install        # install deps (node_modules is not checked in)
 npm run dev        # dev server at http://localhost:4321
 npm run build      # static build to ./dist
 npm run preview    # serve ./dist locally
+npm run audit      # build, then run every SEO/content check (see "Before you push")
 ```
 
-There is no test suite, linter, or formatter in this project. `astro check` is not wired up (`@astrojs/check` + `typescript` are not dependencies), so `npm run build` is the only verification step — it fails on content-collection schema violations and broken imports, which is what catches most mistakes here.
+There is no unit-test suite, linter, or formatter, and `astro check` is not wired up (`@astrojs/check` + `typescript` are not dependencies). The build itself catches content-collection schema violations and broken imports; **everything else is caught by `npm run audit`**, which is the real verification step here.
 
 `README.md` is the unmodified Astro starter boilerplate; it is not a source of truth about this site.
 
+## Before you push
+
+Run:
+
+```sh
+npm run audit
+```
+
+It must pass. The command builds the site and then runs every check in `scripts/audit/` against `dist/`, printing a PASS/FAIL line each and exiting non-zero if anything fails. Nine checks run today:
+
+| check | what it asserts |
+| --- | --- |
+| `titles` | every page has a title ≤ 60 chars and a description of 140–155, with no leftover `(year)` |
+| `dates` | the visible dateline, the JSON-LD `dateModified` and the sitemap `<lastmod>` agree on every route |
+| `schema` | every JSON-LD block parses; exactly one `WebSite` and one `Person` per page; no orphan `@id` references; no `Organization` |
+| `breadcrumbs` | each `BreadcrumbList` matches the visible trail rung for rung |
+| `disclosure` | pages with Amazon links carry `AffiliateDisclosure` before the first one, pages without carry none |
+| `sponsored` | every `amzn.to` / `amazon.com` link has `rel="sponsored"` (and `noopener` when `target="_blank"`) |
+| `products` | the best-of `positiveNotes` / `negativeNotes` match the visible Pros/Cons verbatim and in order |
+| `links` | every internal href resolves to a real built page, with the trailing slash, and every `#fragment` matches a real id |
+| `inbound` | per-page inbound content-link counts, with floors on the money pages and no orphan pages |
+
+Useful flags while iterating: `npm run audit -- --no-build` reuses the existing `dist/`, `--verbose` prints each check's full table, and naming checks runs only those (`npm run audit -- titles links`).
+
+Adding a check is a new `scripts/audit/<name>.mjs` default-exporting `{ name, run() }`, where `run` returns `{ problems: string[], summary, report? }`. The runner picks it up automatically; shared helpers (page list, entity decoding, JSON-LD parsing, `<main>` extraction, anchor parsing) are in `scripts/audit/lib.mjs`.
 ## Deployment
 
 `.github/workflows/deploy.yml` builds and deploys to GitHub Pages on every push to `main`. Feature work happens on branches (e.g. `seo-sprint`) and merging to `main` publishes to https://howtokillgophers.com. The workflow touches `dist/.nojekyll`; nothing else is needed.
