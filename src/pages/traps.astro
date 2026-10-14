@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../data/author';
+import { updatedLine } from '../data/pageDates';
 import { pageTitle, REVIEW_YEAR } from '../data/site';
 
 const faqSchema = {
@@ -12,21 +14,24 @@ const faqSchema = {
     { "@type": "Question", "name": "Do I need a special probe, or can I use rebar?", "acceptedAnswer": { "@type": "Answer", "text": "Rebar from any hardware store does the exact same job as a purpose-built probe. A purpose-built probe just has better ergonomics and handle grip for longer sessions, but the technique is identical." } },
   ]
 };
+
+const crumbLabel = "Gopher Traps & Gear";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/traps/");
 ---
 
 <Layout
   title={pageTitle(`Gopher Traps & Gear Reviews ${REVIEW_YEAR}`)}
   description={`Every piece of gopher gear Mark actually uses in ${REVIEW_YEAR}: high-tension wire traps, gassers, and probe tools, with comparison tables and honest field reviews.`}
-  schemas={[faqSchema]}
+  schemas={[faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Gopher Traps & Gear
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="locker-hero">
     <h1>The Armory</h1>
     <p class="locker-sub">Every category here is something I've worked with in the field. I've listed the specific products I'd buy first based on that experience — if a whole category didn't earn results in my work, it's not on this page.</p>
-<p class="locker-dateline">Updated July 2026</p>
+<p class="locker-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>

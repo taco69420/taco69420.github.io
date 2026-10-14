@@ -1,6 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { updatedLine } from '../data/pageDates';
 import { pageTitle, REVIEW_YEAR } from '../data/site';
+import { authorRef, breadcrumbSchema, SITE_URL } from '../data/author';
+import { bestOfProducts } from '../data/bestOfProducts';
+import { datesFor } from '../data/pageDates';
+
+const route = "/best-gopher-poison/";
+const heading = `Best Gopher Poison of ${REVIEW_YEAR}`;
+const dates = datesFor(route)!;
+const products = bestOfProducts[route];
+const product = Object.fromEntries(products.map((p) => [p.id, p]));
+
+// `datePublished` is absent on purpose: pageDates has no recorded publish
+// date for the best-of pages, and inventing one would be worse than omitting.
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": heading,
+  "author": authorRef,
+  "publisher": authorRef,
+  "image": `${SITE_URL}/taco.jpg`,
+  "datePublished": dates.published,
+  "dateModified": dates.updated,
+  "url": `${SITE_URL}${route}`,
+};
+
+// Pros/cons come from the same arrays the page renders below, so the review
+// notes always match the visible lists. No ratings or offers by design.
+const notes = (items: string[]) => ({
+  "@type": "ItemList",
+  "itemListElement": items.map((text, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": text,
+  })),
+});
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": heading,
+  "itemListElement": products.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Product",
+      "name": p.name,
+      "url": `${SITE_URL}${route}#${p.id}`,
+      "review": {
+        "@type": "Review",
+        "author": authorRef,
+        "positiveNotes": notes(p.pros),
+        "negativeNotes": notes(p.cons),
+      },
+    },
+  })),
+};
+
+const crumbLabel = "Best Gopher Poison";
+const crumbSchema = breadcrumbSchema(crumbLabel, route);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -45,17 +104,17 @@ const faqSchema = {
 <Layout
   title={pageTitle(`Best Gopher Poison of ${REVIEW_YEAR}: Honest Review`)}
   description="Which gopher poisons actually kill, and which ones put your dog at risk. Rodenticide bait, gassers, and CO treatment compared with honest safety guidance."
-  schemas={[faqSchema]}
+  schemas={[articleSchema, itemListSchema, crumbSchema, faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Best Gopher Poison
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="poison-hero">
     <span class="hero-badge">🐾 Check Pet Safety First</span>
-    <h1>Best Gopher Poison of 2026</h1>
+    <h1>{heading}</h1>
     <p class="hero-sub">Last resort. Not first move. If you're here, make sure you've read the safety section before you buy anything.</p>
-    <p class="hero-dateline">Updated July 2026</p>
+    <p class="hero-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
@@ -124,20 +183,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Highly effective when placed correctly inside an active run</li>
-            <li>Low cost per treatment area</li>
-            <li>Can cover multiple tunnel runs in a single application session</li>
-            <li>Diphacinone is stable across soil moisture conditions</li>
+            {product["bait-stations"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Secondary poisoning risk to any animal that eats an affected gopher</li>
-            <li>Zinc phosphide off-gases and requires a mask plus gloves during application</li>
-            <li>Some formulations require a PCO license to purchase in California</li>
-            <li>Diphacinone takes 5–7 days — slower than trapping</li>
-            <li>Completely ineffective if placed near the entrance or in an inactive run</li>
+            {product["bait-stations"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
@@ -157,20 +209,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Same-day results on a properly sealed system</li>
-            <li>No precise tunnel placement required — just find an active entrance</li>
-            <li>Inexpensive per cartridge</li>
-            <li>No residual chemical in the soil after treatment</li>
+            {product["gassers"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Completely ineffective if any tunnel exit is left open</li>
-            <li>Limited penetration in very deep or extensive branching systems</li>
-            <li>Cannot be used near structures — gas follows underground paths</li>
-            <li>Results are harder to confirm than mechanical trapping</li>
-            <li>Requires walking the whole yard to seal every visible exit first</li>
+            {product["gassers"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
@@ -190,20 +235,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Most thorough coverage of complex, deep tunnel networks</li>
-            <li>Active gas injection reaches areas cartridge gassers can't penetrate</li>
-            <li>Same-day to 48-hour results on properly treated systems</li>
-            <li>No residual chemical in soil after treatment</li>
+            {product["co-burrow"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Higher cost per treatment than cartridge gassers or bait pellets</li>
-            <li>Requires more setup — pre-sealing secondary openings before injection</li>
-            <li>Cannot be used near structures, enclosed spaces, or buildings</li>
-            <li>CO is odorless and lethal — requires a personal CO monitor during use</li>
-            <li>Check local regulations and label legality before first use</li>
+            {product["co-burrow"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>

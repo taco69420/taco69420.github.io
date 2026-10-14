@@ -1,6 +1,7 @@
 ---
 import CookieBanner from '../components/CookieBanner.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import { authorSchema, websiteSchema, SOCIAL_LINKS } from '../data/author';
 
 interface Props {
   title: string;
@@ -21,26 +22,7 @@ const siteURL = "https://howtokillgophers.com";
 const pathname = Astro.url.pathname;
 const fullOgImage = ogImage.startsWith("http") ? ogImage : siteURL + ogImage;
 
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "How To Kill Gophers",
-  "url": "https://howtokillgophers.com",
-  "description": "Field-tested gopher control methods and gear recommendations from Mark the Bagger, who has been trapping gophers since age 15.",
-  "publisher": {
-    "@type": "Person",
-    "name": "Mark the Bagger"
-  }
-};
-
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Mark the Bagger",
-  "url": "https://howtokillgophers.com/about/",
-  "description": "Gopher trapper since age 15. Started catching gophers in Redlands, CA for $5 a head. Built howtokillgophers.com to share real hands-on knowledge.",
-  "knowsAbout": ["gopher control", "gopher trapping", "pest control", "Victor traps", "Cinch traps"]
-};
+// The only place the full Person and WebSite nodes are emitted — see src/data/author.ts.
 
 // Affiliate disclosure placement. Render the page's own content to a string so
 // we can look for Amazon links in it: scanning the finished document instead
@@ -197,7 +179,7 @@ const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
       }
     </style>
 
-    <Fragment set:html={[websiteSchema, personSchema, ...schemas].map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('')} />
+    <Fragment set:html={[websiteSchema, authorSchema, ...schemas].map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('')} />
   </head>
 
   <body>
@@ -278,6 +260,12 @@ const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
         <a href="/seasons/" class="legal-link">Seasonal Guide</a>
         &nbsp;·&nbsp;
         <a href="/faq/" class="legal-link">FAQ</a>
+      </p>
+      <p style="margin-bottom: 0.5rem;">
+        Follow along:{' '}
+        {SOCIAL_LINKS.map((link, i) => (
+          <>{i > 0 ? '\u00a0·\u00a0' : ''}<a href={link.url} class="legal-link" target="_blank" rel="me noopener">{link.label}</a></>
+        ))}
       </p>
       <p><strong>Affiliate Disclosure:</strong> I participate in the Amazon Services LLC Associates Program. As an Amazon Associate I earn from qualifying purchases.</p>
       <p style="margin-top: 10px;"><a href="/privacy/" class="legal-link">Read the full Privacy Policy & Legal Disclaimers</a></p>

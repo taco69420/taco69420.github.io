@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import { updatedLine } from '../data/pageDates';
 import { pageTitle } from '../data/site';
 
 const methods = await getCollection('methods');
@@ -83,7 +84,7 @@ const faqSchema = {
     <p class="hero-eyebrow">The Playbook</p>
     <h1>13 Ways to Kill a Gopher</h1>
     <p class="hero-sub">Pick your weapon. Every method below has been field-tested. Some are fast. Some are permanent. Some are both.</p>
-    <p class="hero-dateline">Updated July 2026</p>
+    <p class="hero-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>

@@ -1,6 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { updatedLine } from '../data/pageDates';
 import { pageTitle, REVIEW_YEAR } from '../data/site';
+import { authorRef, breadcrumbSchema, SITE_URL } from '../data/author';
+import { bestOfProducts } from '../data/bestOfProducts';
+import { datesFor } from '../data/pageDates';
+
+const route = "/best-gopher-traps/";
+const heading = `Best Gopher Traps of ${REVIEW_YEAR}`;
+const dates = datesFor(route)!;
+const products = bestOfProducts[route];
+const product = Object.fromEntries(products.map((p) => [p.id, p]));
+
+// `datePublished` is absent on purpose: pageDates has no recorded publish
+// date for the best-of pages, and inventing one would be worse than omitting.
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": heading,
+  "author": authorRef,
+  "publisher": authorRef,
+  "image": `${SITE_URL}/taco.jpg`,
+  "datePublished": dates.published,
+  "dateModified": dates.updated,
+  "url": `${SITE_URL}${route}`,
+};
+
+// Pros/cons come from the same arrays the page renders below, so the review
+// notes always match the visible lists. No ratings or offers by design.
+const notes = (items: string[]) => ({
+  "@type": "ItemList",
+  "itemListElement": items.map((text, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": text,
+  })),
+});
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": heading,
+  "itemListElement": products.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Product",
+      "name": p.name,
+      "url": `${SITE_URL}${route}#${p.id}`,
+      "review": {
+        "@type": "Review",
+        "author": authorRef,
+        "positiveNotes": notes(p.pros),
+        "negativeNotes": notes(p.cons),
+      },
+    },
+  })),
+};
+
+const crumbLabel = "Best Gopher Traps";
+const crumbSchema = breadcrumbSchema(crumbLabel, route);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -45,17 +104,17 @@ const faqSchema = {
 <Layout
   title={pageTitle(`Best Gopher Traps of ${REVIEW_YEAR}: 3 Tested Picks`)}
   description="Victor Easy Set, Victor Black Box, and Cinch traps compared on price, speed, and how forgiving each one is to set. Which to buy for your first tunnel run."
-  schemas={[faqSchema]}
+  schemas={[articleSchema, itemListSchema, crumbSchema, faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Best Gopher Traps
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="traps-hero">
     <span class="hero-badge">⚡ Fastest Results</span>
-    <h1>Best Gopher Traps of 2026</h1>
+    <h1>{heading}</h1>
     <p class="hero-sub">I've been setting these since I was 15. These three are the ones that actually catch gophers.</p>
-    <p class="hero-dateline">Updated July 2026</p>
+    <p class="hero-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
@@ -123,19 +182,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Among the lowest cost-per-catch of any trap on the market</li>
-            <li>Fast to set once the technique is dialed in</li>
-            <li>Durable — same traps can run for years of daily use</li>
-            <li>High catch rate on correctly located active runs</li>
-            <li>No bait required (peanut butter behind the trigger helps, but isn't mandatory)</li>
+            {product["victor-easy-set"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Spring force can snap fingers during placement — heavy gloves required</li>
-            <li>Entirely dependent on accurate tunnel location — a bad set catches nothing</li>
-            <li>Wire ends can wear through thinner gloves over time</li>
+            {product["victor-easy-set"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
@@ -152,18 +205,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Fully enclosed — no exposed jaws, far safer around pets and kids</li>
-            <li>Less intimidating to set than an open high-tension wire trap</li>
-            <li>Weather-resistant plastic housing holds up outdoors for years</li>
-            <li>Sets with a smaller tunnel opening — less digging per set</li>
+            {product["victor-black-box"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Bulkier than a bare wire trap — needs a slightly wider run to seat</li>
-            <li>Typically a hair slower to catch than an open wire set in the same run</li>
-            <li>Costs a little more per trap than the Easy Set</li>
+            {product["victor-black-box"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
@@ -180,18 +228,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Scissor-jaw mechanism is significantly more forgiving to arm than Victor wire traps</li>
-            <li>Fewer accidental misfires during placement in tight or curved tunnels</li>
-            <li>Good trigger sensitivity when properly aligned in the run</li>
-            <li>Solid catch rate — competitive with Victor when placement is correct</li>
+            {product["cinch-traps"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>More expensive per trap than the Victor Easy Set or Black Box</li>
-            <li>Slightly bulkier body — harder to fit in narrow tunnel geometries</li>
-            <li>Alignment is still critical — off by 15 degrees and the gopher pushes it aside</li>
+            {product["cinch-traps"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>

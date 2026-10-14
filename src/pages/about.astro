@@ -1,22 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { updatedLine } from '../data/pageDates';
 import { pageTitle } from '../data/site';
+import { SOCIAL_LINKS } from '../data/author';
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Mark the Bagger",
-  "url": "https://howtokillgophers.com/about/",
-  "description": "Gopher trapping expert from Redlands, CA. Started hunting gophers at 15 for $5 a head. Founder of howtokillgophers.com.",
-  "image": "https://howtokillgophers.com/markwt.jpg",
-  "knowsAbout": ["gopher trapping", "pest control", "yard management", "burrow fumigation"],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Redlands",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  }
-};
+
+const social = Object.fromEntries(SOCIAL_LINKS.map((link) => [link.label, link.url]));
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -34,7 +23,7 @@ const faqSchema = {
   title={pageTitle("About Mark the Bagger: Trapping Gophers Since Age 15")}
   description="Mark started trapping gophers at 15 in his dad's Redlands, CA yard for $5 a head. How that turned into a repeatable skill, and the legend of his dog Taco."
   ogImage="/markwt.jpg"
-  schemas={[personSchema, faqSchema]}
+  schemas={[faqSchema]}
 >
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -44,7 +33,7 @@ const faqSchema = {
   <header>
     <h1>Who is Mark the Bagger?</h1>
     <p class="subtitle">Gopher trapper since age 15. This is what I actually learned.</p>
-    <p class="dateline">Updated July 2026</p>
+    <p class="dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
@@ -73,6 +62,7 @@ const faqSchema = {
       <p>So I studied it. I dug up bad sets to figure out why they didn't fire. I tried different bait placements, different tunnel depths, different trap orientations. Over time it stopped being a chore and became a real skill. I got good at it — genuinely, repeatably good.</p>
       <p>That's the only credential I have: years of digging in the dirt, keeping track of what worked and what didn't, and a yard that eventually stopped having gophers in it.</p>
       <p style="color: #52525b;">Redlands is also just a genuinely difficult city for gophers — the soil, the irrigation, the old citrus grove footprint. <a href="/redlands/">I wrote up why that city has so many of them and what I learned trapping there →</a></p>
+      <p style="color: #52525b;">I also post sets and catches on <a href={social.TikTok} target="_blank" rel="me noopener">TikTok</a> and <a href={social.YouTube} target="_blank" rel="me noopener">YouTube</a> — same yard, same traps, just on video.</p>
     </section>
 
     <section class="card">

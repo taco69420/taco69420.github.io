@@ -1,24 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { authorRef, breadcrumbSchema } from '../data/author';
+import { updatedLine, datesFor } from '../data/pageDates';
 import { pageTitle } from '../data/site';
+
+const dates = datesFor("/gopher-vs-mole/")!;
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Gopher vs Mole — How To Tell Which One Is Destroying Your Yard",
   "description": "Learn how to tell a gopher from a mole using mound shape, tunnel type, and plant damage. The right ID means the right fix.",
-  "author": {
-    "@type": "Person",
-    "name": "Mark the Bagger",
-    "url": "https://howtokillgophers.com/about/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "How To Kill Gophers",
-    "url": "https://howtokillgophers.com"
-  },
-  "datePublished": "2026-03-11",
-  "dateModified": "2026-07-08",
+  "author": authorRef,
+  "publisher": authorRef,
+  "datePublished": dates.published,
+  "dateModified": dates.updated,
   "url": "https://howtokillgophers.com/gopher-vs-mole/"
 };
 
@@ -32,21 +28,24 @@ const faqSchema = {
     { "@type": "Question", "name": "Why are there raised ridges running across my lawn?", "acceptedAnswer": { "@type": "Answer", "text": "Raised surface ridges are mole feeding tunnels, not gopher tunnels. Gophers work deep and never leave surface trails. If you can feel a tunnel ridge underfoot, it's a mole every time." } },
   ]
 };
+
+const crumbLabel = "Gopher vs Mole";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/gopher-vs-mole/");
 ---
 
 <Layout
   title={pageTitle("Gopher vs. Mole: How to Tell Them Apart")}
   description="Crescent mound with a plugged hole off to one side means gopher. Volcano mound with a center hole means mole. Tell them apart before you buy a single trap."
-  schemas={[articleSchema, faqSchema]}
+  schemas={[articleSchema, faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Gopher vs Mole
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header>
     <h1>Gopher vs Mole</h1>
     <p class="subtitle">How To Tell Which One Is Destroying Your Yard</p>
-    <p class="dateline">Updated July 2026</p>
+    <p class="dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>

@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../data/author';
+import { updatedLine } from '../data/pageDates';
 import { pageTitle } from '../data/site';
 
 const faqSchema = {
@@ -128,21 +130,24 @@ const faqSchema = {
     }
   ]
 };
+
+const crumbLabel = "FAQ";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/faq/");
 ---
 
 <Layout
   title={pageTitle("Gopher FAQ: 15 Straight Answers")}
   description="15 straight answers about gophers: the fastest way to kill one, whether coffee grounds work, how deep tunnels go, and when gophers are most active."
-  schemas={[faqSchema]}
+  schemas={[faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › FAQ
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header>
     <h1>Gopher FAQ</h1>
     <p class="subtitle">Questions I get asked constantly — answered straight.</p>
-    <p class="dateline">Updated July 2026</p>
+    <p class="dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>

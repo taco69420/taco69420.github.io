@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { authorRef } from '../../data/author';
 import { pageTitle } from '../../data/site';
 
 export async function getStaticPaths() {
@@ -102,11 +103,7 @@ const howToSchema: Record<string, unknown> = {
   "description": entry.data.description,
   "url": pageURL,
   "datePublished": entry.data.date.toISOString().split("T")[0],
-  "author": {
-    "@type": "Person",
-    "name": "Mark the Bagger",
-    "url": `${siteURL}/about/`
-  },
+  "author": authorRef,
   "estimatedCost": {
     "@type": "MonetaryAmount",
     "currency": "USD",

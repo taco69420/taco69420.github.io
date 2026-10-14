@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { authorRef } from '../../data/author';
 import { pageTitle } from '../../data/site';
 
 export async function getStaticPaths() {
@@ -86,16 +87,8 @@ const articleSchema: Record<string, unknown> = {
   "description": entry.data.description,
   "url": pageURL,
   "datePublished": entry.data.date.toISOString().split("T")[0],
-  "author": {
-    "@type": "Person",
-    "name": "Mark the Bagger",
-    "url": `${siteURL}/about/`
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "How To Kill Gophers",
-    "url": siteURL
-  },
+  "author": authorRef,
+  "publisher": authorRef,
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": pageURL

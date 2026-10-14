@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../data/author';
+import { updatedLine } from '../data/pageDates';
 import { pageTitle, REVIEW_YEAR } from '../data/site';
 
 const faqSchema = {
@@ -40,21 +42,24 @@ const faqSchema = {
     }
   ]
 };
+
+const crumbLabel = "Gopher Control Costs";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/cost/");
 ---
 
 <Layout
   title={pageTitle(`Gopher Control Cost ${REVIEW_YEAR}: Traps vs. Pro`)}
   description={`What gopher control really costs in ${REVIEW_YEAR}, from $15 traps to $500+ pro jobs. All 13 methods compared on price, reusability, and whether they are worth it.`}
-  schemas={[faqSchema]}
+  schemas={[faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Gopher Control Costs
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header>
     <h1>How Much Does Gopher Control Cost?</h1>
     <p class="subtitle">Honest numbers for every method — from a $0 garden hose trick to $500 pro jobs.</p>
-    <p class="dateline">Updated July 2026</p>
+    <p class="dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>

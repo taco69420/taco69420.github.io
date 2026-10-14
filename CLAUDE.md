@@ -46,13 +46,42 @@ A static Astro 5 site — an SEO/affiliate content site about gopher control, wr
 
 **Trailing slashes.** `astro.config.mjs` sets `trailingSlash: 'always'`. Every internal link must end in `/` (`/methods/victor-traps/`, not `/methods/victor-traps`). Missing slashes produce 301 redirects that show up as errors in Search Console — three separate commits exist to clean this up.
 
-**JSON-LD.** `Layout.astro` already emits `WebSite` + `Person` schemas on *every* page. Pages pass additional schemas via the `schemas` prop (`FAQPage`, `HowTo`, `Article`, `BreadcrumbList`, `Organization`). Don't re-declare `WebSite` or `Person` in a page — `index.astro` currently does, which is a duplicate. Any FAQ accordion rendered on a page should have a matching `FAQPage` schema, and the answer text must match the visible copy.
+**JSON-LD.** `src/data/author.ts` is the single source for author identity. It owns the full `Person` node (`@id` `…/about/#mark`) and the `WebSite` node (`@id` `…/#website`), both emitted exactly once per page by `Layout.astro`. Everything else references the author with `authorRef` (`{ "@id": … }`) — never inline another `{ "@type": "Person" }`, which is the duplication this replaced. `Article.publisher` and `HowTo.author` point at the Person too; there is no `Organization` node any more, since the site is a personal brand.
 
-**Titles and datelines.** Page titles follow `<Topic> (2026) | … | Mark The Bagger`. Sixteen pages carry `<p class="dateline">Updated July 2026</p>`; the `[slug]` renderers derive theirs from frontmatter `updated ?? date` instead. When refreshing dates, change all of them together — mixed dates have been an audit finding before.
+`SOCIAL_LINKS` in the same file is the single source for the TikTok and YouTube profiles: it fills the `Person`'s `sameAs`, the "Follow along" row in the `Layout.astro` footer, and the profile links in the about page bio. Those visible links carry `rel="me noopener"`, which is what makes `sameAs` verifiable rather than an unsupported claim.
 
-**Affiliate links.** Amazon links are `amzn.to` shortlinks with `target="_blank" rel="sponsored noopener"` (74 of them). Product names must match what the link actually sells — a past audit removed a fictional product name that didn't match its destination. The footer disclosure in `Layout.astro` is required on every page, which it is by virtue of the shared layout.
+Pages pass extra schemas via the `schemas` prop (`FAQPage`, `HowTo`, `Article`, `ItemList`, `BreadcrumbList`).
+
+**Breadcrumbs must match the visible trail**, because that is what Google's guidance asks for. Static pages declare `const crumbLabel = "…"` in the frontmatter, render it as the leaf of the `<nav class="breadcrumb">` trail, *and* pass it to `breadcrumbSchema(crumbLabel, route)` — one const feeding both, so the two cannot drift. The label is the short nav-style wording (`What Doesn't Work`), not the page's editorial H1 (`Let Me Save You Some Money`); several pages differ on purpose. The two `[slug].astro` renderers build their own three-level `BreadcrumbList` (Home > Methods > title, Home > Common Problems > title) from `entry.data.title`, which is also the H1, so they already agree.
+
+`/about/`, `/methods/`, `/problems/` and `/quiz/` show a visible breadcrumb but have no `BreadcrumbList`; add one with the same `crumbLabel` pattern if you want them covered.
+
+Any FAQ accordion rendered on a page should have a matching `FAQPage` schema, and the answer text must match the visible copy.
+
+The three best-of pages add `Article` plus an `ItemList` of `Product` → `Review`, where `positiveNotes` / `negativeNotes` are generated from `src/data/bestOfProducts.ts` — the same arrays that render the visible Pros/Cons lists, so the two cannot drift. No `reviewRating`, `aggregateRating`, `offers` or prices: nothing on those pages supports a numeric score.
+
+**Titles.** Every page builds its title through `pageTitle()` in `src/data/site.ts`, which appends ` | Mark the Bagger` only when the result still fits 60 characters and ships the base title bare otherwise. The review year is `REVIEW_YEAR` in the same file, and belongs only in the three best-of titles plus `/cost/`, `/traps/` and `/seasons/` — not on method or problem pages. `/southern-california-gopher-control/` still hardcodes its own title and is the one page outside this system.
+
+**Datelines.** Never hardcoded; they render from the dates described under "Updating dates" below.
+
+**Affiliate links.** Amazon links are `amzn.to` shortlinks with `target="_blank" rel="sponsored noopener"` (74 of them). Product names must match what the link actually sells — a past audit removed a fictional product name that didn't match its destination. The footer disclosure in `Layout.astro` is required on every page, which it is by virtue of the shared layout. Two disclosures run in parallel and neither replaces the other: the footer line in `Layout.astro` (`As an Amazon Associate I earn from qualifying purchases`, required by Amazon on every page) and `AffiliateDisclosure.astro`, which `Layout.astro` injects just under the page header on any page whose own content contains an Amazon link. That detection runs on the rendered default slot, not the finished document — scanning the whole document would match `CookieBanner`'s `a[href*="amzn.to"]` tracking selector and stamp a disclosure onto every page.
 
 **Analytics.** `src/components/CookieBanner.astro` holds the GA ID (`G-WGL40V0V8V`) and all analytics logic: GA loads by default, a prior opt-out stored as `localStorage['gdpr-consent'] === 'declined'` blocks it, and a delegated click listener fires an `affiliate_click` event for `amzn.to` / `amazon.com` links. It exposes `window.CookieConsent.showPreferences()`, which `privacy.astro` calls.
+
+## Updating dates
+
+There is one date per page, in one place:
+
+- **Collection pages** — `date` (published) and `updated` (modified) in the markdown frontmatter.
+- **Static pages** — `src/data/pageDates.ts`, keyed by route. `published` is left out where the codebase never recorded a real publish date; don't invent one.
+
+Both feed three outputs at once: the visible dateline (`updatedLine()` / `formatDateline()`), the `Article` / `HowTo` JSON-LD `datePublished` / `dateModified`, and the sitemap's `<lastmod>`. The sitemap's `serialize` hook in `astro.config.mjs` reads collection frontmatter off disk with a regex, because config files cannot import `astro:content`. Change a date in one place and all three move together.
+
+**Bump `updated` only when a page's content meaningfully changes** — new or rewritten guidance, a changed recommendation, a different product. Never for a typo, a title change, or a meta-description edit. Dates are deliberately *not* derived from git history: an audit pass that touches every file would otherwise advertise the whole site as freshly updated.
+
+Each page keeps its own dateline class (`.dateline`, `.hero-dateline`, `.cal-dateline`, `.locker-dateline`, `.mission-dateline`, `.diag-dateline`, `.waste-dateline`) because each is coloured for its own hero. Only the text is shared.
+
+Routes with no recorded date — `/privacy/`, `/quiz/`, `/redlands/` — render no dateline and get no `lastmod`.
 
 ## Editorial facts to keep consistent
 

@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../data/author';
+import { updatedLine } from '../data/pageDates';
 import { pageTitle, REVIEW_YEAR } from '../data/site';
 
 const faqSchema = {
@@ -12,21 +14,24 @@ const faqSchema = {
     { "@type": "Question", "name": "When is the best time to install gopher mesh or barriers?", "acceptedAnswer": { "@type": "Answer", "text": "Winter (December–January) is ideal — gopher activity is at its lowest and you can get infrastructure in place before the spring breeding surge begins in February. Two hours of mesh installation in January is worth ten hours of emergency trapping in March." } },
   ]
 };
+
+const crumbLabel = "Seasonal Guide";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/seasons/");
 ---
 
 <Layout
   title={pageTitle(`Gopher Activity by Season: ${REVIEW_YEAR} Guide`)}
   description={`When gophers are most active and what to do about it. Mark the Bagger's season-by-season ${REVIEW_YEAR} field guide for gopher control in Southern California.`}
-  schemas={[faqSchema]}
+  schemas={[faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Seasonal Guide
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="calendar-hero">
     <h1>Gophers Don't Take Seasons Off. But They Have Patterns.</h1>
     <p class="cal-sub">Know when they surge, when they go deep, and when to hit hard.</p>
-    <p class="cal-dateline">Updated July 2026</p>
+    <p class="cal-dateline">{updatedLine(Astro.url.pathname)}</p>
     <ul class="season-strip" aria-label="Season overview">
       <li class="season-chip"><span class="s-icon">🌸</span><span class="s-name">Spring</span><span class="s-note">Peak season</span></li>
       <li class="season-chip"><span class="s-icon">☀️</span><span class="s-name">Summer</span><span class="s-note">They go deep</span></li>

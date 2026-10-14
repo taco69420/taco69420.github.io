@@ -1,13 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../data/author';
+
+const crumbLabel = "Redlands, CA";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/redlands/");
 ---
 
 <Layout
   title="Gopher Control in Redlands, CA — Where I Learned to Trap | How To Kill Gophers"
   description="Mark the Bagger grew up trapping gophers in Redlands, CA at age 15. Learn why Redlands has so many gophers, what the soil conditions mean for your tunnels, and what methods actually work here."
+  schemas={[crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Redlands, CA
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="redlands-hero">

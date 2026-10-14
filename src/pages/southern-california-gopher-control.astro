@@ -1,23 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { authorRef, breadcrumbSchema } from '../data/author';
+import { updatedLine, datesFor } from '../data/pageDates';
+
+const dates = datesFor("/southern-california-gopher-control/")!;
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Southern California Gopher Control — What's Different Here and What Actually Works",
   "description": "Gopher control in SoCal isn't like the rest of the country. Year-round activity, sandy soil, drip irrigation, and mild winters mean you're never really off the hook. Here's what works in the Inland Empire, San Diego, and the LA Basin.",
-  "author": {
-    "@type": "Person",
-    "name": "Mark the Bagger",
-    "url": "https://howtokillgophers.com/about/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "How To Kill Gophers",
-    "url": "https://howtokillgophers.com"
-  },
-  "datePublished": "2026-03-18",
-  "dateModified": "2026-07-08",
+  "author": authorRef,
+  "publisher": authorRef,
+  "datePublished": dates.published,
+  "dateModified": dates.updated,
   "url": "https://howtokillgophers.com/southern-california-gopher-control/"
 };
 
@@ -31,21 +27,24 @@ const faqSchema = {
     { "@type": "Question", "name": "What's different about gopher control in SoCal vs other regions?", "acceptedAnswer": { "@type": "Answer", "text": "Three things: year-round activity (no real winter break), sandy loam soil that makes tunneling easy, and drip irrigation that creates moisture corridors gophers actively follow. In colder regions you get a winter window to install barriers and reset. In SoCal, gophers keep working through December and January — which means you need year-round maintenance trapping rather than a single seasonal push." } },
   ]
 };
+
+const crumbLabel = "Southern California Gopher Control";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/southern-california-gopher-control/");
 ---
 
 <Layout
   title="Southern California Gopher Control (2026) | How To Kill Gophers"
   description="Year-round activity, sandy soil, drip irrigation, and mild winters make SoCal one of the worst regions in the country for gopher pressure. Here's what actually works in the Inland Empire, San Diego, and the LA Basin."
-  schemas={[articleSchema, faqSchema]}
+  schemas={[articleSchema, faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Southern California Gopher Control
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header>
     <h1>Southern California Gopher Control</h1>
     <p class="subtitle">What's Different Here and What Actually Works</p>
-    <p class="dateline">Updated July 2026</p>
+    <p class="dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>

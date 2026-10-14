@@ -1,6 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { updatedLine } from '../data/pageDates';
 import { pageTitle, REVIEW_YEAR } from '../data/site';
+import { authorRef, breadcrumbSchema, SITE_URL } from '../data/author';
+import { bestOfProducts } from '../data/bestOfProducts';
+import { datesFor } from '../data/pageDates';
+
+const route = "/best-gopher-baits/";
+const heading = `Best Gopher Baits of ${REVIEW_YEAR}`;
+const dates = datesFor(route)!;
+const products = bestOfProducts[route];
+const product = Object.fromEntries(products.map((p) => [p.id, p]));
+
+// `datePublished` is absent on purpose: pageDates has no recorded publish
+// date for the best-of pages, and inventing one would be worse than omitting.
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": heading,
+  "author": authorRef,
+  "publisher": authorRef,
+  "image": `${SITE_URL}/taco.jpg`,
+  "datePublished": dates.published,
+  "dateModified": dates.updated,
+  "url": `${SITE_URL}${route}`,
+};
+
+// Pros/cons come from the same arrays the page renders below, so the review
+// notes always match the visible lists. No ratings or offers by design.
+const notes = (items: string[]) => ({
+  "@type": "ItemList",
+  "itemListElement": items.map((text, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": text,
+  })),
+});
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": heading,
+  "itemListElement": products.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Product",
+      "name": p.name,
+      "url": `${SITE_URL}${route}#${p.id}`,
+      "review": {
+        "@type": "Review",
+        "author": authorRef,
+        "positiveNotes": notes(p.pros),
+        "negativeNotes": notes(p.cons),
+      },
+    },
+  })),
+};
+
+const crumbLabel = "Best Gopher Baits";
+const crumbSchema = breadcrumbSchema(crumbLabel, route);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -45,17 +104,17 @@ const faqSchema = {
 <Layout
   title={pageTitle(`Best Gopher Baits of ${REVIEW_YEAR}: Tested Picks`)}
   description={`The gopher baits worth buying in ${REVIEW_YEAR} — underground rodenticide, gassers, and non-toxic options, with the pet-safety trade-off spelled out for each one.`}
-  schemas={[faqSchema]}
+  schemas={[articleSchema, itemListSchema, crumbSchema, faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Best Gopher Baits
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="baits-hero">
     <span class="hero-badge">⚠️ Read Before Buying</span>
-    <h1>Best Gopher Baits of 2026</h1>
+    <h1>{heading}</h1>
     <p class="hero-sub">Effective when used right. Dangerous when used wrong. Here's what I actually recommend — and what I won't touch.</p>
-    <p class="hero-dateline">Updated July 2026</p>
+    <p class="hero-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
@@ -124,20 +183,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Effective on deeply established tunnel systems difficult to reach with traps</li>
-            <li>Low cost per application relative to the area covered</li>
-            <li>Can address multiple tunnel runs simultaneously with a single session</li>
-            <li>Diphacinone formulations are more stable in wet soil than zinc phosphide</li>
+            {product["bait-stations"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Real secondary poisoning risk to dogs, cats, and raptors that eat affected gophers</li>
-            <li>Zinc phosphide variants off-gas and require more careful handling</li>
-            <li>Takes 3–7 days to work — slower than mechanical traps</li>
-            <li>Some states/counties restrict or require a license for certain rodenticide formulations</li>
-            <li>Requires accurate tunnel location — bait in the wrong spot does nothing</li>
+            {product["bait-stations"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
@@ -157,19 +209,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Can reach deep or branching tunnels that are hard to set traps in effectively</li>
-            <li>Fast to deploy — no probing or precise placement required</li>
-            <li>Inexpensive per treatment</li>
-            <li>No residual chemical left in the soil after treatment</li>
+            {product["gassers"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Completely ineffective if any tunnel exit is left unsealed</li>
-            <li>Works best in shallow-to-mid depth systems — limited penetration in deep runs</li>
-            <li>Keep away from structures — gas can travel underground and enter basements</li>
-            <li>Results are harder to confirm than mechanical trapping</li>
+            {product["gassers"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
@@ -189,19 +235,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Completely safe for dogs, cats, kids, and wildlife</li>
-            <li>No license or permit required</li>
-            <li>Easy to apply with a hose-end sprayer</li>
-            <li>Useful for protecting specific high-value zones during active trapping campaigns</li>
+            {product["castor-oil"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Not a kill method — gophers relocate, they don't die</li>
-            <li>Breaks down after rain or irrigation and needs reapplication every 1–2 weeks</li>
-            <li>Won't hold an established gopher that's heavily invested in a tunnel system</li>
-            <li>Treats symptoms, not the underlying population</li>
+            {product["castor-oil"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
