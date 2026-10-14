@@ -1,6 +1,7 @@
 ---
 title: "Keeping Pets Safe Around Gopher Control"
 description: "Run an effective gopher control program without putting your dogs, cats, or backyard wildlife at risk."
+metaDescription: "Which gopher methods are safe with a dog in the yard and which are not: trap covers, flagging every set, and the secondary poisoning risk from bait."
 date: 2026-03-14
 updated: 2026-07-08
 tags:

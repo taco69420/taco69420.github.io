@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 ---
 
 <Layout
-  title="Start Here Quiz — Find the Right Gopher Fix | How To Kill Gophers"
-  description="Answer 3 quick questions and Mark will point you to the right method for your specific situation."
+  title={pageTitle("Gopher Quiz: Find Your Fix in 3 Questions")}
+  description="Answer 3 quick questions about what you're seeing, how fast you need it handled, and your pets. Mark points you at the gopher method that fits your yard."
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › Start Here Quiz
@@ -192,7 +193,7 @@ import Layout from '../layouts/Layout.astro';
       alternates: [
         { title: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing/', note: 'If you\'re protecting a larger area or full property perimeter' },
         { title: 'Barn Owl Box Installation', url: '/methods/barn-owl-box/', note: 'Layer in natural predator control — works every night passively' },
-        { title: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants/', note: 'If you can\'t install mesh, choose plants gophers naturally avoid' },
+        { title: 'Plants That Repel Gophers', url: '/methods/gopher-resistant-plants/', note: 'If you can\'t install mesh, choose plants gophers naturally avoid' },
       ],
       also: [
         { title: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep/' },
@@ -219,7 +220,7 @@ import Layout from '../layouts/Layout.astro';
       alternates: [
         { title: 'Install Gopher Mesh Barriers', url: '/methods/gopher-mesh/', note: 'The main tool for new yard prep — how to install it correctly' },
         { title: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing/', note: 'If you\'re protecting a large lot or orchard-scale area' },
-        { title: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants/', note: 'Choose plants that naturally deter gophers from the start' },
+        { title: 'Plants That Repel Gophers', url: '/methods/gopher-resistant-plants/', note: 'Choose plants that naturally deter gophers from the start' },
       ],
       also: [
         { title: 'Barn Owl Box Installation', url: '/methods/barn-owl-box/' },

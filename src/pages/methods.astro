@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 
 const methods = await getCollection('methods');
 
@@ -70,8 +71,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Gopher Control Methods & Tactics (2026) | Mark The Bagger"
-  description="Field-tested gopher control methods from easy repellents to advanced burrow fumigation. Mark the Bagger's step-by-step playbook for eliminating gophers from your yard."
+  title={pageTitle("13 Gopher Control Methods, Compared")}
+  description="All 13 gopher control methods in one playbook, from traps and bait to mesh, fencing, and owl boxes. Each one rated for difficulty, speed, and what it fits."
   schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">

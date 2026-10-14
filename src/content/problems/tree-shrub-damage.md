@@ -1,6 +1,7 @@
 ---
 title: "Gopher Damage to Trees & Shrubs"
 description: "Identify and stop gophers from girdling roots and killing established trees, shrubs, and ornamentals from below."
+metaDescription: "Gophers girdle the root crown and the tree looks fine until it doesn't. Spot mounds within 10 feet, trap fast, and cage every root ball before replanting."
 date: 2026-03-14
 updated: 2026-07-08
 tags:

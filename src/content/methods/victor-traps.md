@@ -1,6 +1,7 @@
 ---
 title: "Victor Trap Tunnel Intercept"
 description: "Use classic Victor pinch traps in active main runs for fast, repeatable captures."
+metaDescription: "The Victor pinch trap is Mark's first reach. Probe the main run, set two traps facing opposite directions, block the light, and check in 12–24 hours."
 date: 2026-03-01
 updated: 2026-07-08
 tags:

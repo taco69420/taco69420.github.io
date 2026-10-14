@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -42,8 +43,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="What Doesn't Work on Gophers (And Why I Stopped Wasting Money) | How To Kill Gophers"
-  description="Coffee grounds, Irish Spring, cayenne, chewing gum, pinwheels — I've tried all of them. Here's the honest truth about why these home remedies fail and what actually works."
+  title={pageTitle("What Doesn't Work on Gophers: Myths Tested")}
+  description="Chewing gum, coffee grounds, cayenne, Irish Spring — Mark tried them all and none of them moved a gopher. Why these remedies fail and what to do instead."
   schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">

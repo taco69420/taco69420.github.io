@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle, REVIEW_YEAR } from '../data/site';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -42,8 +43,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Gopher Control Cost Guide 2026 | How Much Does It Actually Cost?"
-  description="Honest breakdown of what every gopher control method costs — from $15 traps to $500 pro jobs. Mark the Bagger compares all 13 methods by price, reusability, and value."
+  title={pageTitle(`Gopher Control Cost ${REVIEW_YEAR}: Traps vs. Pro`)}
+  description={`What gopher control really costs in ${REVIEW_YEAR}, from $15 traps to $500+ pro jobs. All 13 methods compared on price, reusability, and whether they are worth it.`}
   schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -126,7 +127,7 @@ const faqSchema = {
               <td>DIY</td>
             </tr>
             <tr>
-              <td><a href="/methods/gopher-resistant-plants/">Gopher-Resistant Plant Selection</a></td>
+              <td><a href="/methods/gopher-resistant-plants/">Plants That Repel Gophers</a></td>
               <td class="cost-low">Varies</td>
               <td>Varies</td>
               <td>—</td>
@@ -140,7 +141,7 @@ const faqSchema = {
               <td>DIY</td>
             </tr>
             <tr>
-              <td><a href="/methods/castor-oil/">Castor Oil Repellent Program</a></td>
+              <td><a href="/methods/castor-oil/">Castor Oil for Gophers</a></td>
               <td class="cost-mid">~$20–40</td>
               <td>~$20–40 <span class="cost-note">per treatment</span></td>
               <td>No</td>
@@ -210,7 +211,7 @@ const faqSchema = {
       <h3><a href="/methods/cinch-traps/">Cinch Trap Mainline Set</a> — ~$30–35 per trap</h3>
       <p>More expensive than Victor traps but the scissor-jaw design is more forgiving on placement — you lose fewer catches to bad alignment. If you have pets or kids in the yard, the more enclosed design is worth the extra cost. Budget for 2–4 traps to work multiple runs at once: $60–140 total.</p>
 
-      <h3><a href="/methods/castor-oil/">Castor Oil Repellent Program</a> — ~$20–40 per application</h3>
+      <h3><a href="/methods/castor-oil/">Castor Oil for Gophers</a> — ~$20–40 per application</h3>
       <p>Cheap per application, but it's ongoing. Castor oil doesn't kill gophers — it pushes them. As soon as you stop applying, they come back. Best used as a short-term displacement while you set up traps or install permanent barriers, not as a long-term strategy on its own.</p>
 
       <h3><a href="/methods/barn-owl-box/">Barn Owl Box Installation</a> — ~$60–100 one-time</h3>

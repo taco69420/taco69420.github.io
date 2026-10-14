@@ -1,6 +1,7 @@
 ---
 title: "Handling Neighbor Disputes Over Gophers"
 description: "Coordinate control plans across property lines to reduce recurring infestations and tension."
+metaDescription: "Gopher pressure rebounds when only one side of a boundary is treated. How to document both sides, agree a 2–4 week control window, and split the work."
 date: 2026-03-01
 updated: 2026-07-08
 tags:

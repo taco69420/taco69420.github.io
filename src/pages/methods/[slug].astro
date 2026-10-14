@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { pageTitle } from '../../data/site';
 
 export async function getStaticPaths() {
   const methods = await getCollection('methods');
@@ -29,7 +30,7 @@ const relatedLinks: Record<string, Array<{label: string, url: string}>> = {
   ],
   'gopher-mesh': [
     { label: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing/' },
-    { label: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants/' },
+    { label: 'Plants That Repel Gophers', url: '/methods/gopher-resistant-plants/' },
     { label: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep/' },
     { label: 'Stopping Gopher Garden Destruction', url: '/problems/garden-destruction/' },
   ],
@@ -50,7 +51,7 @@ const relatedLinks: Record<string, Array<{label: string, url: string}>> = {
   ],
   'sonic-stakes': [
     { label: 'Victor Trap Tunnel Intercept — pair with for real results', url: '/methods/victor-traps/' },
-    { label: 'Castor Oil Soil Repellent Program', url: '/methods/castor-oil/' },
+    { label: 'Castor Oil for Gophers', url: '/methods/castor-oil/' },
     { label: 'Install Gopher Mesh Barriers — permanent fix', url: '/methods/gopher-mesh/' },
   ],
   'castor-oil': [
@@ -69,9 +70,9 @@ const relatedLinks: Record<string, Array<{label: string, url: string}>> = {
     { label: 'Barn Owl Box Installation — complementary prevention', url: '/methods/barn-owl-box/' },
   ],
   'barn-owl-box': [
-    { label: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants/' },
+    { label: 'Plants That Repel Gophers', url: '/methods/gopher-resistant-plants/' },
     { label: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing/' },
-    { label: 'Castor Oil Soil Repellent Program', url: '/methods/castor-oil/' },
+    { label: 'Castor Oil for Gophers', url: '/methods/castor-oil/' },
   ],
   'dog-hunting': [
     { label: 'Quick Start Guide — Taco\'s role in the process', url: '/quick-start/' },
@@ -129,8 +130,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-  title={`${entry.data.title} (2026) | Gopher Control | Mark The Bagger`}
-  description={entry.data.description}
+  title={pageTitle(entry.data.title)}
+  description={entry.data.metaDescription ?? entry.data.description}
   schemas={[howToSchema, breadcrumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">

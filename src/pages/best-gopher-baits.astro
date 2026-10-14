@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle, REVIEW_YEAR } from '../data/site';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -42,8 +43,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Best Gopher Baits of 2026 | Mark the Bagger"
-  description="Honest picks for gopher bait products — underground rodenticide, gassers, and non-toxic options reviewed by Mark the Bagger with real field experience."
+  title={pageTitle(`Best Gopher Baits of ${REVIEW_YEAR}: Tested Picks`)}
+  description={`The gopher baits worth buying in ${REVIEW_YEAR} — underground rodenticide, gassers, and non-toxic options, with the pet-safety trade-off spelled out for each one.`}
   schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 import BrevoForm from '../components/BrevoForm.astro';
 
 const faqSchema = {
@@ -28,8 +29,8 @@ const howToSchema = {
 ---
 
 <Layout
-  title="Quick Start Guide — How to Trap Gophers (2026) | How To Kill Gophers"
-  description="Mark the Bagger's exact step-by-step gopher trapping process. Scout, probe, flush, and trap — the same method he ran with his dog Taco for years."
+  title={pageTitle("How to Trap Gophers: Quick Start Guide")}
+  description="Scout the yard, probe for the main run, then set traps. Mark the Bagger's exact process, plus the water flush step he ran with Taco — dog owners only."
   schemas={[howToSchema, faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">

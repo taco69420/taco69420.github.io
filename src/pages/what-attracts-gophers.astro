@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -34,8 +35,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="What Attracts Gophers to Your Yard (2026) | How To Kill Gophers"
-  description="Gophers don't show up randomly. Loose soil, dense root systems, drip irrigation, and the wrong plants all make your yard a target. Learn what's drawing them in and how to use it against them."
+  title={pageTitle("What Attracts Gophers to Your Yard")}
+  description="Gophers don't show up at random. Loose soil, dense root systems, drip irrigation, and the wrong plants draw them in. Find out what your yard is guilty of."
   schemas={[articleSchema, faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -191,7 +192,7 @@ const faqSchema = {
       <p class="related-label">Related guides</p>
       <div class="related-grid">
         <a href="/what-doesnt-work/" class="related-card">What Doesn't Work — myth busting →</a>
-        <a href="/methods/gopher-resistant-plants/" class="related-card">Gopher-Resistant Plant Selection →</a>
+        <a href="/methods/gopher-resistant-plants/" class="related-card">Plants That Repel Gophers — what works →</a>
         <a href="/methods/gopher-mesh/" class="related-card">Install Gopher Mesh Barriers — permanent fix →</a>
         <a href="/seasons/" class="related-card">Seasonal Guide — when pressure is highest →</a>
       </div>

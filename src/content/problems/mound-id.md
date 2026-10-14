@@ -1,6 +1,7 @@
 ---
 title: "How to Identify Fresh Gopher Mounds"
 description: "Distinguish active gopher mounds from mole hills and old tunnel spoil to target control correctly."
+metaDescription: "Fresh gopher mounds are fan- or crescent-shaped with a plugged hole off to one side. How to confirm an active run and probe 6–12 inches on the plug side."
 date: 2026-03-01
 updated: 2026-07-08
 tags:

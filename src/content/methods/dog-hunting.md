@@ -1,6 +1,7 @@
 ---
 title: "The Taco Method: Using a Dog to Hunt Gophers"
 description: "Deploy a high-prey-drive dog as a first-line gopher detection and hunting tool — breed matters less than drive."
+metaDescription: "Taco was a chihuahua, and drive beats breed every time. How to let a high-prey-drive dog find active runs by scent, then close with traps where they alert."
 date: 2026-03-14
 updated: 2026-07-08
 tags:

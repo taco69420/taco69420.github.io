@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle, REVIEW_YEAR } from '../data/site';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -14,8 +15,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Best Gopher Traps & Gear Reviews (2026) | Mark The Bagger"
-  description="Mark the Bagger's field-tested gopher trap and gear picks. High-tension wire traps, gopher gassers, probe tools — with comparison tables and honest reviews."
+  title={pageTitle(`Gopher Traps & Gear Reviews ${REVIEW_YEAR}`)}
+  description={`Every piece of gopher gear Mark actually uses in ${REVIEW_YEAR}: high-tension wire traps, gassers, and probe tools, with comparison tables and honest field reviews.`}
   schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -301,11 +302,11 @@ const faqSchema = {
         <li><a href="/methods/poison-bait-stations/">Underground Bait Stations guide</a></li>
         <li><a href="/methods/sonic-stakes/">Sonic Repeller Stakes guide</a></li>
         <li><a href="/methods/flooding-tactics/">Flooding Tactics guide</a></li>
-        <li><a href="/methods/castor-oil/">Castor Oil Repellent guide</a></li>
+        <li><a href="/methods/castor-oil/">Castor Oil for Gophers — does it work?</a></li>
         <li><a href="/methods/dog-hunting/">Dog Hunting guide</a></li>
         <li><a href="/methods/exclusion-fencing/">Exclusion Fencing guide</a></li>
         <li><a href="/methods/barn-owl-box/">Barn Owl Box guide</a></li>
-        <li><a href="/methods/gopher-resistant-plants/">Gopher-Resistant Plants guide</a></li>
+        <li><a href="/methods/gopher-resistant-plants/">Plants That Repel Gophers — full list</a></li>
         <li><a href="/methods/hiring-a-pro/">Hiring a Pro guide</a></li>
         <li><a href="/quick-start/">Quick Start field process</a></li>
         <li><a href="/best-gopher-traps/">Best Gopher Traps of 2026 — full roundup with comparisons</a></li>

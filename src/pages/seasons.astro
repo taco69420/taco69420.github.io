@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle, REVIEW_YEAR } from '../data/site';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -14,8 +15,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Seasonal Gopher Activity Guide (2026) | Mark The Bagger"
-  description="Know exactly when gophers are most active and what to do about it. Mark the Bagger's season-by-season field guide for gopher control in Southern California."
+  title={pageTitle(`Gopher Activity by Season: ${REVIEW_YEAR} Guide`)}
+  description={`When gophers are most active and what to do about it. Mark the Bagger's season-by-season ${REVIEW_YEAR} field guide for gopher control in Southern California.`}
   schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">

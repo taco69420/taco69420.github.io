@@ -1,6 +1,7 @@
 ---
 title: "Stopping Gopher Garden Destruction"
 description: "Protect vegetables, ornamentals, and roots from rapid underground feeding damage."
+metaDescription: "Gophers can destroy a bed in days by severing roots from below. Trap the active run just outside the bed, fit root baskets, and wait 5 days to replant."
 date: 2026-03-01
 updated: 2026-07-08
 tags:

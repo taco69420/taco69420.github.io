@@ -1,6 +1,7 @@
 ---
-title: "Castor Oil Soil Repellent Program"
+title: "Castor Oil for Gophers: Does It Work?"
 description: "Apply castor-oil-based repellents to make feeding zones less attractive and push activity outward."
+metaDescription: "UC IPM doesn't list castor oil as a primary gopher control. What it can do as pressure management, how deep to water it in, and why trapping does the work."
 date: 2026-03-01
 updated: 2026-07-08
 tags:

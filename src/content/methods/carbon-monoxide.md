@@ -1,6 +1,7 @@
 ---
 title: "Carbon Monoxide Burrow Treatment"
 description: "Use approved exhaust-injection devices to deliver carbon monoxide into sealed tunnel systems."
+metaDescription: "Seal the run, inject with an approved device, reseal the point, and recheck in 24–48 hours. An advanced method with strict legal and safety requirements."
 date: 2026-03-01
 updated: 2026-07-08
 tags:

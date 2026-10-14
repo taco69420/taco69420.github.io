@@ -1,6 +1,7 @@
 ---
 title: "Exclusion Fencing for Large Properties"
 description: "Install underground perimeter fencing to block gopher migration into yards, orchards, and large planting areas."
+metaDescription: "Underground fencing stops gopher migration at the boundary. An 18–24 inch trench, 1/2-inch hardware cloth, and the L-bend that keeps them from going under."
 date: 2026-03-14
 updated: 2026-07-08
 tags:

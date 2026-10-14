@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -30,8 +31,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="About Mark The Bagger | Gopher Trapping Expert | How To Kill Gophers (2026)"
-  description="Meet Mark the Bagger — started hunting gophers at 15 for $5 a head in Redlands, CA. Real hands-on experience. No fluff."
+  title={pageTitle("About Mark the Bagger: Trapping Gophers Since Age 15")}
+  description="Mark started trapping gophers at 15 in his dad's Redlands, CA yard for $5 a head. How that turned into a repeatable skill, and the legend of his dog Taco."
   ogImage="/markwt.jpg"
   schemas={[personSchema, faqSchema]}
 >

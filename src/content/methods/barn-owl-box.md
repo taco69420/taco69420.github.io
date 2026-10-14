@@ -1,6 +1,7 @@
 ---
 title: "Barn Owl Box Installation"
 description: "Install a barn owl nesting box to establish a natural, long-term gopher predator on your property."
+metaDescription: "A single barn owl family eats 1,000+ rodents a year. Box placement, the 12–16 foot mount, the predator guard, and the 1–2 seasons before owls move in."
 date: 2026-03-11
 updated: 2026-07-08
 tags:

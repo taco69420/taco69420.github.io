@@ -1,6 +1,7 @@
 ---
 title: "Install Gopher Mesh Barriers"
 description: "Use underground wire mesh to physically block gophers from garden beds and root zones."
+metaDescription: "Depth and overlap are the difference between fortress and buffet. 1/2-inch hardware cloth, an 18–24 inch skirt, and no seam gap wider than half an inch."
 date: 2026-03-01
 updated: 2026-07-08
 tags:

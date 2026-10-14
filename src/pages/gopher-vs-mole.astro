@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -34,8 +35,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Gopher vs Mole (2026): How To Tell Which One Is Destroying Your Yard | How To Kill Gophers"
-  description="Crescent mound with a plugged hole? Gopher. Volcano mound with a center hole? Mole. Learn how to tell them apart and why it matters for treatment."
+  title={pageTitle("Gopher vs. Mole: How to Tell Them Apart")}
+  description="Crescent mound with a plugged hole off to one side means gopher. Volcano mound with a center hole means mole. Tell them apart before you buy a single trap."
   schemas={[articleSchema, faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">

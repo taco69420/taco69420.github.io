@@ -1,6 +1,7 @@
 ---
 title: "Gopher Damage to Lawns & Turf"
 description: "Identify and recover from gopher mounds, dead patches, and subsurface tunneling that destroys grass and creates trip hazards."
+metaDescription: "Mounds, soft spots, and dead patches with no cause above ground. The fix is two-part in strict order: eliminate the gopher first, then repair the turf."
 date: 2026-03-11
 updated: 2026-07-08
 tags:

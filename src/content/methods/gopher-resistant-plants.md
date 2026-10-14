@@ -1,6 +1,7 @@
 ---
-title: "Gopher-Resistant Plant Selection"
+title: "Plants That Repel Gophers: What Actually Works"
 description: "Choose plants that gophers avoid eating so your landscaping survives without constant intervention."
+metaDescription: "Lavender, rosemary, salvia, euphorbia — the plants gophers leave alone, and the high-risk ones (roses, fruit trees, root crops) to cage or move elsewhere."
 date: 2026-03-14
 updated: 2026-07-08
 tags:

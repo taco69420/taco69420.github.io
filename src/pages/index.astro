@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 import RandomLore from '../components/RandomLore.astro';
 import BrevoForm from '../components/BrevoForm.astro';
 
@@ -49,8 +50,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="How To Kill Gophers (2026) | Mark The Bagger"
-  description="Expert gopher trapping advice and gear reviews from Mark the Bagger. Humane and lethal methods that actually work — field-tested in Redlands, CA since 2022."
+  title={pageTitle("How to Kill Gophers: Field-Tested Methods")}
+  description="13 gopher control methods that actually work, from traps and bait to CO and barriers — field-tested in Redlands, CA by Mark the Bagger since 2022."
   schemas={[websiteSchema, faqSchema]}
 >
 

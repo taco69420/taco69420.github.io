@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { pageTitle } from '../../data/site';
 
 export async function getStaticPaths() {
   const problems = await getCollection('problems');
@@ -54,7 +55,7 @@ const relatedLinks: Record<string, Array<{label: string, url: string}>> = {
   'new-yard-prep': [
     { label: 'Install Gopher Mesh Barriers', url: '/methods/gopher-mesh/' },
     { label: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing/' },
-    { label: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants/' },
+    { label: 'Plants That Repel Gophers', url: '/methods/gopher-resistant-plants/' },
   ],
   'pet-safety': [
     { label: 'Victor Trap Tunnel Intercept — safest lethal method', url: '/methods/victor-traps/' },
@@ -121,8 +122,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-  title={`${entry.data.title} (2026) | Gopher Problems | Mark The Bagger`}
-  description={entry.data.description}
+  title={pageTitle(entry.data.title)}
+  description={entry.data.metaDescription ?? entry.data.description}
   schemas={[articleSchema, breadcrumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">

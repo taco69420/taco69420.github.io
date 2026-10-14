@@ -1,6 +1,7 @@
 ---
 title: "Hiring a Professional Gopher Trapper"
 description: "Know when DIY isn't enough and how to find, evaluate, and work with a professional gopher control service."
+metaDescription: "When to stop trapping and call someone. A residential gopher job runs $150 to $500+. The quotes to get, the methods to insist on, and the license to check."
 date: 2026-03-14
 updated: 2026-07-08
 tags:

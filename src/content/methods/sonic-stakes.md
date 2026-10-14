@@ -1,6 +1,7 @@
 ---
 title: "Sonic Repeller Stakes"
 description: "Drive solar-powered vibration stakes into active runs to disrupt and displace gophers without traps or poison."
+metaDescription: "UC IPM says sonic devices haven't been shown to work, and habituation is why. Where stakes still help as a perimeter buffer, and how often to move them."
 date: 2026-03-11
 updated: 2026-07-08
 tags:

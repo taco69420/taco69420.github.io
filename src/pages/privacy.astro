@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 ---
 
 <Layout
-  title="Privacy Policy & Legal Disclaimers | Mark The Bagger"
-  description="Privacy policy, affiliate disclaimer, cookie preferences, and CCPA Do Not Sell opt-out for howtokillgophers.com."
+  title={pageTitle("Privacy Policy & Legal Disclaimers")}
+  description="Privacy policy, Amazon affiliate disclaimer, cookie and Google Analytics preferences, and the CCPA Do Not Sell opt-out for howtokillgophers.com."
 >
   <header>
     <h1>Privacy & Disclaimers</h1>

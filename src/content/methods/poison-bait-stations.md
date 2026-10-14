@@ -1,6 +1,7 @@
 ---
 title: "Underground Bait Station"
 description: "Place rodenticide bait directly in active gopher tunnels for lethal control without digging up the yard."
+metaDescription: "Zinc phosphide or diphacinone placed inside the tunnel, not at the entrance. How to probe, dose, and plug the run, plus the secondary poisoning risk."
 date: 2026-03-11
 updated: 2026-07-08
 tags:
