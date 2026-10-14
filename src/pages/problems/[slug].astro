@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import GearForThis from '../../components/GearForThis.astro';
 import { authorRef } from '../../data/author';
 import { pageTitle } from '../../data/site';
 
@@ -76,6 +77,11 @@ const relatedLinks: Record<string, Array<{label: string, url: string}>> = {
 };
 
 const related = relatedLinks[entry.slug] ?? [];
+// The gear block must not re-link a target the body already points at, so
+// scan the raw markdown for the links it already carries.
+const alreadyLinked = ['/best-gopher-traps/', '/best-gopher-baits/', '/traps/'].filter(
+  (url) => entry.body.includes(`](${url})`) || entry.body.includes(`href="${url}"`)
+);
 
 const siteURL = "https://howtokillgophers.com";
 const pageURL = `${siteURL}/problems/${entry.slug}/`;
@@ -165,6 +171,7 @@ const breadcrumbSchema = {
 
   <main class="card">
     <Content />
+    <GearForThis exclude={alreadyLinked} />
   </main>
 
   <section class="card related-section">

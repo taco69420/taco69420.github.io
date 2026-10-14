@@ -1,0 +1,78 @@
+---
+// Shared "The gear for this" block for the problem pages, so all 11 get the
+// same treatment instead of eleven hand-written variants.
+//
+// `exclude` carries any target the page's own body already links. The rule is
+// one link per target per page, and six of the problem bodies already point at
+// /best-gopher-traps/ or /traps/ inline, so those rows drop out rather than
+// duplicating a link the reader has already been given.
+interface Props {
+  exclude?: string[];
+}
+
+const { exclude = [] } = Astro.props;
+
+const gear = [
+  {
+    url: '/best-gopher-traps/',
+    anchor: 'the gopher traps I actually set',
+    before: 'Trapping solves most of what causes this problem, and ',
+    after: ' is the short list.',
+  },
+  {
+    url: '/best-gopher-baits/',
+    anchor: "the gopher bait I'd use",
+    before: 'When a run sits too deep or too far out to reach with a trap, ',
+    after: ' covers the fallback and the safety caveats that come with it.',
+  },
+  {
+    url: '/traps/',
+    anchor: 'my full gopher gear guide',
+    before: 'Probes, mesh and the rest of what I carry are in ',
+    after: ', with field notes on each.',
+  },
+];
+
+const items = gear.filter((g) => !exclude.includes(g.url));
+---
+
+{items.length > 0 && (
+  <section class="gear-for-this" aria-labelledby="gear-for-this-label">
+    <p class="gear-label" id="gear-for-this-label">The gear for this</p>
+    <ul class="gear-list">
+      {items.map((g) => (
+        <li>{g.before}<a href={g.url}>{g.anchor}</a>{g.after}</li>
+      ))}
+    </ul>
+  </section>
+)}
+
+<style>
+  .gear-for-this {
+    border-left: 4px solid #059669;
+    background: #f0fdf4;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0 0;
+  }
+
+  .gear-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    margin: 0 0 0.6rem;
+  }
+
+  .gear-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .gear-list li + li {
+    margin-top: 0.4rem;
+  }
+</style>

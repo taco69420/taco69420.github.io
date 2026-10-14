@@ -67,4 +67,5 @@ Euphorbia sap is a skin and eye irritant. Wear gloves when handling and keep it 
 
 ## Get the Gear
 No gear needed here — but if you're protecting high-value plants, pair this approach with hardware cloth baskets.
+The basket and mesh options are in [my gopher gear guide](/traps/).
 <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">Shop Gopher Mesh & Hardware Cloth on Amazon →</a>

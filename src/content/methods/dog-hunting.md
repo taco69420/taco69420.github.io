@@ -64,3 +64,5 @@ If you're running poison bait anywhere on the property, keep the dog out of thos
 ## Get the Gear
 The only gear the Taco Method requires is a good dog. But when it's time to set the trap after the dog finds the run:
 <a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon →</a>
+
+Which trap goes in that run is the whole question — I compared them on [my gopher trap picks](/best-gopher-traps/).

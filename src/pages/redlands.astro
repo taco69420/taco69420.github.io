@@ -1,15 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { breadcrumbSchema } from '../data/author';
+import { authorRef, breadcrumbSchema, SITE_URL } from '../data/author';
+import { updatedLine, datesFor } from '../data/pageDates';
+import { pageTitle } from '../data/site';
+import NextSteps from '../components/NextSteps.astro';
+
+const route = "/redlands/";
+const dates = datesFor(route)!;
+
+// No `datePublished`: pageDates has no recorded publish date for this page.
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gopher Control in Redlands, CA",
+  "description":
+    "How to handle gophers yourself in Redlands, CA: what the local clay and sandy soils do to your sets, " +
+    "when DIY trapping makes sense versus hiring a pro, and the methods that work here.",
+  "author": authorRef,
+  "publisher": authorRef,
+  "dateModified": dates.updated,
+  "url": `${SITE_URL}${route}`,
+};
 
 const crumbLabel = "Redlands, CA";
-const crumbSchema = breadcrumbSchema(crumbLabel, "/redlands/");
+const crumbSchema = breadcrumbSchema(crumbLabel, route);
 ---
 
 <Layout
-  title="Gopher Control in Redlands, CA — Where I Learned to Trap | How To Kill Gophers"
-  description="Mark the Bagger grew up trapping gophers in Redlands, CA at age 15. Learn why Redlands has so many gophers, what the soil conditions mean for your tunnels, and what methods actually work here."
-  schemas={[crumbSchema]}
+  title={pageTitle("Gopher Control in Redlands, CA: DIY Guide From a Local")}
+  description="Skip the exterminator and trap them yourself for about $15. A Redlands local on the clay and sandy soil here, finding the main run, and which traps work."
+  schemas={[articleSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › {crumbLabel}
@@ -19,9 +39,20 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/redlands/");
     <p class="hero-eyebrow">Redlands, CA</p>
     <h1>I Grew Up Fighting Gophers in Redlands</h1>
     <p class="hero-sub">This is where it started. My dad's backyard. $5 a gopher. A rebar rod and a bucket.</p>
+    <p class="redlands-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
+
+    <section class="card">
+      <h2 id="diy-or-pro">Hire an Exterminator or Do It Yourself?</h2>
+      <p>Most people searching for gopher control in Redlands want someone to come out and handle it. I don't do paid trapping — this site is me showing you how I do it, so you can do it yourself. For most Redlands yards that's the right call anyway.</p>
+      <p><strong>Do it yourself when</strong> you're dealing with one or two gophers in a normal residential yard. A Victor 2-pack runs about $15 and you reuse the traps indefinitely, so the whole job costs less than a single service call. The hard part isn't the trap, it's finding the main run — and it's not under the mound. That's the part this site teaches.</p>
+      <p><strong>Hire a pro when</strong> the property is large with activity in several zones, when you genuinely don't have time to check sets every morning, or when you've probed the same yard repeatedly and still can't find the main run. Residential gopher work runs about $150 to $500+ depending on property size, method, and whether it's a one-time treatment or a recurring contract. If that's your situation, paying for it is a reasonable call, not a failure.</p>
+      <p>Full numbers in the <a href="/cost/">gopher control cost guide</a>, and what to ask before you sign anything in <a href="/methods/hiring-a-pro/">hiring a professional trapper</a>.</p>
+    </section>
+
+    <NextSteps />
 
     <section class="card">
       <h2 id="origin">Where It Started</h2>
@@ -114,11 +145,6 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/redlands/");
       <p>Best education I ever got. Cheaper than college.</p>
     </div>
 
-    <section class="card cta-section">
-      <h2>Ready to Handle It Yourself?</h2>
-      <p>Start with the same process I've been using since I was 15.</p>
-      <a href="/quick-start/" class="btn">See the Quick Start Guide</a>
-    </section>
 
     <section class="card related-section">
       <p class="related-label">Related guides</p>
@@ -163,6 +189,12 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/redlands/");
     color: #fff8f0;
     margin: 0 0 0.75rem;
     line-height: 1.2;
+  }
+
+  .redlands-dateline {
+    font-size: 0.78rem;
+    color: #c9b39a;
+    margin: 0.85rem 0 0;
   }
 
   .hero-sub {
@@ -271,20 +303,6 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/redlands/");
     margin-bottom: 0;
     font-weight: 600;
     color: #6ee7b7;
-  }
-
-  /* ── CTA section ── */
-  .cta-section {
-    text-align: center;
-  }
-
-  .cta-section h2 {
-    margin-top: 0;
-  }
-
-  .cta-section p {
-    color: #52525b;
-    margin-bottom: 1.25rem;
   }
 
   @media (max-width: 640px) {

@@ -51,4 +51,5 @@ I use this method selectively — it's worth it when you're dealing with a large
 Carbon monoxide is lethal and odorless; never use in enclosed areas, near [structures](/problems/foundation-damage/), or without certified safety equipment.
 
 ## Get the Gear
+The gassers and CO injection devices sit side by side in [my gopher poison and fumigant picks](/best-gopher-poison/).
 <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">Shop CO Burrow Treatment Devices on Amazon →</a>

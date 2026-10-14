@@ -56,4 +56,5 @@ Repellent alone is like sending a strongly worded letter—effective only when b
 Follow label directions exactly; over-application can stress desirable plants and contaminate runoff.
 
 ## Get the Gear
+Before you try anything cheaper than this, I've already put the folk fixes through it — [gum, coffee grounds, cayenne and Irish Spring soap](/what-doesnt-work/) — and none of them worked.
 <a href="https://amzn.to/3P7QFIM" target="_blank" rel="sponsored noopener">Shop Castor Oil Gopher Repellent on Amazon →</a>

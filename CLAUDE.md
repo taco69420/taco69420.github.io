@@ -41,6 +41,7 @@ A static Astro 5 site — an SEO/affiliate content site about gopher control, wr
 - A red warning box injected automatically when `petRisk === 'high'`.
 - A table of contents generated from the body's `h2` headings, shown only when there are 3+.
 - The method page's "Browse all 13 methods" link hardcodes the count.
+- `GearForThis.astro` renders the problem pages' "The gear for this" block, inside `<main>` after `<Content />` and before the related-links block. It is shared so all 11 match, and it takes `exclude` — the renderer scans `entry.body` for the gear targets the markdown already links, and those rows drop out rather than giving the same page a second link to the same target.
 
 ## Conventions that are easy to break
 
@@ -60,10 +61,17 @@ Any FAQ accordion rendered on a page should have a matching `FAQPage` schema, an
 
 The three best-of pages add `Article` plus an `ItemList` of `Product` → `Review`, where `positiveNotes` / `negativeNotes` are generated from `src/data/bestOfProducts.ts` — the same arrays that render the visible Pros/Cons lists, so the two cannot drift. No `reviewRating`, `aggregateRating`, `offers` or prices: nothing on those pages supports a numeric score.
 
-**Titles.** Every page builds its title through `pageTitle()` in `src/data/site.ts`, which appends ` | Mark the Bagger` only when the result still fits 60 characters and ships the base title bare otherwise. The review year is `REVIEW_YEAR` in the same file, and belongs only in the three best-of titles plus `/cost/`, `/traps/` and `/seasons/` — not on method or problem pages. `/southern-california-gopher-control/` still hardcodes its own title and is the one page outside this system.
+**Titles.** Every page builds its title through `pageTitle()` in `src/data/site.ts`, which appends ` | Mark the Bagger` only when the result still fits 60 characters and ships the base title bare otherwise. The review year is `REVIEW_YEAR` in the same file, and belongs only in the three best-of titles plus `/cost/`, `/traps/` and `/seasons/` — not on method or problem pages. All 43 pages go through it, including the two location pages.
 
 **Datelines.** Never hardcoded; they render from the dates described under "Updating dates" below.
 
+**Internal linking.** The best-of pages are the money pages, so method and problem pages are expected to point at them from inside the content, not just from the nav.
+
+- Every `/methods/` page carries at least one content link to a best-of page or to `/traps/`. The mapping follows the method: trap pages to `/best-gopher-traps/`, bait and fumigation pages to `/best-gopher-baits/` and `/best-gopher-poison/`, barrier pages to `/traps/`. Skip it where no best-of page honestly fits rather than forcing one.
+- Every `/problems/` page gets the shared `GearForThis` block described above.
+- **One link per target per page.** Several bodies already link `/best-gopher-traps/` or `/traps/` inline, so check before adding — this is why the gear block takes `exclude`. Pre-existing duplicates to other targets (`/cost/` links each method twice, once in the table and once in prose) predate this rule and were left alone.
+- Anchor text describes the destination: "the gopher traps I actually set", not "click here" or "read more".
+- Adding an internal link to a page with no Amazon links does not trip the affiliate disclosure, which matches `amzn.to` / `amazon.com` hrefs only. The 11 problem pages still carry no Amazon links and no disclosure.
 **Affiliate links.** Amazon links are `amzn.to` shortlinks with `target="_blank" rel="sponsored noopener"` (74 of them). Product names must match what the link actually sells — a past audit removed a fictional product name that didn't match its destination. The footer disclosure in `Layout.astro` is required on every page, which it is by virtue of the shared layout. Two disclosures run in parallel and neither replaces the other: the footer line in `Layout.astro` (`As an Amazon Associate I earn from qualifying purchases`, required by Amazon on every page) and `AffiliateDisclosure.astro`, which `Layout.astro` injects just under the page header on any page whose own content contains an Amazon link. That detection runs on the rendered default slot, not the finished document — scanning the whole document would match `CookieBanner`'s `a[href*="amzn.to"]` tracking selector and stamp a disclosure onto every page.
 
 **Analytics.** `src/components/CookieBanner.astro` holds the GA ID (`G-WGL40V0V8V`) and all analytics logic: GA loads by default, a prior opt-out stored as `localStorage['gdpr-consent'] === 'declined'` blocks it, and a delegated click listener fires an `affiliate_click` event for `amzn.to` / `amazon.com` links. It exposes `window.CookieConsent.showPreferences()`, which `privacy.astro` calls.
@@ -79,15 +87,27 @@ Both feed three outputs at once: the visible dateline (`updatedLine()` / `format
 
 **Bump `updated` only when a page's content meaningfully changes** — new or rewritten guidance, a changed recommendation, a different product. Never for a typo, a title change, or a meta-description edit. Dates are deliberately *not* derived from git history: an audit pass that touches every file would otherwise advertise the whole site as freshly updated.
 
-Each page keeps its own dateline class (`.dateline`, `.hero-dateline`, `.cal-dateline`, `.locker-dateline`, `.mission-dateline`, `.diag-dateline`, `.waste-dateline`) because each is coloured for its own hero. Only the text is shared.
+Each page keeps its own dateline class (`.dateline`, `.hero-dateline`, `.cal-dateline`, `.locker-dateline`, `.mission-dateline`, `.diag-dateline`, `.waste-dateline`, `.redlands-dateline`) because each is coloured for its own hero. Only the text is shared.
 
-Routes with no recorded date — `/privacy/`, `/quiz/`, `/redlands/` — render no dateline and get no `lastmod`.
+Routes with no recorded date — `/privacy/` and `/quiz/` — render no dateline and get no `lastmod`. 41 of the 43 routes carry one.
 
+## The two location pages
+
+`/redlands/` and `/southern-california-gopher-control/` are the highest-impression pages in Search Console and they rank for commercial-intent queries — "gopher control redlands", "gopher exterminator redlands", "gopher control southern california". The people landing there are usually looking to hire somebody.
+
+**Mark does not offer paid trapping, and nothing on the site may imply he is for hire.** That rules out `LocalBusiness`, `ProfessionalService`, `Service` and `Offer` schema, `areaServed` / `serviceArea` / `priceRange` / `telephone` properties, and any "contact me", "get a quote", "free estimate" or service-area copy. Both pages instead say plainly that he does not do paid trapping and then send the reader to the DIY path.
+
+Both carry a "Hire an Exterminator or Do It Yourself?" section straight after the intro, which is honest about when hiring a pro is the right call. It may only use figures that already exist on `/cost/` — the ~$15 Victor 2-pack and the ~$150–500+ residential pro range. Do not invent prices there.
+
+`NextSteps.astro` is the shared next-step block on both pages (`/quick-start/` then `/best-gopher-traps/`), so the two cannot drift. Note this makes `/cost/` and `/quick-start/` appear twice on `/southern-california-gopher-control/` — once in the new copy and once in the pre-existing related-links card and prose. That is a deliberate exception to the one-link rule, kept because the instruction was to link them from the new sections and the existing mentions are Mark's own prose.
+
+Mark's personal Redlands story ("Where It Started", "The $5 Lesson") stays below the new sections, in his voice, untouched.
 ## Editorial facts to keep consistent
 
 These are site-wide claims that have been corrected before; don't reintroduce variants.
 
 - Mark's tenure is framed as **"trapping gophers since age 15"** / "since 2022" for the site. Not "three decades".
+- Mark **does not offer paid trapping**. The site is DIY instruction and affiliate gear; never write copy or schema that implies he can be hired. See "The two location pages".
 - **Taco** is the dog: male (he/him), a chihuahua, Mark's former hunting partner, and **has passed away** — write about him in the past tense.
 - The dog method requires a **"high-prey-drive dog"**, not a "trained dog".
 - Carbon monoxide is **CO**, never CO2.

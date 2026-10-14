@@ -51,4 +51,5 @@ Overlap your seams like roof shingles—gophers are many things, but they are no
 Wear heavy gloves while cutting mesh; galvanized edges can cause deep lacerations.
 
 ## Get the Gear
+Mesh sizes and basket options are laid out in [the mesh and hardware cloth section of my gear guide](/traps/).
 <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">Shop Gopher Mesh & Hardware Cloth on Amazon →</a>

@@ -55,4 +55,5 @@ UC IPM's pest notes confirm both zinc phosphide and diphacinone as registered ro
 Keep all bait away from children and pets. Never place bait in open boxes or above ground. Secondary poisoning of raptors, dogs, and cats is a real risk with zinc phosphide — if wildlife is present, use traps instead. Check your [local regulations](/southern-california-gopher-control/); some bait products require a pest control license to purchase.
 
 ## Get the Gear
+The products in this category are written up on their own pages: the [gopher bait I'd actually use](/best-gopher-baits/), and [how the poison options compare](/best-gopher-poison/) if you're weighing the stronger stuff.
 <a href="https://amzn.to/46XnfTH" target="_blank" rel="sponsored noopener">Shop Underground Bait Applicator on Amazon →</a>

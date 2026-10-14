@@ -53,4 +53,5 @@ Rent a mechanical trencher for anything over 50 feet. Hand-digging a 200-foot pe
 Call 811 before any digging. Underground utility lines, irrigation mains, and electrical conduits all run in the same zones gophers love. One call is free; hitting a gas line is not.
 
 ## Get the Gear
+Fence material is the same hardware cloth I cover in [the mesh section of my gopher gear guide](/traps/).
 <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">Shop Gopher Mesh & Hardware Cloth on Amazon →</a>

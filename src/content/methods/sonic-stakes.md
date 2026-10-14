@@ -54,4 +54,5 @@ Think of sonic stakes like a fence, not a trap. They redirect gophers, they don'
 Completely pet and kid safe. No chemicals, no trigger mechanisms. The only risk is driving the stake into an irrigation line — probe the soil first if you're near [drip lines](/problems/irrigation-damage/).
 
 ## Get the Gear
+If you're shopping at the cheap end, it's worth knowing what I've already ruled out — gum, coffee grounds, cayenne and soap are covered in [the home remedies that don't work](/what-doesnt-work/). For the trapping side of the plan, see [the gopher traps I actually recommend](/best-gopher-traps/).
 <a href="https://amzn.to/4sF1zUD" target="_blank" rel="sponsored noopener">Shop Solar Sonic Repeller Stakes on Amazon →</a>
