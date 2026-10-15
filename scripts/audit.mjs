@@ -26,7 +26,7 @@ const verbose = args.includes('--verbose');
 const only = args.filter((a) => !a.startsWith('--'));
 
 // run in a stable order, not whatever readdir returns
-const ORDER = ['titles', 'dates', 'schema', 'breadcrumbs', 'disclosure', 'sponsored', 'products', 'claims', 'firsthand', 'figures', 'referral', 'links', 'inbound'];
+const ORDER = ['titles', 'dates', 'schema', 'breadcrumbs', 'disclosure', 'sponsored', 'products', 'claims', 'firsthand', 'figures', 'referral', 'mobile', 'links', 'inbound'];
 
 const available = fs
   .readdirSync(path.join(HERE, 'audit'))

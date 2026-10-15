@@ -24,7 +24,7 @@ Run:
 npm run audit
 ```
 
-It must pass. The command builds the site and then runs every check in `scripts/audit/` against `dist/`, printing a PASS/FAIL line each and exiting non-zero if anything fails. Thirteen checks run today:
+It must pass. The command builds the site and then runs every check in `scripts/audit/` against `dist/`, printing a PASS/FAIL line each and exiting non-zero if anything fails. Fourteen checks run today:
 
 | check | what it asserts |
 | --- | --- |
@@ -37,6 +37,7 @@ It must pass. The command builds the site and then runs every check in `scripts/
 | `products` | the best-of `positiveNotes` / `negativeNotes` match the visible Pros/Cons verbatim and in order |
 | `claims` | no anticoagulant bait is recommended, and no absolute safety claim ("completely safe", "zero risk") appears anywhere in `src/` |
 | `firsthand` | every `firsthand: false` page renders the UntestedNote, untested gear is linked only on its own method page, and every best-of product is in `FIRSTHAND_PRODUCTS` |
+| `mobile` | no fixed width over 360px without `max-width`, every table has a scroll wrapper, every iframe is fluid |
 | `referral` | no service wording or business schema on any page; `/find-a-trapper/` is noindex, out of the sitemap, and carries its disclaimers |
 | `figures` | gopher tunnel depth reads 6–12 inches everywhere (all dash types), and no unevidenced method advertises a numeric time-to-results |
 | `links` | every internal href resolves to a real built page, with the trailing slash, and every `#fragment` matches a real id |
@@ -138,6 +139,40 @@ Both carry a "Hire an Exterminator or Do It Yourself?" section straight after th
 `NextSteps.astro` is the shared next-step block on both pages (`/quick-start/` then `/best-gopher-traps/`), so the two cannot drift. Note this makes `/cost/` and `/quick-start/` appear twice on `/southern-california-gopher-control/` — once in the new copy and once in the pre-existing related-links card and prose. That is a deliberate exception to the one-link rule, kept because the instruction was to link them from the new sections and the existing mentions are Mark's own prose.
 
 Mark's personal Redlands story ("Where It Started", "The $5 Lesson") stays below the new sections, in his voice, untouched.
+## Mobile
+
+The site is read on phones more than desktops, and `body { max-width: 900px }` means the desktop layout is the same at 1280px and 1920px — so "it looks fine on my screen" proves nothing either way. Measure.
+
+**How to measure.** Playwright is not a project dependency (deliberately — it would bloat `npm install` for a static site). Run it through `npx` and point the import at the cached copy:
+
+```sh
+npx playwright install chromium          # once
+npm run preview                          # serve dist/ on :4321
+# then a script importing from the npx cache, e.g.
+#   import { chromium } from 'file:///…/npm-cache/_npx/<hash>/node_modules/playwright/index.mjs';
+```
+
+Sweep 360, 390 and 412px (412 is the ROG Phone 8 Pro, the device this was reported on) and check `documentElement.scrollWidth > clientWidth` per page, plus computed `font-size` on prose and `getBoundingClientRect().height` on links and buttons.
+
+**The rules the CSS now enforces, in the `@media (max-width: 640px)` block in `Layout.astro`:**
+
+- **Body copy is 16px.** The desktop sizes (0.82–0.95rem) land at 13–15px on a phone. The rules carry `!important` because Astro compiles page-scoped CSS to `.ps-desc[data-astro-cid-xxx]` — specificity (0,2,0) — which outranks any global selector. This is a readability floor, not a style preference. Labels, badges, datelines and `figcaption` are UI chrome and stay small on purpose.
+- **Tap targets are 44px.** Nav links were 32px, dropdown buttons 26px, footer links 17px. Inline links inside a sentence are exempt, which is also what WCAG 2.5.8 says — do not try to make them 44px tall.
+- **`.btn` is `border-box`.** It used to be `content-box`, so `.btn-quiz { width: 100% }` plus 48px of padding rendered 428px wide in a 412px viewport. That was the only horizontal overflow on the site.
+
+**Measuring the form iframe on `/find-a-trapper/`.** Google Forms is cross-origin, so it cannot report its height to the page and there is no auto-resize. The form also gets *taller* as the viewport narrows, because questions wrap. Measure it by forcing the iframe short so the content overflows, then reading the real height from inside the frame:
+
+```js
+await page.evaluate(() => { document.querySelector('iframe').style.height = '600px'; });
+const f = page.frames().find((x) => x.url().includes('docs.google.com'));
+await f.evaluate(() => Math.max(document.documentElement.scrollHeight, document.body.scrollHeight));
+```
+
+Measured content height: **1824px** at 900px+, 1834 at 768, 1878 at 640, 2021 at 480, 2104 at 412, 2163 at 390, 2318 at 360, 2495 at 320. The stepped heights in `find-a-trapper.astro` come from those numbers plus a small buffer. The original 1600/1900 guesses **clipped the Submit button at every width** — if you add or remove a question on the form, re-measure and re-step, because nothing else will catch it.
+
+`scripts/audit/mobile.mjs` is a static backstop only: fixed widths over 360px with no `max-width`, tables with no scroll wrapper, non-fluid iframes, and `content-box` at `width:100%` with padding. It cannot see rendered overflow — that still needs the Playwright sweep.
+
+Known and accepted: the nav wraps to two rows between 641 and 768px, where the desktop nav is still active but the container has shrunk. Below 641px the mobile rules take over. The Brevo newsletter input and button are third-party markup at 38/40px.
 ## Editorial facts that must not regress
 
 A factual review on 2026-10-14 found the rodenticide pages had been written from an outdated picture of California law, with a citation that contradicted its own source. These are the corrections. `npm run audit` enforces the first two (`scripts/audit/claims.mjs`); the rest are on you.

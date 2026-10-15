@@ -54,7 +54,7 @@ const crumbSchema = breadcrumbSchema(crumbLabel, route);
           title="Request to be matched with a licensed gopher trapper in Redlands or the Inland Empire"
           loading="lazy"
           width="100%"
-          height="1600"
+          height="1900"
           frameborder="0"
           marginheight="0"
           marginwidth="0">Loading…</iframe>
@@ -145,16 +145,21 @@ const crumbSchema = breadcrumbSchema(crumbLabel, route);
     border: 0;
   }
 
-  /* The embed is a fixed-height iframe rather than a ratio box: a Google Form is
-     a tall column whose height does not scale with width, and an aspect-ratio
-     wrapper would crop it on desktop. 1600px clears all seven questions plus the
-     submit row, so the form never gets its own scrollbar. */
+  /* The embed is a fixed-height iframe rather than a ratio box: a Google Form
+     is a tall column, and an aspect-ratio wrapper would crop it.
+     Google Forms is cross-origin so it cannot report its own height, and the
+     form gets TALLER as the viewport narrows (questions wrap). These numbers are
+     measured, not guessed — see "Measuring the form iframe" in CLAUDE.md.
+     Content height by viewport: 1824px at 900px+, 1834 at 768, 1878 at 640,
+     2021 at 480, 2104 at 412, 2163 at 390, 2318 at 360, 2495 at 320. The earlier
+     1600/1900 values clipped the Submit button at every width. */
   .form-frame {
     width: 100%;
     margin: 0.5rem 0 0.75rem;
   }
 
   .form-frame iframe {
+    height: 1900px;
     display: block;
     width: 100%;
     max-width: 100%;
@@ -169,11 +174,10 @@ const crumbSchema = breadcrumbSchema(crumbLabel, route);
     margin: 0;
   }
 
-  @media (max-width: 640px) {
-    /* Narrow viewports reflow the questions taller, so give the frame more room
-       and let the page scroll rather than the iframe. */
-    .form-frame iframe {
-      height: 1900px;
-    }
-  }
+  /* Stepped so no width carries a large empty gap below the Submit button. */
+  @media (max-width: 640px) { .form-frame iframe { height: 2000px; } }
+  @media (max-width: 500px) { .form-frame iframe { height: 2200px; } }
+  @media (max-width: 400px) { .form-frame iframe { height: 2250px; } }
+  @media (max-width: 370px) { .form-frame iframe { height: 2400px; } }
+  @media (max-width: 340px) { .form-frame iframe { height: 2550px; } }
 </style>
