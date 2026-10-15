@@ -151,6 +151,23 @@ const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
       .nav-dropdown-menu li a:hover { background: #f0fdf4; color: #047857; border-bottom: none; }
       .nav-dropdown:hover .nav-dropdown-menu,
       .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+
+      /* The nav lives inside body{max-width:900px}, so it has the same ~836px to
+         work with at 1280px and at 1920px — widening the viewport never helped.
+         At the old 0.825rem/0.6rem the row measured ~919px and "About Mark"
+         dropped to a second line. Tightened below it comes in around 790px.
+         Scoped to the desktop side of the 640px breakpoint so the stacked mobile
+         menu is untouched, and flex-wrap stays `wrap` as a fallback rather than
+         risking horizontal overflow. */
+      @media (min-width: 641px) {
+        nav[aria-label="Main navigation"] { gap: 0.1rem; }
+        nav[aria-label="Main navigation"] > a:not(.nav-brand),
+        .nav-dropdown-btn {
+          font-size: 0.76rem;
+          padding: 0.3rem 0.34rem;
+          white-space: nowrap;
+        }
+      }
       .legal-link { color: #047857; text-decoration: none; }
       .legal-link:hover { text-decoration: underline; }
       .breadcrumb { font-size: 0.82rem; color: #6b7280; margin-bottom: 1.25rem; display: block; }

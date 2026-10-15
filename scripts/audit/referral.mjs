@@ -85,13 +85,57 @@ export default {
       const text = decode(page.html.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ');
       for (const [label, re] of [
         ['not a pest control company', /not a pest control company/i],
-        ['referral fee disclosure', /referral fee/i],
+        // The wording is "I may be paid for referrals" rather than "a referral
+        // fee if you hire them": compensation is not tied to the visitor
+        // actually hiring, and that distinction matters for the CCPA "sale"
+        // disclosure on /privacy/#referrals.
+        ['compensation disclosure', /may be paid for referrals|may be paid by the licensed company/i],
         ['third party will contact you', /contact you directly/i],
         ['fallback link to the form', /Open it here/i],
       ]) {
         if (!re.test(text)) problems.push(`${REFERRAL_PAGE}: missing ${label}`);
         rows.push([REFERRAL_PAGE, label, re.test(text) ? 'present' : 'MISSING']);
       }
+    }
+
+    // ── /privacy/ must not over-promise about the referral data ───────────
+    const privacy = all.find((p) => p.route === '/privacy/');
+    if (!privacy) problems.push('/privacy/ is not built');
+    else {
+      const t = decode(privacy.html.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ');
+      // Claims that would be false now that referrals may be compensated.
+      for (const re of [/do not sell these details/i, /I do not sell your data/i, /Neither is sold/i]) {
+        const m = t.match(re);
+        if (m) problems.push(`/privacy/: stale claim "${m[0]}" — referral details may count as a "sale" under CCPA`);
+      }
+      // And the disclosures that must be there instead.
+      for (const [label, re] of [
+        ['CCPA "sale" disclosure', /may count as a "sale" of personal information under California law/i],
+        ['compensation disclosure', /may be paid by the licensed company for referrals/i],
+        ['newsletter never sold', /Newsletter emails are never sold or shared/i],
+        ['deletion route', /hello@howtokillgophers\.com/i],
+      ]) {
+        if (!re.test(t)) problems.push(`/privacy/: missing ${label}`);
+        rows.push(['/privacy/', label, re.test(t) ? 'present' : 'MISSING']);
+      }
+      if (!/id="do-not-sell"/.test(privacy.html)) problems.push('/privacy/: the #do-not-sell section anchor is gone');
+    }
+
+    // ── the custom 404 ────────────────────────────────────────────────────
+    // dist/404.html is not an index.html, so pages() does not see it.
+    const p404 = path.join(DIST, '404.html');
+    if (!fs.existsSync(p404)) {
+      problems.push('dist/404.html is missing — GitHub Pages needs it to serve the custom 404');
+    } else {
+      const h = fs.readFileSync(p404, 'utf8');
+      const robots = (h.match(/<meta name="robots" content="([^"]*)"/) || [, ''])[1];
+      if (!/noindex/i.test(robots)) problems.push(`404.html: robots is "${robots}" — must be noindex`);
+      for (const href of ['/quick-start/', '/best-gopher-traps/', '/methods/', '"/"']) {
+        const needle = href === '"/"' ? 'href="/"' : `href="${href}"`;
+        if (!h.includes(needle)) problems.push(`404.html: no link to ${href}`);
+      }
+      rows.push(['404.html', 'robots', robots || '(none)']);
+      rows.push(['404.html', 'links', 'quick-start, best-gopher-traps, methods, home']);
     }
 
     // ── sitemap exclusion ──────────────────────────────────────────────────
