@@ -109,7 +109,7 @@ export const bestOfProducts: Record<string, ReviewedProduct[]> = {
       cons: [
         "More expensive per trap than the Victor Easy Set or Black Box",
         "Slightly bulkier body — harder to fit in narrow tunnel geometries",
-        "Alignment is still critical — off by 15 degrees and the gopher pushes it aside",
+        "Alignment is still critical — off-angle and the gopher pushes it aside",
       ],
     },
   ],

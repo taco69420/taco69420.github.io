@@ -31,6 +31,27 @@ const ABSOLUTES = [
   /eliminates all\b/i,
 ];
 
+/**
+ * Overclaims found in a 2026-10-15 credibility sweep: invented-precision
+ * numbers (an exact %, angle, or hour-ratio presented as fact with no
+ * source) and hype/absolutes that overstate evidence. See CLAUDE.md
+ * "Editorial facts that must not regress". These are the literal patterns
+ * that regressed, not a blanket ban on the underlying words — e.g. "best"
+ * and "permanent" have many legitimate uses on this site and are not here.
+ */
+const OVERCLAIMS = [
+  [/\d+%\s+of the result/i, 'invented-precision percentage with no source'],
+  [/off by \d+\s*degrees/i, 'invented-precision angle with no source'],
+  [/\bthe number one reason\b/i, 'unsourced ranking claim — use "a common reason"'],
+  [/\bdramatically reduc/i, 'unsourced magnitude claim — state the effect without a hype adverb'],
+  [/\b(two|three|four|\d+)\s+hours? of .{0,40}(is|dramatically) worth\b/i, 'invented labor-time ratio with no source'],
+  [/\bis worth (ten|\d+)\s+hours?\b/i, 'invented labor-time ratio with no source'],
+  [/together you'?re unbeatable\b/i, 'absolute/hype claim with no evidence'],
+  [/\bfast and effective\b/i, 'unsourced results claim'],
+  [/zinc phosphide acts? (in|within)\s*\d/i, 'invented timing — UC IPM only confirms "lethal after a single feeding," no hour window'],
+  [/\bcan discourage scouts\b/i, 'unsupported efficacy claim for a method UC IPM found not effective'],
+];
+
 // wording that turns a mention of an anticoagulant into a recommendation
 const RECOMMENDS = [
   /\bmy (?:preference|pick|choice|go-to)\b/i,
@@ -105,6 +126,11 @@ export default {
         for (const re of ABSOLUTES) {
           const m = line.match(re);
           if (m) problems.push(`${where}: absolute safety claim "${m[0]}" — use "no rodenticide involved" instead`);
+        }
+
+        for (const [re, reason] of OVERCLAIMS) {
+          const m = line.match(re);
+          if (m) problems.push(`${where}: overclaim "${m[0]}" — ${reason}`);
         }
 
         if (!ANTICOAG.test(line)) return;
