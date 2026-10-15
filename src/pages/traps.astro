@@ -8,7 +8,7 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "What is the best gopher trap?", "acceptedAnswer": { "@type": "Answer", "text": "Victor-style high-tension wire traps (Macabee pattern) are the most reliable for main tunnel intercept work. They're inexpensive, durable, and catch consistently when placed correctly in the main run." } },
+    { "@type": "Question", "name": "What is the best gopher trap?", "acceptedAnswer": { "@type": "Answer", "text": "Victor-style high-tension wire traps (Macabee pattern) are the most reliable for main tunnel intercept work. They're inexpensive, durable, and work well when placed correctly in the main run." } },
     { "@type": "Question", "name": "Do I need bait on a gopher trap?", "acceptedAnswer": { "@type": "Answer", "text": "Bait isn't required — UC Davis studies found no benefit from adding bait to traps; placement and technique are what matter. I still dab a bit of peanut butter behind the trigger plate out of habit, but that's personal preference, not a catch-rate claim." } },
     { "@type": "Question", "name": "When should I use gopher gassers instead of traps?", "acceptedAnswer": { "@type": "Answer", "text": "Gassers work best when you can't locate the active run in a deep, branching tunnel network. Seal every exit hole before lighting one, or you'll just fumigate your lawn for no effect." } },
     { "@type": "Question", "name": "Do I need a special probe, or can I use rebar?", "acceptedAnswer": { "@type": "Answer", "text": "Rebar from any hardware store does the exact same job as a purpose-built probe. A purpose-built probe just has better ergonomics and handle grip for longer sessions, but the technique is identical." } },
@@ -30,7 +30,7 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/traps/");
 
   <header class="locker-hero">
     <h1>The Armory</h1>
-    <p class="locker-sub">Every category here is something I've worked with in the field. I've listed the specific products I'd buy first based on that experience — if a whole category didn't earn results in my work, it's not on this page.</p>
+    <p class="locker-sub">Every category here is something I've worked with in the field. I've listed the specific products I'd buy first based on that experience. Where the research says a method is unproven — like sonic stakes — I say so and link what UC IPM actually found, rather than claim it earned results on its own.</p>
 <p class="locker-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
@@ -42,13 +42,13 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/traps/");
         alt="Mark's full gopher control kit laid out in a car trunk — Victor traps, Amdro gopher gassers, probe, twine, and cardboard"
         width="4096"
         height="2304"
-        style="width: 100%; border-radius: 8px; display: block;"
+        style="width: 100%; height: auto; border-radius: 8px; display: block;"
       />
-      <figcaption style="font-size: 0.85rem; color: #6b7280; margin-top: 0.6rem; line-height: 1.5;">The full kit. Everything on this page has earned its spot in that trunk.</figcaption>
+      <figcaption style="font-size: 0.85rem; color: #6b7280; margin-top: 0.6rem; line-height: 1.5;">The full kit I bring on a job.</figcaption>
     </figure>
 
     <section class="card" style="border-left: 4px solid #10b981;">
-      <p style="margin: 0; color: #374151; font-size: 0.95rem;">These aren't generic roundups. I started trapping gophers at 15 for $5 a head, and the categories on this page are what I've worked with in the field. Where I list a specific product, it's what I'd buy first based on my experience with that type of gear — not a paid placement, not a spec-sheet recommendation. <a href="/about/">More on my background and how these picks get made</a>.</p>
+      <p style="margin: 0; color: #374151; font-size: 0.95rem;">These aren't generic roundups. I started trapping gophers at 15 for $5 a head, and the categories on this page are what I've worked with in the field. Where I list a specific product, it's what I'd buy first based on my experience with that type of gear, not a spec-sheet recommendation. I earn a commission on purchases; brands don't pay for placement. <a href="/about/">More on my background and how these picks get made</a>.</p>
     </section>
 
     <nav class="card" aria-label="Table of contents" style="border-left: 4px solid #059669; padding: 1rem 1.5rem;">
@@ -87,7 +87,7 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/traps/");
         <div class="product-card">
           <div class="product-badge badge-best">Best Overall</div>
           <h4 class="product-name">Victor Easy Set Gopher Trap</h4>
-          <p class="product-desc">The classic Macabee-pattern high-tension wire trap and still the most reliable tool in the kit. Sets fast, fires clean, and holds up to years of daily use. Every serious trapper has a dozen of these.</p>
+          <p class="product-desc">The classic Macabee-pattern high-tension wire trap and still the most reliable tool in the kit. Sets fast, fires clean, and holds up to years of daily use.</p>
           <p class="product-best-for"><strong>Best for:</strong> Main tunnel intercept on active runs — the go-to for any <a href="/problems/mound-id/">fresh mound</a> situation.</p>
           <a href="https://amzn.to/4cIJ64V" class="btn" target="_blank" rel="sponsored noopener">Shop on Amazon →</a>
         </div>
@@ -194,7 +194,7 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/traps/");
     ============================================================= -->
     <section class="card armory-category">
       <h2 id="probes">Probe Tools</h2>
-      <p class="category-intro">Before you set a single trap, you need to find the main tunnel run — and for that, you need a probe. I've been using the same piece of rebar I found on the ground when I was 15. Still use it today. You push it into the soil a few inches out from the mound, work in a semicircle, and when it drops, you've found the tunnel. That's it.</p>
+      <p class="category-intro">Before you set a single trap, you need to find the main tunnel run — and for that, you need a probe. I've been using the same piece of rebar I found on the ground when I was 15. Still use it today. You push it into the soil about 4 to 12 inches from the plug side of the mound, work in a semicircle, and when it drops, you've found the tunnel. That's it.</p>
       <p class="category-intro">A plain piece of rebar from any hardware store does exactly the same job. You don't need to buy anything special. But if you want something with a real handle and a better grip — something that doesn't tear up your palm after a long day of probing — there are purpose-built gopher probes made for this exact task. I won't pretend the ergonomics aren't nicer.</p>
 
       <div class="field-notes">
@@ -252,7 +252,7 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/traps/");
     ============================================================= -->
     <section class="card armory-category">
       <h2 id="mesh">Gopher Mesh & Hardware Cloth</h2>
-      <p class="category-intro">The spec matters here — go with 1/2-inch galvanized. Smaller mesh restricts root growth and starves your plants; larger mesh lets juveniles squeeze through and defeats the whole purpose. This is the permanent fix for raised beds and planting areas. I've lined dozens of beds with this stuff, and when it's installed right, it's a one-time job. The key installation detail: overlap your seams like roof shingles — water and gophers both find the same gaps.</p>
+      <p class="category-intro">The spec matters here — go with 1/2-inch galvanized. Smaller mesh restricts root growth and starves your plants; larger mesh lets juveniles squeeze through and defeats the whole purpose. This is a long-lasting barrier for raised beds and planting areas. I've lined dozens of beds with this stuff, and when it's installed right, it's a one-time job. The key installation detail: overlap your seams like roof shingles — water and gophers both find the same gaps.</p>
       <p class="category-intro">For a full walkthrough on installation technique, see the <a href="/methods/gopher-mesh/">Gopher Mesh & Hardware Cloth guide</a>.</p>
       <a href="https://amzn.to/4b9UG87" class="btn" target="_blank" rel="sponsored noopener">Shop Gopher Mesh on Amazon →</a>
       <p class="category-guide-link">Full installation guide: <a href="/methods/gopher-mesh/">Gopher Mesh & Hardware Cloth →</a></p>
@@ -263,7 +263,7 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/traps/");
     ============================================================= -->
     <section class="card armory-category">
       <h2 id="bait-stations">Underground Bait Stations</h2>
-      <p class="category-intro">This is a last resort, not a first move. Diphacinone used to be the common choice here and it's now prohibited for residential use in California, which leaves zinc phosphide where the label lists pocket gophers. On carcass risk zinc phosphide is the lower risk of the two — it isn't stored in the animal's tissue, while anticoagulants persist in the liver. Don't read that as pet-safe. Zinc phosphide is acutely toxic, and a dog that eats the bait — or a freshly killed gopher with bait still in its stomach — can be poisoned. It is the remaining legal option for a California homeowner, not a safe one. I still won't use bait at all on any property where dogs are working. Full stop. If there's a dog covering that ground, we trap only.</p>
+      <p class="category-intro">This is a last resort, not a first move. Diphacinone used to be the common choice here and it's now prohibited for residential use in California, which leaves zinc phosphide where the label lists pocket gophers. On carcass risk zinc phosphide is the lower risk of the two — it isn't stored in the animal's tissue, while anticoagulants persist in the liver. Don't read that as pet-safe. Zinc phosphide is acutely toxic, and a dog that eats the bait — or a freshly killed gopher with bait still in its stomach — can be poisoned. It is the remaining legal option for a California homeowner, not a safe one. I still won't use bait at all on any property where dogs are working. If there's a dog covering that ground, we trap only.</p>
       <p class="category-intro" style="background: #fff7ed; border-left: 4px solid #f97316; padding: 0.65rem 0.9rem; border-radius: 4px; color: #92400e;"><strong>Pet safety:</strong> Never place bait stations where dogs, cats, or other animals can access them. Even tamper-resistant stations can be dug up or knocked loose. Keep pets away from treated areas until you've confirmed all stations are secure and accounted for.</p>
       <p class="category-intro">For full bait station protocol, see the <a href="/methods/poison-bait-stations/">Underground Bait Stations guide</a>.</p>
       <a href="https://amzn.to/46XnfTH" class="btn" target="_blank" rel="sponsored noopener">Shop Bait Applicator on Amazon →</a>
@@ -318,7 +318,7 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/traps/");
       <div class="faq-list">
         <details class="faq-item">
           <summary>What is the best gopher trap?</summary>
-          <p>Victor-style high-tension wire traps (Macabee pattern) are the most reliable for main tunnel intercept work. They're inexpensive, durable, and catch consistently when placed correctly in the main run.</p>
+          <p>Victor-style high-tension wire traps (Macabee pattern) are the most reliable for main tunnel intercept work. They're inexpensive, durable, and work well when placed correctly in the main run.</p>
         </details>
         <details class="faq-item">
           <summary>Do I need bait on a gopher trap?</summary>
