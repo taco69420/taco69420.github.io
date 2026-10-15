@@ -30,14 +30,6 @@ Short answer: the research doesn't back it. UC IPM says castor bean and the othe
 - Yard markers
 - Gloves
 
-<div class="method-product-box">
-  <p class="mpb-label">Recommended Gear</p>
-  <h3 class="mpb-name">Castor Oil Gopher Repellent Concentrate</h3>
-  <p class="mpb-desc">Castor-oil-based repellent applied with a hose-end sprayer and watered in deeply. Note that UC IPM has not found repellents effective at protecting plantings from gophers — buy this knowing that.</p>
-  <p class="mpb-best-for"><strong>Best for:</strong> People who want to try a non-lethal option on turf they care about, with trapping doing the actual work at the boundary.</p>
-  <a href="https://amzn.to/3P7QFIM" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Castor Oil Repellent on Amazon (not personally tested) →</a>
-</div>
-
 ## The Process
 1. Mow and lightly water the target zone so solution can penetrate evenly.
 2. Mix and apply repellent according to label rate across active and buffer areas.
@@ -58,4 +50,5 @@ Follow label directions exactly; over-application can stress desirable plants an
 
 ## Get the Gear
 Before you try anything cheaper than this, I've already put the folk fixes through it — [gum, coffee grounds, cayenne and Irish Spring soap](/what-doesnt-work/) — and none of them worked.
-<a href="https://amzn.to/3P7QFIM" target="_blank" rel="sponsored noopener">Shop Castor Oil Gopher Repellent on Amazon (not personally tested) →</a>
+
+This page isn't linking a specific bottle. Most "castor oil" products sold on Amazon are cosmetic-grade oil with no pesticide label or application rate — not something meant to go on your lawn. If you want to try a repellent anyway, buy a product actually labeled for gophers or moles and follow that label exactly.

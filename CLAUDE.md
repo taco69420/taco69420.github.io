@@ -109,7 +109,16 @@ The note sets its own colour rather than inheriting the dateline's, because **th
 
 **The nav wraps on purpose below 880px.** It needs about 794px of items. The container gives 836px at 900px+ but only 577px at 641px, so one row is impossible in that band — a font small enough to fit would be unreadable. The touch treatment (44px targets) therefore starts at 879px instead of 640px, so it wraps deliberately rather than raggedly. One row is preserved from 880px up.
 
-**Affiliate links.** Amazon links are `amzn.to` shortlinks with `target="_blank" rel="sponsored noopener"` (74 of them). Product names must match what the link actually sells — a past audit removed a fictional product name that didn't match its destination. The footer disclosure in `Layout.astro` is required on every page, which it is by virtue of the shared layout. Two disclosures run in parallel and neither replaces the other: the footer line in `Layout.astro` (`As an Amazon Associate I earn from qualifying purchases`, required by Amazon on every page) and `AffiliateDisclosure.astro`, which `Layout.astro` injects just under the page header on any page whose own content contains an Amazon link. That detection runs on the rendered default slot, not the finished document — scanning the whole document would match `CookieBanner`'s `a[href*="amzn.to"]` tracking selector and stamp a disclosure onto every page.
+**Affiliate links.** Amazon links are `amzn.to` shortlinks with `target="_blank" rel="sponsored noopener"`. Product names must match what the link actually sells — a past audit removed a fictional product name that didn't match its destination. The footer disclosure in `Layout.astro` is required on every page, which it is by virtue of the shared layout.
+
+**Every `amzn.to` id is registered in `src/data/amazonLinks.ts`**, paired with the product it was manually verified to point at. `scripts/audit/amazonLinks.mjs` fails the build on any `amzn.to` link in the built site whose id isn't a key there — a new product box has to be registered (and verified) before it ships, which is what should have caught the two below sooner.
+
+**Bad Amazon links.** A manual verification pass on 2026-10-15 found two registered links whose actual destination contradicted the page they were on:
+
+- `/methods/carbon-monoxide/` linked "Manning Products Underground Exterminator — Reusable Exhaust Pipe Attachment ... with Exhaust from Cars" under id `47l872T` — a car-exhaust attachment, on a page whose own copy says "don't improvise with automotive exhaust setups." Removed the product box and all three links; the page now refers to purpose-built CO injection equipment generically, with no affiliate link, and keeps the warning.
+- `/methods/castor-oil/` linked "US+ Castor Oil Cold Pressed, 100% Pure, USP Grade" under id `3P7QFIM` — a cosmetic-grade oil with no pesticide label or application rate. Removed the product box and both links; the page now tells a reader who wants to try a repellent to buy a product actually labeled for gophers or moles and follow that label, without linking one.
+
+Neither id is in `amazonLinks.ts` or `scripts/audit/firsthand.mjs`'s `UNTESTED_GEAR` anymore. Do not re-add `47l872T` or `3P7QFIM` without re-verifying the destination first, and do not add a replacement link for either page without the same manual verification — check what the short link actually resolves to, not just the anchor text someone wrote.
 
 **Analytics.** `src/components/CookieBanner.astro` holds the GA ID (`G-WGL40V0V8V`) and all analytics logic: GA loads by default, a prior opt-out stored as `localStorage['gdpr-consent'] === 'declined'` blocks it, and a delegated click listener fires an `affiliate_click` event for `amzn.to` / `amazon.com` links. It exposes `window.CookieConsent.showPreferences()`, which `privacy.astro` calls.
 
@@ -132,12 +141,12 @@ Routes with no recorded date — `/privacy/` and `/quiz/` — render no dateline
 
 `/redlands/` and `/southern-california-gopher-control/` are the highest-impression pages in Search Console and they rank for commercial-intent queries — "gopher control redlands", "gopher exterminator redlands", "gopher control southern california". The people landing there are usually looking to hire somebody.
 
-**Referral wording is allowed. Service wording is not.** `/find-a-trapper/` is a lead-referral page: a visitor fills in one Google Form and the lead goes to a DPR-licensed pest control company, which may pay a referral fee. So the site may say it will **"get you matched with"** or **"connect you with a licensed local trapper"**, and may describe where the **partner trappers** work. It may never read as though Mark or "we" do the work.
-
-Forbidden anywhere, and failed by `scripts/audit/referral.mjs`: "free estimate", "get a quote from me", "we come out", "our technicians", "service area", "licensed and insured", plus `LocalBusiness`, `HomeAndConstructionBusiness`, `ProfessionalService`, `Service`, `Offer`, `AggregateOffer` and `PestControlService` schema, and the `areaServed` / `serviceArea` / `priceRange` / `openingHours` / `telephone` properties. The referral page itself must carry "I'm not a pest control company", the referral-fee disclosure, the line that the licensed business contacts you directly, and a working fallback link to the form.
-
-`/find-a-trapper/` is **`noindex, follow`** (via `Layout`'s `noindex` prop) and is filtered out of the sitemap in `astro.config.mjs`. It is a thin lead-capture page aimed at commercial-intent queries, so it should not compete in search with the guides. The `dates` check exempts it from the "must be in the sitemap" rule; nothing else is exempt.
-
+**Referral wording is allowed. Service wording is not.** `/find-a-trapper/` is a lead-referral page: a visitor fills in one Google Form and the lead goes to a DPR-licensed pest control company, which may pay a referral fee. So the site may say it will **"get you matched with"** or **"connect you with a licensed local trapper"**, and may describe where the **partner trappers** work. It may never read as though Mark or "we" do the work.
+
+Forbidden anywhere, and failed by `scripts/audit/referral.mjs`: "free estimate", "get a quote from me", "we come out", "our technicians", "service area", "licensed and insured", plus `LocalBusiness`, `HomeAndConstructionBusiness`, `ProfessionalService`, `Service`, `Offer`, `AggregateOffer` and `PestControlService` schema, and the `areaServed` / `serviceArea` / `priceRange` / `openingHours` / `telephone` properties. The referral page itself must carry "I'm not a pest control company", the referral-fee disclosure, the line that the licensed business contacts you directly, and a working fallback link to the form.
+
+`/find-a-trapper/` is **`noindex, follow`** (via `Layout`'s `noindex` prop) and is filtered out of the sitemap in `astro.config.mjs`. It is a thin lead-capture page aimed at commercial-intent queries, so it should not compete in search with the guides. The `dates` check exempts it from the "must be in the sitemap" rule; nothing else is exempt.
+
 **Mark does not offer paid trapping, and nothing on the site may imply he is for hire.** That rules out `LocalBusiness`, `ProfessionalService`, `Service` and `Offer` schema, `areaServed` / `serviceArea` / `priceRange` / `telephone` properties, and any "contact me", "get a quote", "free estimate" or service-area copy. Both pages instead say plainly that he does not do paid trapping and then send the reader to the DIY path.
 
 Both carry a "Hire an Exterminator or Do It Yourself?" section straight after the intro, which is honest about when hiring a pro is the right call. It may only use figures that already exist on `/cost/` — the ~$15 Victor 2-pack and the ~$150–500+ residential pro range. Do not invent prices there.
@@ -145,40 +154,40 @@ Both carry a "Hire an Exterminator or Do It Yourself?" section straight after th
 `NextSteps.astro` is the shared next-step block on both pages (`/quick-start/` then `/best-gopher-traps/`), so the two cannot drift. Note this makes `/cost/` and `/quick-start/` appear twice on `/southern-california-gopher-control/` — once in the new copy and once in the pre-existing related-links card and prose. That is a deliberate exception to the one-link rule, kept because the instruction was to link them from the new sections and the existing mentions are Mark's own prose.
 
 Mark's personal Redlands story ("Where It Started", "The $5 Lesson") stays below the new sections, in his voice, untouched.
-## Mobile
-
-The site is read on phones more than desktops, and `body { max-width: 900px }` means the desktop layout is the same at 1280px and 1920px — so "it looks fine on my screen" proves nothing either way. Measure.
-
-**How to measure.** Playwright is not a project dependency (deliberately — it would bloat `npm install` for a static site). Run it through `npx` and point the import at the cached copy:
-
-```sh
-npx playwright install chromium          # once
-npm run preview                          # serve dist/ on :4321
-# then a script importing from the npx cache, e.g.
-#   import { chromium } from 'file:///…/npm-cache/_npx/<hash>/node_modules/playwright/index.mjs';
-```
-
-Sweep 360, 390 and 412px (412 is the ROG Phone 8 Pro, the device this was reported on) and check `documentElement.scrollWidth > clientWidth` per page, plus computed `font-size` on prose and `getBoundingClientRect().height` on links and buttons.
-
-**The rules the CSS now enforces, in the `@media (max-width: 640px)` block in `Layout.astro`:**
-
-- **Body copy is 16px.** The desktop sizes (0.82–0.95rem) land at 13–15px on a phone. The rules carry `!important` because Astro compiles page-scoped CSS to `.ps-desc[data-astro-cid-xxx]` — specificity (0,2,0) — which outranks any global selector. This is a readability floor, not a style preference. Labels, badges, datelines and `figcaption` are UI chrome and stay small on purpose.
-- **Tap targets are 44px.** Nav links were 32px, dropdown buttons 26px, footer links 17px. Inline links inside a sentence are exempt, which is also what WCAG 2.5.8 says — do not try to make them 44px tall.
-- **`.btn` is `border-box`.** It used to be `content-box`, so `.btn-quiz { width: 100% }` plus 48px of padding rendered 428px wide in a 412px viewport. That was the only horizontal overflow on the site.
-
-**Measuring the form iframe on `/find-a-trapper/`.** Google Forms is cross-origin, so it cannot report its height to the page and there is no auto-resize. The form also gets *taller* as the viewport narrows, because questions wrap. Measure it by forcing the iframe short so the content overflows, then reading the real height from inside the frame:
-
-```js
-await page.evaluate(() => { document.querySelector('iframe').style.height = '600px'; });
-const f = page.frames().find((x) => x.url().includes('docs.google.com'));
-await f.evaluate(() => Math.max(document.documentElement.scrollHeight, document.body.scrollHeight));
-```
-
-Measured content height: **1824px** at 900px+, 1834 at 768, 1878 at 640, 2021 at 480, 2104 at 412, 2163 at 390, 2318 at 360, 2495 at 320. The stepped heights in `find-a-trapper.astro` come from those numbers plus a small buffer. The original 1600/1900 guesses **clipped the Submit button at every width** — if you add or remove a question on the form, re-measure and re-step, because nothing else will catch it.
-
-`scripts/audit/mobile.mjs` is a static backstop only: fixed widths over 360px with no `max-width`, tables with no scroll wrapper, non-fluid iframes, and `content-box` at `width:100%` with padding. It cannot see rendered overflow — that still needs the Playwright sweep.
-
-Known and accepted: the nav wraps to two rows between 641 and 768px, where the desktop nav is still active but the container has shrunk. Below 641px the mobile rules take over. The Brevo newsletter input and button are third-party markup at 38/40px.
+## Mobile
+
+The site is read on phones more than desktops, and `body { max-width: 900px }` means the desktop layout is the same at 1280px and 1920px — so "it looks fine on my screen" proves nothing either way. Measure.
+
+**How to measure.** Playwright is not a project dependency (deliberately — it would bloat `npm install` for a static site). Run it through `npx` and point the import at the cached copy:
+
+```sh
+npx playwright install chromium          # once
+npm run preview                          # serve dist/ on :4321
+# then a script importing from the npx cache, e.g.
+#   import { chromium } from 'file:///…/npm-cache/_npx/<hash>/node_modules/playwright/index.mjs';
+```
+
+Sweep 360, 390 and 412px (412 is the ROG Phone 8 Pro, the device this was reported on) and check `documentElement.scrollWidth > clientWidth` per page, plus computed `font-size` on prose and `getBoundingClientRect().height` on links and buttons.
+
+**The rules the CSS now enforces, in the `@media (max-width: 640px)` block in `Layout.astro`:**
+
+- **Body copy is 16px.** The desktop sizes (0.82–0.95rem) land at 13–15px on a phone. The rules carry `!important` because Astro compiles page-scoped CSS to `.ps-desc[data-astro-cid-xxx]` — specificity (0,2,0) — which outranks any global selector. This is a readability floor, not a style preference. Labels, badges, datelines and `figcaption` are UI chrome and stay small on purpose.
+- **Tap targets are 44px.** Nav links were 32px, dropdown buttons 26px, footer links 17px. Inline links inside a sentence are exempt, which is also what WCAG 2.5.8 says — do not try to make them 44px tall.
+- **`.btn` is `border-box`.** It used to be `content-box`, so `.btn-quiz { width: 100% }` plus 48px of padding rendered 428px wide in a 412px viewport. That was the only horizontal overflow on the site.
+
+**Measuring the form iframe on `/find-a-trapper/`.** Google Forms is cross-origin, so it cannot report its height to the page and there is no auto-resize. The form also gets *taller* as the viewport narrows, because questions wrap. Measure it by forcing the iframe short so the content overflows, then reading the real height from inside the frame:
+
+```js
+await page.evaluate(() => { document.querySelector('iframe').style.height = '600px'; });
+const f = page.frames().find((x) => x.url().includes('docs.google.com'));
+await f.evaluate(() => Math.max(document.documentElement.scrollHeight, document.body.scrollHeight));
+```
+
+Measured content height: **1824px** at 900px+, 1834 at 768, 1878 at 640, 2021 at 480, 2104 at 412, 2163 at 390, 2318 at 360, 2495 at 320. The stepped heights in `find-a-trapper.astro` come from those numbers plus a small buffer. The original 1600/1900 guesses **clipped the Submit button at every width** — if you add or remove a question on the form, re-measure and re-step, because nothing else will catch it.
+
+`scripts/audit/mobile.mjs` is a static backstop only: fixed widths over 360px with no `max-width`, tables with no scroll wrapper, non-fluid iframes, and `content-box` at `width:100%` with padding. It cannot see rendered overflow — that still needs the Playwright sweep.
+
+Known and accepted: the nav wraps to two rows between 641 and 768px, where the desktop nav is still active but the container has shrunk. Below 641px the mobile rules take over. The Brevo newsletter input and button are third-party markup at 38/40px.
 ## Editorial facts that must not regress
 
 A factual review on 2026-10-14 found the rodenticide pages had been written from an outdated picture of California law, with a citation that contradicted its own source. These are the corrections. `npm run audit` enforces the first two (`scripts/audit/claims.mjs`); the rest are on you.

@@ -30,18 +30,10 @@ Carbon monoxide treatment can be effective in dense tunnel networks when runs ar
 - PPE per device label
 - Warning flags
 
-<div class="method-product-box">
-  <p class="mpb-label">Recommended Gear</p>
-  <h3 class="mpb-name">CO Burrow Injection Device</h3>
-  <p class="mpb-desc">Approved carbon monoxide injection device built for treating sealed tunnel networks. Purpose-built for this application — don't improvise with automotive exhaust setups.</p>
-  <p class="mpb-best-for"><strong>Best for:</strong> Large, established tunnel networks with multiple interconnected runs where trapping alone hasn't kept pace.</p>
-  <a href="https://amzn.to/47l872T" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop CO Burrow Treatment Devices on Amazon (not personally tested) →</a>
-</div>
-
 ## The Process
 1. Confirm [local regulations](/southern-california-gopher-control/) and label legality before any treatment begins.
 2. [Identify active runs](/problems/mound-id/) and pre-seal secondary openings to prevent gas escape.
-3. Insert the <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">injection probe</a> into the main tunnel and start treatment per label timing.
+3. Insert the injection probe from an approved, purpose-built CO device into the main tunnel and start treatment per label timing — never an improvised automotive exhaust setup.
 4. Seal the injection point immediately after dosing and monitor nearby vent points.
 5. Return after 24-48 hours to check for new mounds and retreat only per label limits.
 
@@ -53,4 +45,5 @@ Carbon monoxide is lethal and odorless; never use in enclosed areas, near [struc
 
 ## Get the Gear
 Pressurized CO devices and burning gas cartridges are two different things, and this site keeps them apart. The cartridges are on [the gopher bait and fumigant page](/best-gopher-poison/), alongside UC IPM's verdict that cartridge fumigation "isn't effective because gophers can seal off their burrows rapidly."
-<a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">Shop CO Burrow Treatment Devices on Amazon (not personally tested) →</a>
+
+This page isn't linking a specific device. Every pressurized CO unit I could find sold on Amazon under this category is actually a reusable exhaust-pipe attachment meant to route a car's exhaust into the burrow — exactly the improvised setup the warning above tells you not to use. If you go this route, buy from a dealer selling equipment actually labeled and approved for burrow fumigation, and follow that label exactly.

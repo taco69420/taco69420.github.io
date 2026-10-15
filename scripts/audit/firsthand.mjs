@@ -17,10 +17,13 @@ import { ROOT, pages, table } from './lib.mjs';
  */
 
 // affiliate id -> the one method page allowed to carry it
+//
+// castor-oil and carbon-monoxide used to have entries here too, but both
+// affiliate links were removed after manual verification found the
+// destination didn't match the page — see "Bad Amazon links" in CLAUDE.md.
+// Neither page links a product anymore, so there's nothing to allowlist.
 const UNTESTED_GEAR = {
-  '3P7QFIM': { name: 'castor oil repellent', home: '/methods/castor-oil/' },
   '4sKmKFc': { name: 'barn owl nesting box', home: '/methods/barn-owl-box/' },
-  '47l872T': { name: 'pressurized CO burrow device', home: '/methods/carbon-monoxide/' },
 };
 
 export default {
