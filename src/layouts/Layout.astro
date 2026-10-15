@@ -132,7 +132,10 @@ const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
       h3 { color: #1f2937; font-size: 1.05rem; font-weight: 600; }
       .subtitle { color: #52525b; font-size: 1.05rem; margin-top: 0.25rem; }
       .card { background: white; padding: 1.75rem; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.04); margin-bottom: 1.5rem; border: 1px solid #e9eaec; }
-      .btn { display: inline-block; background: #059669; color: white !important; padding: 0.65rem 1.4rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.875rem; margin-top: 0.75rem; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; border-bottom: none !important; box-shadow: 0 1px 3px rgba(5,150,105,0.3); letter-spacing: 0.01em; }
+      /* content-box + width:100% + horizontal padding overflowed the viewport
+         by exactly the padding — .btn-quiz on the homepage was 428px wide at a
+         412px viewport. Every .btn sizes inside its box now. */
+      .btn { box-sizing: border-box; display: inline-block; background: #059669; color: white !important; padding: 0.65rem 1.4rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.875rem; margin-top: 0.75rem; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; border-bottom: none !important; box-shadow: 0 1px 3px rgba(5,150,105,0.3); letter-spacing: 0.01em; }
       .btn:hover { background: #047857; border-bottom: none !important; color: white !important; transform: translateY(-1px); box-shadow: 0 4px 10px rgba(5,150,105,0.3); }
       .disclaimer { border-top: 2px solid #e8e8eb; padding-top: 2rem; margin-top: 4rem; font-size: 0.85rem; color: #6b7280; text-align: center; }
       nav[aria-label="Main navigation"] { display: flex; align-items: center; gap: 0.2rem; margin-bottom: 2.5rem; flex-wrap: wrap; padding-bottom: 1.25rem; border-bottom: 2px solid #e8e8eb; row-gap: 0.4rem; }
@@ -196,6 +199,51 @@ const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
         body { padding: 1rem; }
         h1 { font-size: 1.75rem; }
         .nav-brand { margin-bottom: 0.25rem; }
+
+        /* Body copy at 16px. The desktop sizes (0.82–0.95rem) measured
+           13–15px on a phone, which is below the comfortable reading floor.
+           Scoped to prose: labels, badges, datelines and captions are UI
+           chrome and stay small on purpose. */
+        /* !important because Astro compiles page-scoped rules to
+           .ps-desc[data-astro-cid-xxx] (specificity 0,2,0), which outranks any
+           global selector here. This is a readability floor, not a style choice. */
+        p, li, dd, dt { font-size: 1rem !important; line-height: 1.65; }
+        .card p, .card li, main p, main li { font-size: 1rem !important; }
+        table td, table th { font-size: 1rem !important; }
+        .affiliate-disclosure, .form-fallback, .fourohfour-note,
+        .rn-body, .untested-body, .mpb-desc, .mpb-best-for,
+        .ps-desc, .ps-best-for, .product-desc, .category-intro,
+        .group-desc, .season-tagline, .product-best-for { font-size: 1rem !important; line-height: 1.6; }
+        .subtitle, .hero-sub { font-size: 1.05rem !important; }
+
+        /* Tap targets. 44px is the smallest comfortable touch area; the nav
+           links were 32px, the dropdown buttons 26px and the footer links 17px. */
+        nav[aria-label="Main navigation"] > a:not(.nav-brand),
+        .nav-dropdown-btn {
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+          font-size: 0.95rem;
+          padding: 0.5rem 0.7rem;
+        }
+        .nav-dropdown { display: inline-flex; }
+        .nav-dropdown-menu li a { min-height: 44px; display: flex; align-items: center; font-size: 0.95rem; }
+        .nav-brand { min-height: 44px; display: inline-flex; align-items: center; }
+        .btn, .mpb-btn, .table-btn {
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem;
+        }
+        /* /cost/ uses bare <details><summary> rather than .faq-item, and page-scoped
+           rules outrank these, so the floor is enforced for every summary. */
+        summary { min-height: 44px !important; padding: 0.9rem 0 !important; font-size: 1rem !important; display: flex; align-items: center; }
+        .legal-link { display: inline-block; padding: 0.6rem 0; min-height: 44px; line-height: 1.9; }
+        .skip-link { min-height: 44px; display: inline-flex; align-items: center; }
+        /* Breadcrumb and inline prose links keep their line height: WCAG 2.5.8
+           exempts targets inside a sentence. A little padding still helps. */
+        .breadcrumb a { display: inline-block; padding: 0.35rem 0; }
       }
     </style>
 
