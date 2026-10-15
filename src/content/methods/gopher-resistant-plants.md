@@ -41,9 +41,7 @@ No special gear required — just smart plant choices.
 - Salvia (most native varieties) — low palatability
 - Catmint (Nepeta) — repels gophers and looks good doing it
 - Euphorbia — toxic sap makes it a hard pass for gophers
-- Agapanthus — not their favorite, decent as a border plant
 - Breath of Heaven (Coleonema) — fragrant, avoided consistently
-- Gopher plant (Euphorbia lathyris) — specifically named for this, though it can spread aggressively
 
 **High-risk plants to protect or relocate away from active zones:**
 - Roses

@@ -82,6 +82,11 @@ const related = relatedLinks[entry.slug] ?? [];
 const alreadyLinked = ['/best-gopher-traps/', '/best-gopher-baits/', '/traps/'].filter(
   (url) => entry.body.includes(`](${url})`) || entry.body.includes(`href="${url}"`)
 );
+// pet-safety's whole thesis is to avoid bait around pets; the shared gear
+// block must not then turn around and promote it.
+if (entry.slug === 'pet-safety' && !alreadyLinked.includes('/best-gopher-baits/')) {
+  alreadyLinked.push('/best-gopher-baits/');
+}
 
 const siteURL = "https://howtokillgophers.com";
 const pageURL = `${siteURL}/problems/${entry.slug}/`;

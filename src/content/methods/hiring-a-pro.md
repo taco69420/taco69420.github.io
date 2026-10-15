@@ -34,7 +34,7 @@ Most gopher problems are one-animal jobs you can handle yourself with [a pair of
 <div class="method-product-box">
   <p class="mpb-label">Before You Make the Call</p>
   <h3 class="mpb-name">Victor Easy Set Gopher Trap</h3>
-  <p class="mpb-desc">Most single-gopher situations resolve with a pair of traps set correctly in the right run — see the [cost breakdown](/cost/) for what that actually runs. If you haven't tried trapping yet, start here before paying for a service call.</p>
+  <p class="mpb-desc">Most single-gopher situations resolve with a pair of traps set correctly in the right run — see the <a href="/cost/">cost breakdown</a> for what that actually runs. If you haven't tried trapping yet, start here before paying for a service call.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> 1–3 active mound clusters — the most common residential gopher situation, and the one DIY trapping handles best.</p>
   <a href="https://amzn.to/4cIJ64V" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
 </div>
