@@ -50,7 +50,7 @@ Cinch traps are my backup when [Victor sets](/methods/victor-traps/) aren't prod
 </figure>
 
 ## Bagger Pro-Tip
-Straight alignment is everything with cinch traps. I've pulled failed sets where the trap was off by 15 degrees and the gopher just pushed it aside. Treat it like parking in a narrow garage — any angle and you're done. Get it centered, get it level, then cover the light.
+Straight alignment is everything with cinch traps. I've pulled failed sets where the trap was off-angle and the gopher just pushed it aside. Treat it like parking in a narrow garage — any angle and you're done. Get it centered, get it level, then cover the light.
 
 ## Safety Warning
 Never set cinch traps with bare hands near your face; sudden release can cause serious hand or eye injury.

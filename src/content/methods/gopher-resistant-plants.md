@@ -20,7 +20,7 @@ sources:
 ---
 
 ## Quick Answer
-Gophers avoid plants with strong-smelling roots, toxic compounds, or fibrous root systems they can't easily chew. Swapping high-risk plants (roses, fruit trees, root vegetables) for resistant varieties in gopher-heavy zones won't eliminate the problem but it will dramatically reduce the damage and the replanting cycle.
+Gophers avoid plants with strong-smelling roots, toxic compounds, or fibrous root systems they can't easily chew. Swapping high-risk plants (roses, fruit trees, root vegetables) for resistant varieties in gopher-heavy zones won't eliminate the problem but it can reduce the damage and the replanting cycle.
 
 ## The Gear
 No special gear required — just smart plant choices.

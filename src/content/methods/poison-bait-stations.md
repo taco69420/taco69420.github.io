@@ -20,7 +20,7 @@ sources:
 ---
 
 ## Quick Answer
-Underground bait stations place zinc phosphide pellets directly in the tunnel where gophers feed. Anticoagulant baits like diphacinone used to be the other option, but they're prohibited for residential use in California now — see the legal note below. When done right, baiting is fast and effective. When done wrong, you poison a neighbor's dog or a hawk that eats the carcass. Read this whole page before you touch the bait.
+Underground bait stations place zinc phosphide pellets directly in the tunnel where gophers feed. Anticoagulant baits like diphacinone used to be the other option, but they're prohibited for residential use in California now — see the legal note below. When done right, it works — zinc phosphide is lethal after a single feeding, per UC IPM. When done wrong, you poison a neighbor's dog or a hawk that eats the carcass. Read this whole page before you touch the bait.
 
 ## The Gear
 - Registered underground gopher bait (zinc phosphide pellets — check the label lists pocket gophers)
@@ -43,7 +43,7 @@ Underground bait stations place zinc phosphide pellets directly in the tunnel wh
 2. Open a small access hole with your trowel — just wide enough to insert the applicator.
 3. Place the labeled dose of bait inside the tunnel, not at the entrance. Gophers are suspicious of openings.
 4. Plug the hole completely with soil or a clod. UC IPM's instruction is simply to cover the hole so light doesn't get in.
-5. Flag the location. Check after 3–5 days for new activity. Re-bait once if no take in 7 days, then switch methods.
+5. Flag the location. UC IPM's benchmark: if new mounds appear within 2 days of baiting, rebait or switch to trapping.
 
 ## Bagger Pro-Tip
 Diphacinone used to be a common choice for gopher bait. It's now prohibited for residential use in California, so for a homeowner here zinc phosphide is what's left. It's temperamental: I've had it fail in damp soil, and you have to respect the off-gassing. Work slowly, follow the label, and accept that it's a worse day than setting a trap. I also won't use bait at all on a property where [dogs are working](/problems/pet-safety/) — the risk from a bait-killed gopher is real, and no placement trick removes it.
