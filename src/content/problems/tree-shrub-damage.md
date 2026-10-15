@@ -35,7 +35,7 @@ Gophers kill trees and shrubs by girdling the root crown — chewing all the way
 5. For new replacement plantings, install a [hardware cloth basket](/methods/gopher-mesh/) around the root ball before planting. This is the only reliable protection for young trees.
 
 ## Bagger Pro-Tip
-Don't plant a $200 fruit tree without a $4 hardware cloth basket. It takes ten minutes and it's the difference between a tree and an expensive gopher snack. Every new tree Mark plants goes in with a basket. No exceptions.
+Don't plant a $200 fruit tree without a $4 hardware cloth basket. It takes ten minutes and it's the difference between a tree and an expensive gopher snack. Every new tree I plant goes in with a basket. No exceptions.
 
 ## Safety Warning
 When excavating around root crowns, use a hand trowel rather than a shovel. One bad shovel strike can finish what the gopher started.

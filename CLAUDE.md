@@ -35,6 +35,7 @@ It must pass. The command builds the site and then runs every check in `scripts/
 | `disclosure` | pages with Amazon links carry `AffiliateDisclosure` before the first one, pages without carry none |
 | `sponsored` | every `amzn.to` / `amazon.com` link has `rel="sponsored"` (and `noopener` when `target="_blank"`) |
 | `products` | the best-of `positiveNotes` / `negativeNotes` match the visible Pros/Cons verbatim and in order |
+| `claims` | no anticoagulant bait is recommended, and no absolute safety claim ("completely safe", "zero risk") appears anywhere in `src/` |
 | `links` | every internal href resolves to a real built page, with the trailing slash, and every `#fragment` matches a real id |
 | `inbound` | per-page inbound content-link counts, with floors on the money pages and no orphan pages |
 
@@ -128,6 +129,29 @@ Both carry a "Hire an Exterminator or Do It Yourself?" section straight after th
 `NextSteps.astro` is the shared next-step block on both pages (`/quick-start/` then `/best-gopher-traps/`), so the two cannot drift. Note this makes `/cost/` and `/quick-start/` appear twice on `/southern-california-gopher-control/` — once in the new copy and once in the pre-existing related-links card and prose. That is a deliberate exception to the one-link rule, kept because the instruction was to link them from the new sections and the existing mentions are Mark's own prose.
 
 Mark's personal Redlands story ("Where It Started", "The $5 Lesson") stays below the new sections, in his voice, untouched.
+## Editorial facts that must not regress
+
+A factual review on 2026-10-14 found the rodenticide pages had been written from an outdated picture of California law, with a citation that contradicted its own source. These are the corrections. `npm run audit` enforces the first two (`scripts/audit/claims.mjs`); the rest are on you.
+
+**Anticoagulant baits are prohibited for residential use in California.** CDPR: "Effective January 1, 2024, most uses of the rodenticide diphacinone are prohibited," and those prohibitions "include residential or home uses"; products labelled for prohibited uses "can only be sold to an end user by a DPR-licensed pest control dealer." UC IPM 7433 puts it as chlorophacinone and diphacinone "are no longer legal for residential use in California." Diphacinone may be **named** — to explain the prohibition, or the carcass hazard — but never recommended, preferred, or called the safer option. The audit fails on a mention that carries recommending language without prohibition context.
+
+**Zinc phosphide is the remaining homeowner bait.** UC IPM: 2% zinc phosphide baits are available, with exemptions for home use. Only recommend it where the product label lists pocket gophers.
+
+**The secondary-poisoning comparison runs the opposite way from what the site used to say.** Zinc phosphide is not stored in the animal's tissue; anticoagulants persist in the liver, which is why that class is the one California restricted. The canonical wording lives on `/southern-california-gopher-control/`. The old claim that diphacinone was the lower-risk choice around pets and raptors was wrong and is the single worst error the review found.
+
+**Cartridge fumigation does not work.** UC IPM: "Fumigation with smoke or gas cartridges isn't effective because gophers can seal off their burrows rapidly." Gas cartridges ("gassers") may stay listed, but with that verdict attached and **no "Best …" badge**. They are also a fire hazard — you light them and bury them — so every mention needs the warning: never under or near structures, decks, porches, dry vegetation or mulch, and follow the label. They are not carbon monoxide devices: cartridges are sodium nitrate, sulfur and charcoal, producing oxides of sulfur along with CO. Pressurized CO injection devices are a separate category and a separate page.
+
+**No absolute safety claims, anywhere.** "Completely safe", "100% safe", "totally safe", "perfectly safe", "zero risk", "no risk" and "completely pet-safe" are all banned, including inside `bestOfProducts.ts` pros and JSON-LD strings. The defensible phrasing is **"no rodenticide involved"**. A set trap can still injure a paw; say so. The audit fails the build on any of these strings.
+
+**One trap-check timing: "check daily; if nothing in one to two days, move the trap."** From UC IPM: "If you haven't captured a gopher within 1 to 2 days, reset the traps in a different location." The site previously had five different answers (12 h, 24 h, 12–48 h, 12–72 h, overnight). The `timeToResults` frontmatter field is a different claim — how long until results — and is left alone.
+
+**Other numbers that are pinned to UC IPM 7433.** Feeding burrows 6–12 inches below ground; the nest and food storage chamber as deep as 6 feet; probe "about 4 to 12 inches from the plug side" of the mound; up to 3 litters a year in irrigated sites against 1 in nonirrigated, litters averaging 5–6 young; aluminum phosphide only in burrows "more than 100 feet from any building". Repellents: no repellent has proven effective, and castor bean and similar "haven't been shown to repel gophers". Frightening devices, including vibrating/sonic stakes: "haven't been effective in research trials". Owl boxes: "unlikely to reduce gopher numbers enough to prevent damage", and owls are "unreliable... particularly over small areas such as a yard".
+
+**Cover the hole — keep this.** UC IPM says "Cover the hole so light doesn't get in," so the advice stays. What was removed is the stronger claim, stated as fact, that light makes a gopher *abandon or seal off* the area. Don't reintroduce it.
+
+**TODO (needs field testing, not a desk edit):** the UC IPM alfalfa guidelines say "Studies have shown the Gophinator and Cinch traps to be more effective than other tested traps," while `/best-gopher-traps/` ranks the Victor Easy Set first and the Gophinator is not on the site at all. Deliberately left as-is — only change the ranking after actually testing a Gophinator.
+
+**Prices live on `/cost/` only.** That page carries no Amazon links, which keeps stated prices away from buy buttons. Don't put a product price on a page that links to Amazon; link to `/cost/` instead.
 ## Editorial facts to keep consistent
 
 These are site-wide claims that have been corrected before; don't reintroduce variants.

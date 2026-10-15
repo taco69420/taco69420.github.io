@@ -70,7 +70,7 @@ const faqSchema = {
       "name": "What is the most effective gopher poison?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For tunnel-placed rodenticide, diphacinone bait pellets placed correctly inside an active run are the most consistently effective option for most residential properties. For large or deeply established tunnel systems, CO burrow fumigation devices offer more thorough coverage than pellet bait alone."
+        "text": "For a California homeowner the question mostly answers itself: anticoagulant baits including diphacinone have been prohibited for residential use since January 1, 2024, which leaves zinc phosphide where the label lists pocket gophers. Placed correctly inside an active run it works. Traps work better and carry no carcass risk, which is why they are still my first choice."
       }
     },
     {
@@ -86,7 +86,7 @@ const faqSchema = {
       "name": "How long does gopher poison take to work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Zinc phosphide bait: 24–48 hours. Diphacinone bait: 5–7 days (requires multiple feedings). Gopher gassers: same day in a properly sealed system. CO burrow treatment: same day to 48 hours. No new mound activity within 7 days of placement means either the run was inactive, the bait wasn't taken, or the gopher moved on before treatment."
+        "text": "Zinc phosphide bait: 24–48 hours. Gopher gassers: same day in a properly sealed system, though UC IPM found cartridge fumigation isn't effective because gophers can seal off their burrows rapidly. CO burrow treatment: same day to 48 hours. No new mound activity within 7 days of placement means either the run was inactive, the bait wasn't taken, or the gopher moved on before treatment."
       }
     },
     {
@@ -94,7 +94,7 @@ const faqSchema = {
       "name": "Do I need a license to use gopher poison?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Depends on the product and state. In California, certain rodenticide formulations require a licensed Pest Control Operator to purchase and apply. Diphacinone consumer bait products are generally available without a license. Always read the full product label — it is the legal document that governs proper use, and following it exactly is required by law, not optional."
+        "text": "In California, most uses of diphacinone have been prohibited since January 1, 2024, including residential and home uses, and products labelled for those prohibited uses can only be sold to an end user by a DPR-licensed pest control dealer. Baits containing 2% zinc phosphide are available with exemptions for home use. Always read the full product label — it is the legal document that governs proper use, and following it exactly is required by law, not optional."
       }
     }
   ]
@@ -178,7 +178,7 @@ const faqSchema = {
       <div class="product-badge badge-best">Most Effective Rodenticide</div>
       <h2 id="bait-stations" class="ps-name">Underground Bait Applicator</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Pet-free properties where you need lethal control on established tunnel systems — particularly useful when trapping sessions aren't producing results over multiple days.</p>
-      <p class="ps-desc">Rodenticide bait pellets (diphacinone or zinc phosphide) placed inside active gopher tunnels. The mechanism is straightforward: <a href="/traps/">probe</a> to locate the main lateral tunnel, open a clean access hole, place the labeled bait dose 6–8 inches inside the run, and seal the hole completely with soil. The gopher encounters the bait during normal tunnel activity and consumes a lethal dose. Diphacinone (anticoagulant) takes multiple feedings over 5–7 days; zinc phosphide acts faster at 24–48 hours but is more sensitive to soil moisture conditions and requires extra PPE during handling due to off-gassing. My preference is diphacinone for most residential jobs — slower, but more consistent and a lower secondary risk profile. Note: the tool linked here is the underground applicator that places the dose at tunnel depth — you load it with registered bait pellets, which are sold separately.</p>
+      <p class="ps-desc">Zinc phosphide bait pellets placed inside active gopher tunnels. The mechanism is straightforward: <a href="/traps/">probe</a> to locate the main lateral tunnel, open a clean access hole, place the labeled bait dose 6–8 inches inside the run, and cover the hole so light doesn't get in. The gopher encounters the bait during normal tunnel activity and consumes a lethal dose. Zinc phosphide acts at 24–48 hours but is sensitive to soil moisture and requires extra PPE during handling due to off-gassing. Diphacinone used to be a common choice here; it is now prohibited for residential use in California. Note: the tool linked here is the underground applicator that places the dose at tunnel depth — you load it with registered bait pellets, which are sold separately.</p>
       <div class="ps-verdict">
         <div class="ps-pros">
           <h3>Pros</h3>
@@ -201,7 +201,7 @@ const faqSchema = {
 
     <!-- Product 2: Gopher Gassers -->
     <section class="card product-section">
-      <div class="product-badge badge-budget">Best Fast-Acting Fumigant</div>
+      <div class="product-badge badge-budget">Cartridge Fumigant — Read the Research First</div>
       <h2 id="gassers" class="ps-name">Gopher Gassers (Fumigation Cartridges)</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Mid-depth tunnel systems where you can't locate or access the main run effectively, and where every tunnel exit can be sealed before treatment.</p>
       <p class="ps-desc">Light the fuse, drop the burning cartridge into the tunnel, immediately seal the entrance with tamped soil. The cartridge generates gas as it burns, filling the tunnel system. This only works if every exit is sealed first — even one open hole vents the system and renders the treatment ineffective. Walk the yard and plug every mound you can find before you light anything. I use gassers when I'm dealing with a complex system where traps keep missing and I can't get a clean probe read on the active run. Post-rain or post-irrigation is ideal — compacted wet soil holds the gas in the system much better than dry, loose soil.</p>
@@ -220,7 +220,7 @@ const faqSchema = {
         </div>
       </div>
       <div class="safety-callout">
-        <strong>Safety:</strong> Never use gassers within 15 feet of occupied structures, under decks or crawl spaces, or near any building foundation. The combustion gas travels underground and can enter structures through foundation gaps. Keep children and pets away from the treated area.
+        <strong>Safety:</strong> A gasser is a cartridge you light and bury, so it is a fire hazard as well as a gas hazard — never under or near structures, decks, porches, dry vegetation or mulch, and follow the label. Never use within 15 feet of occupied structures or crawl spaces. The combustion gas travels underground and can enter structures through foundation gaps. Keep children and pets away from the treated area.
       </div>
       <a href="https://amzn.to/4b4oF11" class="btn" target="_blank" rel="sponsored noopener">Shop Gopher Gassers on Amazon →</a>
     </section>
@@ -262,8 +262,8 @@ const faqSchema = {
         <dt>Match the method to the tunnel depth</dt>
         <dd>Bait pellets work best in standard-depth residential systems (6–18 inches) where you can probe and locate the main run. Cartridge gassers work in mid-depth systems where exits can be sealed. CO injection is the right call for deep, complex, established networks where neither of the other approaches can reach effectively.</dd>
 
-        <dt>Diphacinone vs. zinc phosphide — know the difference</dt>
-        <dd>Diphacinone is slower (5–7 days) but more stable in varied soil conditions and carries a lower secondary poisoning risk. Zinc phosphide is faster (24–48 hours) but off-gases during application and can fail in wet soil. For most residential use, diphacinone is the more consistent and safer choice.</dd>
+        <dt>Which baits you can actually use in California</dt>
+        <dd>Anticoagulants — diphacinone and chlorophacinone — are no longer legal for residential use in California, prohibited since January 1, 2024. Baits containing 2% zinc phosphide are available with exemptions for home use, so that is the homeowner option if the label lists pocket gophers. On carcass risk the two classes differ: zinc phosphide is not stored in the animal's tissue, while anticoagulants persist in the liver. Anticoagulants are the class California restricted. Don't read that as pet-safe. Zinc phosphide is acutely toxic, and a dog that eats the bait — or a freshly killed gopher with bait still in its stomach — can be poisoned. It is the remaining legal option for a California homeowner, not a safe one.</dd>
 
         <dt>Check your state's regulations</dt>
         <dd>In California and several other states, certain rodenticide formulations require a Pest Control Operator license to purchase and apply. Check CDPR requirements before ordering. The label is the controlling legal document — following it is not optional.</dd>
@@ -277,7 +277,7 @@ const faqSchema = {
       <div class="faq-list">
         <details class="faq-item">
           <summary>What is the most effective gopher poison?</summary>
-          <p>For tunnel-placed rodenticide, diphacinone bait pellets placed correctly inside an active run are the most consistently effective option for most residential properties. For large or deeply established tunnel systems, CO burrow fumigation devices offer more thorough coverage than pellet bait alone.</p>
+          <p>For a California homeowner the question mostly answers itself: anticoagulant baits including diphacinone have been prohibited for residential use since January 1, 2024, which leaves zinc phosphide where the label lists pocket gophers. Placed correctly inside an active run it works. Traps work better and carry no carcass risk, which is why they are still my first choice.</p>
         </details>
         <details class="faq-item">
           <summary>Is gopher poison safe around other animals?</summary>
@@ -285,11 +285,11 @@ const faqSchema = {
         </details>
         <details class="faq-item">
           <summary>How long does gopher poison take to work?</summary>
-          <p>Zinc phosphide bait: 24–48 hours. Diphacinone bait: 5–7 days (requires multiple feedings). Gopher gassers: same day in a properly sealed system. CO burrow treatment: same day to 48 hours. No new <a href="/problems/mound-id/">mound</a> activity within 7 days of placement means either the run was inactive, the bait wasn't taken, or the gopher moved on before treatment.</p>
+          <p>Zinc phosphide bait: 24–48 hours. Gopher gassers: same day in a properly sealed system, though UC IPM found cartridge fumigation isn't effective because gophers can seal off their burrows rapidly. CO burrow treatment: same day to 48 hours. No new <a href="/problems/mound-id/">mound</a> activity within 7 days of placement means either the run was inactive, the bait wasn't taken, or the gopher moved on before treatment.</p>
         </details>
         <details class="faq-item">
           <summary>Do I need a license to use gopher poison?</summary>
-          <p>Depends on the product and state. In California, certain rodenticide formulations require a licensed Pest Control Operator to purchase and apply. Diphacinone consumer bait products are generally available without a license. Always read the full product label — it is the legal document that governs proper use, and following it exactly is required by law, not optional.</p>
+          <p>In California, most uses of diphacinone have been prohibited since January 1, 2024, including residential and home uses, and products labelled for those prohibited uses can only be sold to an end user by a DPR-licensed pest control dealer. Baits containing 2% zinc phosphide are available with exemptions for home use. Always read the full product label — it is the legal document that governs proper use, and following it exactly is required by law, not optional.</p>
         </details>
       </div>
     </section>

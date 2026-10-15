@@ -1,9 +1,9 @@
 ---
 title: "Castor Oil for Gophers: Does It Work?"
 description: "Apply castor-oil-based repellents to make feeding zones less attractive and push activity outward."
-metaDescription: "UC IPM doesn't list castor oil as a primary gopher control. What it can do as pressure management, how deep to water it in, and why trapping does the work."
+metaDescription: "UC IPM says castor bean and similar plants haven't been shown to repel gophers. What that means for the bottled stuff, and why trapping does the work."
 date: 2026-03-01
-updated: 2026-07-08
+updated: 2026-10-14
 tags:
   - repellent
   - lawn
@@ -20,7 +20,7 @@ sources:
 ---
 
 ## Quick Answer
-Castor oil repellents can reduce gopher activity in [high-value turf](/problems/lawn-damage/) when applied deeply and repeatedly. They work best as pressure-management, not guaranteed elimination.
+Short answer: the research doesn't back it. UC IPM says castor bean and the other plants people reach for "haven't been shown to repel gophers from an area," and no repellent has proven effective at protecting plantings. It still gets used on [high-value turf](/problems/lawn-damage/) as a hedge, but that's habit rather than evidence, and this page isn't going to dress it up as more.
 
 ## The Gear
 - Castor-oil-based repellent concentrate
@@ -32,8 +32,8 @@ Castor oil repellents can reduce gopher activity in [high-value turf](/problems/
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
   <h4 class="mpb-name">Castor Oil Gopher Repellent Concentrate</h4>
-  <p class="mpb-desc">Castor-oil-based repellent that makes soil feeding zones unpalatable to gophers. Apply with a hose-end sprayer and water in deeply for the product to reach root-level soil where gophers feed.</p>
-  <p class="mpb-best-for"><strong>Best for:</strong> High-value turf areas under moderate pressure — most effective as a deterrent layer used alongside active trapping at the boundary.</p>
+  <p class="mpb-desc">Castor-oil-based repellent applied with a hose-end sprayer and watered in deeply. Note that UC IPM has not found repellents effective at protecting plantings from gophers — buy this knowing that.</p>
+  <p class="mpb-best-for"><strong>Best for:</strong> People who want to try a non-lethal option on turf they care about, with trapping doing the actual work at the boundary.</p>
   <a href="https://amzn.to/3P7QFIM" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Castor Oil Repellent on Amazon →</a>
 </div>
 
@@ -42,12 +42,12 @@ Castor oil repellents can reduce gopher activity in [high-value turf](/problems/
 2. Mix and apply repellent according to label rate across active and buffer areas.
 3. Deep-water immediately after application to carry product into root-level soil.
 4. Repeat application in 7-14 days or after heavy rain for sustained pressure.
-5. Pair with [traps](/best-gopher-traps/) and <a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">traps</a> at boundary mounds where displaced activity appears.
+5. Set <a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">traps</a> at the boundary mounds where activity shows up, and read [my trap picks](/best-gopher-traps/) if you don't have a pair yet.
 
 ## What the Evidence Shows
-UC IPM does not list castor oil repellents as a primary recommended control method for pocket gophers — trapping and baiting are the methods with the strongest evidence behind them. Where repellents are discussed, the consensus is that results are inconsistent and heavily dependent on application depth and frequency. That's an honest read of the research, and it matches what I've seen in the field. *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
+UC IPM is blunt: plants such as gopher purge, castor bean and garlic "haven't been shown to repel gophers from an area," and no repellent has proven effective at protecting gardens or other plantings. *(Source: [Baldwin, R.A. — UC IPM Pest Notes: Pocket Gophers, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
 
-Used correctly — deep application, repeated on schedule, paired with trapping at the perimeter — castor oil can reduce activity in a protected zone. Used as a standalone fix on an active infestation, it won't hold.
+So treat the rest of this page as common practice rather than proof. The usual approach is to put it on turf you don't want torn up while the boundary gets worked with traps. As a standalone fix on an active infestation it won't hold — and the research says it may not be doing anything at all.
 
 ## Bagger Pro-Tip
 Repellent alone is like sending a strongly worded letter—effective only when backed by enforcement at the border.

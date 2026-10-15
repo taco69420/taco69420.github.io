@@ -1,9 +1,9 @@
 ---
 title: "Hiring a Professional Gopher Trapper"
 description: "Know when DIY isn't enough and how to find, evaluate, and work with a professional gopher control service."
-metaDescription: "When to stop trapping and call someone. A residential gopher job runs $150 to $500+. The quotes to get, the methods to insist on, and the license to check."
+metaDescription: "When to stop trapping and call someone in. The quotes to get, the methods to insist on, the license to check, and where the real money goes."
 date: 2026-03-14
-updated: 2026-07-08
+updated: 2026-10-14
 tags:
   - professional
   - service
@@ -20,7 +20,7 @@ sources:
 ---
 
 ## Quick Answer
-Most gopher problems are one-animal jobs you can handle yourself with a [$15 trap](/best-gopher-traps/). But there are situations where calling a professional is the right call — large infestations across multiple zones, commercial properties, HOA common areas, or when you've been at it for months with no results. Knowing when to escalate is part of the process.
+Most gopher problems are one-animal jobs you can handle yourself with [a pair of traps](/best-gopher-traps/). But there are situations where calling a professional is the right call — large infestations across multiple zones, commercial properties, HOA common areas, or when you've been at it for months with no results. Knowing when to escalate is part of the process.
 
 ## When to Call a Pro
 
@@ -33,13 +33,13 @@ Most gopher problems are one-animal jobs you can handle yourself with a [$15 tra
 <div class="method-product-box">
   <p class="mpb-label">Before You Make the Call</p>
   <h4 class="mpb-name">Victor Easy Set Gopher Trap</h4>
-  <p class="mpb-desc">Most single-gopher situations resolve with a pair of $15 traps set correctly in the right run. If you haven't tried trapping yet, start here before paying for a service call.</p>
+  <p class="mpb-desc">Most single-gopher situations resolve with a pair of traps set correctly in the right run — see the [cost breakdown](/cost/) for what that actually runs. If you haven't tried trapping yet, start here before paying for a service call.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> 1–3 active mound clusters — the most common residential gopher situation, and the one DIY trapping handles best.</p>
   <a href="https://amzn.to/4cIJ64V" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
 </div>
 
 ## The Process
-1. Get at least two quotes. Gopher control pricing varies wildly — $150 to $500+ for a residential job is a normal range depending on property size and method.
+1. Get at least two quotes. Gopher control pricing varies wildly by property size and method — I keep the current ranges in the [cost guide](/cost/) rather than repeating them here.
 2. Ask specifically what method they use. [Trapping](/methods/victor-traps/) and <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">CO fumigation</a> are preferred. Be cautious with anyone who defaults immediately to poison bait on a property with kids, pets, or edible gardens.
 3. Ask if they guarantee results and what the callback policy is. A reputable operator will come back if new activity appears within the treatment window.
 4. Check for a valid [California](/southern-california-gopher-control/) Pest Control Operator license (PCO license) if they're applying any restricted-use products.

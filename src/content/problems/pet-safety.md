@@ -3,7 +3,7 @@ title: "Keeping Pets Safe Around Gopher Control"
 description: "Run an effective gopher control program without putting your dogs, cats, or backyard wildlife at risk."
 metaDescription: "Which gopher methods are safe with a dog in the yard and which are not: trap covers, flagging every set, and the secondary poisoning risk from bait."
 date: 2026-03-14
-updated: 2026-07-08
+updated: 2026-10-14
 tags:
   - pets
   - safety
@@ -39,11 +39,11 @@ The two biggest risks to pets in a gopher control program are poison bait and un
 Taco — Mark's late dog — is the reason this page exists. A [chihuahua with a nose for gopher tunnels](/methods/dog-hunting/) is an asset, but even the best working dog shouldn't have unsupervised access to a live trap set. Flag everything. Always.
 
 ## Safety Warning
-Zinc phosphide and strychnine-based baits are extremely dangerous to dogs and can be fatal in small doses. If you use any bait product, store it locked up and treat every bait station as a serious hazard. When in doubt, use mechanical traps only.
+Zinc phosphide and strychnine-based baits are extremely dangerous to dogs and can be fatal in small doses. Anticoagulant baits — diphacinone and chlorophacinone — belong in the same warning: they persist in the liver of a poisoned animal, so the risk carries in the carcass long after the bait is gone, and vitamin K1 is the veterinary antidote. Those are prohibited for residential use in California anyway, which is the other reason you won't find them recommended on this site. If you use any bait product, store it locked up and treat every bait station as a serious hazard. When in doubt, use mechanical traps only — and get a dog to a vet immediately if you suspect any rodenticide.
 
 ## Fix It
 All of these methods can be run safely around pets with the right precautions.
 - [Victor Trap Tunnel Intercept](/methods/victor-traps/) — mechanical, no poison, easily covered
 - [Cinch Trap Mainline Set](/methods/cinch-traps/) — same deal, just flag and cover the set
 - [Install Gopher Mesh Barriers](/methods/gopher-mesh/) — the safest long-term solution for pet households
-- [Barn Owl Box Installation](/methods/barn-owl-box/) — completely pet-safe biological control
+- [Barn Owl Box Installation](/methods/barn-owl-box/) — no rodenticide involved, though UC IPM says boxes are unlikely to cut gopher numbers enough in a yard

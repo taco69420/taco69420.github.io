@@ -3,7 +3,7 @@ title: "Carbon Monoxide Burrow Treatment"
 description: "Use approved exhaust-injection devices to deliver carbon monoxide into sealed tunnel systems."
 metaDescription: "Seal the run, inject with an approved device, reseal the point, and recheck in 24–48 hours. An advanced method with strict legal and safety requirements."
 date: 2026-03-01
-updated: 2026-07-08
+updated: 2026-10-14
 tags:
   - fumigation
   - advanced
@@ -48,8 +48,8 @@ Carbon monoxide treatment can be effective in dense tunnel networks when runs ar
 I use this method selectively — it's worth it when you're dealing with a large, established tunnel network that traps keep missing. For a single-gopher situation, it's overkill. Seal every opening you can find before you start, or you're just venting the tunnel to atmosphere. Gas work rewards precision, not cowboy energy.
 
 ## Safety Warning
-Carbon monoxide is lethal and odorless; never use in enclosed areas, near [structures](/problems/foundation-damage/), or without certified safety equipment.
+Carbon monoxide is lethal and odorless; never use in enclosed areas, near [structures](/problems/foundation-damage/), or without certified safety equipment. This page is about pressurized injection devices, not the burning cartridges sold as "gassers" — those are a fire hazard as well as a gas one, and have their own warnings on the [bait and fumigant pages](/best-gopher-poison/).
 
 ## Get the Gear
-The gassers and CO injection devices sit side by side in [my gopher poison and fumigant picks](/best-gopher-poison/).
+Pressurized CO devices and burning gas cartridges are two different things and I keep them apart — see [my gopher poison and fumigant picks](/best-gopher-poison/). Worth knowing that UC IPM says cartridge fumigation "isn't effective because gophers can seal off their burrows rapidly."
 <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">Shop CO Burrow Treatment Devices on Amazon →</a>

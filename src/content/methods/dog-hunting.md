@@ -56,7 +56,7 @@ A dog with a strong prey drive is one of the best gopher detection tools you hav
 5. If the dog is fast and the gopher surfaces — that's between them. Nature is nature.
 
 ## Bagger Pro-Tip
-The dog is reconnaissance, not the whole operation. Taco could find a run that would take Mark twenty minutes of probing to locate. But Taco didn't set traps. Use your dog to shorten the detection phase, then finish the job with the right method. Together you're unbeatable.
+The dog is reconnaissance, not the whole operation. Taco could find a run that would take me twenty minutes of probing to locate. But Taco didn't set traps. Use your dog to shorten the detection phase, then finish the job with the right method. Together you're unbeatable.
 
 ## Safety Warning
 If you're running poison bait anywhere on the property, keep the dog out of those areas completely. A dog that hunts gophers is at elevated risk of [secondary poisoning](/problems/pet-safety/) from a bait-killed gopher. Don't mix the Taco Method with any [poison-based approach](/methods/poison-bait-stations/) — it's not worth it.
