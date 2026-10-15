@@ -31,7 +31,7 @@ Gopher mesh is one of the most reliable long-term defenses for [raised beds](/pr
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">1/2-Inch Galvanized Hardware Cloth</h4>
+  <h3 class="mpb-name">1/2-Inch Galvanized Hardware Cloth</h3>
   <p class="mpb-desc">Heavy-gauge galvanized mesh that keeps gophers out of raised beds and planting areas for years. The 1/2-inch opening is the right spec — smaller openings restrict root growth; larger ones let juveniles through.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Lining raised beds, building wire baskets around individual plants, or installing vertical barrier skirts.</p>
   <a href="https://amzn.to/4b9UG87" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Hardware Cloth on Amazon →</a>

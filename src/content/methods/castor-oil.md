@@ -32,7 +32,7 @@ Short answer: the research doesn't back it. UC IPM says castor bean and the othe
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">Castor Oil Gopher Repellent Concentrate</h4>
+  <h3 class="mpb-name">Castor Oil Gopher Repellent Concentrate</h3>
   <p class="mpb-desc">Castor-oil-based repellent applied with a hose-end sprayer and watered in deeply. Note that UC IPM has not found repellents effective at protecting plantings from gophers — buy this knowing that.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> People who want to try a non-lethal option on turf they care about, with trapping doing the actual work at the boundary.</p>
   <a href="https://amzn.to/3P7QFIM" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Castor Oil Repellent on Amazon (not personally tested) →</a>

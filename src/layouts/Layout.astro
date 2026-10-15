@@ -35,9 +35,11 @@ const pageHtml = Astro.slots.has('default') ? await Astro.slots.render('default'
 const hasAmazonLink = /href=["']https?:\/\/(?:www\.)?(?:amzn\.to|amazon\.com)/i.test(pageHtml);
 
 // One compact disclosure per page, merged into the dateline row so it reads as
-// "Updated October 2026 · Has affiliate links" rather than a separate box. The
-// dateline already sits in the <header>, which is above every Amazon link on
-// the page, so this satisfies "clear and conspicuous, before the link".
+// "Updated October 2026 · Affiliate links — I earn a commission" rather than a
+// separate box. The commission wording is in the visible link text itself, not
+// just title/aria-label, which is what makes this "clear and conspicuous"
+// rather than hover-only. The dateline already sits in the <header>, which is
+// above every Amazon link on the page, so this satisfies "before the link" too.
 //
 // Each page keeps its own dateline class because each is coloured for its own
 // hero; the note inherits that colour, so wherever the dateline passes contrast
@@ -46,7 +48,7 @@ const AFFILIATE_NOTE =
   ' <span class="affiliate-sep" aria-hidden="true">·</span> ' +
   '<a class="affiliate-note" href="/privacy/#affiliate"' +
   ' title="I earn a commission from qualifying purchases at no extra cost to you."' +
-  ' aria-label="I earn a commission from qualifying purchases at no extra cost to you.">Has affiliate links</a>';
+  ' aria-label="I earn a commission from qualifying purchases at no extra cost to you.">Affiliate links — I earn a commission</a>';
 
 // Append to the first dateline paragraph. Four classes are in use
 // (.dateline, .hero-dateline, .mission-dateline, .locker-dateline …), so match
@@ -369,7 +371,7 @@ const afterDisclosure = needsStandaloneNote ? pageBody.slice(splitAt) : '';
           href="/privacy/#affiliate"
           title="I earn a commission from qualifying purchases at no extra cost to you."
           aria-label="I earn a commission from qualifying purchases at no extra cost to you."
-          >Has affiliate links</a
+          >Affiliate links — I earn a commission</a
         >
       </p>
     )}

@@ -29,7 +29,7 @@ A dog with a strong prey drive is one of the best gopher detection tools you hav
 
 <div class="method-product-box">
   <p class="mpb-label">For the Close — After the Dog Finds the Run</p>
-  <h4 class="mpb-name">Victor Easy Set Gopher Trap</h4>
+  <h3 class="mpb-name">Victor Easy Set Gopher Trap</h3>
   <p class="mpb-desc">The dog does the detection; the trap does the job. Once your dog marks a run, set two Victor traps back-to-back facing opposite directions — the gopher has nowhere to go.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Setting in the exact runs your dog has already confirmed are active — no guesswork, no wasted sets.</p>
   <a href="https://amzn.to/4cIJ64V" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>

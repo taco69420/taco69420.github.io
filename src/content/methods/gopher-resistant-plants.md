@@ -27,7 +27,7 @@ No special gear required — just smart plant choices.
 
 <div class="method-product-box">
   <p class="mpb-label">Protecting High-Value Plants</p>
-  <h4 class="mpb-name">1/2-Inch Galvanized Hardware Cloth</h4>
+  <h3 class="mpb-name">1/2-Inch Galvanized Hardware Cloth</h3>
   <p class="mpb-desc">When gopher-resistant plants aren't an option — young fruit trees, established roses, root vegetables — hardware cloth wire baskets give them physical protection gophers can't chew through.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Building wire baskets around individual high-value plants or lining raised beds before planting.</p>
   <a href="https://amzn.to/4b9UG87" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Hardware Cloth on Amazon →</a>

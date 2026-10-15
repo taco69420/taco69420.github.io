@@ -33,7 +33,7 @@ Exclusion fencing is the most labor-intensive method on this site — but on lar
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">1/2-Inch Galvanized Hardware Cloth (24–36" Wide)</h4>
+  <h3 class="mpb-name">1/2-Inch Galvanized Hardware Cloth (24–36" Wide)</h3>
   <p class="mpb-desc">Heavy-gauge galvanized mesh in wider rolls sized for perimeter fencing. The 1/2-inch grid stops gophers; the 24–36 inch width gives you 18+ inches of burial depth plus surface coverage in one unroll.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Underground perimeter barriers on large properties, orchards, and yards that border open land with ongoing gopher migration pressure.</p>
   <a href="https://amzn.to/4b9UG87" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Hardware Cloth on Amazon →</a>

@@ -31,7 +31,7 @@ Before the romance: UC IPM says installing owl boxes is "unlikely to reduce goph
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">Barn Owl Nesting Box</h4>
+  <h3 class="mpb-name">Barn Owl Nesting Box</h3>
   <p class="mpb-desc">Pre-built nesting box designed to the correct interior dimensions barn owls need. Skips the DIY plywood math, stays weatherproof longer, and gets installed faster so owls can start scouting sooner.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Larger properties with open hunting ground — fields, orchards, acreage. UC IPM is clear that owls are unreliable over an area as small as a yard.</p>
   <a href="https://amzn.to/4sKmKFc" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Barn Owl Nesting Boxes on Amazon (not personally tested) →</a>

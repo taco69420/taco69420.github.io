@@ -31,7 +31,7 @@ Cinch traps are my backup when [Victor sets](/methods/victor-traps/) aren't prod
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">Cinch Traps (Scissor-Jaw Style)</h4>
+  <h3 class="mpb-name">Cinch Traps (Scissor-Jaw Style)</h3>
   <p class="mpb-desc">Forgiving alignment and easy setting make these a solid choice for beginners and veterans alike. Consistent results in straight main tunnels where Victor sets are missing.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Open, straight tunnel runs — especially useful when geometry makes Victor-style sets difficult.</p>
   <a href="https://amzn.to/4sMH5cR" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Cinch Traps on Amazon →</a>
