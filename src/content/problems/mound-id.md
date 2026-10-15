@@ -3,7 +3,7 @@ title: "How to Identify Fresh Gopher Mounds"
 description: "Distinguish active gopher mounds from mole hills and old tunnel spoil to target control correctly."
 metaDescription: "Fresh gopher mounds are fan- or crescent-shaped with a plugged hole off to one side. How to confirm an active run and probe 6–12 inches on the plug side."
 date: 2026-03-01
-updated: 2026-07-08
+updated: 2026-10-14
 tags:
   - identification
   - diagnostics
@@ -30,7 +30,7 @@ Fresh gopher mounds are usually fan- or crescent-shaped with a plugged soil hole
 ## The Process
 1. Inspect [mound shape](/gopher-vs-mole/) and locate the plugged hole, usually offset from center.
 2. Scrape smooth a test mound area and mark it to check for overnight rebuild.
-3. [Probe](/traps/) for the main run on the plug side, about 6–12 inches from the mound. Feeding tunnels run 6–12 inches below the surface; nesting chambers can go as deep as 6 feet. *(Source: [UC IPM, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
+3. [Probe](/traps/) for the main run about 4 to 12 inches from the plug side of the mound. Feeding tunnels run 6–12 inches below the surface; nesting chambers can go as deep as 6 feet. *(Source: [UC IPM, 2025](https://ipm.ucanr.edu/PMG/PESTNOTES/pn7433.html))*
 4. Compare signs with [mole ridges](/gopher-vs-mole/) (raised surface runs) to avoid misidentification.
 5. Log confirmed active sites and prioritize them for [trapping](/quick-start/) first.
 

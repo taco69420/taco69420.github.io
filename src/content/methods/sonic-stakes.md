@@ -9,7 +9,7 @@ tags:
   - non-lethal
   - solar
 difficulty: easy
-timeToResults: "1-3 weeks"
+timeToResults: "Not established by research"
 petRisk: low
 cost: low
 sources:

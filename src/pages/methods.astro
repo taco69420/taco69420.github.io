@@ -48,8 +48,8 @@ const methodMeta = {
   'exclusion-fencing':       { speed: 'Immediate',         bestFor: 'Large properties & orchards' },
   'gopher-resistant-plants': { speed: '1–2 seasons',       bestFor: 'Long-term landscaping' },
   'barn-owl-box':            { speed: '1–2 seasons',       bestFor: 'Natural long-term predator control' },
-  'castor-oil':              { speed: '3–14 days',         bestFor: 'Perimeter buffer after trapping' },
-  'sonic-stakes':            { speed: '1–3 weeks',         bestFor: 'Perimeter deterrent' },
+  'castor-oil':              { speed: 'Not established',    bestFor: 'Non-lethal option, not research-backed' },
+  'sonic-stakes':            { speed: 'Not established',    bestFor: 'Non-lethal option, not research-backed' },
   'hiring-a-pro':            { speed: '1–2 weeks',         bestFor: 'Severe or recurring infestations' },
 };
 
@@ -64,7 +64,7 @@ const faqSchema = {
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "What is the most effective gopher control method?", "acceptedAnswer": { "@type": "Answer", "text": "Mechanical trapping — either Victor (Macabee) or Cinch-style traps — is the most reliable method for active infestations. Traps work directly in the main tunnel, require no chemicals, and give immediate results." } },
-    { "@type": "Question", "name": "Do gopher repellents actually work?", "acceptedAnswer": { "@type": "Answer", "text": "Repellents like castor oil and sonic stakes can discourage gophers at the perimeter but won't stop an active infestation or a breeding surge. Use them to hold ground after trapping, not as a primary fix." } },
+    { "@type": "Question", "name": "Do gopher repellents actually work?", "acceptedAnswer": { "@type": "Answer", "text": "Not according to the research. UC IPM found no repellent effective at protecting plantings, and frightening devices such as vibrating stakes \"haven't been effective in research trials.\" Trapping is what clears a yard." } },
     { "@type": "Question", "name": "What is the difference between Victor traps and Cinch traps?", "acceptedAnswer": { "@type": "Answer", "text": "Both are main-run mechanical traps. Victor traps use a wire pinch mechanism and are the classic Macabee style. Cinch traps use a scissor-jaw design that many find easier to set and less prone to misfiring." } },
     { "@type": "Question", "name": "How long does gopher control take?", "acceptedAnswer": { "@type": "Answer", "text": "A single gopher can be caught within 24–48 hours with a properly placed trap. If you're dealing with multiple gophers or a yard-wide infestation, plan for 1–3 weeks of active trapping to clear the population." } },
   ]
@@ -176,7 +176,7 @@ const faqSchema = {
         </details>
         <details class="faq-item">
           <summary>Do gopher repellents actually work?</summary>
-          <p>Repellents like castor oil and sonic stakes can discourage gophers at the perimeter but won't stop an active infestation or a breeding surge. Use them to hold ground after trapping, not as a primary fix.</p>
+          <p>Not according to the research. UC IPM found no repellent effective at protecting plantings, and frightening devices such as vibrating stakes "haven't been effective in research trials." Trapping is what clears a yard.</p>
         </details>
         <details class="faq-item">
           <summary>What is the difference between Victor traps and Cinch traps?</summary>

@@ -9,7 +9,7 @@ tags:
   - lawn
   - nonlethal
 difficulty: easy
-timeToResults: "3-14 days"
+timeToResults: "Not established by research"
 firsthand: false
 petRisk: low
 cost: medium

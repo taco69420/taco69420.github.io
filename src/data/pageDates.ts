@@ -23,7 +23,7 @@ export const pageDates: Record<string, PageDates> = {
   "/best-gopher-traps/": { updated: "2026-10-14" },
   "/cost/": { updated: "2026-10-14" },
   "/faq/": { updated: "2026-10-14" },
-  "/gopher-vs-mole/": { published: "2026-03-11", updated: "2026-07-08" },
+  "/gopher-vs-mole/": { published: "2026-03-11", updated: "2026-10-14" },
   "/methods/": { updated: "2026-10-14" },
   "/problems/": { updated: "2026-07-08" },
   "/quick-start/": { updated: "2026-07-08" },

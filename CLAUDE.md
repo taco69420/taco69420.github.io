@@ -24,7 +24,7 @@ Run:
 npm run audit
 ```
 
-It must pass. The command builds the site and then runs every check in `scripts/audit/` against `dist/`, printing a PASS/FAIL line each and exiting non-zero if anything fails. Nine checks run today:
+It must pass. The command builds the site and then runs every check in `scripts/audit/` against `dist/`, printing a PASS/FAIL line each and exiting non-zero if anything fails. Twelve checks run today:
 
 | check | what it asserts |
 | --- | --- |
@@ -36,6 +36,8 @@ It must pass. The command builds the site and then runs every check in `scripts/
 | `sponsored` | every `amzn.to` / `amazon.com` link has `rel="sponsored"` (and `noopener` when `target="_blank"`) |
 | `products` | the best-of `positiveNotes` / `negativeNotes` match the visible Pros/Cons verbatim and in order |
 | `claims` | no anticoagulant bait is recommended, and no absolute safety claim ("completely safe", "zero risk") appears anywhere in `src/` |
+| `firsthand` | every `firsthand: false` page renders the UntestedNote, untested gear is linked only on its own method page, and every best-of product is in `FIRSTHAND_PRODUCTS` |
+| `figures` | gopher tunnel depth reads 6–12 inches everywhere (all dash types), and no unevidenced method advertises a numeric time-to-results |
 | `links` | every internal href resolves to a real built page, with the trailing slash, and every `#fragment` matches a real id |
 | `inbound` | per-page inbound content-link counts, with floors on the money pages and no orphan pages |
 
@@ -159,6 +161,14 @@ Site-wide claims have to match. "Every recommendation here is based on real fiel
 **One trap-check timing: "check daily; if nothing in one to two days, move the trap."** From UC IPM: "If you haven't captured a gopher within 1 to 2 days, reset the traps in a different location." The site previously had five different answers (12 h, 24 h, 12–48 h, 12–72 h, overnight). The `timeToResults` frontmatter field is a different claim — how long until results — and is left alone.
 
 **Other numbers that are pinned to UC IPM 7433.** Feeding burrows 6–12 inches below ground; the nest and food storage chamber as deep as 6 feet; probe "about 4 to 12 inches from the plug side" of the mound; up to 3 litters a year in irrigated sites against 1 in nonirrigated, litters averaging 5–6 young; aluminum phosphide only in burrows "more than 100 feet from any building". Repellents: no repellent has proven effective, and castor bean and similar "haven't been shown to repel gophers". Frightening devices, including vibrating/sonic stakes: "haven't been effective in research trials". Owl boxes: "unlikely to reduce gopher numbers enough to prevent damage", and owls are "unreliable... particularly over small areas such as a yard".
+
+**Gopher tunnel depth is 6–12 inches. Nothing else, anywhere.** UC IPM 7433: "Feeding burrows are usually 6 to 12 inches below ground," with the nest and food storage chamber as deep as 6 feet. The figure **6–18 inches** was wrong and survived three correction passes on `/gopher-vs-mole/`, `/` and `/best-gopher-poison/`, because these ranges use an en dash and `grep "6-18"` cannot match it. `scripts/audit/figures.mjs` now bans that figure outright and tests every dash variant — for anything with a dash in it, trust the audit and not grep. The one permitted exception is `/redlands/`'s "14–18 inches down" in clay, a first-hand observation explicitly flagged as deeper than average, allowlisted in that check.
+
+**Probe distance is "about 4 to 12 inches from the plug side"** of the mound, from the same source.
+
+**A method the research does not support must not advertise a timeframe.** `timeToResults` on `/methods/sonic-stakes/` and `/methods/castor-oil/` reads "Not established by research", and the `speed` cells in `methods.astro` match. A numeric figure there contradicts the page's own copy and fails the audit.
+
+**Sonic stakes are the one hedged method Mark has actually used** — front yard, heavy season, run alongside trapping. `/traps/` states the UC IPM verdict first, then that anecdote explicitly labelled as an anecdote, with no outcome claim, because he was trapping at the same time. Do not turn it back into an efficacy claim.
 
 **Cover the hole — keep this.** UC IPM says "Cover the hole so light doesn't get in," so the advice stays. What was removed is the stronger claim, stated as fact, that light makes a gopher *abandon or seal off* the area. Don't reintroduce it.
 
