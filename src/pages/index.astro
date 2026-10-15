@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import { updatedLine } from '../data/pageDates';
+import { pageTitle } from '../data/site';
 import RandomLore from '../components/RandomLore.astro';
 import BrevoForm from '../components/BrevoForm.astro';
 
@@ -23,25 +25,13 @@ const featuredMeta = {
   'gopher-mesh':  { speed: 'Immediate',    bestFor: 'Garden beds & raised beds' },
 };
 
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "How To Kill Gophers",
-  "url": "https://howtokillgophers.com",
-  "description": "Expert gopher trapping advice and gear reviews from Mark the Bagger. Field-tested methods for eliminating gophers from your yard.",
-  "author": {
-    "@type": "Person",
-    "name": "Mark the Bagger",
-    "url": "https://howtokillgophers.com/about/"
-  }
-};
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "When is the best time to trap gophers?", "acceptedAnswer": { "@type": "Answer", "text": "Spring (February–May) and fall (September–November) are the two peak activity windows. During spring, gophers are breeding hard and expanding territory fast — fresh mounds appear daily. Fall is the second major surge as they cache food for winter. Hit both windows hard and you stay ahead of the problem." } },
-    { "@type": "Question", "name": "How deep do gophers dig?", "acceptedAnswer": { "@type": "Answer", "text": "Main tunnel runs are 6–18 inches underground. Nesting chambers and food storage can go 3–6 feet deep in established systems. In summer, gophers go even deeper to escape heat — sometimes 3–4 feet below the surface." } },
+    { "@type": "Question", "name": "How deep do gophers dig?", "acceptedAnswer": { "@type": "Answer", "text": "Feeding burrows run 6–12 inches underground, and the nest and food storage chamber can be as deep as 6 feet depending on soil type. In summer gophers work deeper to escape the heat." } },
     { "@type": "Question", "name": "How do I identify a gopher mound?", "acceptedAnswer": { "@type": "Answer", "text": "A gopher mound is crescent or fan-shaped with a plugged hole off to one side. If the mound is a symmetrical volcano with a center hole, you have a mole — which requires completely different treatment. See the Gopher vs Mole ID guide for a full comparison." } },
     { "@type": "Question", "name": "How long does it take to get rid of gophers?", "acceptedAnswer": { "@type": "Answer", "text": "A single gopher can be caught as fast as 12 hours, typically 24–48 hours, with a properly placed trap in the main tunnel run. Complete elimination depends on how many gophers are present and whether new ones are migrating in from neighboring yards. No new mounds for 5–7 consecutive days means the gopher is gone." } },
   ]
@@ -49,16 +39,16 @@ const faqSchema = {
 ---
 
 <Layout
-  title="How To Kill Gophers (2026) | Mark The Bagger"
-  description="Expert gopher trapping advice and gear reviews from Mark the Bagger. Humane and lethal methods that actually work — field-tested in Redlands, CA since 2022."
-  schemas={[websiteSchema, faqSchema]}
+  title={pageTitle("How to Kill Gophers: Field-Tested Methods")}
+  description="13 gopher control methods compared, from traps and bait to CO and barriers. Trapping Redlands, CA since 2022 — and flagging what I haven't used myself."
+  schemas={[faqSchema]}
 >
 
   <header class="hero">
     <h1>How To Kill Gophers</h1>
     <p class="subtitle">From Mark the Bagger — trapping gophers since age 15.</p>
-    <p class="dateline">Updated July 2026</p>
-    <p class="hero-body">I started catching gophers at 15 for $5 a head. My dog <a href="/methods/dog-hunting/">Taco</a> was my partner. Over the years I built up real hands-on knowledge of what works — and what's a waste of time. This site is where I put all of it. No paid placements, no filler. Every recommendation here is based on real field experience.</p>
+    <p class="dateline">{updatedLine(Astro.url.pathname)}</p>
+    <p class="hero-body">I started catching gophers at 15 for $5 a head. My dog <a href="/methods/dog-hunting/">Taco</a> was my partner. Over the years I built up real hands-on knowledge of what works — and what's a waste of time. This site is where I put all of it. No paid placements, no filler. My trap and gear picks come from real field experience. Where I haven't used something myself, I say so and stick to what the research shows.</p>
     <figure class="hero-photo">
       <img src="/taco-catch.jpg" alt="Taco the chihuahua proudly holding a freshly caught gopher" />
       <figcaption>Taco with a fresh catch. He never missed.</figcaption>
@@ -174,7 +164,7 @@ const faqSchema = {
         </details>
         <details class="faq-item">
           <summary>How deep do gophers dig?</summary>
-          <p>Main tunnel runs are 6–18 inches underground. Nesting chambers and food storage can go 3–6 feet deep in established systems. In summer, gophers go even deeper to escape heat — sometimes 3–4 feet below the surface.</p>
+          <p>Feeding burrows run 6–12 inches underground, and the nest and food storage chamber can be as deep as 6 feet depending on soil type. In summer gophers work deeper to escape the heat.</p>
         </details>
         <details class="faq-item">
           <summary>How do I identify a gopher mound?</summary>

@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../data/author';
+import { updatedLine } from '../data/pageDates';
+import { pageTitle } from '../data/site';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -39,22 +42,25 @@ const faqSchema = {
     }
   ]
 };
+
+const crumbLabel = "What Doesn't Work";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/what-doesnt-work/");
 ---
 
 <Layout
-  title="What Doesn't Work on Gophers (And Why I Stopped Wasting Money) | How To Kill Gophers"
-  description="Coffee grounds, Irish Spring, cayenne, chewing gum, pinwheels — I've tried all of them. Here's the honest truth about why these home remedies fail and what actually works."
-  schemas={[faqSchema]}
+  title={pageTitle("What Doesn't Work on Gophers: Myths Tested")}
+  description="Chewing gum, coffee grounds, cayenne, Irish Spring — Mark tried them all and none of them moved a gopher. Why these remedies fail and what to do instead."
+  schemas={[faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › What Doesn't Work
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="waste-hero">
     <p class="waste-eyebrow">Hard-Earned Lessons</p>
     <h1>Let Me Save You Some Money</h1>
     <p class="waste-sub">I've tried the internet's favorite home remedies. Here's the honest truth.</p>
-    <p class="waste-dateline">Updated July 2026</p>
+    <p class="waste-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main id="main-content">

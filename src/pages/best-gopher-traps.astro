@@ -1,5 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { updatedLine } from '../data/pageDates';
+import { pageTitle, REVIEW_YEAR } from '../data/site';
+import { authorRef, breadcrumbSchema, SITE_URL } from '../data/author';
+import { bestOfProducts } from '../data/bestOfProducts';
+import { datesFor } from '../data/pageDates';
+
+const route = "/best-gopher-traps/";
+const heading = `Best Gopher Traps of ${REVIEW_YEAR}`;
+const dates = datesFor(route)!;
+const products = bestOfProducts[route];
+const product = Object.fromEntries(products.map((p) => [p.id, p]));
+
+// `datePublished` is absent on purpose: pageDates has no recorded publish
+// date for the best-of pages, and inventing one would be worse than omitting.
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": heading,
+  "author": authorRef,
+  "publisher": authorRef,
+  "image": `${SITE_URL}/taco.jpg`,
+  "datePublished": dates.published,
+  "dateModified": dates.updated,
+  "url": `${SITE_URL}${route}`,
+};
+
+// Pros/cons come from the same arrays the page renders below, so the review
+// notes always match the visible lists. No ratings or offers by design.
+const notes = (items: string[]) => ({
+  "@type": "ItemList",
+  "itemListElement": items.map((text, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": text,
+  })),
+});
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": heading,
+  "itemListElement": products.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Product",
+      "name": p.name,
+      "url": `${SITE_URL}${route}#${p.id}`,
+      "review": {
+        "@type": "Review",
+        "author": authorRef,
+        "positiveNotes": notes(p.pros),
+        "negativeNotes": notes(p.cons),
+      },
+    },
+  })),
+};
+
+const crumbLabel = "Best Gopher Traps";
+const crumbSchema = breadcrumbSchema(crumbLabel, route);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -34,7 +94,7 @@ const faqSchema = {
       "name": "How do I know if my trap placement is correct?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The trap should sit fully inside the main tunnel with the jaws spanning the full width of the run, and no soil touching the trigger. Cover the hole to block light and airflow — a gopher that senses a change in the tunnel environment will seal off that section rather than walk through it. Check within 12–24 hours. No catch and no disturbance means the run wasn't active at that location; move the trap."
+        "text": "The trap should sit fully inside the main tunnel with the jaws spanning the full width of the run, and no soil touching the trigger. Cover the hole so light doesn't get in, which is what UC IPM instructs. Check daily. If nothing has happened in one to two days, the run wasn't active at that location; move the trap."
       }
     }
   ]
@@ -42,19 +102,19 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Best Gopher Traps of 2026 | Mark the Bagger"
-  description="Field-tested gopher trap picks from Mark the Bagger — Victor Easy Set, Victor Black Box, and Cinch Traps compared with honest pros and cons. Updated 2026."
-  schemas={[faqSchema]}
+  title={pageTitle(`Best Gopher Traps of ${REVIEW_YEAR}: 3 Tested Picks`)}
+  description="Victor Easy Set, Victor Black Box, and Cinch traps compared on price, speed, and how forgiving each one is to set. Which to buy for your first tunnel run."
+  schemas={[articleSchema, itemListSchema, crumbSchema, faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Best Gopher Traps
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="traps-hero">
     <span class="hero-badge">⚡ Fastest Results</span>
-    <h1>Best Gopher Traps of 2026</h1>
+    <h1>{heading}</h1>
     <p class="hero-sub">I've been setting these since I was 15. These three are the ones that actually catch gophers.</p>
-    <p class="hero-dateline">Updated July 2026</p>
+    <p class="hero-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
@@ -67,10 +127,10 @@ const faqSchema = {
       <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
       <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
         <li><a href="#quick-picks">Quick Picks</a></li>
-        <li><a href="#victor-easy-set">Victor Easy Set Gopher Trap</a></li>
-        <li><a href="#victor-black-box">Victor Black Box Gopher Trap</a></li>
-        <li><a href="#cinch-traps">Cinch Traps (Scissor-Jaw Style)</a></li>
-        <li><a href="#buying-guide">What to Look For in a Gopher Trap</a></li>
+        {products.map((p) => (
+          <li><a href={`#${p.id}`}>{p.tocName}</a></li>
+        ))}
+<li><a href="#buying-guide">What to Look For in a Gopher Trap</a></li>
         <li><a href="#faq">Frequently Asked Questions</a></li>
       </ul>
     </nav>
@@ -89,25 +149,15 @@ const faqSchema = {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Victor Easy Set Gopher Trap</strong></td>
-              <td>Main tunnel intercept, highest catch rate</td>
-              <td><span class="tier-badge tier-budget">Budget</span></td>
-              <td><a href="https://amzn.to/4cIJ64V" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-            <tr>
-              <td><strong>Victor Black Box Gopher Trap</strong></td>
-              <td>Enclosed design, safer around pets &amp; kids</td>
-              <td><span class="tier-badge tier-budget">Budget</span></td>
-              <td><a href="https://amzn.to/4bqUakW" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-            <tr>
-              <td><strong>Cinch Traps (Scissor-Jaw)</strong></td>
-              <td>Beginners, easier arming, fewer misfires</td>
-              <td><span class="tier-badge tier-mid">Mid</span></td>
-              <td><a href="https://amzn.to/4sMH5cR" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-          </tbody>
+            {products.map((p) => (
+              <tr>
+                <td><strong>{p.tableName}</strong></td>
+                <td>{p.bestFor}</td>
+                <td><span class={`tier-badge tier-${p.tier}`}>{p.tier === 'budget' ? 'Budget' : p.tier === 'mid' ? 'Mid' : 'Premium'}</span></td>
+                <td><a href={p.url} class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+              </tr>
+            ))}
+</tbody>
         </table>
       </div>
     </section>
@@ -117,24 +167,18 @@ const faqSchema = {
       <div class="product-badge badge-best">Best Overall</div>
       <h2 id="victor-easy-set" class="ps-name">Victor Easy Set Gopher Trap</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Main tunnel intercept on active runs — the highest consistent catch rate of any mechanical trap I've used since I started trapping at 15.</p>
-      <p class="ps-desc">The Victor Easy Set is a Macabee-pattern wire trap that's been the standard for serious gopher trappers for decades. Two spring-loaded wire arms close across the tunnel when the trigger plate is activated. Set two of them back-to-back facing opposite directions in the main run, cover the opening to block light, and check in 12–24 hours. When the run is active and placement is right, you will catch a gopher. The mechanism is simple, which is exactly why it works.</p>
+      <p class="ps-desc">The Victor Easy Set is a Macabee-pattern wire trap that's been the standard for serious gopher trappers for decades. Two spring-loaded wire arms close across the tunnel when the trigger plate is activated. Set two of them back-to-back facing opposite directions in the main run, cover the opening so light doesn't get in, and check daily — if nothing in one to two days, move them. When the run is active and placement is right, you will catch a gopher. The mechanism is simple, which is exactly why it works.</p>
       <div class="ps-verdict">
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Among the lowest cost-per-catch of any trap on the market</li>
-            <li>Fast to set once the technique is dialed in</li>
-            <li>Durable — same traps can run for years of daily use</li>
-            <li>High catch rate on correctly located active runs</li>
-            <li>No bait required (peanut butter behind the trigger helps, but isn't mandatory)</li>
+            {product["victor-easy-set"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Spring force can snap fingers during placement — heavy gloves required</li>
-            <li>Entirely dependent on accurate tunnel location — a bad set catches nothing</li>
-            <li>Wire ends can wear through thinner gloves over time</li>
+            {product["victor-easy-set"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
@@ -151,18 +195,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Fully enclosed — no exposed jaws, far safer around pets and kids</li>
-            <li>Less intimidating to set than an open high-tension wire trap</li>
-            <li>Weather-resistant plastic housing holds up outdoors for years</li>
-            <li>Sets with a smaller tunnel opening — less digging per set</li>
+            {product["victor-black-box"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Bulkier than a bare wire trap — needs a slightly wider run to seat</li>
-            <li>Typically a hair slower to catch than an open wire set in the same run</li>
-            <li>Costs a little more per trap than the Easy Set</li>
+            {product["victor-black-box"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
@@ -179,18 +218,13 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Scissor-jaw mechanism is significantly more forgiving to arm than Victor wire traps</li>
-            <li>Fewer accidental misfires during placement in tight or curved tunnels</li>
-            <li>Good trigger sensitivity when properly aligned in the run</li>
-            <li>Solid catch rate — competitive with Victor when placement is correct</li>
+            {product["cinch-traps"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>More expensive per trap than the Victor Easy Set or Black Box</li>
-            <li>Slightly bulkier body — harder to fit in narrow tunnel geometries</li>
-            <li>Alignment is still critical — off by 15 degrees and the gopher pushes it aside</li>
+            {product["cinch-traps"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
@@ -235,7 +269,7 @@ const faqSchema = {
         </details>
         <details class="faq-item">
           <summary>How do I know if my trap placement is correct?</summary>
-          <p>The trap should sit fully inside the main tunnel with the jaws spanning the full width of the run, and no soil touching the trigger. Cover the hole to block light and airflow — a gopher that senses a change in the tunnel environment will seal off that section rather than walk through it. Check within 12–24 hours. No catch and no disturbance means the run wasn't active at that location; move the trap.</p>
+          <p>The trap should sit fully inside the main tunnel with the jaws spanning the full width of the run, and no soil touching the trigger. Cover the hole so light doesn't get in, which is what UC IPM instructs. Check daily. If nothing has happened in one to two days, the run wasn't active at that location; move the trap.</p>
         </details>
       </div>
     </section>

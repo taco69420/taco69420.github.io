@@ -1,6 +1,7 @@
 ---
 title: "Gopher-Proofing a New Yard Before Planting"
 description: "Install the right barriers and defenses before you landscape so gophers never get a foothold in the first place."
+metaDescription: "The best time to gopher-proof a yard is before you plant. Hardware cloth under beds, a root basket on every tree, and an 18-inch perimeter trench outside."
 date: 2026-03-14
 updated: 2026-07-08
 tags:

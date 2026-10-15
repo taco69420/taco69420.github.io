@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../data/author';
+import { updatedLine } from '../data/pageDates';
+import { pageTitle, REVIEW_YEAR } from '../data/site';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -11,21 +14,24 @@ const faqSchema = {
     { "@type": "Question", "name": "Do I need a special probe, or can I use rebar?", "acceptedAnswer": { "@type": "Answer", "text": "Rebar from any hardware store does the exact same job as a purpose-built probe. A purpose-built probe just has better ergonomics and handle grip for longer sessions, but the technique is identical." } },
   ]
 };
+
+const crumbLabel = "Gopher Traps & Gear";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/traps/");
 ---
 
 <Layout
-  title="Best Gopher Traps & Gear Reviews (2026) | Mark The Bagger"
-  description="Mark the Bagger's field-tested gopher trap and gear picks. High-tension wire traps, gopher gassers, probe tools — with comparison tables and honest reviews."
-  schemas={[faqSchema]}
+  title={pageTitle(`Gopher Traps & Gear Reviews ${REVIEW_YEAR}`)}
+  description={`The gopher gear Mark actually uses in ${REVIEW_YEAR}: high-tension wire traps, gassers, probes and hardware cloth, with comparison tables and honest field reviews.`}
+  schemas={[faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Gopher Traps & Gear
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="locker-hero">
     <h1>The Armory</h1>
     <p class="locker-sub">Every category here is something I've worked with in the field. I've listed the specific products I'd buy first based on that experience — if a whole category didn't earn results in my work, it's not on this page.</p>
-<p class="locker-dateline">Updated July 2026</p>
+<p class="locker-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
@@ -154,14 +160,6 @@ const faqSchema = {
           <a href="https://amzn.to/4b4oF11" class="btn" target="_blank" rel="sponsored noopener">Shop on Amazon →</a>
         </div>
 
-        <div class="product-card">
-          <div class="product-badge badge-budget">Deep Systems</div>
-          <h4 class="product-name">CO Burrow Treatment Device</h4>
-          <p class="product-desc">Carbon monoxide-based fumigation that pushes gas deep into branching tunnel networks. More thorough penetration than standard cartridges on complex or multi-gopher systems. Higher cost per use but more complete coverage.</p>
-          <p class="product-best-for"><strong>Best for:</strong> Established infestations with deep, branching runs where cartridge gassers aren't reaching the full system.</p>
-          <a href="https://amzn.to/47l872T" class="btn" target="_blank" rel="sponsored noopener">Shop on Amazon →</a>
-        </div>
-
       </div>
 
       <h3 class="compare-heading">Quick Comparison</h3>
@@ -181,12 +179,6 @@ const faqSchema = {
               <td><span class="tier-badge tier-budget">Budget</span></td>
               <td>Mid-depth systems, quick deployment</td>
               <td><a href="https://amzn.to/4b4oF11" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-            <tr>
-              <td><strong>CO Burrow Fumigator</strong></td>
-              <td><span class="tier-badge tier-premium">Premium</span></td>
-              <td>Deep, complex tunnel networks</td>
-              <td><a href="https://amzn.to/47l872T" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
             </tr>
           </tbody>
         </table>
@@ -269,7 +261,7 @@ const faqSchema = {
     ============================================================= -->
     <section class="card armory-category">
       <h2 id="bait-stations">Underground Bait Stations</h2>
-      <p class="category-intro">This is a last resort, not a first move. When I do reach for bait, I use diphacinone over zinc phosphide — it's slower acting, but it's safer to handle and carries a lower secondary poisoning risk to hawks, owls, and other things eating what you're killing. The tradeoff is worth it. I also won't use bait at all on any property where dogs are working. Full stop. If there's a dog covering that ground, we trap only.</p>
+      <p class="category-intro">This is a last resort, not a first move. Diphacinone used to be the common choice here and it's now prohibited for residential use in California, which leaves zinc phosphide where the label lists pocket gophers. On carcass risk zinc phosphide is the lower risk of the two — it isn't stored in the animal's tissue, while anticoagulants persist in the liver. Don't read that as pet-safe. Zinc phosphide is acutely toxic, and a dog that eats the bait — or a freshly killed gopher with bait still in its stomach — can be poisoned. It is the remaining legal option for a California homeowner, not a safe one. I still won't use bait at all on any property where dogs are working. Full stop. If there's a dog covering that ground, we trap only.</p>
       <p class="category-intro" style="background: #fff7ed; border-left: 4px solid #f97316; padding: 0.65rem 0.9rem; border-radius: 4px; color: #92400e;"><strong>Pet safety:</strong> Never place bait stations where dogs, cats, or other animals can access them. Even tamper-resistant stations can be dug up or knocked loose. Keep pets away from treated areas until you've confirmed all stations are secure and accounted for.</p>
       <p class="category-intro">For full bait station protocol, see the <a href="/methods/poison-bait-stations/">Underground Bait Stations guide</a>.</p>
       <a href="https://amzn.to/46XnfTH" class="btn" target="_blank" rel="sponsored noopener">Shop Bait Applicator on Amazon →</a>
@@ -281,7 +273,8 @@ const faqSchema = {
     ============================================================= -->
     <section class="card armory-category">
       <h2 id="sonic-stakes">Sonic Repeller Stakes</h2>
-      <p class="category-intro">Sonic stakes won't eliminate gophers on their own — don't buy them expecting a standalone fix. What they can do is push gophers out of a specific zone while you're actively trapping. Think of them as a perimeter buffer. I've used them to keep gophers from re-entering a cleared area while I work an adjacent section with traps. Used that way — as a supplement, not a replacement — they earn their spot in the kit.</p>
+      <p class="category-intro">Start with the research, because it's the part most pages selling these leave out: UC IPM tested this class of device and found that frightening devices such as vibrating stakes "haven't been effective in research trials."</p>
+      <p class="category-intro"><strong>My anecdote, and only an anecdote:</strong> I've run sonic stakes in our front yard when gophers were bad, trying to keep them out of a section I'd already cleared while I worked the next section with traps. I was trapping at the same time, so I can't separate what the stakes did from what the traps did — and I'm not going to pretend otherwise.</p>
       <p class="category-intro">For placement strategy, see the <a href="/methods/sonic-stakes/">Sonic Repeller Stakes guide</a>.</p>
       <a href="https://amzn.to/4sF1zUD" class="btn" target="_blank" rel="sponsored noopener">Shop Sonic Stakes on Amazon →</a>
       <p class="category-guide-link">Full technique guide: <a href="/methods/sonic-stakes/">Sonic Repeller Stakes →</a></p>
@@ -301,11 +294,11 @@ const faqSchema = {
         <li><a href="/methods/poison-bait-stations/">Underground Bait Stations guide</a></li>
         <li><a href="/methods/sonic-stakes/">Sonic Repeller Stakes guide</a></li>
         <li><a href="/methods/flooding-tactics/">Flooding Tactics guide</a></li>
-        <li><a href="/methods/castor-oil/">Castor Oil Repellent guide</a></li>
+        <li><a href="/methods/castor-oil/">Castor Oil for Gophers — does it work?</a></li>
         <li><a href="/methods/dog-hunting/">Dog Hunting guide</a></li>
         <li><a href="/methods/exclusion-fencing/">Exclusion Fencing guide</a></li>
         <li><a href="/methods/barn-owl-box/">Barn Owl Box guide</a></li>
-        <li><a href="/methods/gopher-resistant-plants/">Gopher-Resistant Plants guide</a></li>
+        <li><a href="/methods/gopher-resistant-plants/">Plants That Repel Gophers — full list</a></li>
         <li><a href="/methods/hiring-a-pro/">Hiring a Pro guide</a></li>
         <li><a href="/quick-start/">Quick Start field process</a></li>
         <li><a href="/best-gopher-traps/">Best Gopher Traps of 2026 — full roundup with comparisons</a></li>

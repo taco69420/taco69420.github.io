@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 ---
 
 <Layout
-  title="Privacy Policy & Legal Disclaimers | Mark The Bagger"
-  description="Privacy policy, affiliate disclaimer, cookie preferences, and CCPA Do Not Sell opt-out for howtokillgophers.com."
+  title={pageTitle("Privacy Policy & Legal Disclaimers")}
+  description="Privacy policy, Amazon affiliate disclaimer, cookie and Google Analytics preferences, and the CCPA Do Not Sell opt-out for howtokillgophers.com."
 >
   <header>
     <h1>Privacy & Disclaimers</h1>
@@ -13,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
 
   <main>
     <section class="card">
-      <h2>Amazon Affiliate Disclaimer</h2>
+      <h2 id="affiliate">Amazon Affiliate Disclaimer</h2>
       <p>As an Amazon Associate, I earn from qualifying purchases. This means if you click on an affiliate link and buy a trap or gasser, I may receive a small commission at no extra cost to you. This helps fund the hosting for this site and keeps the hardware running.</p>
     </section>
 

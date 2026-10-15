@@ -3,11 +3,17 @@ import { defineCollection, z } from 'astro:content';
 const baseSchema = z.object({
   title: z.string(),
   description: z.string(),
+  // Search-result copy. Falls back to `description`, which also renders as the
+  // visible page subtitle and so has to read as body text, not as a meta tag.
+  metaDescription: z.string().optional(),
   date: z.date(),
   updated: z.date().optional(),
   tags: z.array(z.string()),
   difficulty: z.enum(['easy', 'medium', 'hard']),
   timeToResults: z.string(),
+  // false on a method the author has not personally used. Drives UntestedNote
+  // on the page; absent means first-hand, which is the site default.
+  firsthand: z.boolean().optional(),
   petRisk: z.enum(['low', 'medium', 'high']),
   cost: z.enum(['low', 'medium', 'high']),
   sources: z.array(

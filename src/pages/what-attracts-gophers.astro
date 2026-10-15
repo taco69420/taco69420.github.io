@@ -1,23 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { authorRef, breadcrumbSchema } from '../data/author';
+import { updatedLine, datesFor } from '../data/pageDates';
+import { pageTitle } from '../data/site';
+
+const dates = datesFor("/what-attracts-gophers/")!;
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "What Attracts Gophers to Your Yard — And How to Use That Against Them",
   "description": "Gophers don't show up randomly. Loose soil, dense root systems, irrigation lines, and the wrong plants all make your yard a target. Here's what's drawing them in.",
-  "author": {
-    "@type": "Person",
-    "name": "Mark the Bagger",
-    "url": "https://howtokillgophers.com/about/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "How To Kill Gophers",
-    "url": "https://howtokillgophers.com"
-  },
-  "datePublished": "2026-03-18",
-  "dateModified": "2026-07-08",
+  "author": authorRef,
+  "publisher": authorRef,
+  "datePublished": dates.published,
+  "dateModified": dates.updated,
   "url": "https://howtokillgophers.com/what-attracts-gophers/"
 };
 
@@ -31,21 +28,24 @@ const faqSchema = {
     { "@type": "Question", "name": "Can I make my yard gopher-proof without trapping?", "acceptedAnswer": { "@type": "Answer", "text": "Not completely, but you can significantly reduce pressure. Underground hardware cloth barriers are the most effective passive defense — nothing gets through 1/2-inch galvanized mesh installed 18 inches deep with a 6-inch outward-facing lip. Swapping in gopher-resistant plants and fixing irrigation leaks also helps. But if you already have an active gopher, trapping is the only way to actually remove it." } },
   ]
 };
+
+const crumbLabel = "What Attracts Gophers";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/what-attracts-gophers/");
 ---
 
 <Layout
-  title="What Attracts Gophers to Your Yard (2026) | How To Kill Gophers"
-  description="Gophers don't show up randomly. Loose soil, dense root systems, drip irrigation, and the wrong plants all make your yard a target. Learn what's drawing them in and how to use it against them."
-  schemas={[articleSchema, faqSchema]}
+  title={pageTitle("What Attracts Gophers to Your Yard")}
+  description="Gophers don't show up at random. Loose soil, dense root systems, drip irrigation, and the wrong plants draw them in. Find out what your yard is guilty of."
+  schemas={[articleSchema, faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › What Attracts Gophers
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header>
     <h1>What Attracts Gophers to Your Yard</h1>
     <p class="subtitle">And How to Use That Against Them</p>
-    <p class="dateline">Updated July 2026</p>
+    <p class="dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
@@ -191,7 +191,7 @@ const faqSchema = {
       <p class="related-label">Related guides</p>
       <div class="related-grid">
         <a href="/what-doesnt-work/" class="related-card">What Doesn't Work — myth busting →</a>
-        <a href="/methods/gopher-resistant-plants/" class="related-card">Gopher-Resistant Plant Selection →</a>
+        <a href="/methods/gopher-resistant-plants/" class="related-card">Plants That Repel Gophers — what works →</a>
         <a href="/methods/gopher-mesh/" class="related-card">Install Gopher Mesh Barriers — permanent fix →</a>
         <a href="/seasons/" class="related-card">Seasonal Guide — when pressure is highest →</a>
       </div>

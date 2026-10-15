@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { authorRef, breadcrumbSchema } from '../data/author';
+import { updatedLine, datesFor } from '../data/pageDates';
+import { pageTitle } from '../data/site';
 import BrevoForm from '../components/BrevoForm.astro';
 
 const faqSchema = {
@@ -13,9 +16,13 @@ const faqSchema = {
   ]
 };
 
+const dates = datesFor("/quick-start/")!;
+
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
+  "dateModified": dates.updated,
+  "author": authorRef,
   "name": "Quick Start Guide: How to Trap Gophers",
   "description": "Mark the Bagger's exact step-by-step gopher trapping process, field-tested over years with his dog Taco.",
   "step": [
@@ -25,22 +32,25 @@ const howToSchema = {
     { "@type": "HowToStep", "name": "Set traps", "text": "Set Victor-style pinch traps back-to-back facing opposite directions in the main run. Cover the hole — no light in the tunnel. The gopher returns to repair the damage and hits the trap." }
   ]
 };
+
+const crumbLabel = "Quick Start";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/quick-start/");
 ---
 
 <Layout
-  title="Quick Start Guide — How to Trap Gophers (2026) | How To Kill Gophers"
-  description="Mark the Bagger's exact step-by-step gopher trapping process. Scout, probe, flush, and trap — the same method he ran with his dog Taco for years."
-  schemas={[howToSchema, faqSchema]}
+  title={pageTitle("How to Trap Gophers: Quick Start Guide")}
+  description="Scout the yard, probe for the main run, then set traps. Mark the Bagger's exact process, plus the water flush step he ran with Taco — dog owners only."
+  schemas={[howToSchema, faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Quick Start
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="mission-hero">
     <p class="mission-eyebrow">Field Briefing</p>
     <h1>The Taco Method: Start Here</h1>
     <p class="mission-sub">4 steps. No fluff. Scout, probe, flush (dog owners), trap. This is the process.</p>
-    <p class="mission-dateline">Updated July 2026</p>
+    <p class="mission-dateline">{updatedLine(Astro.url.pathname)}</p>
     <ol class="step-track" aria-label="Process steps">
       <li class="step-node"><span class="step-circle">1</span><span class="step-label">Scout</span></li>
       <li class="step-connector" aria-hidden="true"></li>

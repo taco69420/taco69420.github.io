@@ -1,0 +1,44 @@
+---
+// Shown on any method page whose frontmatter sets `firsthand: false`.
+//
+// The site's whole premise is field experience, so a page about a method the
+// author has not personally used has to say so rather than borrow the
+// credibility of the pages that are first-hand. Driven by the frontmatter flag,
+// never hardcoded per page — scripts/audit/claims.mjs fails the build if a page
+// with `firsthand: false` renders without this note.
+---
+
+<aside class="untested-note">
+  <p class="untested-label">Not field-tested by me</p>
+  <p class="untested-body">
+    I haven't used this one myself. This page is based on the research and
+    published guidance, not my own field experience.
+  </p>
+</aside>
+
+<style>
+  .untested-note {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-left: 4px solid #d4af37;
+    border-radius: 6px;
+    padding: 0.9rem 1.25rem;
+    margin: 0 0 1.5rem;
+  }
+
+  .untested-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #92400e;
+    margin: 0 0 0.35rem;
+  }
+
+  .untested-body {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #78350f;
+  }
+</style>

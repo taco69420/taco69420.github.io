@@ -1,23 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { authorRef, breadcrumbSchema } from '../data/author';
+import { updatedLine, datesFor } from '../data/pageDates';
+import { pageTitle } from '../data/site';
+import NextSteps from '../components/NextSteps.astro';
+
+const dates = datesFor("/southern-california-gopher-control/")!;
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Southern California Gopher Control — What's Different Here and What Actually Works",
   "description": "Gopher control in SoCal isn't like the rest of the country. Year-round activity, sandy soil, drip irrigation, and mild winters mean you're never really off the hook. Here's what works in the Inland Empire, San Diego, and the LA Basin.",
-  "author": {
-    "@type": "Person",
-    "name": "Mark the Bagger",
-    "url": "https://howtokillgophers.com/about/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "How To Kill Gophers",
-    "url": "https://howtokillgophers.com"
-  },
-  "datePublished": "2026-03-18",
-  "dateModified": "2026-07-08",
+  "author": authorRef,
+  "publisher": authorRef,
+  "datePublished": dates.published,
+  "dateModified": dates.updated,
   "url": "https://howtokillgophers.com/southern-california-gopher-control/"
 };
 
@@ -31,21 +29,24 @@ const faqSchema = {
     { "@type": "Question", "name": "What's different about gopher control in SoCal vs other regions?", "acceptedAnswer": { "@type": "Answer", "text": "Three things: year-round activity (no real winter break), sandy loam soil that makes tunneling easy, and drip irrigation that creates moisture corridors gophers actively follow. In colder regions you get a winter window to install barriers and reset. In SoCal, gophers keep working through December and January — which means you need year-round maintenance trapping rather than a single seasonal push." } },
   ]
 };
+
+const crumbLabel = "Southern California Gopher Control";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/southern-california-gopher-control/");
 ---
 
 <Layout
-  title="Southern California Gopher Control (2026) | How To Kill Gophers"
-  description="Year-round activity, sandy soil, drip irrigation, and mild winters make SoCal one of the worst regions in the country for gopher pressure. Here's what actually works in the Inland Empire, San Diego, and the LA Basin."
-  schemas={[articleSchema, faqSchema]}
+  title={pageTitle("Southern California Gopher Control: DIY Trapping Guide")}
+  description="Skip the exterminator and do it yourself. Why SoCal gophers never take a winter off, the methods that hold up in sandy loam, and what a pro really costs."
+  schemas={[articleSchema, faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Southern California Gopher Control
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header>
     <h1>Southern California Gopher Control</h1>
     <p class="subtitle">What's Different Here and What Actually Works</p>
-    <p class="dateline">Updated July 2026</p>
+    <p class="dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
@@ -54,6 +55,7 @@ const faqSchema = {
       <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
       <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
         <li><a href="#why-socal">Why SoCal Is Ground Zero for Gophers</a></li>
+        <li><a href="#diy-or-pro">Hire an Exterminator or Do It Yourself?</a></li>
         <li><a href="#year-round">Year-Round Activity — No Real Off-Season</a></li>
         <li><a href="#soil">Soil and Landscape Conditions</a></li>
         <li><a href="#plants">Plants Gophers Target in SoCal</a></li>
@@ -73,12 +75,22 @@ const faqSchema = {
     </section>
 
     <section class="card">
+      <h2 id="diy-or-pro">Hire an Exterminator or Do It Yourself?</h2>
+      <p>If you searched for gopher control in Southern California, you were probably hoping to find someone to come out and do it. I don't do paid trapping — this site is the do-it-yourself version, and for most yards that's the right call anyway.</p>
+      <p><strong>Do it yourself when</strong> you're dealing with one or two gophers in a normal residential yard. A Victor 2-pack runs about $15 and you reuse the traps indefinitely, so the whole job costs less than a single service call. The SoCal catch is that there's no off-season, so you're checking sets through the year rather than once each spring.</p>
+      <p><strong>Hire a pro when</strong> the property is large with activity in several zones, when you can't walk the yard every morning through the spring and fall surges, or when you've probed repeatedly and still can't find the main run. Residential gopher work runs about $150 to $500+ depending on property size, method, and whether it's a one-time treatment or a recurring contract. If that's your situation, paying for it is a reasonable call, not a failure.</p>
+      <p>Full numbers in the <a href="/cost/">gopher control cost guide</a>, and what to ask before you sign anything in <a href="/methods/hiring-a-pro/">hiring a professional trapper</a>.</p>
+    </section>
+
+    <NextSteps />
+
+    <section class="card">
       <h2 id="year-round">Year-Round Activity — No Real Off-Season</h2>
       <p>In most of the continental U.S., gopher activity drops significantly in winter. Not here. SoCal winters — even inland valley winters in Redlands, Hemet, or El Cajon — rarely get cold enough to push gophers deep or slow their breeding cycles meaningfully. January mounds are common. December trapping is productive.</p>
 
       <p>What SoCal does have is two <em>surges</em> that are notably worse than baseline:</p>
       <ul>
-        <li><strong>Spring (February–May):</strong> Peak breeding. A single female produces 2–3 litters of 5–6 pups during this window. New tunnels go in fast and mounds multiply overnight. This is your most important trapping window of the year — start early, before you see the first new mound.</li>
+        <li><strong>Spring (February–May):</strong> Peak breeding. In irrigated ground a female can produce up to 3 litters a year — against 1 in nonirrigated sites — and litters average 5 to 6 young. New tunnels go in fast and mounds multiply overnight. This is your most important trapping window of the year — start early, before you see the first new mound.</li>
         <li><strong>Fall (September–November):</strong> Food caching season. Gophers expand their tunnel network aggressively to stockpile roots and bulbs for winter. Second-biggest activity surge of the year, especially in vegetable gardens as crops finish.</li>
       </ul>
 
@@ -140,10 +152,10 @@ const faqSchema = {
       <ul>
         <li><strong>Pocket gophers are non-game mammals</strong> under California Fish and Game Code. Property owners can legally trap or kill gophers on their own property without a permit or license.</li>
         <li><strong>Mechanical traps</strong> (Victor, Cinch, Macabee-style) are unrestricted for homeowner use. No permit needed. Buy them, set them, dispose of the catch.</li>
-        <li><strong>Carbon monoxide fumigation devices</strong> (like the Giant Destroyer or Pressurized CO systems) are legal for homeowner use without a license. See the <a href="/methods/carbon-monoxide/">CO burrow treatment guide</a> for proper technique and safety.</li>
-        <li><strong>Grain bait products</strong> containing zinc phosphide (sold under brands like Moletox) are legal for homeowners to purchase and use following label directions. Note that fumigation cartridges such as the Gopher Gasser burn to produce gas — they're fumigants, not grain bait, and belong to the fumigation category above. Restricted-use pesticides and professional-grade fumigants (methyl bromide, aluminum phosphide) require a licensed Pest Control Operator.</li>
+        <li><strong>Two different things get called "gassers."</strong> Burning gas cartridges (the Giant Destroyer and similar) are sodium nitrate, sulfur and charcoal — they produce oxides of sulfur along with carbon monoxide, and UC IPM found cartridge fumigation "isn't effective because gophers can seal off their burrows rapidly." They are also a fire hazard: never under or near structures, decks, porches, dry vegetation or mulch. Pressurized carbon monoxide injection devices are a separate category — see the <a href="/methods/carbon-monoxide/">CO burrow treatment guide</a> for technique and safety. Read the label on whichever you buy.</li>
+        <li><strong>Grain bait products</strong> containing zinc phosphide (sold under brands like Moletox) are legal for homeowners to purchase and use following label directions. Note that fumigation cartridges such as the Gopher Gasser burn to produce gas — they're fumigants, not grain bait, and belong to the fumigation category above. Aluminum phosphide is a professional fumigant, and UC IPM notes it can only be used in burrows "more than 100 feet from any building."</li>
         <li><strong>Local restrictions may apply.</strong> Some HOAs prohibit certain rodent control methods on common areas or require approval before treating. A handful of municipalities have regulations on poison bait use near waterways or in specific zones. Check with your local municipality if you're near a protected area or creek corridor.</li>
-        <li><strong>Secondary poisoning caution.</strong> California has strict regulations around rodenticides that cause secondary poisoning risk to raptors and other wildlife. Zinc phosphide is generally lower risk than anticoagulant rodenticides (which are broadly restricted in California for ground squirrel and other rodent control). If you have barn owls, hawks, or other raptors in your area, mechanical trapping eliminates all secondary poisoning risk.</li>
+        <li><strong>Secondary poisoning caution.</strong> California has strict regulations around rodenticides that cause secondary poisoning risk to raptors and other wildlife. On carcass risk zinc phosphide is lower risk than anticoagulant rodenticides — it isn't stored in the animal's tissue, while anticoagulants persist in the liver. Anticoagulants are the class California restricted: diphacinone and chlorophacinone have been prohibited for residential use here since January 1, 2024. Don't read that as pet-safe. Zinc phosphide is acutely toxic, and a dog that eats the bait — or a freshly killed gopher with bait still in its stomach — can be poisoned. It is the remaining legal option for a California homeowner, not a safe one. If you have barn owls, hawks, or other raptors in your area, mechanical trapping eliminates all secondary poisoning risk.</li>
       </ul>
     </section>
 
@@ -157,7 +169,7 @@ const faqSchema = {
         <li><strong>Underground hardware cloth</strong> — The permanent fix for gardens, young trees, and raised beds. Install before planting. In SoCal you don't get a low-activity season to install it without pressure — winter is your best window, but any time before the next spring surge works. Full guide: <a href="/methods/gopher-mesh/">gopher mesh installation</a>.</li>
         <li><strong>Bait stations</strong> — Effective for larger infestations. Useful in areas where traps are hard to service frequently. Read the <a href="/methods/poison-bait-stations/">bait station guide</a> for placement and safety.</li>
         <li><strong>Carbon monoxide fumigation</strong> — Good for flushing complex tunnel systems and confirming tunnel layout. Pairs well with follow-up trapping. See the <a href="/methods/carbon-monoxide/">CO treatment guide</a>.</li>
-        <li><strong>Barn owl boxes</strong> — A legitimate long-term tool in SoCal. Barn owls are present across the region and actively hunt gophers. A breeding pair can take 3–4 gophers per night. Takes time to establish, but in the foothills and semi-rural communities it's worth doing. Full guide: <a href="/methods/barn-owl-box/">barn owl box installation</a>.</li>
+        <li><strong>Barn owl boxes</strong> — A long-game addition, not a control method. Barn owls are present across the region and do hunt gophers. Be straight about the limits though: UC IPM says owl boxes are "unlikely to reduce gopher numbers enough to prevent damage" and that owls are "unreliable... particularly over small areas such as a yard." On foothill acreage I still think a box is worth putting up. Full guide: <a href="/methods/barn-owl-box/">barn owl box installation</a>.</li>
       </ul>
 
       <h3>What Doesn't Work Well in SoCal</h3>
@@ -196,7 +208,7 @@ const faqSchema = {
             <tr>
               <td><strong>March–April</strong></td>
               <td class="level-peak">Peak activity</td>
-              <td>Highest activity of the year. Check traps every 12–24 hours. Walk the perimeter daily. New mounds overnight are normal — keep pace with trapping.</td>
+              <td>Highest activity of the year. Check traps daily; if nothing in one to two days, move them. Walk the perimeter daily. New mounds overnight are normal — keep pace with trapping.</td>
             </tr>
             <tr>
               <td><strong>May</strong></td>

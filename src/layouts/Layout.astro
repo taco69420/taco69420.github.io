@@ -1,5 +1,7 @@
 ---
 import CookieBanner from '../components/CookieBanner.astro';
+import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import { authorSchema, websiteSchema, SOCIAL_LINKS } from '../data/author';
 
 interface Props {
   title: string;
@@ -10,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = "Expert gopher trapping advice and gear reviews from Mark the Bagger. Serving Redlands, CA with field-tested methods since 2022.",
+  description = "Gopher trapping advice and gear reviews from Mark the Bagger, trapping in Redlands, CA since 2022. DIY only — not a paid trapping service.",
   ogImage = "/taco.jpg",
   schemas = [],
 } = Astro.props;
@@ -20,26 +22,25 @@ const siteURL = "https://howtokillgophers.com";
 const pathname = Astro.url.pathname;
 const fullOgImage = ogImage.startsWith("http") ? ogImage : siteURL + ogImage;
 
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "How To Kill Gophers",
-  "url": "https://howtokillgophers.com",
-  "description": "Field-tested gopher control methods and gear recommendations from Mark the Bagger, who has been trapping gophers since age 15.",
-  "publisher": {
-    "@type": "Person",
-    "name": "Mark the Bagger"
-  }
-};
+// The only place the full Person and WebSite nodes are emitted — see src/data/author.ts.
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Mark the Bagger",
-  "url": "https://howtokillgophers.com/about/",
-  "description": "Gopher trapper since age 15. Started catching gophers in Redlands, CA for $5 a head. Built howtokillgophers.com to share real hands-on knowledge.",
-  "knowsAbout": ["gopher control", "gopher trapping", "pest control", "Victor traps", "Cinch traps"]
-};
+// Affiliate disclosure placement. Render the page's own content to a string so
+// we can look for Amazon links in it: scanning the finished document instead
+// would match CookieBanner's a[href*="amzn.to"] click-tracking selector and
+// stamp a disclosure onto all 43 pages. Markdown bodies render inside this slot
+// too, so this one check covers static pages and content collections alike.
+const pageHtml = Astro.slots.has('default') ? await Astro.slots.render('default') : '';
+const hasAmazonLink = /href=["']https?:\/\/(?:www\.)?(?:amzn\.to|amazon\.com)/i.test(pageHtml);
+
+// Every H1 on this site sits in a <header> next to its subtitle and dateline, so
+// splitting at </h1> would wedge the disclosure into the middle of that block.
+// Split after the header instead, falling back to the H1, then the page top.
+const anchor = hasAmazonLink
+  ? (pageHtml.match(/<\/header>/i) ?? pageHtml.match(/<\/h1>/i))
+  : null;
+const splitAt = anchor?.index != null ? anchor.index + anchor[0].length : 0;
+const beforeDisclosure = hasAmazonLink ? pageHtml.slice(0, splitAt) : pageHtml;
+const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
 ---
 
 <html lang="en">
@@ -178,7 +179,7 @@ const personSchema = {
       }
     </style>
 
-    <Fragment set:html={[websiteSchema, personSchema, ...schemas].map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('')} />
+    <Fragment set:html={[websiteSchema, authorSchema, ...schemas].map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('')} />
   </head>
 
   <body>
@@ -197,8 +198,8 @@ const personSchema = {
           <li><a href="/methods/carbon-monoxide/">Carbon Monoxide Burrow Treatment</a></li>
           <li><a href="/methods/poison-bait-stations/">Underground Bait Station</a></li>
           <li><a href="/methods/sonic-stakes/">Sonic Repeller Stakes</a></li>
-          <li><a href="/methods/castor-oil/">Castor Oil Soil Repellent Program</a></li>
-          <li><a href="/methods/gopher-resistant-plants/">Gopher-Resistant Plant Selection</a></li>
+          <li><a href="/methods/castor-oil/">Castor Oil for Gophers</a></li>
+          <li><a href="/methods/gopher-resistant-plants/">Plants That Repel Gophers</a></li>
           <li><a href="/methods/exclusion-fencing/">Exclusion Fencing for Large Properties</a></li>
           <li><a href="/methods/barn-owl-box/">Barn Owl Box Installation</a></li>
           <li><a href="/methods/dog-hunting/">The Taco Method: Using a Dog to Hunt Gophers</a></li>
@@ -241,7 +242,9 @@ const personSchema = {
       <a href="/about/" class={pathname === '/about/' ? 'nav-active' : ''}>About Mark</a>
     </nav>
 
-    <slot />
+    <Fragment set:html={beforeDisclosure} />
+    {hasAmazonLink && <AffiliateDisclosure />}
+    <Fragment set:html={afterDisclosure} />
 
     <footer class="disclaimer">
       <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
@@ -257,6 +260,12 @@ const personSchema = {
         <a href="/seasons/" class="legal-link">Seasonal Guide</a>
         &nbsp;·&nbsp;
         <a href="/faq/" class="legal-link">FAQ</a>
+      </p>
+      <p style="margin-bottom: 0.5rem;">
+        Follow along:{' '}
+        {SOCIAL_LINKS.map((link, i) => (
+          <>{i > 0 ? '\u00a0·\u00a0' : ''}<a href={link.url} class="legal-link" target="_blank" rel="me noopener">{link.label}</a></>
+        ))}
       </p>
       <p><strong>Affiliate Disclosure:</strong> I participate in the Amazon Services LLC Associates Program. As an Amazon Associate I earn from qualifying purchases.</p>
       <p style="margin-top: 10px;"><a href="/privacy/" class="legal-link">Read the full Privacy Policy & Legal Disclaimers</a></p>

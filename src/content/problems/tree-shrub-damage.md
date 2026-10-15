@@ -1,6 +1,7 @@
 ---
 title: "Gopher Damage to Trees & Shrubs"
 description: "Identify and stop gophers from girdling roots and killing established trees, shrubs, and ornamentals from below."
+metaDescription: "Gophers girdle the root crown and the tree looks fine until it doesn't. Spot mounds within 10 feet, trap fast, and cage every root ball before replanting."
 date: 2026-03-14
 updated: 2026-07-08
 tags:
@@ -34,7 +35,7 @@ Gophers kill trees and shrubs by girdling the root crown — chewing all the way
 5. For new replacement plantings, install a [hardware cloth basket](/methods/gopher-mesh/) around the root ball before planting. This is the only reliable protection for young trees.
 
 ## Bagger Pro-Tip
-Don't plant a $200 fruit tree without a $4 hardware cloth basket. It takes ten minutes and it's the difference between a tree and an expensive gopher snack. Every new tree Mark plants goes in with a basket. No exceptions.
+Don't plant a $200 fruit tree without a $4 hardware cloth basket. It takes ten minutes and it's the difference between a tree and an expensive gopher snack. Every new tree I plant goes in with a basket. No exceptions.
 
 ## Safety Warning
 When excavating around root crowns, use a hand trowel rather than a shovel. One bad shovel strike can finish what the gopher started.

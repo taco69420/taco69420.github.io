@@ -1,6 +1,7 @@
 ---
 title: "Gophers Chewing Irrigation Lines"
 description: "Find and fix underground drip and soaker lines destroyed by gopher gnawing, and stop repeat damage."
+metaDescription: "Soggy spots and a pressure drop at the valve mean a chewed drip line. How to probe for the break, splice in barbed couplings, and mesh it before burying."
 date: 2026-03-11
 updated: 2026-07-08
 tags:

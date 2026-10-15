@@ -1,8 +1,9 @@
 ---
 title: "Victor Trap Tunnel Intercept"
 description: "Use classic Victor pinch traps in active main runs for fast, repeatable captures."
+metaDescription: "The Victor pinch trap is my first reach. Probe the main run, set two facing opposite directions, cover the hole, check daily, and move it after two days."
 date: 2026-03-01
-updated: 2026-07-08
+updated: 2026-10-14
 tags:
   - trapping
   - mechanical
@@ -21,7 +22,7 @@ sources:
 ---
 
 ## Quick Answer
-Victor traps are my go-to — they're what I started with at 15 and what I still reach for first. Place two traps directly in the main runway facing opposite directions, block the light, and if the run is active you're often looking at a catch overnight.
+Victor traps are my go-to — they're what I started with at 15 and what I still reach for first. Place two traps directly in the main runway facing opposite directions, cover the hole so light doesn't get in, and check daily. If the run is active you're often looking at a catch overnight; if nothing's happened in one to two days, move the trap.
 
 ## The Gear
 - 2 [Victor-style gopher traps](/best-gopher-traps/)
@@ -44,7 +45,7 @@ Victor traps are my go-to — they're what I started with at 15 and what I still
 </figure>
 
 ## The Process
-1. Find a [fresh mound](/problems/mound-id/) and use a <a href="https://amzn.to/40JUZ3u" target="_blank" rel="sponsored noopener">gopher probe</a> 6-12 inches from the plug side to locate the main tunnel.
+1. Find a [fresh mound](/problems/mound-id/) and use a <a href="https://amzn.to/40JUZ3u" target="_blank" rel="sponsored noopener">gopher probe</a> about 4 to 12 inches from the plug side to locate the main tunnel.
 2. Open the tunnel cleanly and clear enough space so trap jaws move without rubbing dirt.
 3. Set two traps facing opposite directions in the main run and secure them with wire or cord.
 4. Cover the opening to block light and airflow while keeping trap triggers unobstructed.

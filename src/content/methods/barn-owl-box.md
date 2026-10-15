@@ -1,14 +1,16 @@
 ---
 title: "Barn Owl Box Installation"
 description: "Install a barn owl nesting box to establish a natural, long-term gopher predator on your property."
+metaDescription: "UC IPM says owl boxes are unlikely to cut gopher numbers enough in a yard. Box placement, the 12–16 foot mount, and what a box is actually for."
 date: 2026-03-11
-updated: 2026-07-08
+updated: 2026-10-14
 tags:
   - biological-control
   - non-lethal
   - long-term
 difficulty: easy
 timeToResults: "1-2 seasons"
+firsthand: false
 petRisk: low
 cost: low
 sources:
@@ -19,7 +21,7 @@ sources:
 ---
 
 ## Quick Answer
-A single barn owl family eats 1,000+ rodents per year. Installing a nesting box on your property is the slowest method on this site, but once owls move in, they work every night for free. Best used as a long-game addition alongside [active trapping](/methods/victor-traps/) — not as your only defense.
+Before the romance: UC IPM says installing owl boxes is "unlikely to reduce gopher numbers enough to prevent damage," and that owls are "unreliable... particularly over small areas such as a yard." A box is worth putting up if you want owls on the property and you like the idea of something hunting for free — but if you want the gophers gone this season, [set traps](/methods/victor-traps/). This is the slowest method on the site and it is not a defense on its own.
 
 ## The Gear
 - Barn owl nesting box (pre-built or DIY plywood)
@@ -31,8 +33,8 @@ A single barn owl family eats 1,000+ rodents per year. Installing a nesting box 
   <p class="mpb-label">Recommended Gear</p>
   <h4 class="mpb-name">Barn Owl Nesting Box</h4>
   <p class="mpb-desc">Pre-built nesting box designed to the correct interior dimensions barn owls need. Skips the DIY plywood math, stays weatherproof longer, and gets installed faster so owls can start scouting sooner.</p>
-  <p class="mpb-best-for"><strong>Best for:</strong> Properties with open hunting ground — fields, orchards, large lawns — where owls have room to patrol regularly at night.</p>
-  <a href="https://amzn.to/4sKmKFc" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Barn Owl Nesting Boxes on Amazon →</a>
+  <p class="mpb-best-for"><strong>Best for:</strong> Larger properties with open hunting ground — fields, orchards, acreage. UC IPM is clear that owls are unreliable over an area as small as a yard.</p>
+  <a href="https://amzn.to/4sKmKFc" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Barn Owl Nesting Boxes on Amazon (not personally tested) →</a>
 </div>
 
 ## The Process
@@ -43,10 +45,11 @@ A single barn owl family eats 1,000+ rodents per year. Installing a nesting box 
 5. Clean out old nesting material each fall (after fledglings leave) to encourage reuse the following spring.
 
 ## Bagger Pro-Tip
-Don't expect results in year one. Barn owls scout territory for months before committing. If you're in a rural or semi-rural area and you can wait [a season](/seasons/), this is the most satisfying method on the list — nothing beats watching an owl drop on a mound at dusk.
+Don't expect results in year one, and don't count on this one for damage control at all — the research doesn't support it at yard scale. Barn owls scout territory for months before committing. If you're rural or semi-rural and you can wait [a season](/seasons/), it's still the most appealing idea on this list — a resident pair working your ground every night at no ongoing cost.
 
 ## Safety Warning
 Never disturb an active nest. Barn owls are protected under the Migratory Bird Treaty Act — interfering with an active nest is a federal offense. Once they're in, leave them alone and let them work.
 
 ## Get the Gear
-<a href="https://amzn.to/4sKmKFc" target="_blank" rel="sponsored noopener">Shop Barn Owl Nesting Boxes on Amazon →</a>
+Owls are the long game. For the part of the plan that works this week, see [the gopher traps I actually recommend](/best-gopher-traps/).
+<a href="https://amzn.to/4sKmKFc" target="_blank" rel="sponsored noopener">Shop Barn Owl Nesting Boxes on Amazon (not personally tested) →</a>

@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
 ---
 
 <Layout
-  title="Start Here Quiz — Find the Right Gopher Fix | How To Kill Gophers"
-  description="Answer 3 quick questions and Mark will point you to the right method for your specific situation."
+  title={pageTitle("Gopher Quiz: Find Your Fix in 3 Questions")}
+  description="Answer 3 quick questions about what you're seeing, how fast you need it handled, and your pets. Mark points you at the gopher method that fits your yard."
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> › Start Here Quiz
@@ -148,7 +149,7 @@ import Layout from '../layouts/Layout.astro';
     'victor-traps': {
       title: 'Victor Trap Tunnel Intercept',
       url: '/methods/victor-traps/',
-      reason: "You want results fast with no restrictions — Victor-style pinch traps set correctly in the main run are the fastest, most reliable method. Set two back-to-back, block all light after setting, and check in 12 hours.",
+      reason: "You want results fast with no restrictions — Victor-style pinch traps set correctly in the main run are the fastest, most reliable method. Set two back-to-back, cover the hole after setting, and check daily — if nothing in one to two days, move the trap.",
       alternates: [
         { title: 'Cinch Trap Mainline Set', url: '/methods/cinch-traps/', note: 'More enclosed design — good if you want a slightly safer trap' },
         { title: 'The Taco Method: Dog Hunting', url: '/methods/dog-hunting/', note: 'If you have a high-prey-drive dog, combine with trapping for faster results' },
@@ -164,7 +165,7 @@ import Layout from '../layouts/Layout.astro';
       reason: "With pets or kids in the yard, mechanical traps are the right call — no bait, nothing dangerous if a dog digs it up. Cinch traps are just as effective as Victor-style and slightly more enclosed.",
       alternates: [
         { title: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps/', note: 'Slightly less enclosed but equally effective — if you want the classic option' },
-        { title: 'The Taco Method: Dog Hunting', url: '/methods/dog-hunting/', note: 'Completely safe with dogs — uses a high-prey-drive dog to locate and flush gophers' },
+        { title: 'The Taco Method: Dog Hunting', url: '/methods/dog-hunting/', note: 'No rodenticide involved — uses a high-prey-drive dog to locate and flush gophers' },
       ],
       also: [
         { title: 'The Quick Start Guide (full field process)', url: '/quick-start/' },
@@ -174,7 +175,7 @@ import Layout from '../layouts/Layout.astro';
     'quick-start': {
       title: 'The Quick Start Guide',
       url: '/quick-start/',
-      reason: "Since you have time to do it right, start here. It's the full field process — scout, probe, flush, trap — in the exact order Mark runs it. Following the sequence is more reliable than jumping straight to setting traps.",
+      reason: "Since you have time to do it right, start here. It's the full field process — scout, probe, flush, trap — in the exact order I run it. Following the sequence is more reliable than jumping straight to setting traps.",
       alternates: [
         { title: 'Victor Trap Tunnel Intercept', url: '/methods/victor-traps/', note: 'Skip ahead to the trapping step if you\'ve already scouted the run' },
         { title: 'Cinch Trap Mainline Set', url: '/methods/cinch-traps/', note: 'The pet-safe mechanical option if dogs or kids use the yard' },
@@ -192,7 +193,7 @@ import Layout from '../layouts/Layout.astro';
       alternates: [
         { title: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing/', note: 'If you\'re protecting a larger area or full property perimeter' },
         { title: 'Barn Owl Box Installation', url: '/methods/barn-owl-box/', note: 'Layer in natural predator control — works every night passively' },
-        { title: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants/', note: 'If you can\'t install mesh, choose plants gophers naturally avoid' },
+        { title: 'Plants That Repel Gophers', url: '/methods/gopher-resistant-plants/', note: 'If you can\'t install mesh, choose plants gophers naturally avoid' },
       ],
       also: [
         { title: 'Gopher-Proofing a New Yard', url: '/problems/new-yard-prep/' },
@@ -219,7 +220,7 @@ import Layout from '../layouts/Layout.astro';
       alternates: [
         { title: 'Install Gopher Mesh Barriers', url: '/methods/gopher-mesh/', note: 'The main tool for new yard prep — how to install it correctly' },
         { title: 'Exclusion Fencing for Large Properties', url: '/methods/exclusion-fencing/', note: 'If you\'re protecting a large lot or orchard-scale area' },
-        { title: 'Gopher-Resistant Plant Selection', url: '/methods/gopher-resistant-plants/', note: 'Choose plants that naturally deter gophers from the start' },
+        { title: 'Plants That Repel Gophers', url: '/methods/gopher-resistant-plants/', note: 'Choose plants that naturally deter gophers from the start' },
       ],
       also: [
         { title: 'Barn Owl Box Installation', url: '/methods/barn-owl-box/' },

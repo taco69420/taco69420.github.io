@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../data/author';
+import { updatedLine } from '../data/pageDates';
+import { pageTitle, REVIEW_YEAR } from '../data/site';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -10,7 +13,7 @@ const faqSchema = {
       "name": "What is the cheapest way to get rid of gophers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Victor pinch traps are the cheapest effective method — a 2-pack runs about $15 and you reuse them indefinitely. Set two back-to-back in the main run, block the light, check in 12 hours. Most single-gopher jobs are done for under $20 total."
+        "text": "Victor pinch traps are the cheapest effective method — a 2-pack runs about $15 and you reuse them indefinitely. Set two back-to-back in the main run, cover the hole, and check daily — if nothing in one to two days, move the trap. Most single-gopher jobs are done for under $20 total."
       }
     },
     {
@@ -34,26 +37,29 @@ const faqSchema = {
       "name": "Do sonic stakes actually work and are they worth buying?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sonic stakes are cheap ($20–40 each) but the results are inconsistent. Gophers habituate to the vibration within days to weeks in most cases. They work best as a temporary deterrent while you're setting up a real control program — not as a standalone fix."
+        "text": "Sonic stakes are cheap ($20–40 each) but UC IPM found that frightening devices of this kind \"haven't been effective in research trials.\" Treat the money as optional spending alongside a real control program, not as a fix."
       }
     }
   ]
 };
+
+const crumbLabel = "Gopher Control Costs";
+const crumbSchema = breadcrumbSchema(crumbLabel, "/cost/");
 ---
 
 <Layout
-  title="Gopher Control Cost Guide 2026 | How Much Does It Actually Cost?"
-  description="Honest breakdown of what every gopher control method costs — from $15 traps to $500 pro jobs. Mark the Bagger compares all 13 methods by price, reusability, and value."
-  schemas={[faqSchema]}
+  title={pageTitle(`Gopher Control Cost ${REVIEW_YEAR}: Traps vs. Pro`)}
+  description={`What gopher control really costs in ${REVIEW_YEAR}, from $15 traps to $500+ pro jobs. All 13 methods compared on price, reusability, and whether they are worth it.`}
+  schemas={[faqSchema, crumbSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Gopher Control Costs
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header>
     <h1>How Much Does Gopher Control Cost?</h1>
     <p class="subtitle">Honest numbers for every method — from a $0 garden hose trick to $500 pro jobs.</p>
-    <p class="dateline">Updated July 2026</p>
+    <p class="dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
@@ -126,7 +132,7 @@ const faqSchema = {
               <td>DIY</td>
             </tr>
             <tr>
-              <td><a href="/methods/gopher-resistant-plants/">Gopher-Resistant Plant Selection</a></td>
+              <td><a href="/methods/gopher-resistant-plants/">Plants That Repel Gophers</a></td>
               <td class="cost-low">Varies</td>
               <td>Varies</td>
               <td>—</td>
@@ -140,7 +146,7 @@ const faqSchema = {
               <td>DIY</td>
             </tr>
             <tr>
-              <td><a href="/methods/castor-oil/">Castor Oil Repellent Program</a></td>
+              <td><a href="/methods/castor-oil/">Castor Oil for Gophers</a></td>
               <td class="cost-mid">~$20–40</td>
               <td>~$20–40 <span class="cost-note">per treatment</span></td>
               <td>No</td>
@@ -200,7 +206,7 @@ const faqSchema = {
       <p>The best value on this entire list. A 2-pack of Victor Easy Set traps runs about $15. They're reusable indefinitely — I have traps that have caught dozens of gophers. Most single-gopher jobs are done for under $20 total. This is the method I recommend to almost everyone starting out.</p>
 
       <h3><a href="/methods/poison-bait-stations/">Underground Bait Station</a> — ~$20–30 upfront + recurring bait costs</h3>
-      <p>The bait station itself is cheap, but zinc phosphide or diphacinone bait isn't a one-time purchase — you're replenishing it. Ongoing cost adds up if gopher pressure is high or persistent. Also carries pet and wildlife risk, which is a real cost some people don't factor in.</p>
+      <p>The bait station itself is cheap, but zinc phosphide bait isn't a one-time purchase — you're replenishing it. (Anticoagulant baits like diphacinone are prohibited for residential use in California, so they're not a budget line at all here.) Ongoing cost adds up if gopher pressure is high or persistent. Also carries pet and wildlife risk, which is a real cost some people don't factor in.</p>
     </section>
 
     <!-- $30–$150 -->
@@ -210,11 +216,11 @@ const faqSchema = {
       <h3><a href="/methods/cinch-traps/">Cinch Trap Mainline Set</a> — ~$30–35 per trap</h3>
       <p>More expensive than Victor traps but the scissor-jaw design is more forgiving on placement — you lose fewer catches to bad alignment. If you have pets or kids in the yard, the more enclosed design is worth the extra cost. Budget for 2–4 traps to work multiple runs at once: $60–140 total.</p>
 
-      <h3><a href="/methods/castor-oil/">Castor Oil Repellent Program</a> — ~$20–40 per application</h3>
+      <h3><a href="/methods/castor-oil/">Castor Oil for Gophers</a> — ~$20–40 per application</h3>
       <p>Cheap per application, but it's ongoing. Castor oil doesn't kill gophers — it pushes them. As soon as you stop applying, they come back. Best used as a short-term displacement while you set up traps or install permanent barriers, not as a long-term strategy on its own.</p>
 
       <h3><a href="/methods/barn-owl-box/">Barn Owl Box Installation</a> — ~$60–100 one-time</h3>
-      <p>Buy or build a nesting box, mount it on a 12–16 foot post, and wait. A resident barn owl family eats 1,000+ rodents per year. Once they move in, the cost drops to zero and they work every night. The catch: it takes 1–2 seasons for owls to discover and adopt the box. Not a fast fix.</p>
+      <p>Buy or build a nesting box, mount it on a 12–16 foot post, and wait. Once they move in the cost drops to zero and they hunt every night — but UC IPM says owl boxes are "unlikely to reduce gopher numbers enough to prevent damage," so budget for traps regardless. The catch: it takes 1–2 seasons for owls to discover and adopt the box. Not a fast fix.</p>
 
       <h3><a href="/methods/gopher-mesh/">Gopher Mesh — Small Area</a> — ~$50–150</h3>
       <p>A single 4x8 raised bed runs $30–60 in hardware cloth. A small garden area of 100–200 sq ft runs $50–150 depending on depth and material quality. This is one-time spend — install it right and you never pay again. For small gardens and raised beds, it's the best value permanent fix available.</p>
@@ -245,7 +251,7 @@ const faqSchema = {
         <li><strong>Best overall value:</strong> <a href="/methods/victor-traps/">Victor traps</a> — $15, reusable, fastest results, works on almost every job.</li>
         <li><strong>Best for gardens:</strong> <a href="/methods/gopher-mesh/">Gopher mesh</a> — one-time cost, permanent fix, nothing else comes close for vegetable beds.</li>
         <li><strong>Best long-term investment:</strong> <a href="/methods/barn-owl-box/">Barn owl box</a> — costs $80 once, then works free every night for years.</li>
-        <li><strong>Worst value for most yards:</strong> <a href="/methods/sonic-stakes/">Sonic stakes</a> — cheap upfront but gophers habituate fast. You're usually better off spending that $30 on more traps.</li>
+        <li><strong>Worst value for most yards:</strong> <a href="/methods/sonic-stakes/">Sonic stakes</a> — cheap upfront, but the research trials didn't find devices like these effective. You're usually better off spending that $30 on more traps.</li>
         <li><strong>Skip unless you have a specific reason:</strong> <a href="/methods/castor-oil/">Castor oil</a> — fine as a short-term push, but recurring cost and no permanent results make it a poor standalone strategy.</li>
       </ul>
       <p style="margin-bottom: 0;">Not sure where to start? <a href="/quiz/">Take the quiz →</a> — 3 questions and I'll point you to the right method for your situation.</p>
@@ -256,7 +262,7 @@ const faqSchema = {
       <h2 id="faq">Frequently Asked Questions</h2>
       <details>
         <summary>What is the cheapest way to get rid of gophers?</summary>
-        <p>Victor pinch traps are the cheapest effective method — a 2-pack runs about $15 and you reuse them indefinitely. Set two back-to-back in the main run, block the light, check in 12 hours. Most single-gopher jobs are done for under $20 total.</p>
+        <p>Victor pinch traps are the cheapest effective method — a 2-pack runs about $15 and you reuse them indefinitely. Set two back-to-back in the main run, cover the hole, and check daily — if nothing in one to two days, move the trap. Most single-gopher jobs are done for under $20 total.</p>
       </details>
       <details>
         <summary>How much does professional gopher trapping cost?</summary>
@@ -268,7 +274,7 @@ const faqSchema = {
       </details>
       <details>
         <summary>Do sonic stakes actually work and are they worth buying?</summary>
-        <p>Sonic stakes are cheap ($20–40 each) but the results are inconsistent. Gophers habituate to the vibration within days to weeks in most cases. They work best as a temporary deterrent while you're setting up a real control program — not as a standalone fix.</p>
+        <p>Sonic stakes are cheap ($20–40 each) but UC IPM found that frightening devices of this kind "haven't been effective in research trials." Treat the money as optional spending alongside a real control program, not as a fix.</p>
       </details>
     </section>
 

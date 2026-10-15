@@ -1,0 +1,57 @@
+---
+// Shared next-step block for the two location pages, so both read the same.
+// Deliberately only two links: the process, then the gear.
+---
+
+<section class="next-steps" aria-labelledby="next-steps-label">
+  <p class="next-label" id="next-steps-label">Next step</p>
+  <ul class="next-list">
+    <li>
+      <a href="/quick-start/">How I'd do it, step by step</a> — the field process
+      start to finish: find the fresh mound, probe for the main run, set, confirm.
+    </li>
+    <li>
+      <a href="/best-gopher-traps/">The traps I use</a> — the short list, with what
+      each one is good at and where it gives you trouble.
+    </li>
+  </ul>
+</section>
+
+<style>
+  .next-steps {
+    background: #065f46;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .next-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #6ee7b7;
+    margin: 0 0 0.6rem;
+  }
+
+  .next-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: #ecfdf5;
+    line-height: 1.7;
+    font-size: 0.93rem;
+  }
+
+  .next-list li + li {
+    margin-top: 0.45rem;
+  }
+
+  .next-list a {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .next-list a:hover {
+    color: #a7f3d0;
+  }
+</style>

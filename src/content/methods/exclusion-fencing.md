@@ -1,14 +1,16 @@
 ---
 title: "Exclusion Fencing for Large Properties"
 description: "Install underground perimeter fencing to block gopher migration into yards, orchards, and large planting areas."
+metaDescription: "Underground fencing stops gopher migration at the boundary. An 18–24 inch trench, 1/2-inch hardware cloth, and the L-bend that keeps them from going under."
 date: 2026-03-14
-updated: 2026-07-08
+updated: 2026-10-14
 tags:
   - prevention
   - barrier
   - large-property
 difficulty: hard
 timeToResults: "Immediate prevention"
+firsthand: false
 petRisk: low
 cost: high
 sources:
@@ -46,10 +48,11 @@ Exclusion fencing is the most labor-intensive method on this site — but on lar
 6. Inspect the fence line annually for corrosion, settlement, or breaches.
 
 ## Bagger Pro-Tip
-Rent a mechanical trencher for anything over 50 feet. Hand-digging a 200-foot perimeter trench in [Redlands](/southern-california-gopher-control/) clay is a full day of misery. The rental costs $80 and saves your back. Call 811 first — always.
+Rent a mechanical trencher for anything over 50 feet. Hand-digging a 200-foot perimeter trench in [Redlands](/southern-california-gopher-control/) clay is a full day's work. A trencher rental runs about $80 and saves your back. Call 811 first — always.
 
 ## Safety Warning
 Call 811 before any digging. Underground utility lines, irrigation mains, and electrical conduits all run in the same zones gophers love. One call is free; hitting a gas line is not.
 
 ## Get the Gear
+Fence material is the same hardware cloth covered in [the mesh section of the gear guide](/traps/).
 <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">Shop Gopher Mesh & Hardware Cloth on Amazon →</a>

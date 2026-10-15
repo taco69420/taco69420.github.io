@@ -1,6 +1,7 @@
 ---
 title: "Cinch Trap Mainline Set"
 description: "Deploy cinch-style traps in open tunnel runs for quick mechanical control."
+metaDescription: "Cinch traps are forgiving to align, which makes them good for beginners. Probe the main run, set two back-to-back to cover both directions, 12–72 hours."
 date: 2026-03-01
 updated: 2026-07-08
 tags:

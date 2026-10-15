@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import { updatedLine } from '../data/pageDates';
+import { pageTitle } from '../data/site';
 
 const problems = await getCollection('problems');
 const bySlug = Object.fromEntries(problems.map(p => [p.slug, p]));
@@ -69,8 +71,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Common Gopher Problems & How To Fix Them (2026) | How To Kill Gophers"
-  description="Identify and solve common gopher damage — from destroyed lawns and chewed irrigation lines to foundation risk and vegetable garden destruction."
+  title={pageTitle("Common Gopher Problems & How to Fix Them")}
+  description="11 gopher problems and the fix for each: wrecked lawns, chewed drip lines, girdled trees, foundation risk, and gardens stripped out from underneath."
   schemas={[faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -80,7 +82,7 @@ const faqSchema = {
   <header class="diagnostic-hero">
     <h1>What's Happening in Your Yard?</h1>
     <p class="diag-sub">Start with the damage you're seeing — each guide tells you exactly what to do about it.</p>
-    <p class="diag-dateline">Updated July 2026</p>
+    <p class="diag-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>

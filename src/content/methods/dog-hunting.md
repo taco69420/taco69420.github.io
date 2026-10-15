@@ -1,6 +1,7 @@
 ---
 title: "The Taco Method: Using a Dog to Hunt Gophers"
 description: "Deploy a high-prey-drive dog as a first-line gopher detection and hunting tool — breed matters less than drive."
+metaDescription: "Taco was a chihuahua, and drive beats breed every time. How to let a high-prey-drive dog find active runs by scent, then close with traps where they alert."
 date: 2026-03-14
 updated: 2026-07-08
 tags:
@@ -55,7 +56,7 @@ A dog with a strong prey drive is one of the best gopher detection tools you hav
 5. If the dog is fast and the gopher surfaces — that's between them. Nature is nature.
 
 ## Bagger Pro-Tip
-The dog is reconnaissance, not the whole operation. Taco could find a run that would take Mark twenty minutes of probing to locate. But Taco didn't set traps. Use your dog to shorten the detection phase, then finish the job with the right method. Together you're unbeatable.
+The dog is reconnaissance, not the whole operation. Taco could find a run that would take me twenty minutes of probing to locate. But Taco didn't set traps. Use your dog to shorten the detection phase, then finish the job with the right method. Together you're unbeatable.
 
 ## Safety Warning
 If you're running poison bait anywhere on the property, keep the dog out of those areas completely. A dog that hunts gophers is at elevated risk of [secondary poisoning](/problems/pet-safety/) from a bait-killed gopher. Don't mix the Taco Method with any [poison-based approach](/methods/poison-bait-stations/) — it's not worth it.
@@ -63,3 +64,5 @@ If you're running poison bait anywhere on the property, keep the dog out of thos
 ## Get the Gear
 The only gear the Taco Method requires is a good dog. But when it's time to set the trap after the dog finds the run:
 <a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">Shop Victor Gopher Traps on Amazon →</a>
+
+Which trap goes in that run is the whole question — I compared them on [my gopher trap picks](/best-gopher-traps/).

@@ -1,6 +1,7 @@
 ---
 title: "Managing Gopher Risk Near Foundations"
 description: "Reduce burrowing pressure that can undermine soil support near slabs, walkways, and hardscape."
+metaDescription: "Gopher tunneling near a foundation increases soil voids and moisture movement. How to survey the perimeter, trap runs that parallel the slab, and backfill."
 date: 2026-03-01
 updated: 2026-07-08
 tags:

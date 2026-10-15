@@ -1,6 +1,7 @@
 ---
 title: "Install Gopher Mesh Barriers"
 description: "Use underground wire mesh to physically block gophers from garden beds and root zones."
+metaDescription: "Depth and overlap are the difference between fortress and buffet. 1/2-inch hardware cloth, an 18–24 inch skirt, and no seam gap wider than half an inch."
 date: 2026-03-01
 updated: 2026-07-08
 tags:
@@ -50,4 +51,5 @@ Overlap your seams like roof shingles—gophers are many things, but they are no
 Wear heavy gloves while cutting mesh; galvanized edges can cause deep lacerations.
 
 ## Get the Gear
+Mesh sizes and basket options are laid out in [the mesh and hardware cloth section of my gear guide](/traps/).
 <a href="https://amzn.to/4b9UG87" target="_blank" rel="sponsored noopener">Shop Gopher Mesh & Hardware Cloth on Amazon →</a>

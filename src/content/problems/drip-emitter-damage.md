@@ -1,6 +1,7 @@
 ---
 title: "Gophers Destroying Drip Emitters & Heads"
 description: "Find and fix chewed drip emitters, pop-up heads, and shallow irrigation fittings that gophers gnaw through repeatedly."
+metaDescription: "The emitter fix takes ten minutes; the gopher fix takes a trap. How to find the chewed emitter, swap the barb, and mesh the fitting against repeat bites."
 date: 2026-03-14
 updated: 2026-07-08
 tags:

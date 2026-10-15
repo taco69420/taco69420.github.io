@@ -1,5 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { updatedLine } from '../data/pageDates';
+import { pageTitle, REVIEW_YEAR } from '../data/site';
+import { authorRef, breadcrumbSchema, SITE_URL } from '../data/author';
+import { bestOfProducts } from '../data/bestOfProducts';
+import { datesFor } from '../data/pageDates';
+
+const route = "/best-gopher-baits/";
+const heading = `Best Gopher Baits of ${REVIEW_YEAR}`;
+const dates = datesFor(route)!;
+const products = bestOfProducts[route];
+const product = Object.fromEntries(products.map((p) => [p.id, p]));
+
+// `datePublished` is absent on purpose: pageDates has no recorded publish
+// date for the best-of pages, and inventing one would be worse than omitting.
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": heading,
+  "author": authorRef,
+  "publisher": authorRef,
+  "image": `${SITE_URL}/taco.jpg`,
+  "datePublished": dates.published,
+  "dateModified": dates.updated,
+  "url": `${SITE_URL}${route}`,
+};
+
+// Pros/cons come from the same arrays the page renders below, so the review
+// notes always match the visible lists. No ratings or offers by design.
+const notes = (items: string[]) => ({
+  "@type": "ItemList",
+  "itemListElement": items.map((text, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": text,
+  })),
+});
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": heading,
+  "itemListElement": products.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Product",
+      "name": p.name,
+      "url": `${SITE_URL}${route}#${p.id}`,
+      "review": {
+        "@type": "Review",
+        "author": authorRef,
+        "positiveNotes": notes(p.pros),
+        "negativeNotes": notes(p.cons),
+      },
+    },
+  })),
+};
+
+const crumbLabel = "Best Gopher Baits";
+const crumbSchema = breadcrumbSchema(crumbLabel, route);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -23,10 +83,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "What is the difference between diphacinone and zinc phosphide gopher bait?",
+      "name": "Which gopher baits are legal for homeowners in California?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Zinc phosphide acts faster (24–48 hours) but can fail in damp soil and requires extra handling precautions due to off-gassing. Diphacinone takes 5–7 days but is more stable across soil conditions and carries a lower secondary poisoning risk. For most residential applications, diphacinone is the safer and more reliable choice."
+        "text": "Anticoagulants — diphacinone and chlorophacinone — are no longer legal for residential use in California, prohibited since January 1, 2024. Baits containing 2% zinc phosphide are available with exemptions for home use, so for a homeowner that is the option, where the label lists pocket gophers. Zinc phosphide acts in 24–48 hours but can fail in damp soil and needs extra handling care because it off-gasses."
       }
     },
     {
@@ -42,25 +102,25 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Best Gopher Baits of 2026 | Mark the Bagger"
-  description="Honest picks for gopher bait products — underground rodenticide, gassers, and non-toxic options reviewed by Mark the Bagger with real field experience."
-  schemas={[faqSchema]}
+  title={pageTitle(`Best Gopher Baits of ${REVIEW_YEAR}: Tested Picks`)}
+  description={`The gopher baits worth buying in ${REVIEW_YEAR} — underground rodenticide, gassers, and non-toxic options, with the pet-safety trade-off spelled out for each one.`}
+  schemas={[articleSchema, itemListSchema, crumbSchema, faqSchema]}
 >
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a> › Best Gopher Baits
+    <a href="/">Home</a> › {crumbLabel}
   </nav>
 
   <header class="baits-hero">
     <span class="hero-badge">⚠️ Read Before Buying</span>
-    <h1>Best Gopher Baits of 2026</h1>
+    <h1>{heading}</h1>
     <p class="hero-sub">Effective when used right. Dangerous when used wrong. Here's what I actually recommend — and what I won't touch.</p>
-    <p class="hero-dateline">Updated July 2026</p>
+    <p class="hero-dateline">{updatedLine(Astro.url.pathname)}</p>
   </header>
 
   <main>
 
     <section class="card" style="border-left: 4px solid #10b981;">
-      <p style="margin: 0 0 0.75rem; color: #374151; font-size: 0.95rem;">I'm going to be upfront: traps are my first choice. They're faster, more precise, and carry zero risk of secondary poisoning to dogs, cats, or birds of prey. But there are real situations where bait makes sense — deep tunnel systems you can't effectively trap, large properties with more gopher activity than you can cover with mechanical sets alone, or situations where someone just needs a different approach.</p>
+      <p style="margin: 0 0 0.75rem; color: #374151; font-size: 0.95rem;">I'm going to be upfront: traps are my first choice. They're faster, more precise, and there is no rodenticide involved for a dog, cat or bird of prey to be poisoned by. But there are real situations where bait makes sense — deep tunnel systems you can't effectively trap, large properties with more gopher activity than you can cover with mechanical sets alone, or situations where someone just needs a different approach.</p>
       <p style="margin: 0; color: #374151; font-size: 0.95rem;">If you have pets that work the yard or wildlife you care about, read the safety section on each product below before you open anything. Secondary poisoning is not theoretical — it happens.</p>
     </section>
 
@@ -68,10 +128,10 @@ const faqSchema = {
       <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
       <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
         <li><a href="#quick-picks">Quick Picks</a></li>
-        <li><a href="#bait-stations">Underground Bait Applicator</a></li>
-        <li><a href="#gassers">Gopher Gassers (Fumigation Cartridges)</a></li>
-        <li><a href="#castor-oil">Castor Oil Gopher Repellent</a></li>
-        <li><a href="#buying-guide">What to Look For in a Gopher Bait</a></li>
+        {products.map((p) => (
+          <li><a href={`#${p.id}`}>{p.tocName}</a></li>
+        ))}
+<li><a href="#buying-guide">What to Look For in a Gopher Bait</a></li>
         <li><a href="#faq">Frequently Asked Questions</a></li>
       </ul>
     </nav>
@@ -90,25 +150,15 @@ const faqSchema = {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Underground Bait Applicator</strong></td>
-              <td>Deep or inaccessible runs, no pets on property</td>
-              <td><span class="tier-badge tier-budget">Budget</span></td>
-              <td><a href="https://amzn.to/46XnfTH" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-            <tr>
-              <td><strong>Gopher Gassers (Fumigation Cartridges)</strong></td>
-              <td>Mid-depth branching systems, fast deployment</td>
-              <td><span class="tier-badge tier-budget">Budget</span></td>
-              <td><a href="https://amzn.to/4b4oF11" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-            <tr>
-              <td><strong>Castor Oil Gopher Repellent</strong></td>
-              <td>Non-toxic option, turf pressure management</td>
-              <td><span class="tier-badge tier-mid">Mid</span></td>
-              <td><a href="https://amzn.to/3P7QFIM" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-          </tbody>
+            {products.map((p) => (
+              <tr>
+                <td><strong>{p.tableName}</strong></td>
+                <td>{p.bestFor}</td>
+                <td><span class={`tier-badge tier-${p.tier}`}>{p.tier === 'budget' ? 'Budget' : p.tier === 'mid' ? 'Mid' : 'Premium'}</span></td>
+                <td><a href={p.url} class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+              </tr>
+            ))}
+</tbody>
         </table>
       </div>
     </section>
@@ -118,25 +168,18 @@ const faqSchema = {
       <div class="product-badge badge-best">Most Effective Lethal Option</div>
       <h2 id="bait-stations" class="ps-name">Underground Bait Applicator</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Properties without pets or raptors where you need lethal control on deep or branching tunnel systems that are difficult to trap mechanically.</p>
-      <p class="ps-desc">Underground rodenticide bait — typically diphacinone or zinc phosphide pellets — placed directly inside active gopher tunnels. The key word is "inside." Bait dropped at a tunnel opening or sprinkled on the surface does nothing except waste product and create unnecessary chemical exposure. <a href="/traps/">Probe</a> to locate the main run, open a small access hole with a trowel, place the labeled dose inside the tunnel 6–8 inches from the opening, and seal the hole completely with soil to block light. Gophers are suspicious of anything near their entrances — the bait needs to be far enough in that they encounter it during normal tunnel activity. Note: the tool linked here is the underground applicator that places the dose at tunnel depth — you load it with registered bait pellets, which are sold separately.</p>
+      <p class="ps-desc">Underground rodenticide bait — zinc phosphide pellets, now that anticoagulants are off the table for California homes — placed directly inside active gopher tunnels. The key word is "inside." Bait dropped at a tunnel opening or sprinkled on the surface does nothing except waste product and create unnecessary chemical exposure. <a href="/traps/">Probe</a> to locate the main run, open a small access hole with a trowel, place the labeled dose inside the tunnel 6–8 inches from the opening, and cover the hole so light doesn't get in. Gophers are suspicious of anything near their entrances — the bait needs to be far enough in that they encounter it during normal tunnel activity. Note: the tool linked here is the underground applicator that places the dose at tunnel depth — you load it with registered bait pellets, which are sold separately.</p>
       <div class="ps-verdict">
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Effective on deeply established tunnel systems difficult to reach with traps</li>
-            <li>Low cost per application relative to the area covered</li>
-            <li>Can address multiple tunnel runs simultaneously with a single session</li>
-            <li>Diphacinone formulations are more stable in wet soil than zinc phosphide</li>
+            {product["bait-stations"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Real secondary poisoning risk to dogs, cats, and raptors that eat affected gophers</li>
-            <li>Zinc phosphide variants off-gas and require more careful handling</li>
-            <li>Takes 3–7 days to work — slower than mechanical traps</li>
-            <li>Some states/counties restrict or require a license for certain rodenticide formulations</li>
-            <li>Requires accurate tunnel location — bait in the wrong spot does nothing</li>
+            {product["bait-stations"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
@@ -148,7 +191,7 @@ const faqSchema = {
 
     <!-- Product 2: Gopher Gassers -->
     <section class="card product-section">
-      <div class="product-badge badge-budget">Best for Deep Tunnel Systems</div>
+      <div class="product-badge badge-budget">Cartridge Fumigant — Read the Research First</div>
       <h2 id="gassers" class="ps-name">Gopher Gassers (Fumigation Cartridges)</h2>
       <p class="ps-best-for"><strong>Best for:</strong> Mid-depth tunnel systems where you can't locate the active run clearly enough for effective trap placement, and trapping sessions haven't produced results.</p>
       <p class="ps-desc">Cartridge-style gassers — you light the fuse, drop the burning cartridge into the main tunnel opening, and immediately seal the entrance with soil. The cartridge burns and fills the tunnel system with gas. For this to work, every exit hole needs to be sealed before you light the cartridge, or the gas simply exhausts to the surface instead of filling the run. Walk the yard, plug every mound opening you can find, then treat. Wet soil holds the seal better and keeps the gas in the system longer — after irrigation or rain is a good time to use these.</p>
@@ -156,55 +199,20 @@ const faqSchema = {
         <div class="ps-pros">
           <h3>Pros</h3>
           <ul>
-            <li>Can reach deep or branching tunnels that are hard to set traps in effectively</li>
-            <li>Fast to deploy — no probing or precise placement required</li>
-            <li>Inexpensive per treatment</li>
-            <li>No residual chemical left in the soil after treatment</li>
+            {product["gassers"].pros.map((pro) => <li>{pro}</li>)}
           </ul>
         </div>
         <div class="ps-cons">
           <h3>Cons</h3>
           <ul>
-            <li>Completely ineffective if any tunnel exit is left unsealed</li>
-            <li>Works best in shallow-to-mid depth systems — limited penetration in deep runs</li>
-            <li>Keep away from structures — gas can travel underground and enter basements</li>
-            <li>Results are harder to confirm than mechanical trapping</li>
+            {product["gassers"].cons.map((con) => <li>{con}</li>)}
           </ul>
         </div>
       </div>
       <div class="safety-callout">
-        <strong>Safety:</strong> Never use gassers near occupied structures, under decks, or adjacent to buildings. The gas follows tunnel paths underground and can enter through foundation cracks. Keep children and pets away from the treatment area until sealed holes have had time to settle.
+        <strong>Safety:</strong> A gasser is a cartridge you light and bury, so it is a fire hazard as well as a gas hazard — never under or near structures, decks, porches, dry vegetation or mulch, and follow the label. The gas follows tunnel paths underground and can enter through foundation cracks. Keep children and pets away from the treatment area until sealed holes have had time to settle.
       </div>
       <a href="https://amzn.to/4b4oF11" class="btn" target="_blank" rel="sponsored noopener">Shop Gopher Gassers on Amazon →</a>
-    </section>
-
-    <!-- Product 3: Castor Oil Repellent -->
-    <section class="card product-section">
-      <div class="product-badge" style="background: #fffbeb; color: #92400e; border: 1.5px solid #fcd34d;">Best Non-Toxic Option</div>
-      <h2 id="castor-oil" class="ps-name">Castor Oil Gopher Repellent Concentrate</h2>
-      <p class="ps-best-for"><strong>Best for:</strong> Pet-safe pressure management in high-value turf areas — best used as a deterrent layer that pushes gophers toward the yard edge where trapping is easier, not as a standalone solution.</p>
-      <p class="ps-desc">Castor-oil-based repellent concentrate applied through a hose-end sprayer and watered in deeply to carry the product to root-level soil. It makes the soil feeding environment unpleasant enough that gophers relocate rather than continue feeding in the treated zone. This is not a kill method and it's not a permanent fix — gophers come back when the product breaks down or they get hungry enough. But it's genuinely useful for protecting specific areas (a vegetable garden, a new lawn, a replanted bed) while you address the main population with traps. I'd always pair it with active trapping at the boundary.</p>
-      <div class="ps-verdict">
-        <div class="ps-pros">
-          <h3>Pros</h3>
-          <ul>
-            <li>Completely safe for dogs, cats, kids, and wildlife</li>
-            <li>No license or permit required</li>
-            <li>Easy to apply with a hose-end sprayer</li>
-            <li>Useful for protecting specific high-value zones during active trapping campaigns</li>
-          </ul>
-        </div>
-        <div class="ps-cons">
-          <h3>Cons</h3>
-          <ul>
-            <li>Not a kill method — gophers relocate, they don't die</li>
-            <li>Breaks down after rain or irrigation and needs reapplication every 1–2 weeks</li>
-            <li>Won't hold an established gopher that's heavily invested in a tunnel system</li>
-            <li>Treats symptoms, not the underlying population</li>
-          </ul>
-        </div>
-      </div>
-      <a href="https://amzn.to/3P7QFIM" class="btn" target="_blank" rel="sponsored noopener">Shop Castor Oil Gopher Repellent on Amazon →</a>
     </section>
 
     <!-- Buying Guide -->
@@ -212,14 +220,14 @@ const faqSchema = {
       <h2 id="buying-guide">What to Look For in a Gopher Bait</h2>
       <p style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Before choosing a bait, run through this checklist:</p>
       <dl class="buying-guide">
-        <dt>Active ingredient: diphacinone vs. zinc phosphide</dt>
-        <dd>Diphacinone is an anticoagulant rodenticide that takes 5–7 days to work but is more stable in wet soil and carries lower secondary poisoning risk. Zinc phosphide is faster (24–48 hours) but off-gasses during application and fails more readily in damp conditions. For most residential use, diphacinone is the smarter choice.</dd>
+        <dt>Active ingredient: what is left legal in California</dt>
+        <dd>Anticoagulant baits — diphacinone and chlorophacinone — are no longer legal for residential use in California. Zinc phosphide at 2% is available with exemptions for home use and works in 24–48 hours, but it off-gasses during application and fails more readily in damp soil. On carcass risk, zinc phosphide is not stored in the animal's tissue while anticoagulants persist in the liver. Don't read that as pet-safe. Zinc phosphide is acutely toxic, and a dog that eats the bait — or a freshly killed gopher with bait still in its stomach — can be poisoned. It is the remaining legal option for a California homeowner, not a safe one.</dd>
 
         <dt>Pet and wildlife safety — non-negotiable</dt>
         <dd>If dogs or cats are working your yard, or if you have raptors nesting or hunting nearby, do not use rodenticide bait. Secondary poisoning from a bait-killed gopher is a documented real-world risk, not a theoretical one. Use mechanical traps — the <a href="/methods/victor-traps/">Victor Trap guide</a> covers the full placement process.</dd>
 
         <dt>Placement depth matters more than product choice</dt>
-        <dd>Bait placed at the tunnel entrance, in an inactive run, or too close to the opening is wasted product. Probe first, open a clean access point 6–8 inches into the tunnel, place the labeled dose, and seal the hole completely. Light in the tunnel causes gophers to avoid and backfill the area.</dd>
+        <dd>Bait placed at the tunnel entrance, in an inactive run, or too close to the opening is wasted product. Probe first, open a clean access point 6–8 inches into the tunnel, place the labeled dose, and seal the hole completely. UC IPM's instruction is simply to cover the hole so light doesn't get in.</dd>
 
         <dt>Regulatory restrictions</dt>
         <dd>Certain rodenticide formulations require a licensed Pest Control Operator to purchase and apply in California and other states. Check your local requirements before ordering. The label is the law — follow it exactly.</dd>
@@ -240,8 +248,8 @@ const faqSchema = {
           <p>No. Secondary poisoning is a real risk — a dog or cat that eats a bait-killed gopher can be poisoned by the active ingredient in the gopher's system. If you have pets that use the yard, skip bait entirely. Use <a href="/best-gopher-traps/">mechanical traps</a> instead. This isn't a gray area.</p>
         </details>
         <details class="faq-item">
-          <summary>What is the difference between diphacinone and zinc phosphide gopher bait?</summary>
-          <p>Zinc phosphide acts faster (24–48 hours) but can fail in damp soil and requires extra handling precautions due to off-gassing. Diphacinone takes 5–7 days but is more stable across soil conditions and carries a lower secondary poisoning risk. For most residential applications, diphacinone is the safer and more reliable choice.</p>
+          <summary>Which gopher baits are legal for homeowners in California?</summary>
+          <p>Anticoagulants — diphacinone and chlorophacinone — are no longer legal for residential use in California, prohibited since January 1, 2024. Baits containing 2% zinc phosphide are available with exemptions for home use, so for a homeowner that is the option, where the label lists pocket gophers. Zinc phosphide acts in 24–48 hours but can fail in damp soil and needs extra handling care because it off-gasses.</p>
         </details>
         <details class="faq-item">
           <summary>When should I use bait instead of traps?</summary>
