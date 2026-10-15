@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { pageTitle } from '../data/site';
+
+// No pageDates entry and no dateline: a 404 has nothing meaningful to date.
+// @astrojs/sitemap leaves 404 out on its own, and the referral filter in
+// astro.config.mjs excludes it belt-and-braces.
+---
+
+<Layout
+  title={pageTitle('Page Not Found')}
+  description="That page isn't here — probed and came up empty. Start with the quick-start field process, the trap picks, or the full list of gopher control methods."
+  noindex
+>
+  <header>
+    <h1>Nothing in This Hole</h1>
+    <p class="subtitle">
+      Probed, came up empty. That page either moved or never existed — either way, there's no gopher
+      down there.
+    </p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Try one of these instead</h2>
+      <ul class="fourohfour-links">
+        <li>
+          <a href="/quick-start/">The Taco Method: start here</a> — the field process start to
+          finish: find the fresh mound, probe for the main run, set, confirm.
+        </li>
+        <li>
+          <a href="/best-gopher-traps/">The traps I actually set</a> — the short list, with what each
+          one is good at and where it gives you trouble.
+        </li>
+        <li>
+          <a href="/methods/">All 13 gopher control methods</a> — compared on speed, cost and
+          difficulty, with the ones I haven't used myself flagged.
+        </li>
+        <li>
+          <a href="/">Back to the homepage</a> — if you'd rather just start over.
+        </li>
+      </ul>
+      <p class="fourohfour-note">
+        If you got here from a link on this site, that's my mistake — email
+        <strong>hello@howtokillgophers.com</strong> and I'll fix it.
+      </p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .fourohfour-links {
+    margin: 0;
+    padding-left: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .fourohfour-links li + li {
+    margin-top: 0.6rem;
+  }
+
+  .fourohfour-note {
+    margin: 1.25rem 0 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+</style>

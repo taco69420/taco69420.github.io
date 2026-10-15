@@ -32,20 +32,37 @@ const crumbSchema = breadcrumbSchema(crumbLabel, route);
   <header>
     <h1>Get Matched With a Licensed Gopher Trapper</h1>
     <p class="subtitle">
-      I don't do paid trapping myself. If you'd rather hire someone than set traps, fill this out —
-      I'm lining up licensed trappers in the Inland Empire and I'll reach out within one to two days.
+      I don't do paid trapping myself — fill this out and I'll reach out within one to two days.
     </p>
     <p class="dateline">{updatedLine(route)}</p>
   </header>
 
   <main>
     <aside class="referral-note">
-      <p class="rn-label">How this works</p>
       <p class="rn-body">
-        I'm not a pest control company. Your info will go to a licensed local pest control business,
-        who will contact you directly. I may receive a referral fee; it doesn't cost you anything extra.
+        <strong>I'm not a pest control company.</strong> Your info will go to a licensed local pest
+        control business, who will contact you directly. I may be paid for referrals; it doesn't cost
+        you anything extra.
       </p>
     </aside>
+
+    <section class="card">
+      <h2 id="form" class="visually-hidden">The form</h2>
+      <div class="form-frame">
+        <iframe
+          src={FORM_EMBED}
+          title="Request to be matched with a licensed gopher trapper in Redlands or the Inland Empire"
+          loading="lazy"
+          width="100%"
+          height="1600"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">Loading…</iframe>
+      </div>
+      <p class="form-fallback">
+        Form not loading? <a href={FORM_FALLBACK} target="_blank" rel="noopener">Open it here</a>.
+      </p>
+    </section>
 
     <section class="card">
       <h2 id="coverage">Where the partner trappers work</h2>
@@ -60,24 +77,6 @@ const crumbSchema = breadcrumbSchema(crumbLabel, route);
         <a href="/quick-start/">step-by-step field process</a> and
         <a href="/best-gopher-traps/">the traps I actually set</a> will get a single gopher handled
         for the price of a sandwich.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2 id="form">The form</h2>
-      <div class="form-frame">
-        <iframe
-          src={FORM_EMBED}
-          title="Request to be matched with a licensed gopher trapper in Redlands or the Inland Empire"
-          loading="lazy"
-          width="100%"
-          height="1600"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0">Loading…</iframe>
-      </div>
-      <p class="form-fallback">
-        Form not loading? <a href={FORM_FALLBACK} target="_blank" rel="noopener">Open it here</a>.
       </p>
     </section>
 
@@ -97,7 +96,7 @@ const crumbSchema = breadcrumbSchema(crumbLabel, route);
         </li>
       </ol>
       <p>
-        What gets shared, and the referral fee, are spelled out in the
+        What gets shared, and how I may be paid, are spelled out in the
         <a href="/privacy/#referrals">privacy notice</a>.
       </p>
     </section>
@@ -128,6 +127,22 @@ const crumbSchema = breadcrumbSchema(crumbLabel, route);
     font-size: 0.95rem;
     line-height: 1.65;
     color: #78350f;
+  }
+
+  /* The form is the first thing on the page now, so a visible "The form"
+     heading above it is just noise — but the section still needs a heading for
+     the document outline and for screen readers. */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
   }
 
   /* The embed is a fixed-height iframe rather than a ratio box: a Google Form is
