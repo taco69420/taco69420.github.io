@@ -8,6 +8,8 @@ interface Props {
   description?: string;
   ogImage?: string;
   schemas?: Record<string, unknown>[];
+  /** true on a page that must stay out of the index (the referral form). */
+  noindex?: boolean;
 }
 
 const {
@@ -15,6 +17,7 @@ const {
   description = "Gopher trapping advice and gear reviews from Mark the Bagger, trapping in Redlands, CA since 2022. DIY only — not a paid trapping service.",
   ogImage = "/taco.jpg",
   schemas = [],
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = Astro.url.href;
@@ -50,7 +53,7 @@ const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
     <title>{title}</title>
 
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
     <link rel="canonical" href={canonicalURL} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />

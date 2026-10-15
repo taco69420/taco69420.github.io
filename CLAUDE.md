@@ -24,7 +24,7 @@ Run:
 npm run audit
 ```
 
-It must pass. The command builds the site and then runs every check in `scripts/audit/` against `dist/`, printing a PASS/FAIL line each and exiting non-zero if anything fails. Twelve checks run today:
+It must pass. The command builds the site and then runs every check in `scripts/audit/` against `dist/`, printing a PASS/FAIL line each and exiting non-zero if anything fails. Thirteen checks run today:
 
 | check | what it asserts |
 | --- | --- |
@@ -37,6 +37,7 @@ It must pass. The command builds the site and then runs every check in `scripts/
 | `products` | the best-of `positiveNotes` / `negativeNotes` match the visible Pros/Cons verbatim and in order |
 | `claims` | no anticoagulant bait is recommended, and no absolute safety claim ("completely safe", "zero risk") appears anywhere in `src/` |
 | `firsthand` | every `firsthand: false` page renders the UntestedNote, untested gear is linked only on its own method page, and every best-of product is in `FIRSTHAND_PRODUCTS` |
+| `referral` | no service wording or business schema on any page; `/find-a-trapper/` is noindex, out of the sitemap, and carries its disclaimers |
 | `figures` | gopher tunnel depth reads 6–12 inches everywhere (all dash types), and no unevidenced method advertises a numeric time-to-results |
 | `links` | every internal href resolves to a real built page, with the trailing slash, and every `#fragment` matches a real id |
 | `inbound` | per-page inbound content-link counts, with floors on the money pages and no orphan pages |
@@ -124,6 +125,12 @@ Routes with no recorded date — `/privacy/` and `/quiz/` — render no dateline
 
 `/redlands/` and `/southern-california-gopher-control/` are the highest-impression pages in Search Console and they rank for commercial-intent queries — "gopher control redlands", "gopher exterminator redlands", "gopher control southern california". The people landing there are usually looking to hire somebody.
 
+**Referral wording is allowed. Service wording is not.** `/find-a-trapper/` is a lead-referral page: a visitor fills in one Google Form and the lead goes to a DPR-licensed pest control company, which may pay a referral fee. So the site may say it will **"get you matched with"** or **"connect you with a licensed local trapper"**, and may describe where the **partner trappers** work. It may never read as though Mark or "we" do the work.
+
+Forbidden anywhere, and failed by `scripts/audit/referral.mjs`: "free estimate", "get a quote from me", "we come out", "our technicians", "service area", "licensed and insured", plus `LocalBusiness`, `HomeAndConstructionBusiness`, `ProfessionalService`, `Service`, `Offer`, `AggregateOffer` and `PestControlService` schema, and the `areaServed` / `serviceArea` / `priceRange` / `openingHours` / `telephone` properties. The referral page itself must carry "I'm not a pest control company", the referral-fee disclosure, the line that the licensed business contacts you directly, and a working fallback link to the form.
+
+`/find-a-trapper/` is **`noindex, follow`** (via `Layout`'s `noindex` prop) and is filtered out of the sitemap in `astro.config.mjs`. It is a thin lead-capture page aimed at commercial-intent queries, so it should not compete in search with the guides. The `dates` check exempts it from the "must be in the sitemap" rule; nothing else is exempt.
+
 **Mark does not offer paid trapping, and nothing on the site may imply he is for hire.** That rules out `LocalBusiness`, `ProfessionalService`, `Service` and `Offer` schema, `areaServed` / `serviceArea` / `priceRange` / `telephone` properties, and any "contact me", "get a quote", "free estimate" or service-area copy. Both pages instead say plainly that he does not do paid trapping and then send the reader to the DIY path.
 
 Both carry a "Hire an Exterminator or Do It Yourself?" section straight after the intro, which is honest about when hiring a pro is the right call. It may only use figures that already exist on `/cost/` — the ~$15 Victor 2-pack and the ~$150–500+ residential pro range. Do not invent prices there.

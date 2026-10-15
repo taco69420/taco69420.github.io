@@ -46,6 +46,8 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     sitemap({
+      // The referral form is noindex, so it has no business in the sitemap.
+      filter: (page) => new URL(page).pathname !== '/find-a-trapper/',
       serialize(item) {
         const stamp = lastmod[new URL(item.url).pathname];
         if (stamp) item.lastmod = `${stamp}T00:00:00.000Z`;

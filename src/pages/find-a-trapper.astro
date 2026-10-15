@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../data/author';
+import { updatedLine } from '../data/pageDates';
+import { pageTitle } from '../data/site';
+
+const route = '/find-a-trapper/';
+
+// Resolved from the forms.gle share link. The share link stays as the fallback,
+// since it is the one that keeps working if the long URL ever changes.
+const FORM_ID = '1FAIpQLSe4O0uhTLbQTqpahPaXwnnhubyn3b_HMCbqQqgQEr42JEt7EQ';
+const FORM_EMBED = `https://docs.google.com/forms/d/e/${FORM_ID}/viewform?embedded=true`;
+const FORM_FALLBACK = 'https://forms.gle/ruoVGaFJiEzs4NJd9';
+
+const crumbLabel = 'Find a Trapper';
+const crumbSchema = breadcrumbSchema(crumbLabel, route);
+
+// Deliberately no LocalBusiness / Service / Offer schema: this page refers work
+// out to a licensed company, it does not advertise a service of Mark's.
+---
+
+<Layout
+  title={pageTitle('Get Matched With a Licensed Gopher Trapper')}
+  description="I don't do paid trapping myself. I'm lining up licensed trappers in Redlands and the Inland Empire — fill out one short form and I'll be in touch."
+  schemas={[crumbSchema]}
+  noindex
+>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> › {crumbLabel}
+  </nav>
+
+  <header>
+    <h1>Get Matched With a Licensed Gopher Trapper</h1>
+    <p class="subtitle">
+      I don't do paid trapping myself. If you'd rather hire someone than set traps, fill this out —
+      I'm lining up licensed trappers in the Inland Empire and I'll reach out within one to two days.
+    </p>
+    <p class="dateline">{updatedLine(route)}</p>
+  </header>
+
+  <main>
+    <aside class="referral-note">
+      <p class="rn-label">How this works</p>
+      <p class="rn-body">
+        I'm not a pest control company. Your info will go to a licensed local pest control business,
+        who will contact you directly. I may receive a referral fee; it doesn't cost you anything extra.
+      </p>
+    </aside>
+
+    <section class="card">
+      <h2 id="coverage">Where the partner trappers work</h2>
+      <p>
+        The trappers I'm lining up work Redlands and the wider Inland Empire. I'm still building that
+        list, so I'm not going to promise you a name on day one. If you're outside the area, send the
+        form anyway — I'll tell you straight if I can't match you rather than hand your details to
+        someone who'd drive two hours and charge you for it.
+      </p>
+      <p>
+        If you'd rather just do it yourself, that's still what most of this site is for: the
+        <a href="/quick-start/">step-by-step field process</a> and
+        <a href="/best-gopher-traps/">the traps I actually set</a> will get a single gopher handled
+        for the price of a sandwich.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 id="form">The form</h2>
+      <div class="form-frame">
+        <iframe
+          src={FORM_EMBED}
+          title="Request to be matched with a licensed gopher trapper in Redlands or the Inland Empire"
+          loading="lazy"
+          width="100%"
+          height="1600"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">Loading…</iframe>
+      </div>
+      <p class="form-fallback">
+        Form not loading? <a href={FORM_FALLBACK} target="_blank" rel="noopener">Open it here</a>.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 id="what-happens">What happens after you submit</h2>
+      <ol>
+        <li>I read it, usually the same day.</li>
+        <li>
+          I come back to you within one to two days, either with a licensed trapper who covers your
+          ZIP or with an honest "I don't have anyone there yet". Anyone I do put you in touch with
+          holds a California Department of Pesticide Regulation licence — worth checking yourself
+          too, which <a href="/methods/hiring-a-pro/">hiring a professional trapper</a> explains how to do.
+        </li>
+        <li>
+          If there's a match, they contact you directly to quote the work. Any agreement is between
+          you and them.
+        </li>
+      </ol>
+      <p>
+        What gets shared, and the referral fee, are spelled out in the
+        <a href="/privacy/#referrals">privacy notice</a>.
+      </p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .referral-note {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-left: 4px solid #d4af37;
+    border-radius: 6px;
+    padding: 1rem 1.35rem;
+    margin: 0 0 1.5rem;
+  }
+
+  .rn-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #92400e;
+    margin: 0 0 0.4rem;
+  }
+
+  .rn-body {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #78350f;
+  }
+
+  /* The embed is a fixed-height iframe rather than a ratio box: a Google Form is
+     a tall column whose height does not scale with width, and an aspect-ratio
+     wrapper would crop it on desktop. 1600px clears all seven questions plus the
+     submit row, so the form never gets its own scrollbar. */
+  .form-frame {
+    width: 100%;
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  .form-frame iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .form-fallback {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    /* Narrow viewports reflow the questions taller, so give the frame more room
+       and let the page scroll rather than the iframe. */
+    .form-frame iframe {
+      height: 1900px;
+    }
+  }
+</style>

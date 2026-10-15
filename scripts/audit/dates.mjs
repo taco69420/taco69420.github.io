@@ -66,8 +66,14 @@ export default {
       }
 
       // a page showing a dateline should be in the sitemap with a lastmod
-      if (visMonth && sm === null) problems.push(`${page.route}: shows a dateline but has no sitemap <lastmod>`);
-      if (sm === undefined) problems.push(`${page.route}: not in the sitemap`);
+      // /find-a-trapper/ is a noindex lead-capture page, deliberately filtered
+      // out of the sitemap in astro.config.mjs, so it is exempt from both
+      // sitemap rules while still having to agree on the dates it does show.
+      const sitemapExempt = page.route === '/find-a-trapper/';
+      if (visMonth && sm === null && !sitemapExempt) {
+        problems.push(`${page.route}: shows a dateline but has no sitemap <lastmod>`);
+      }
+      if (sm === undefined && !sitemapExempt) problems.push(`${page.route}: not in the sitemap`);
 
       rows.push([
         page.route,
