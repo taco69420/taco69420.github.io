@@ -50,6 +50,23 @@ const OVERCLAIMS = [
   [/\bfast and effective\b/i, 'unsourced results claim'],
   [/zinc phosphide acts? (in|within)\s*\d/i, 'invented timing — UC IPM only confirms "lethal after a single feeding," no hour window'],
   [/\bcan discourage scouts\b/i, 'unsupported efficacy claim for a method UC IPM found not effective'],
+
+  // Found in a 2026-10-15 follow-up sweep of /traps/ and /best-gopher-traps/.
+  [/highest consistent catch rate/i, 'invented-precision superlative with no source'],
+  [/standard for serious gopher trappers for decades/i, 'unsourced tenure/authority claim'],
+  [/\byou will catch a gopher\b/i, 'overpromises outcome — placement right does not guarantee a catch'],
+  [/lowest cost-per-catch/i, 'invented-precision cost claim with no numbers behind it'],
+  [/peanut butter behind the trigger helps, but isn'?t mandatory/i, 'implies a catch-rate benefit from bait that research does not support'],
+  [/safest around pets/i, 'absolute safety superlative — no trap is "safest," it is still a trap'],
+  [/far safer around pets and kids/i, 'absolute-leaning safety claim for a mechanical trap'],
+  [/cuts it off entirely\b/i, 'overstates certainty — a trap set does not guarantee capture'],
+  [/every serious trapper has a dozen of these/i, 'unsourced authority/popularity claim'],
+  [/everything on this page has earned its spot/i, 'blanket claim contradicted by hedged methods like sonic stakes'],
+  [/these three are the ones that actually catch gophers/i, 'overstates certainty — use "the ones I\'ve used" instead'],
+  [/\bthe permanent fix for raised beds\b/i, 'absolute claim — use "a long-lasting barrier" instead'],
+  [/\bno paid placements\b/i, 'use "I earn a commission on purchases; brands don\'t pay for placement" instead'],
+  [/\bnot a paid placement\b/i, 'use "I earn a commission on purchases; brands don\'t pay for placement" instead'],
+  [/a few inches out from the mound/i, 'wrong probe distance — UC IPM says about 4 to 12 inches from the plug side'],
 ];
 
 // wording that turns a mention of an anticoagulant into a recommendation

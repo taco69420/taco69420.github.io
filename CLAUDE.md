@@ -194,7 +194,7 @@ A factual review on 2026-10-14 found the rodenticide pages had been written from
 
 **First-hand experience: what Mark has and has not used.** This is the single most important editorial fact on the site, because the whole proposition is field experience. No page may state or imply first-hand use of anything in the second list.
 
-*Has personally used:* Victor Easy Set, Victor Black Box, Cinch traps, soil probe, gopher wire mesh, flooding runs (with Taco), the underground bait applicator with zinc phosphide bait, gopher gassers (cartridges), gopher-resistant plants, mole traps, sonic stakes (front yard, heavy season), dog hunting with Taco.
+*Has personally used:* Victor Easy Set, Victor Black Box, Cinch traps, soil probe (still uses the same rebar probe he found at 15), gopher wire mesh (has lined many garden beds with it), flooding runs (with Taco), the underground bait applicator with zinc phosphide bait, gopher gassers (cartridges), gopher-resistant plants, mole traps, sonic stakes (front yard, heavy season), dog hunting with Taco.
 
 *Has never used:* exclusion fencing, pressurized CO burrow devices, castor oil repellent, hiring a professional trapper, barn owl boxes, diphacinone.
 

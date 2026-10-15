@@ -3,13 +3,13 @@ title: "Victor Trap Tunnel Intercept"
 description: "Use classic Victor pinch traps in active main runs for fast, repeatable captures."
 metaDescription: "The Victor pinch trap is my first reach. Probe the main run, set two facing opposite directions, cover the hole, check daily, and move it after two days."
 date: 2026-03-01
-updated: 2026-10-14
+updated: 2026-10-15
 tags:
   - trapping
   - mechanical
   - beginner
 difficulty: medium
-timeToResults: "12-48 hours"
+timeToResults: "Often within a day or two"
 petRisk: medium
 cost: low
 sources:
@@ -49,7 +49,7 @@ Victor traps are my go-to — they're what I started with at 15 and what I still
 2. Open the tunnel cleanly and clear enough space so trap jaws move without rubbing dirt.
 3. Set two traps facing opposite directions in the main run and secure them with wire or cord.
 4. Cover the opening to block light and airflow while keeping trap triggers unobstructed.
-5. Check in 12-24 hours, reset in a nearby active run if no activity.
+5. Check daily; if nothing in 1 to 2 days, move the trap.
 
 <figure style="display:flex;flex-direction:column;align-items:center;margin:1.5rem 0;gap:0.75rem;">
   <iframe width="315" height="560" src="https://www.youtube.com/embed/zyDy1dnUruQ" title="How to place a Victor gopher trap in the tunnel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius:8px;max-width:100%;"></iframe>

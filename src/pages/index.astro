@@ -20,8 +20,8 @@ const difficultyColors = {
 };
 
 const featuredMeta = {
-  'victor-traps': { speed: '12–48 hours',  bestFor: 'Active main tunnel runs' },
-  'cinch-traps':  { speed: '12–72 hours',  bestFor: 'Open tunnel runs' },
+  'victor-traps': { speed: 'Often within a day or two',  bestFor: 'Active main tunnel runs' },
+  'cinch-traps':  { speed: 'Often within a day or two',  bestFor: 'Open tunnel runs' },
   'gopher-mesh':  { speed: 'Immediate',    bestFor: 'Garden beds & raised beds' },
 };
 
@@ -33,14 +33,14 @@ const faqSchema = {
     { "@type": "Question", "name": "When is the best time to trap gophers?", "acceptedAnswer": { "@type": "Answer", "text": "Spring (February–May) and fall (September–November) are the two peak activity windows. During spring, gophers are breeding hard and expanding territory fast — fresh mounds appear daily. Fall is the second major surge as they cache food for winter. Hit both windows hard and you stay ahead of the problem." } },
     { "@type": "Question", "name": "How deep do gophers dig?", "acceptedAnswer": { "@type": "Answer", "text": "Feeding burrows run 6–12 inches underground, and the nest and food storage chamber can be as deep as 6 feet depending on soil type. In summer gophers work deeper to escape the heat." } },
     { "@type": "Question", "name": "How do I identify a gopher mound?", "acceptedAnswer": { "@type": "Answer", "text": "A gopher mound is crescent or fan-shaped with a plugged hole off to one side. If the mound is a symmetrical volcano with a center hole, you have a mole — which requires completely different treatment. See the Gopher vs Mole ID guide for a full comparison." } },
-    { "@type": "Question", "name": "How long does it take to get rid of gophers?", "acceptedAnswer": { "@type": "Answer", "text": "A single gopher can be caught as fast as 12 hours, typically 24–48 hours, with a properly placed trap in the main tunnel run. Complete elimination depends on how many gophers are present and whether new ones are migrating in from neighboring yards. No new mounds for 5–7 consecutive days is a good monitoring signal the gopher is gone — not proof, since a gopher can sit quiet underground for a few days without pushing fresh soil. If mounds resume, it's active again." } },
+    { "@type": "Question", "name": "How long does it take to get rid of gophers?", "acceptedAnswer": { "@type": "Answer", "text": "A single gopher is often caught within a day or two with a properly placed trap in the main tunnel run — check daily, and if nothing happens in 1 to 2 days, move the trap. Complete elimination depends on how many gophers are present and whether new ones are migrating in from neighboring yards. No new mounds for 5–7 consecutive days is a good monitoring signal the gopher is gone — not proof, since a gopher can sit quiet underground for a few days without pushing fresh soil. If mounds resume, it's active again." } },
   ]
 };
 ---
 
 <Layout
-  title={pageTitle("How to Kill Gophers: Field-Tested Methods")}
-  description="13 gopher control methods compared, from traps and bait to CO and barriers. Trapping Redlands, CA since 2022 — and flagging what I haven't used myself."
+  title={pageTitle("Gopher Control Guide: Traps, Baits & Barriers")}
+  description="13 gopher control methods compared, from traps and bait to CO and barriers. Trapping since age 15 in Redlands, CA, flagging what I haven't used myself."
   schemas={[faqSchema]}
 >
 
@@ -48,7 +48,7 @@ const faqSchema = {
     <h1>How To Kill Gophers</h1>
     <p class="subtitle">From Mark the Bagger — trapping gophers since age 15.</p>
     <p class="dateline">{updatedLine(Astro.url.pathname)}</p>
-    <p class="hero-body">I started catching gophers at 15 for $5 a head. My dog <a href="/methods/dog-hunting/">Taco</a> was my partner. Over the years I built up real hands-on knowledge of what works — and what's a waste of time. This site is where I put all of it. No paid placements, no filler. My trap and gear picks come from real field experience — <a href="/about/">more on who I am and how I got into this</a>. Where I haven't used something myself, I say so and stick to what the research shows.</p>
+    <p class="hero-body">I started catching gophers at 15 for $5 a head. My dog <a href="/methods/dog-hunting/">Taco</a> was my partner. Over the years I built up real hands-on knowledge of what works — and what's a waste of time. This site is where I put all of it. No filler. I earn a commission on purchases; brands don't pay for placement. My trap and gear picks come from real field experience — <a href="/about/">more on who I am and how I got into this</a>. Where I haven't used something myself, I say so and stick to what the research shows.</p>
     <figure class="hero-photo">
       <img src="/taco-catch.jpg" alt="Taco the chihuahua proudly holding a freshly caught gopher" width="800" height="736" />
       <figcaption>Taco with a fresh catch. He never missed.</figcaption>
@@ -105,7 +105,7 @@ const faqSchema = {
 
     <section class="card">
       <h2>Most-Used Methods</h2>
-      <p style="margin-top: 0; color: #52525b; font-size: 0.95rem;">The three Mark reaches for first on almost every job.</p>
+      <p style="margin-top: 0; color: #52525b; font-size: 0.95rem;">The three I reach for first.</p>
       <div class="method-grid">
         {featuredMethods.map((method) => (
           <article class="method-card">
@@ -172,7 +172,7 @@ const faqSchema = {
         </details>
         <details class="faq-item">
           <summary>How long does it take to get rid of gophers?</summary>
-          <p>A single gopher can be caught as fast as 12 hours, typically 24–48 hours, with a properly placed trap in the main tunnel run. Complete elimination depends on how many gophers are present and whether new ones are <a href="/what-attracts-gophers/">migrating in from neighboring yards</a>. No new mounds for 5–7 consecutive days is a good monitoring signal the gopher is gone — not proof, since a gopher can sit quiet underground for a few days without pushing fresh soil. If mounds resume, it's active again.</p>
+          <p>A single gopher is often caught within a day or two with a properly placed trap in the main tunnel run — check daily, and if nothing happens in 1 to 2 days, move the trap. Complete elimination depends on how many gophers are present and whether new ones are <a href="/what-attracts-gophers/">migrating in from neighboring yards</a>. No new mounds for 5–7 consecutive days is a good monitoring signal the gopher is gone — not proof, since a gopher can sit quiet underground for a few days without pushing fresh soil. If mounds resume, it's active again.</p>
         </details>
       </div>
     </section>
@@ -202,6 +202,7 @@ const faqSchema = {
   .hero-photo img {
     max-width: 400px;
     width: 100%;
+    height: auto;
     border-radius: 8px;
     display: block;
     margin: 0 auto;

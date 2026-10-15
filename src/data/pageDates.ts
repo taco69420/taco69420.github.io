@@ -16,17 +16,17 @@ export interface PageDates {
 }
 
 export const pageDates: Record<string, PageDates> = {
-  "/": { updated: "2026-10-14" },
+  "/": { updated: "2026-10-15" },
   "/about/": { updated: "2026-07-08" },
   "/best-gopher-baits/": { updated: "2026-10-14" },
   "/best-gopher-poison/": { updated: "2026-10-14" },
-  "/best-gopher-traps/": { updated: "2026-10-14" },
+  "/best-gopher-traps/": { updated: "2026-10-15" },
   "/cost/": { updated: "2026-10-14" },
   "/faq/": { updated: "2026-10-14" },
-  "/find-a-trapper/": { published: "2026-10-14", updated: "2026-10-14" },
+  "/find-a-trapper/": { published: "2026-10-14", updated: "2026-10-15" },
   "/gopher-vs-mole/": { published: "2026-03-11", updated: "2026-10-14" },
   "/methods/": { updated: "2026-10-14" },
-  "/privacy/": { updated: "2026-10-14" },
+  "/privacy/": { updated: "2026-10-15" },
   "/problems/": { updated: "2026-10-15" },
   "/quick-start/": { updated: "2026-10-15" },
   "/redlands/": { updated: "2026-10-14" },

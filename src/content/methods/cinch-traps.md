@@ -1,15 +1,15 @@
 ---
 title: "Cinch Trap Mainline Set"
 description: "Deploy cinch-style traps in open tunnel runs for quick mechanical control."
-metaDescription: "Cinch traps are forgiving to align, which makes them good for beginners. Probe the main run, set two back-to-back to cover both directions, 12–72 hours."
+metaDescription: "Cinch traps are forgiving to align, which makes them good for beginners. Probe the main run, set two back-to-back to cover both directions, check daily."
 date: 2026-03-01
-updated: 2026-07-08
+updated: 2026-10-15
 tags:
   - trapping
   - cinch
   - control
 difficulty: medium
-timeToResults: "12-72 hours"
+timeToResults: "Often within a day or two"
 petRisk: medium
 cost: low
 sources:
@@ -42,7 +42,7 @@ Cinch traps are my backup when [Victor sets](/methods/victor-traps/) aren't prod
 2. Open the run and remove loose soil to keep the trigger loop unobstructed.
 3. Set two cinch traps back-to-back to intercept movement in both directions.
 4. Cover the opening with a board or soil cap to reduce light and airflow changes.
-5. Recheck daily and reset in a new active run if no sign after 48 hours.
+5. Check daily; if nothing in 1 to 2 days, move the trap.
 
 <figure style="display:flex;flex-direction:column;align-items:center;margin:1.5rem 0;gap:0.75rem;">
   <iframe width="315" height="560" src="https://www.youtube.com/embed/letIRC4vG4o" title="How and why to tie gopher traps to a stake" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius:8px;max-width:100%;"></iframe>
