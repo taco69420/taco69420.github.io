@@ -5,13 +5,15 @@ import { pages, decode, table } from './lib.mjs';
  *
  *  1. the footer statement, required by Amazon on every page; and
  *  2. one compact in-page note, only on pages that actually link to Amazon,
- *     merged into the dateline row as "Updated <Month Year> · Has affiliate
- *     links" and pointing at /privacy/#affiliate.
+ *     merged into the dateline row as "Updated <Month Year> · Affiliate links
+ *     — I earn a commission" and pointing at /privacy/#affiliate.
  *
  * It used to be a separate boxed component under the header. The box was
  * redundant with the footer and heavy on mobile, so it is now one muted line.
  * What has to stay true is the part that matters legally: exactly one note, on
- * exactly the pages with Amazon links, above the first one.
+ * exactly the pages with Amazon links, above the first one, and the commission
+ * wording has to be in the VISIBLE link text — not just title/aria-label,
+ * which is hover-only and does not satisfy FTC "clear and conspicuous".
  *
  * Detection runs on the finished HTML. The *injection* in Layout.astro reads
  * the rendered slot instead — scanning the whole document there would match
@@ -51,6 +53,13 @@ export default {
           const tag = html.slice(noteAt - 200, noteAt + 400);
           if (!tag.includes(LABEL)) problems.push(`${page.route}: the note is missing the title/aria-label text`);
           if (!/href="\/privacy\/#affiliate"/.test(tag)) problems.push(`${page.route}: the note does not link to /privacy/#affiliate`);
+
+          // the commission wording must be in the VISIBLE text, not just the
+          // hover-only title/aria-label — FTC disclosure has to be seen, not hovered
+          const linkText = (tag.match(/>([^<]*)<\/a/) || [])[1] || '';
+          if (!/commission/i.test(decode(linkText))) {
+            problems.push(`${page.route}: the note's visible text does not mention "commission" (title/aria-label alone is not enough)`);
+          }
         }
       } else if (notes !== 0) {
         problems.push(`${page.route}: carries an in-page disclosure but has no Amazon links`);

@@ -29,7 +29,7 @@ Sonic stakes send low-frequency vibrations through the soil every 30 seconds or 
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">Solar Sonic Repeller Stakes</h4>
+  <h3 class="mpb-name">Solar Sonic Repeller Stakes</h3>
   <p class="mpb-desc">Solar-powered stakes that emit low-frequency vibrations every 30 seconds. No batteries or power cords required. Worth knowing up front that UC IPM found devices of this kind haven't been effective in research trials.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> People who want to try a non-lethal option around one bed and understand the research doesn't support it. Trapping is what addresses the population.</p>
   <a href="https://amzn.to/4sF1zUD" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Sonic Repeller Stakes on Amazon →</a>

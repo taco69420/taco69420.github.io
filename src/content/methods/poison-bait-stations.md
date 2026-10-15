@@ -32,7 +32,7 @@ Underground bait stations place zinc phosphide pellets directly in the tunnel wh
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">Underground Bait Applicator</h4>
+  <h3 class="mpb-name">Underground Bait Applicator</h3>
   <p class="mpb-desc">The applicator tool that places bait at tunnel depth — inside the run, not at the entrance, where gophers actively feed. Load it with registered zinc phosphide pellets (sold separately).</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Large or inaccessible tunnel networks only — and only where pets, dogs and raptors cannot reach the treated ground or a poisoned carcass.</p>
   <a href="https://amzn.to/46XnfTH" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Bait Applicator on Amazon →</a>

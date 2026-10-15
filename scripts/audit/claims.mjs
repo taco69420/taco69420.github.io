@@ -28,6 +28,7 @@ const ABSOLUTES = [
   /completely pet[- ]safe/i,
   /completely pet and kid safe/i,
   /absolutely safe/i,
+  /eliminates all\b/i,
 ];
 
 // wording that turns a mention of an anticoagulant into a recommendation

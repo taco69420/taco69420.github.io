@@ -32,7 +32,7 @@ Carbon monoxide treatment can be effective in dense tunnel networks when runs ar
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">CO Burrow Injection Device</h4>
+  <h3 class="mpb-name">CO Burrow Injection Device</h3>
   <p class="mpb-desc">Approved carbon monoxide injection device built for treating sealed tunnel networks. Purpose-built for this application — don't improvise with automotive exhaust setups.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Large, established tunnel networks with multiple interconnected runs where trapping alone hasn't kept pace.</p>
   <a href="https://amzn.to/47l872T" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop CO Burrow Treatment Devices on Amazon (not personally tested) →</a>

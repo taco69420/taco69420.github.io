@@ -33,7 +33,7 @@ Victor traps are my go-to — they're what I started with at 15 and what I still
 
 <div class="method-product-box">
   <p class="mpb-label">Recommended Gear</p>
-  <h4 class="mpb-name">Victor Easy Set Gopher Trap</h4>
+  <h3 class="mpb-name">Victor Easy Set Gopher Trap</h3>
   <p class="mpb-desc">High-tension wire trap that fires clean and holds up to years of daily use. The go-to for any main-tunnel set — nothing I've tested beats it for speed and reliability.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> Active main tunnel intercept — place two facing opposite directions for the highest catch rate.</p>
   <a href="https://amzn.to/4cIJ64V" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
