@@ -1,6 +1,5 @@
 ---
 import CookieBanner from '../components/CookieBanner.astro';
-import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 import { authorSchema, websiteSchema, SOCIAL_LINKS } from '../data/author';
 
 interface Props {
@@ -35,15 +34,42 @@ const fullOgImage = ogImage.startsWith("http") ? ogImage : siteURL + ogImage;
 const pageHtml = Astro.slots.has('default') ? await Astro.slots.render('default') : '';
 const hasAmazonLink = /href=["']https?:\/\/(?:www\.)?(?:amzn\.to|amazon\.com)/i.test(pageHtml);
 
-// Every H1 on this site sits in a <header> next to its subtitle and dateline, so
-// splitting at </h1> would wedge the disclosure into the middle of that block.
-// Split after the header instead, falling back to the H1, then the page top.
-const anchor = hasAmazonLink
-  ? (pageHtml.match(/<\/header>/i) ?? pageHtml.match(/<\/h1>/i))
+// One compact disclosure per page, merged into the dateline row so it reads as
+// "Updated October 2026 · Has affiliate links" rather than a separate box. The
+// dateline already sits in the <header>, which is above every Amazon link on
+// the page, so this satisfies "clear and conspicuous, before the link".
+//
+// Each page keeps its own dateline class because each is coloured for its own
+// hero; the note inherits that colour, so wherever the dateline passes contrast
+// the note does too.
+const AFFILIATE_NOTE =
+  ' <span class="affiliate-sep" aria-hidden="true">·</span> ' +
+  '<a class="affiliate-note" href="/privacy/#affiliate"' +
+  ' title="I earn a commission from qualifying purchases at no extra cost to you."' +
+  ' aria-label="I earn a commission from qualifying purchases at no extra cost to you.">Has affiliate links</a>';
+
+// Append to the first dateline paragraph. Four classes are in use
+// (.dateline, .hero-dateline, .mission-dateline, .locker-dateline …), so match
+// any of them rather than listing them.
+const datelineRe = /(<p class="[a-z-]*dateline"[^>]*>)([\s\S]*?)(<\/p>)/i;
+let pageBody = pageHtml;
+let needsStandaloneNote = false;
+if (hasAmazonLink) {
+  if (datelineRe.test(pageBody)) {
+    pageBody = pageBody.replace(datelineRe, (_m, open, inner, close) => open + inner + AFFILIATE_NOTE + close);
+  } else {
+    // No dateline on this page: fall back to one small muted line under the header.
+    needsStandaloneNote = true;
+  }
+}
+
+// Only used for the fallback, which splits after the header as before.
+const anchor = needsStandaloneNote
+  ? (pageBody.match(/<\/header>/i) ?? pageBody.match(/<\/h1>/i))
   : null;
 const splitAt = anchor?.index != null ? anchor.index + anchor[0].length : 0;
-const beforeDisclosure = hasAmazonLink ? pageHtml.slice(0, splitAt) : pageHtml;
-const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
+const beforeDisclosure = needsStandaloneNote ? pageBody.slice(0, splitAt) : pageBody;
+const afterDisclosure = needsStandaloneNote ? pageBody.slice(splitAt) : '';
 ---
 
 <html lang="en">
@@ -162,7 +188,7 @@ const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
          Scoped to the desktop side of the 640px breakpoint so the stacked mobile
          menu is untouched, and flex-wrap stays `wrap` as a fallback rather than
          risking horizontal overflow. */
-      @media (min-width: 641px) {
+      @media (min-width: 880px) {
         nav[aria-label="Main navigation"] { gap: 0.1rem; }
         nav[aria-label="Main navigation"] > a:not(.nav-brand),
         .nav-dropdown-btn {
@@ -191,14 +217,52 @@ const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
       .card a[href^="http"]::after { content: "↗"; font-size: 0.7em; position: absolute; right: 0; top: 0.1em; opacity: 0.5; }
 
       .dateline { font-size: 0.8rem; color: #6b7280; margin-top: 0.25rem; }
+
+      /* The note must hit WCAG AA (4.5:1). Inheriting the dateline colour does NOT:
+         measured, the datelines themselves run 2.29-4.43:1 against their own
+         backgrounds. So the note sets its own colour per context — measured values
+         in the comment. Still muted and boxless, just legible.
+         light pages  #4b5563 on #f5f5f3 = 6.92:1
+         dark heroes  #f3f4f6 on #7f1d1d / #111111 / #3b2a1a = 9.10 / 17.16 / 12.46:1 */
+      .affiliate-note { color: #4b5563; text-decoration: underline; text-underline-offset: 2px; }
+      .affiliate-note:visited { color: #4b5563; }
+      .affiliate-note:hover { color: #1f2937; text-decoration-thickness: 2px; }
+      .affiliate-sep { color: #4b5563; padding: 0 0.15rem; }
+      .hero-dateline .affiliate-note, .locker-dateline .affiliate-note, .mission-dateline .affiliate-note,
+      .hero-dateline .affiliate-note:visited, .locker-dateline .affiliate-note:visited, .mission-dateline .affiliate-note:visited { color: #f3f4f6; }
+      .hero-dateline .affiliate-note:hover, .locker-dateline .affiliate-note:hover, .mission-dateline .affiliate-note:hover { color: #ffffff; }
+      .hero-dateline .affiliate-sep, .locker-dateline .affiliate-sep, .mission-dateline .affiliate-sep { color: #f3f4f6; }
+      .affiliate-standalone { font-size: 0.8rem; color: #6b7280; margin: 0.25rem 0 1rem; }
+
+      /* 2. Table-of-contents links were 21px tall. */
+      nav[aria-label="Table of contents"] li a { display: inline-block; padding: 0.4rem 0; }
       .skip-link { position: absolute; top: 0; left: 0; transform: translateY(-100%); background: #065f46; color: white !important; padding: 0.5rem 1rem; text-decoration: none; z-index: 10000; font-weight: 600; border-radius: 0 0 6px 0; transition: transform 0.15s; }
       .skip-link:focus { position: fixed; transform: translateY(0); }
       :focus-visible { outline: 2px solid #047857; outline-offset: 3px; border-radius: 3px; }
 
+      /* The nav needs ~794px of items. The container is 836px at 900px+ but
+         only 577px at 641px, so between 641 and 900 it wraps no matter how
+         tight the type gets — a 27% font reduction would be unreadable. Rather
+         than leave it wrapping raggedly with 26px buttons, the touch treatment
+         now starts at 900px: it wraps on purpose, with 44px targets. */
+      @media (max-width: 879px) {
+        .nav-brand { margin-bottom: 0.25rem; min-height: 44px; display: inline-flex; align-items: center; }
+        nav[aria-label="Main navigation"] { row-gap: 0.15rem; }
+        nav[aria-label="Main navigation"] > a:not(.nav-brand),
+        .nav-dropdown-btn {
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+          font-size: 0.95rem;
+          padding: 0.5rem 0.7rem;
+        }
+        .nav-dropdown { display: inline-flex; }
+        .nav-dropdown-menu li a { min-height: 44px; display: flex; align-items: center; font-size: 0.95rem; }
+      }
+
       @media (max-width: 640px) {
         body { padding: 1rem; }
         h1 { font-size: 1.75rem; }
-        .nav-brand { margin-bottom: 0.25rem; }
 
         /* Body copy at 16px. The desktop sizes (0.82–0.95rem) measured
            13–15px on a phone, which is below the comfortable reading floor.
@@ -216,19 +280,6 @@ const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
         .group-desc, .season-tagline, .product-best-for { font-size: 1rem !important; line-height: 1.6; }
         .subtitle, .hero-sub { font-size: 1.05rem !important; }
 
-        /* Tap targets. 44px is the smallest comfortable touch area; the nav
-           links were 32px, the dropdown buttons 26px and the footer links 17px. */
-        nav[aria-label="Main navigation"] > a:not(.nav-brand),
-        .nav-dropdown-btn {
-          min-height: 44px;
-          display: inline-flex;
-          align-items: center;
-          font-size: 0.95rem;
-          padding: 0.5rem 0.7rem;
-        }
-        .nav-dropdown { display: inline-flex; }
-        .nav-dropdown-menu li a { min-height: 44px; display: flex; align-items: center; font-size: 0.95rem; }
-        .nav-brand { min-height: 44px; display: inline-flex; align-items: center; }
         .btn, .mpb-btn, .table-btn {
           min-height: 44px;
           display: inline-flex;
@@ -311,7 +362,17 @@ const afterDisclosure = hasAmazonLink ? pageHtml.slice(splitAt) : '';
     </nav>
 
     <Fragment set:html={beforeDisclosure} />
-    {hasAmazonLink && <AffiliateDisclosure />}
+    {needsStandaloneNote && (
+      <p class="affiliate-standalone">
+        <a
+          class="affiliate-note"
+          href="/privacy/#affiliate"
+          title="I earn a commission from qualifying purchases at no extra cost to you."
+          aria-label="I earn a commission from qualifying purchases at no extra cost to you."
+          >Has affiliate links</a
+        >
+      </p>
+    )}
     <Fragment set:html={afterDisclosure} />
 
     <footer class="disclaimer">
