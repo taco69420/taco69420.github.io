@@ -1,27 +1,64 @@
 /**
  * Products reviewed on the three best-of pages, in page order.
  *
- * These pages render their Pros/Cons lists from this data, and build the
- * Product/Review JSON-LD (positiveNotes / negativeNotes) from the same arrays,
- * so the markup and the structured data cannot drift apart. Edit the copy here,
- * not in the page markup.
+ * These pages render their quick-picks table, their table of contents and
+ * their Pros/Cons lists from this data, and build the Product/Review JSON-LD
+ * (positiveNotes / negativeNotes) from the same arrays, so the markup and the
+ * structured data cannot drift apart. Removing a product here removes it from
+ * all of them at once. Edit the copy here, not in the page markup.
  *
  * Deliberately no ratings, offers or prices: nothing on these pages supports a
  * numeric score, and review snippets without a real rating are the honest shape.
+ *
+ * Every product listed here must appear in FIRSTHAND_PRODUCTS below. A best-of
+ * page is a recommendation, and the site only recommends gear it has actually
+ * used. Untested gear lives on its own method page behind an UntestedNote.
  */
 export interface ReviewedProduct {
   /** Matches the product section's heading id, so the schema and the anchor agree. */
   id: string;
   name: string;
+  /** Label in the table of contents. */
+  tocName: string;
+  /** Label in the quick-picks table, which is sometimes shorter. */
+  tableName: string;
+  /** "Best For" cell in the quick-picks table. */
+  bestFor: string;
+  /** Price tier, rendered as a badge. Never a figure — Amazon prices must come from their API. */
+  tier: 'budget' | 'mid' | 'premium';
+  /** Affiliate destination for the table's Shop button. */
+  url: string;
   pros: string[];
   cons: string[];
 }
+
+/**
+ * Gear the site owner has personally used in the field. The audit fails if a
+ * best-of page lists anything outside this set. See "Editorial facts" in
+ * CLAUDE.md for the full first-hand / never-used split.
+ */
+export const FIRSTHAND_PRODUCTS = [
+  "victor-easy-set",
+  "victor-black-box",
+  "cinch-traps",
+  "bait-stations",
+  "gassers",
+  "soil-probe",
+  "gopher-mesh",
+  "mole-traps",
+  "sonic-stakes",
+] as const;
 
 export const bestOfProducts: Record<string, ReviewedProduct[]> = {
   "/best-gopher-traps/": [
     {
       id: "victor-easy-set",
       name: "Victor Easy Set Gopher Trap",
+      tocName: "Victor Easy Set Gopher Trap",
+      tableName: "Victor Easy Set Gopher Trap",
+      bestFor: "Main tunnel intercept, highest catch rate",
+      tier: "budget",
+      url: "https://amzn.to/4cIJ64V",
       pros: [
         "Among the lowest cost-per-catch of any trap on the market",
         "Fast to set once the technique is dialed in",
@@ -38,6 +75,11 @@ export const bestOfProducts: Record<string, ReviewedProduct[]> = {
     {
       id: "victor-black-box",
       name: "Victor Black Box Gopher Trap",
+      tocName: "Victor Black Box Gopher Trap",
+      tableName: "Victor Black Box Gopher Trap",
+      bestFor: "Enclosed design, safer around pets & kids",
+      tier: "budget",
+      url: "https://amzn.to/4bqUakW",
       pros: [
         "Fully enclosed — no exposed jaws, far safer around pets and kids",
         "Less intimidating to set than an open high-tension wire trap",
@@ -53,6 +95,11 @@ export const bestOfProducts: Record<string, ReviewedProduct[]> = {
     {
       id: "cinch-traps",
       name: "Cinch Traps (Scissor-Jaw Style)",
+      tocName: "Cinch Traps (Scissor-Jaw Style)",
+      tableName: "Cinch Traps (Scissor-Jaw)",
+      bestFor: "Beginners, easier arming, fewer misfires",
+      tier: "mid",
+      url: "https://amzn.to/4sMH5cR",
       pros: [
         "Scissor-jaw mechanism is significantly more forgiving to arm than Victor wire traps",
         "Fewer accidental misfires during placement in tight or curved tunnels",
@@ -70,6 +117,11 @@ export const bestOfProducts: Record<string, ReviewedProduct[]> = {
     {
       id: "bait-stations",
       name: "Underground Bait Applicator",
+      tocName: "Underground Bait Applicator",
+      tableName: "Underground Bait Applicator",
+      bestFor: "Deep or inaccessible runs, no pets on property",
+      tier: "budget",
+      url: "https://amzn.to/46XnfTH",
       pros: [
         "Effective on deeply established tunnel systems difficult to reach with traps",
         "Low cost per application relative to the area covered",
@@ -87,6 +139,11 @@ export const bestOfProducts: Record<string, ReviewedProduct[]> = {
     {
       id: "gassers",
       name: "Gopher Gassers (Fumigation Cartridges)",
+      tocName: "Gopher Gassers (Fumigation Cartridges)",
+      tableName: "Gopher Gassers (Fumigation Cartridges)",
+      bestFor: "Mid-depth branching systems, fast deployment",
+      tier: "budget",
+      url: "https://amzn.to/4b4oF11",
       pros: [
         "Fast to deploy — no probing or precise placement required",
         "Inexpensive per treatment",
@@ -99,28 +156,16 @@ export const bestOfProducts: Record<string, ReviewedProduct[]> = {
         "Results are harder to confirm than mechanical trapping",
       ],
     },
-    {
-      id: "castor-oil",
-      name: "Castor Oil Gopher Repellent Concentrate",
-      pros: [
-        "No rodenticide involved — nothing for a dog or a hawk to be poisoned by",
-        "No license or permit required",
-        "Easy to apply with a hose-end sprayer",
-        "Useful for protecting specific high-value zones during active trapping campaigns",
-      ],
-      cons: [
-        "UC IPM has not found repellents effective at protecting plantings from gophers",
-        "Not a kill method — at best gophers relocate, they don't die",
-        "Breaks down after rain or irrigation and needs reapplication every 1–2 weeks",
-        "Won't hold an established gopher that's heavily invested in a tunnel system",
-        "Treats symptoms, not the underlying population",
-      ],
-    },
   ],
   "/best-gopher-poison/": [
     {
       id: "bait-stations",
       name: "Underground Bait Applicator",
+      tocName: "Underground Bait Applicator",
+      tableName: "Underground Bait Applicator",
+      bestFor: "Most reliable lethal bait for tunnel placement",
+      tier: "budget",
+      url: "https://amzn.to/46XnfTH",
       pros: [
         "Highly effective when placed correctly inside an active run",
         "Low cost per treatment area",
@@ -138,6 +183,11 @@ export const bestOfProducts: Record<string, ReviewedProduct[]> = {
     {
       id: "gassers",
       name: "Gopher Gassers (Fumigation Cartridges)",
+      tocName: "Gopher Gassers (Fumigation Cartridges)",
+      tableName: "Gopher Gassers (Fumigation Cartridges)",
+      bestFor: "Fast deployment on mid-depth sealed systems",
+      tier: "budget",
+      url: "https://amzn.to/4b4oF11",
       pros: [
         "Same-day results on a properly sealed system",
         "No precise tunnel placement required — just find an active entrance",
@@ -151,23 +201,6 @@ export const bestOfProducts: Record<string, ReviewedProduct[]> = {
         "Cannot be used near structures — gas follows underground paths",
         "Results are harder to confirm than mechanical trapping",
         "Requires walking the whole yard to seal every visible exit first",
-      ],
-    },
-    {
-      id: "co-burrow",
-      name: "CO Burrow Treatment Device",
-      pros: [
-        "Most thorough coverage of complex, deep tunnel networks",
-        "Active gas injection reaches areas cartridge gassers can't penetrate",
-        "Same-day to 48-hour results on properly treated systems",
-        "No residual chemical in soil after treatment",
-      ],
-      cons: [
-        "Higher cost per treatment than cartridge gassers or bait pellets",
-        "Requires more setup — pre-sealing secondary openings before injection",
-        "Cannot be used near structures, enclosed spaces, or buildings",
-        "CO is odorless and lethal — requires a personal CO monitor during use",
-        "Check local regulations and label legality before first use",
       ],
     },
   ],

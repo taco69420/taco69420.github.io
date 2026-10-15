@@ -16,7 +16,7 @@ export interface PageDates {
 }
 
 export const pageDates: Record<string, PageDates> = {
-  "/": { updated: "2026-07-08" },
+  "/": { updated: "2026-10-14" },
   "/about/": { updated: "2026-07-08" },
   "/best-gopher-baits/": { updated: "2026-10-14" },
   "/best-gopher-poison/": { updated: "2026-10-14" },
@@ -24,7 +24,7 @@ export const pageDates: Record<string, PageDates> = {
   "/cost/": { updated: "2026-10-14" },
   "/faq/": { updated: "2026-10-14" },
   "/gopher-vs-mole/": { published: "2026-03-11", updated: "2026-07-08" },
-  "/methods/": { updated: "2026-07-08" },
+  "/methods/": { updated: "2026-10-14" },
   "/problems/": { updated: "2026-07-08" },
   "/quick-start/": { updated: "2026-07-08" },
   "/redlands/": { updated: "2026-10-14" },

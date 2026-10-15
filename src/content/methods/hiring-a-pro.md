@@ -10,6 +10,7 @@ tags:
   - large-infestation
 difficulty: easy
 timeToResults: "1-2 weeks"
+firsthand: false
 petRisk: low
 cost: high
 sources:
@@ -40,7 +41,7 @@ Most gopher problems are one-animal jobs you can handle yourself with [a pair of
 
 ## The Process
 1. Get at least two quotes. Gopher control pricing varies wildly by property size and method — I keep the current ranges in the [cost guide](/cost/) rather than repeating them here.
-2. Ask specifically what method they use. [Trapping](/methods/victor-traps/) and <a href="https://amzn.to/47l872T" target="_blank" rel="sponsored noopener">CO fumigation</a> are preferred. Be cautious with anyone who defaults immediately to poison bait on a property with kids, pets, or edible gardens.
+2. Ask specifically what method they use. [Trapping](/methods/victor-traps/) and [CO fumigation](/methods/carbon-monoxide/) are preferred. Be cautious with anyone who defaults immediately to poison bait on a property with kids, pets, or edible gardens.
 3. Ask if they guarantee results and what the callback policy is. A reputable operator will come back if new activity appears within the treatment window.
 4. Check for a valid [California](/southern-california-gopher-control/) Pest Control Operator license (PCO license) if they're applying any restricted-use products.
 5. After treatment, ask for a written summary of what was done — this matters for foundation damage documentation or HOA records.

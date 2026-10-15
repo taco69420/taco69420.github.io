@@ -133,6 +133,19 @@ Mark's personal Redlands story ("Where It Started", "The $5 Lesson") stays below
 
 A factual review on 2026-10-14 found the rodenticide pages had been written from an outdated picture of California law, with a citation that contradicted its own source. These are the corrections. `npm run audit` enforces the first two (`scripts/audit/claims.mjs`); the rest are on you.
 
+**First-hand experience: what Mark has and has not used.** This is the single most important editorial fact on the site, because the whole proposition is field experience. No page may state or imply first-hand use of anything in the second list.
+
+*Has personally used:* Victor Easy Set, Victor Black Box, Cinch traps, soil probe, gopher wire mesh, flooding runs (with Taco), the underground bait applicator with zinc phosphide bait, gopher gassers (cartridges), gopher-resistant plants, mole traps, sonic stakes (front yard, heavy season), dog hunting with Taco.
+
+*Has never used:* exclusion fencing, pressurized CO burrow devices, castor oil repellent, hiring a professional trapper, barn owl boxes, diphacinone.
+
+Three mechanisms enforce this, all checked by `scripts/audit/firsthand.mjs`:
+
+- A method page for something untested sets `firsthand: false` in its frontmatter, which renders `UntestedNote.astro` under the header. Never hardcode the note per page.
+- An affiliate link for untested gear appears **only** on that gear's own method page, labelled "(not personally tested)". The castor oil, barn owl box and CO device links are not allowed in a best-of roundup, in The Armory, or in any "my kit" context.
+- Every product on a best-of page must be listed in `FIRSTHAND_PRODUCTS` in `src/data/bestOfProducts.ts`. A best-of page is a recommendation, and the site only recommends gear it has used. This is why `/best-gopher-baits/` and `/best-gopher-poison/` carry two products each rather than three.
+
+Site-wide claims have to match. "Every recommendation here is based on real field experience" and "Every method below has been field-tested" were both false once five of the thirteen methods were untested; both now say that the untested ones are flagged. `/traps/` may keep "the gear Mark actually uses" only while every product on it is in the first list.
 **Anticoagulant baits are prohibited for residential use in California.** CDPR: "Effective January 1, 2024, most uses of the rodenticide diphacinone are prohibited," and those prohibitions "include residential or home uses"; products labelled for prohibited uses "can only be sold to an end user by a DPR-licensed pest control dealer." UC IPM 7433 puts it as chlorophacinone and diphacinone "are no longer legal for residential use in California." Diphacinone may be **named** — to explain the prohibition, or the carcass hazard — but never recommended, preferred, or called the safer option. The audit fails on a mention that carries recommending language without prohibition context.
 
 **Zinc phosphide is the remaining homeowner bait.** UC IPM: 2% zinc phosphide baits are available, with exemptions for home use. Only recommend it where the product label lists pocket gophers.

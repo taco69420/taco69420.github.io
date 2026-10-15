@@ -127,10 +127,10 @@ const faqSchema = {
       <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
       <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
         <li><a href="#quick-picks">Quick Picks</a></li>
-        <li><a href="#victor-easy-set">Victor Easy Set Gopher Trap</a></li>
-        <li><a href="#victor-black-box">Victor Black Box Gopher Trap</a></li>
-        <li><a href="#cinch-traps">Cinch Traps (Scissor-Jaw Style)</a></li>
-        <li><a href="#buying-guide">What to Look For in a Gopher Trap</a></li>
+        {products.map((p) => (
+          <li><a href={`#${p.id}`}>{p.tocName}</a></li>
+        ))}
+<li><a href="#buying-guide">What to Look For in a Gopher Trap</a></li>
         <li><a href="#faq">Frequently Asked Questions</a></li>
       </ul>
     </nav>
@@ -149,25 +149,15 @@ const faqSchema = {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Victor Easy Set Gopher Trap</strong></td>
-              <td>Main tunnel intercept, highest catch rate</td>
-              <td><span class="tier-badge tier-budget">Budget</span></td>
-              <td><a href="https://amzn.to/4cIJ64V" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-            <tr>
-              <td><strong>Victor Black Box Gopher Trap</strong></td>
-              <td>Enclosed design, safer around pets &amp; kids</td>
-              <td><span class="tier-badge tier-budget">Budget</span></td>
-              <td><a href="https://amzn.to/4bqUakW" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-            <tr>
-              <td><strong>Cinch Traps (Scissor-Jaw)</strong></td>
-              <td>Beginners, easier arming, fewer misfires</td>
-              <td><span class="tier-badge tier-mid">Mid</span></td>
-              <td><a href="https://amzn.to/4sMH5cR" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-          </tbody>
+            {products.map((p) => (
+              <tr>
+                <td><strong>{p.tableName}</strong></td>
+                <td>{p.bestFor}</td>
+                <td><span class={`tier-badge tier-${p.tier}`}>{p.tier === 'budget' ? 'Budget' : p.tier === 'mid' ? 'Mid' : 'Premium'}</span></td>
+                <td><a href={p.url} class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+              </tr>
+            ))}
+</tbody>
         </table>
       </div>
     </section>

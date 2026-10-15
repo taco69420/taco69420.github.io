@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import UntestedNote from '../../components/UntestedNote.astro';
 import { authorRef } from '../../data/author';
 import { pageTitle } from '../../data/site';
 
@@ -140,6 +141,8 @@ const breadcrumbSchema = {
     <p class="subtitle">{entry.data.description}</p>
     <p class="dateline">Updated {updatedDisplay}</p>
   </header>
+
+  {entry.data.firsthand === false && <UntestedNote />}
 
   {entry.slug === 'dog-hunting' && (
     <figure style="text-align: center; margin: 1.5rem 0 0;">

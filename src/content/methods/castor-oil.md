@@ -10,6 +10,7 @@ tags:
   - nonlethal
 difficulty: easy
 timeToResults: "3-14 days"
+firsthand: false
 petRisk: low
 cost: medium
 sources:
@@ -20,7 +21,7 @@ sources:
 ---
 
 ## Quick Answer
-Short answer: the research doesn't back it. UC IPM says castor bean and the other plants people reach for "haven't been shown to repel gophers from an area," and no repellent has proven effective at protecting plantings. It still gets used on [high-value turf](/problems/lawn-damage/) as a hedge, but that's habit rather than evidence, and this page isn't going to dress it up as more.
+Short answer: the research doesn't back it. UC IPM says castor bean and the other plants people reach for "haven't been shown to repel gophers from an area," and no repellent has proven effective at protecting plantings. It's commonly used on [high-value turf](/problems/lawn-damage/) as a hedge, but that's common practice rather than evidence, and this page isn't going to dress it up as more.
 
 ## The Gear
 - Castor-oil-based repellent concentrate
@@ -34,7 +35,7 @@ Short answer: the research doesn't back it. UC IPM says castor bean and the othe
   <h4 class="mpb-name">Castor Oil Gopher Repellent Concentrate</h4>
   <p class="mpb-desc">Castor-oil-based repellent applied with a hose-end sprayer and watered in deeply. Note that UC IPM has not found repellents effective at protecting plantings from gophers — buy this knowing that.</p>
   <p class="mpb-best-for"><strong>Best for:</strong> People who want to try a non-lethal option on turf they care about, with trapping doing the actual work at the boundary.</p>
-  <a href="https://amzn.to/3P7QFIM" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Castor Oil Repellent on Amazon →</a>
+  <a href="https://amzn.to/3P7QFIM" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Castor Oil Repellent on Amazon (not personally tested) →</a>
 </div>
 
 ## The Process
@@ -57,4 +58,4 @@ Follow label directions exactly; over-application can stress desirable plants an
 
 ## Get the Gear
 Before you try anything cheaper than this, I've already put the folk fixes through it — [gum, coffee grounds, cayenne and Irish Spring soap](/what-doesnt-work/) — and none of them worked.
-<a href="https://amzn.to/3P7QFIM" target="_blank" rel="sponsored noopener">Shop Castor Oil Gopher Repellent on Amazon →</a>
+<a href="https://amzn.to/3P7QFIM" target="_blank" rel="sponsored noopener">Shop Castor Oil Gopher Repellent on Amazon (not personally tested) →</a>

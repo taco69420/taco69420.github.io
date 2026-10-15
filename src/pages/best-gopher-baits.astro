@@ -128,10 +128,10 @@ const faqSchema = {
       <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin: 0 0 0.65rem;">In This Guide</p>
       <ul style="margin: 0; padding-left: 1.1rem; line-height: 1.9; font-size: 0.9rem;">
         <li><a href="#quick-picks">Quick Picks</a></li>
-        <li><a href="#bait-stations">Underground Bait Applicator</a></li>
-        <li><a href="#gassers">Gopher Gassers (Fumigation Cartridges)</a></li>
-        <li><a href="#castor-oil">Castor Oil Gopher Repellent</a></li>
-        <li><a href="#buying-guide">What to Look For in a Gopher Bait</a></li>
+        {products.map((p) => (
+          <li><a href={`#${p.id}`}>{p.tocName}</a></li>
+        ))}
+<li><a href="#buying-guide">What to Look For in a Gopher Bait</a></li>
         <li><a href="#faq">Frequently Asked Questions</a></li>
       </ul>
     </nav>
@@ -150,25 +150,15 @@ const faqSchema = {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Underground Bait Applicator</strong></td>
-              <td>Deep or inaccessible runs, no pets on property</td>
-              <td><span class="tier-badge tier-budget">Budget</span></td>
-              <td><a href="https://amzn.to/46XnfTH" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-            <tr>
-              <td><strong>Gopher Gassers (Fumigation Cartridges)</strong></td>
-              <td>Mid-depth branching systems, fast deployment</td>
-              <td><span class="tier-badge tier-budget">Budget</span></td>
-              <td><a href="https://amzn.to/4b4oF11" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-            <tr>
-              <td><strong>Castor Oil Gopher Repellent</strong></td>
-              <td>Non-toxic option, turf pressure management</td>
-              <td><span class="tier-badge tier-mid">Mid</span></td>
-              <td><a href="https://amzn.to/3P7QFIM" class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
-            </tr>
-          </tbody>
+            {products.map((p) => (
+              <tr>
+                <td><strong>{p.tableName}</strong></td>
+                <td>{p.bestFor}</td>
+                <td><span class={`tier-badge tier-${p.tier}`}>{p.tier === 'budget' ? 'Budget' : p.tier === 'mid' ? 'Mid' : 'Premium'}</span></td>
+                <td><a href={p.url} class="table-btn" target="_blank" rel="sponsored noopener">Shop →</a></td>
+              </tr>
+            ))}
+</tbody>
         </table>
       </div>
     </section>
@@ -223,29 +213,6 @@ const faqSchema = {
         <strong>Safety:</strong> A gasser is a cartridge you light and bury, so it is a fire hazard as well as a gas hazard — never under or near structures, decks, porches, dry vegetation or mulch, and follow the label. The gas follows tunnel paths underground and can enter through foundation cracks. Keep children and pets away from the treatment area until sealed holes have had time to settle.
       </div>
       <a href="https://amzn.to/4b4oF11" class="btn" target="_blank" rel="sponsored noopener">Shop Gopher Gassers on Amazon →</a>
-    </section>
-
-    <!-- Product 3: Castor Oil Repellent -->
-    <section class="card product-section">
-      <div class="product-badge" style="background: #fffbeb; color: #92400e; border: 1.5px solid #fcd34d;">Non-Toxic — Not Research-Backed</div>
-      <h2 id="castor-oil" class="ps-name">Castor Oil Gopher Repellent Concentrate</h2>
-      <p class="ps-best-for"><strong>Best for:</strong> Pet-safe pressure management in high-value turf areas — best used as a deterrent layer that pushes gophers toward the yard edge where trapping is easier, not as a standalone solution.</p>
-      <p class="ps-desc">Castor-oil-based repellent concentrate applied through a hose-end sprayer and watered in deeply to carry the product to root-level soil. It makes the soil feeding environment unpleasant enough that gophers relocate rather than continue feeding in the treated zone. This is not a kill method and it's not a permanent fix — gophers come back when the product breaks down or they get hungry enough. But it's genuinely useful for protecting specific areas (a vegetable garden, a new lawn, a replanted bed) while you address the main population with traps. I'd always pair it with active trapping at the boundary.</p>
-      <div class="ps-verdict">
-        <div class="ps-pros">
-          <h3>Pros</h3>
-          <ul>
-            {product["castor-oil"].pros.map((pro) => <li>{pro}</li>)}
-          </ul>
-        </div>
-        <div class="ps-cons">
-          <h3>Cons</h3>
-          <ul>
-            {product["castor-oil"].cons.map((con) => <li>{con}</li>)}
-          </ul>
-        </div>
-      </div>
-      <a href="https://amzn.to/3P7QFIM" class="btn" target="_blank" rel="sponsored noopener">Shop Castor Oil Gopher Repellent on Amazon →</a>
     </section>
 
     <!-- Buying Guide -->
