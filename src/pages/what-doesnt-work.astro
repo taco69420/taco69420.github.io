@@ -4,43 +4,38 @@ import { breadcrumbSchema } from '../data/author';
 import { updatedLine } from '../data/pageDates';
 import { pageTitle } from '../data/site';
 
+// Single source for the FAQ: the visible accordion renders `html` as markup,
+// and the JSON-LD `text` is derived from the same string by stripping tags —
+// so the schema and the visible copy cannot drift apart.
+const stripTags = (html: string) => html.replace(/<[^>]+>/g, '').trim();
+
+const faqs = [
+  {
+    q: "Does Irish Spring soap keep gophers away?",
+    html: "No. Irish Spring soap has a strong smell to humans, but gophers don't care. They live underground in a tunnel system that already smells like dirt, roots, and decomposing organic matter. Hanging a bar of soap near a mound does nothing — gophers aren't above ground long enough to encounter it, and the smell doesn't penetrate into tunnel systems.",
+  },
+  {
+    q: "Do coffee grounds repel gophers?",
+    html: "No. Coffee grounds don't penetrate the soil deeply enough to reach active tunnel systems, which run 6–12 inches underground. Gophers have no reason to avoid them, and the smell dissipates fast — especially after watering. I've seen yards where someone dumped pounds of grounds into every mound and still had active tunneling the next day.",
+  },
+  {
+    q: "Does cayenne pepper work on gophers?",
+    html: "No. Same problem as coffee grounds — cayenne is a surface treatment and gophers live underground. It washes away with the first watering. Even if a gopher encounters it at the tunnel entrance, it's not going to abandon an established burrow system over a little pepper.",
+  },
+  {
+    q: "Does chewing gum kill gophers?",
+    html: "No. This is one of the oldest gopher myths out there. Gophers eat roots — not random objects in their tunnels. There's zero field evidence this works, and the mechanism doesn't make sense. Save the Juicy Fruit for yourself.",
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Does Irish Spring soap keep gophers away?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Irish Spring soap has a strong smell to humans, but gophers don't care. They live underground in a tunnel system that already smells like dirt, roots, and decomposing organic matter. Hanging a bar of soap near a mound does nothing — gophers aren't above ground long enough to encounter it, and the smell doesn't penetrate into tunnel systems."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do coffee grounds repel gophers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Coffee grounds don't penetrate the soil deeply enough to reach active tunnel systems, which run 6–12 inches underground. Gophers have no reason to avoid them, and the smell dissipates fast — especially after watering. I've seen yards where someone dumped pounds of grounds into every mound and still had active tunneling the next day."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does cayenne pepper work on gophers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Same problem as coffee grounds — cayenne is a surface treatment and gophers live underground. It washes away with the first watering. Even if a gopher encounters it at the tunnel entrance, it's not going to abandon an established burrow system over a little pepper. It might irritate a gopher briefly; it won't solve your problem."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does chewing gum kill gophers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. This is one of the oldest gopher myths out there. The theory is that gophers eat it and it clogs their digestive system, but gophers don't eat random objects — they eat roots. Even if a gopher encounters a piece of gum at a tunnel entrance, they're more likely to push it aside or ignore it entirely. There's zero field evidence this works."
-      }
-    }
-  ]
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": stripTags(f.html) },
+  })),
 };
 
 const crumbLabel = "What Doesn't Work";
@@ -122,22 +117,12 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/what-doesnt-work/");
     <section class="card" id="faq">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-list">
-        <details class="faq-item">
-          <summary>Does Irish Spring soap keep gophers away?</summary>
-          <p>No. Irish Spring soap has a strong smell to humans, but gophers don't care. They live underground in a tunnel system that already smells like dirt, roots, and decomposing organic matter. Hanging a bar of soap near a mound does nothing — gophers aren't above ground long enough to encounter it, and the smell doesn't penetrate into tunnel systems.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Do coffee grounds repel gophers?</summary>
-          <p>No. Coffee grounds don't penetrate the soil deeply enough to reach active tunnel systems, which run 6–12 inches underground. Gophers have no reason to avoid them, and the smell dissipates fast — especially after watering. I've seen yards where someone dumped pounds of grounds into every mound and still had active tunneling the next day.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Does cayenne pepper work on gophers?</summary>
-          <p>No. Same problem as coffee grounds — cayenne is a surface treatment and gophers live underground. It washes away with the first watering. Even if a gopher encounters it at the tunnel entrance, it's not going to abandon an established burrow system over a little pepper.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Does chewing gum kill gophers?</summary>
-          <p>No. This is one of the oldest gopher myths out there. Gophers eat roots — not random objects in their tunnels. There's zero field evidence this works, and the mechanism doesn't make sense. Save the Juicy Fruit for yourself.</p>
-        </details>
+        {faqs.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <p set:html={f.html} />
+          </details>
+        ))}
       </div>
     </section>
 

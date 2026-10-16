@@ -34,7 +34,7 @@ Gopher tunneling near foundations can increase soil voids and moisture movement 
 2. Map active zones and set traps in runs that parallel the structure.
 3. Backfill shallow voids with suitable fill and compact in thin lifts.
 4. Adjust irrigation to prevent [over-saturated perimeter soil](/what-attracts-gophers/).
-5. Reinspect weekly and escalate to [professional assessment](/methods/hiring-a-pro/) if settlement continues.
+5. Reinspect weekly and escalate to [professional assessment](/methods/hiring-a-pro/) if settlement continues. If the activity near your foundation keeps outrunning what you can trap yourself, [I can connect you with a licensed local trapper](/find-a-trapper/) — I may be paid for referrals; it costs you nothing extra.
 
 ## Bagger Pro-Tip
 Treat your slab edge like a castle wall—patrol the perimeter before the moat shows up.

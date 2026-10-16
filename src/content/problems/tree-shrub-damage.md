@@ -3,7 +3,7 @@ title: "Gopher Damage to Trees & Shrubs"
 description: "Identify and stop gophers from girdling roots and killing established trees, shrubs, and ornamentals from below."
 metaDescription: "Gophers girdle the root crown and the tree looks fine until it doesn't. Spot mounds within 10 feet, trap fast, and cage every root ball before replanting."
 date: 2026-03-14
-updated: 2026-07-08
+updated: 2026-10-15
 tags:
   - trees
   - shrubs
@@ -31,7 +31,7 @@ Gophers kill trees and shrubs by girdling the root crown — chewing all the way
 1. Check for fresh mounds within 10 feet of any tree or shrub base — gophers work the root zone aggressively.
 2. Set [traps](/best-gopher-traps/) immediately in the active main run nearest the plant. Don't wait to see how bad the damage is.
 3. Once the gopher is removed, carefully excavate around the root crown to assess damage. Look for gnaw marks, missing bark, or severed feeder roots.
-4. Minor girdling (less than 25% of circumference) may recover on its own with proper watering. Major girdling is usually fatal to the plant — don't waste a season waiting on a dead tree.
+4. Minor girdling may recover on its own with proper watering. Major girdling — most of the way around the trunk or root crown — is usually fatal to the plant, and sources disagree on exactly where that line falls, so don't waste a season waiting on a tree that's clearly not coming back.
 5. For new replacement plantings, install a [hardware cloth basket](/methods/gopher-mesh/) around the root ball before planting. This is the only reliable protection for young trees.
 
 ## Bagger Pro-Tip

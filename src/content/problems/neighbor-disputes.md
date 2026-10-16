@@ -39,6 +39,10 @@ Gopher issues often rebound when only one side of a [boundary is treated](/metho
 ## Bagger Pro-Tip
 Nothing unites neighbors like a common enemy with terrible landscaping ethics.
 
+One time we spotted a gopher poking right out of its hole at the edge of the yard. We started flooding it, and there were open mounds right over the line in the neighbor's yard. So I went and asked him if I could run Taco through his yard, figuring the gopher was just surfacing for air because of the water. Taco sniffed around a good while. The bastard got away.
+
+Point is, I asked first. Gopher control is a block problem, not a one-yard problem, and a neighbor who's cool with you working the edge beats fighting a tunnel system you only half control.
+
 ## Safety Warning
 Do not enter adjacent property or set devices beyond your boundary without explicit permission.
 

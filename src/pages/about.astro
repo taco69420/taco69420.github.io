@@ -7,15 +7,38 @@ import { SOCIAL_LINKS } from '../data/author';
 
 const social = Object.fromEntries(SOCIAL_LINKS.map((link) => [link.label, link.url]));
 
+// Single source for the FAQ: the visible accordion renders `html` as markup,
+// and the JSON-LD `text` is derived from the same string by stripping tags —
+// so the schema and the visible copy cannot drift apart.
+const stripTags = (html: string) => html.replace(/<[^>]+>/g, '').trim();
+
+const faqs = [
+  {
+    q: "How did Mark learn to trap gophers?",
+    html: "Mark started at 15, trapping gophers in his father's yard in Redlands, CA for $5 a head. Over years of active work — digging up failed sets, testing different techniques, and working alongside his dog Taco — it became a repeatable skill rather than guesswork.",
+  },
+  {
+    q: "What gopher control methods does Mark recommend?",
+    html: 'For most active gopher problems, Mark recommends starting with Victor or Cinch-style mechanical traps placed in the main tunnel run. They\'re reliable, affordable, and require no chemicals. See <a href="/methods/">The Playbook</a> for step-by-step guides on each method.',
+  },
+  {
+    q: "Does Mark offer gopher removal services?",
+    html: 'No — Mark doesn\'t do paid trapping. This site is DIY instruction and gear picks. If you\'d rather hire it out, the <a href="/find-a-trapper/">trapper referral page</a> can connect you with a licensed local trapper — Mark may be paid for the referral, which costs you nothing extra. For specific questions about your yard situation, email hello@howtokillgophers.com and Mark will share what he knows.',
+  },
+  {
+    q: "What credentials does Mark have?",
+    html: "No formal certifications or pest control license — just years of hands-on experience with traps, probes, gassers, and bait stations across real yards with real gophers. The expertise comes from field testing, not textbooks.",
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "How did Mark learn to trap gophers?", "acceptedAnswer": { "@type": "Answer", "text": "Mark started at 15, trapping gophers in his father's yard in Redlands, CA for $5 a head. Over years of active work — digging up failed sets, testing different techniques, and working alongside his dog Taco — it became a repeatable skill rather than guesswork." } },
-    { "@type": "Question", "name": "What gopher control methods does Mark recommend?", "acceptedAnswer": { "@type": "Answer", "text": "For most active gopher problems, Mark recommends starting with Victor or Cinch-style mechanical traps placed in the main tunnel run. They're reliable, affordable, and require no chemicals." } },
-    { "@type": "Question", "name": "Does Mark offer gopher removal services?", "acceptedAnswer": { "@type": "Answer", "text": "No — this site is purely educational. For specific questions about your yard situation, email hello@howtokillgophers.com and Mark will share what he knows." } },
-    { "@type": "Question", "name": "What credentials does Mark have?", "acceptedAnswer": { "@type": "Answer", "text": "No formal certifications or pest control license — just years of hands-on experience with traps, probes, gassers, and bait stations across real yards with real gophers. The expertise comes from field testing, not textbooks." } },
-  ]
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": stripTags(f.html) },
+  })),
 };
 ---
 
@@ -138,22 +161,12 @@ const faqSchema = {
     <section class="card">
       <h2 id="faq">Frequently Asked Questions</h2>
       <div class="faq-list">
-        <details class="faq-item">
-          <summary>How did Mark learn to trap gophers?</summary>
-          <p>Mark started at 15, trapping gophers in his father's yard in Redlands, CA for $5 a head. Over years of active work — digging up failed sets, testing different techniques, and working alongside his dog Taco — it became a repeatable skill rather than guesswork.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What gopher control methods does Mark recommend?</summary>
-          <p>For most active gopher problems, Mark recommends starting with Victor or Cinch-style mechanical traps placed in the main tunnel run. They're reliable, affordable, and require no chemicals. See <a href="/methods/">The Playbook</a> for step-by-step guides on each method.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Does Mark offer gopher removal services?</summary>
-          <p>No — Mark doesn't do paid trapping. This site is DIY instruction and gear picks. If you'd rather hire it out, the <a href="/find-a-trapper/">trapper referral page</a> can connect you with a licensed local trapper — Mark may be paid for the referral, which costs you nothing extra. For specific questions about your yard situation, email hello@howtokillgophers.com and Mark will share what he knows.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What credentials does Mark have?</summary>
-          <p>No formal certifications or pest control license — just years of hands-on experience with traps, probes, gassers, and bait stations across real yards with real gophers. The expertise comes from field testing, not textbooks.</p>
-        </details>
+        {faqs.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <p set:html={f.html} />
+          </details>
+        ))}
       </div>
     </section>
 
