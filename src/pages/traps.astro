@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { breadcrumbSchema } from '../data/author';
 import { updatedLine } from '../data/pageDates';
 import { pageTitle, REVIEW_YEAR } from '../data/site';
+import HireCTA from '../components/HireCTA.astro';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -309,6 +310,12 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/traps/");
         <li><a href="/">Back to homepage</a></li>
       </ul>
     </section>
+
+    <HireCTA
+      variant="inline"
+      text="Not interested in building out a kit yourself?"
+      linkText="get matched with a licensed local trapper"
+    />
 
     <!-- ============================================================
          FAQ

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { breadcrumbSchema } from '../data/author';
 import { updatedLine } from '../data/pageDates';
 import { pageTitle } from '../data/site';
+import HireCTA from '../components/HireCTA.astro';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -268,6 +269,12 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/faq/");
         )}
       </section>
     ))}
+
+    <HireCTA
+      variant="inline"
+      text="None of that sound like a weekend you want?"
+      linkText="get matched with a licensed local trapper"
+    />
 
     <section class="card related-section">
       <p class="related-label">Related guides</p>

@@ -39,8 +39,6 @@ Most gopher problems are one-animal jobs you can handle yourself with [a pair of
   <a href="https://amzn.to/4cIJ64V" class="mpb-btn" target="_blank" rel="sponsored noopener">Shop Victor Traps on Amazon →</a>
 </div>
 
-Want me to connect you with a licensed local trapper? I'm lining up trappers in the Inland Empire. [Fill out one short form](/find-a-trapper/) and I'll reach out within 1-2 days. I may be paid for referrals; it costs you nothing extra.
-
 ## The Process
 1. Get at least two quotes. Gopher control pricing varies wildly by property size and method — I keep the current ranges in the [cost guide](/cost/) rather than repeating them here.
 2. Ask specifically what method they use. [Trapping](/methods/victor-traps/) and [CO fumigation](/methods/carbon-monoxide/) are preferred. Be cautious with anyone who defaults immediately to poison bait on a property with kids, pets, or edible gardens.

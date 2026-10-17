@@ -4,6 +4,7 @@ import { authorRef, breadcrumbSchema } from '../data/author';
 import { updatedLine, datesFor } from '../data/pageDates';
 import { pageTitle } from '../data/site';
 import BrevoForm from '../components/BrevoForm.astro';
+import HireCTA from '../components/HireCTA.astro';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -191,6 +192,12 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/quick-start/");
     <section class="card" style="border-left: 4px solid #f97316;">
       <p style="margin: 0; color: #374151; font-size: 0.9rem;">Seen people online recommending coffee grounds or Irish Spring? <a href="/what-doesnt-work/" style="color: #047857; font-weight: 600;">Here's why that won't cut it</a> — and a rundown of every folk remedy I've tried and watched fail.</p>
     </section>
+
+    <HireCTA
+      variant="inline"
+      text="Read all that and still don't want to do it yourself?"
+      linkText="get matched with a licensed local trapper"
+    />
 
     <section class="card">
       <h2 id="faq">Frequently Asked Questions</h2>

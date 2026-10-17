@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { breadcrumbSchema } from '../data/author';
 import { updatedLine } from '../data/pageDates';
 import { pageTitle, REVIEW_YEAR } from '../data/site';
+import HireCTA from '../components/HireCTA.astro';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -240,7 +241,12 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/cost/");
       <p>Equipment cost is the barrier here — a Rodent Riddler or similar CO unit runs $300–500. After that, operating costs are low. This is an advanced method that requires training and safety discipline, and it's not one I've used myself — the full guide is research-based, not a field report. Most homeowners don't need it — if you're considering it, read the full guide first.</p>
 
       <h3><a href="/methods/hiring-a-pro/">Hiring a Professional Gopher Trapper</a> — ~$150–500+ per job</h3>
-      <p>Residential gopher control varies wildly by operator and region — $150 to $500+ for a single job is a normal range. Ongoing contracts for properties with recurring pressure run $50–150/month. Get at least two quotes. The cheapest operator isn't always the best — ask how they trap, what they guarantee, and what happens if the gopher comes back. Want me to connect you with a licensed local trapper? <a href="/find-a-trapper/">Fill out one short form</a> — I may be paid for referrals; it costs you nothing extra.</p>
+      <p>Residential gopher control varies wildly by operator and region — $150 to $500+ for a single job is a normal range. Ongoing contracts for properties with recurring pressure run $50–150/month. Get at least two quotes. The cheapest operator isn't always the best — ask how they trap, what they guarantee, and what happens if the gopher comes back.</p>
+
+      <HireCTA
+        heading="Decided hiring is the move?"
+        text="I don't do paid trapping myself, but I can connect you with a licensed local trapper in the Inland Empire — skip the quote-shopping and tell me about your yard instead. I'll reach out within a day or two."
+      />
     </section>
 
     <!-- Best Value -->

@@ -47,3 +47,5 @@ Carbon monoxide is lethal and odorless; never use in enclosed areas, near [struc
 Pressurized CO devices and burning gas cartridges are two different things, and this site keeps them apart. The cartridges are on [the gopher bait and fumigant page](/best-gopher-poison/), alongside UC IPM's verdict that cartridge fumigation "isn't effective because gophers can seal off their burrows rapidly."
 
 This page isn't linking a specific device. Every pressurized CO unit I could find sold on Amazon under this category is actually a reusable exhaust-pipe attachment meant to route a car's exhaust into the burrow — exactly the improvised setup the warning above tells you not to use. If you go this route, buy from a dealer selling equipment actually labeled and approved for burrow fumigation, and follow that label exactly.
+
+Not interested in sourcing that equipment and running a burrow fumigation yourself? [I can connect you with a licensed local trapper](/find-a-trapper/) instead — I may be paid for referrals; it costs you nothing extra.
