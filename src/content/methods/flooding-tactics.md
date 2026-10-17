@@ -47,7 +47,7 @@ UC IPM notes that "pocket gophers can easily withstand normal garden or home lan
 5. Let soil settle, then transition to [traps](/best-gopher-traps/) — set via <a href="https://amzn.to/4cIJ64V" target="_blank" rel="sponsored noopener">traps</a> at the most active main run locations.
 
 ## Bagger Pro-Tip
-This only made sense for me because I had Taco. I'd run the hose, he'd work the yard, and we'd catch them as they surfaced. No dog? Don't bother flooding — set your traps, cover the hole, and let the gopher come back to repair the damage. They always do. That's when they hit.
+This only made sense for me because I had Taco. I'd run the hose, he'd work the yard, and we'd catch them as they surfaced. No dog? Don't bother flooding — set your traps, cover the hole, and let the gopher come back to repair the damage. They always do. That's when they hit. No dog and no appetite for any of this yourself? [Get matched with a licensed local trapper](/find-a-trapper/) instead — I may be paid for referrals; it costs you nothing extra.
 
 ## Safety Warning
 Avoid flooding near [foundations](/problems/foundation-damage/), retaining walls, or slopes where water saturation can trigger soil movement.

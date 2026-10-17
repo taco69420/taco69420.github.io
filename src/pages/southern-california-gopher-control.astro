@@ -4,6 +4,7 @@ import { authorRef, breadcrumbSchema } from '../data/author';
 import { updatedLine, datesFor } from '../data/pageDates';
 import { pageTitle } from '../data/site';
 import NextSteps from '../components/NextSteps.astro';
+import HireCTA from '../components/HireCTA.astro';
 
 const dates = datesFor("/southern-california-gopher-control/")!;
 
@@ -79,7 +80,12 @@ const crumbSchema = breadcrumbSchema(crumbLabel, "/southern-california-gopher-co
       <p>If you searched for gopher control in Southern California, you were probably hoping to find someone to come out and do it. I don't do paid trapping — this site is the do-it-yourself version, and for most yards that's the right call anyway.</p>
       <p><strong>Do it yourself when</strong> you're dealing with one or two gophers in a normal residential yard. A Victor 2-pack runs about $15 and you reuse the traps indefinitely, so the whole job costs less than a single service call. The SoCal catch is that there's no off-season, so you're checking sets through the year rather than once each spring.</p>
       <p><strong>Hire a pro when</strong> the property is large with activity in several zones, when you can't walk the yard every morning through the spring and fall surges, or when you've probed repeatedly and still can't find the main run. Residential gopher work runs about $150 to $500+ depending on property size, method, and whether it's a one-time treatment or a recurring contract. If that's your situation, paying for it is a reasonable call, not a failure.</p>
-      <p>Full numbers in the <a href="/cost/">gopher control cost guide</a>, and what to ask before you sign anything in <a href="/methods/hiring-a-pro/">hiring a professional trapper</a>. Want me to connect you with a licensed local trapper? I'm lining up trappers in the Inland Empire — <a href="/find-a-trapper/">tell me about your yard</a> and I'll reach out within 1-2 days.</p>
+      <p>Full numbers in the <a href="/cost/">gopher control cost guide</a>, and what to ask before you sign anything in <a href="/methods/hiring-a-pro/">hiring a professional trapper</a>.</p>
+      <HireCTA
+        variant="inline"
+        text="Decided this yard isn't a DIY job?"
+        linkText="get matched with a licensed local trapper in the Inland Empire"
+      />
     </section>
 
     <NextSteps />

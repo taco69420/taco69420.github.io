@@ -5,6 +5,7 @@ import { pageTitle, REVIEW_YEAR } from '../data/site';
 import { authorRef, breadcrumbSchema, SITE_URL } from '../data/author';
 import { bestOfProducts } from '../data/bestOfProducts';
 import { datesFor } from '../data/pageDates';
+import HireCTA from '../components/HireCTA.astro';
 
 const route = "/best-gopher-poison/";
 const heading = `Best Gopher Poison of ${REVIEW_YEAR}`;
@@ -268,6 +269,12 @@ const faqSchema = {
         </details>
       </div>
     </section>
+
+    <HireCTA
+      variant="inline"
+      text="Not up for handling poison bait yourself?"
+      linkText="get matched with a licensed local trapper"
+    />
 
     <section class="card related-section">
       <p class="related-label">Related guides</p>

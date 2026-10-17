@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import UntestedNote from '../../components/UntestedNote.astro';
+import HireCTA from '../../components/HireCTA.astro';
 import { authorRef } from '../../data/author';
 import { pageTitle } from '../../data/site';
 
@@ -164,6 +165,8 @@ const breadcrumbSchema = {
     </div>
   )}
 
+  {entry.slug === 'hiring-a-pro' && <HireCTA />}
+
   <section class="card">
     <h2>Quick Stats</h2>
     <ul>
@@ -204,6 +207,13 @@ const breadcrumbSchema = {
   <div class="card" style="background: #fffbeb; border: 1.5px solid #fde68a; border-left: 4px solid #f59e0b; padding: 1rem 1.5rem;">
     <p style="margin: 0; font-size: 0.9rem; color: #374151; line-height: 1.6;"><strong style="color: #92400e;">Timing matters more than most people think.</strong> Spring (Feb–May) and fall (Sep–Nov) are when gophers are most active — trap during a surge and you'll catch within hours. Miss those windows and you're chasing a slow target. <a href="/seasons/" style="color: #92400e; font-weight: 600; border-bottom-color: #fcd34d;">See the full Seasonal Guide →</a></p>
   </div>
+
+  {entry.slug === 'hiring-a-pro' && (
+    <HireCTA
+      heading="Still haven't found anyone?"
+      text="If you've read this far and you'd rather someone else just handled it, say so. I can connect you with a licensed local trapper in the Inland Empire — tell me about your yard and I'll reach out within a day or two. I may be paid for referrals; it costs you nothing extra."
+    />
+  )}
 
   <section class="card related-section">
     <p class="related-label">Related guides</p>

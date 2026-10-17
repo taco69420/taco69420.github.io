@@ -48,7 +48,7 @@ Exclusion fencing is the most labor-intensive method on this site — but on lar
 6. Inspect the fence line annually for corrosion, settlement, or breaches.
 
 ## Bagger Pro-Tip
-Rent a mechanical trencher for anything over 50 feet. Hand-digging a 200-foot perimeter trench in [Redlands](/southern-california-gopher-control/) clay is a full day's work. A trencher rental saves your back. Call 811 first — always.
+Rent a mechanical trencher for anything over 50 feet. Hand-digging a 200-foot perimeter trench in [Redlands](/southern-california-gopher-control/) clay is a full day's work. A trencher rental saves your back. Call 811 first — always. Not keen on trenching a perimeter yourself at all? [I can connect you with a licensed local trapper](/find-a-trapper/) instead — I may be paid for referrals; it costs you nothing extra.
 
 ## Safety Warning
 Call 811 before any digging. Underground utility lines, irrigation mains, and electrical conduits all run in the same zones gophers love. One call is free; hitting a gas line is not.
