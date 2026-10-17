@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { DIST, pages, decode, table } from './lib.mjs';
+import { DIST, pages, decode, table, anchors } from './lib.mjs';
 
 /**
  * Mark refers work out; he does not perform it. The site may say it will match
@@ -16,6 +16,24 @@ import { DIST, pages, decode, table } from './lib.mjs';
  * of the sitemap.
  */
 const REFERRAL_PAGE = '/find-a-trapper/';
+
+// Pages whose copy explicitly pitches the reader on the referral ("get
+// matched with", "connect you with") — on these, the pitch has to resolve to
+// a real link, not just text that reads like one. The three best-of pages and
+// /traps/ are deliberately excluded: their inline mentions are optional so
+// affiliate content stays the hero, per CLAUDE.md's "protect the money pages".
+const REQUIRED_LINKERS = [
+  '/methods/hiring-a-pro/',
+  '/cost/',
+  '/redlands/',
+  '/southern-california-gopher-control/',
+  '/methods/carbon-monoxide/',
+  '/methods/flooding-tactics/',
+  '/methods/exclusion-fencing/',
+  '/problems/foundation-damage/',
+  '/quick-start/',
+  '/faq/',
+];
 
 // Wording that would present the site as the service provider.
 const FORBIDDEN = [
@@ -98,6 +116,25 @@ export default {
       }
     }
 
+    // ── pages that pitch the referral must actually link to it ────────────
+    // A raw markdown link that fails to render ("[text](/find-a-trapper/)"
+    // sitting in the body as literal text) must not count — only a real
+    // anchor does, matched attribute-order-independent via the same `anchors`
+    // helper the links/inbound checks use.
+    let linked = 0;
+    for (const route of REQUIRED_LINKERS) {
+      const linker = all.find((p) => p.route === route);
+      if (!linker) {
+        problems.push(`${route} is not built, but it's required to link to ${REFERRAL_PAGE}`);
+        rows.push([route, `links to ${REFERRAL_PAGE}`, 'PAGE MISSING']);
+        continue;
+      }
+      const hasLink = anchors(linker.html).some((a) => a.href === REFERRAL_PAGE);
+      if (!hasLink) problems.push(`${route}: missing required outbound link to ${REFERRAL_PAGE}`);
+      else linked++;
+      rows.push([route, `links to ${REFERRAL_PAGE}`, hasLink ? 'present' : 'MISSING']);
+    }
+
     // ── /privacy/ must not over-promise about the referral data ───────────
     const privacy = all.find((p) => p.route === '/privacy/');
     if (!privacy) problems.push('/privacy/ is not built');
@@ -150,7 +187,7 @@ export default {
 
     return {
       problems,
-      summary: `no service wording or business schema on ${all.length} pages; ${REFERRAL_PAGE} is noindex, out of the sitemap, and carries its disclaimers`,
+      summary: `no service wording or business schema on ${all.length} pages; ${REFERRAL_PAGE} is noindex, out of the sitemap, carries its disclaimers, and is linked from ${linked}/${REQUIRED_LINKERS.length} required pages`,
       report: table(['where', 'check', 'value'], rows),
     };
   },
